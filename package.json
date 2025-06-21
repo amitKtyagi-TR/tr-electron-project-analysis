@@ -1,0 +1,41 @@
+{
+  "name": "@ai-assistant/code-analysis-engine",
+  "version": "0.1.0",
+  "description": "Node.js/TypeScript code analysis engine for AI coding assistant",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+"scripts": {
+    "build": "tsup src/index.ts --format esm --dts --clean",
+    "dev": "tsx src/index.ts",
+    "test": "vitest",
+    "lint": "tsc --noEmit",
+    "lint:fix": "eslint src/ --ext .ts --fix",
+    "format": "prettier --write src/",
+    "type-check": "tsc --noEmit",
+    "clean": "rm -rf dist"
+  },
+  "keywords": [
+    "code-analysis",
+    "typescript",
+    "ast",
+    "electron",
+    "static-analysis"
+  ],
+  "author": "AI Assistant Team",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.19.1",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "eslint": "^8.57.1",
+    "prettier": "^3.5.3",
+    "tsup": "^8.5.0",
+    "tsx": "^4.20.3",
+    "typescript": "^5.8.3",
+    "vitest": "^1.6.1"
+  }
+}
