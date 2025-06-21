@@ -6,3 +6,4 @@
  */
 
 export { TreeSitterManager, type QueryCapture } from './tree-sitter-manager.js';
+export { BabelAnalyzer } from './babel-analyzer.js';

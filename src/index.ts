@@ -22,7 +22,8 @@ export * from './types/index.js';
 // Export core functionality
 export { GitProcessor, FileProcessor, DEFAULT_PROCESSING_OPTIONS } from './core/index.js';
 export type { ProcessingOptions, FileProcessingResult } from './core/index.js';
-export { TreeSitterManager } from './parsers/index.js';
+// Export parser functionality
+export { TreeSitterManager, BabelAnalyzer } from './parsers/index.js';
 export type { QueryCapture } from './parsers/index.js';
 /**
  * Temporary placeholder function for development validation

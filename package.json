@@ -16,7 +16,8 @@
     "clean": "rm -rf dist",
     "example:git": "tsx examples/test-git-processor.ts",
     "example:files": "tsx examples/file-processing-demo.ts",
-    "setup:parsers": "node scripts/download-parsers.js"
+    "setup:parsers": "node scripts/download-parsers.js",
+    "example:babel": "tsx examples/babel-analyzer-demo.ts"
   },
   "keywords": [
     "code-analysis",
@@ -40,6 +41,9 @@
     "vitest": "^1.6.1"
   },
   "dependencies": {
+    "@babel/parser": "^7.27.5",
+    "@babel/traverse": "^7.27.4",
+    "@babel/types": "^7.27.6",
     "p-limit": "^5.0.0",
     "web-tree-sitter": "^0.20.8"
   }
