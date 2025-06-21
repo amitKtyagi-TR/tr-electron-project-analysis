@@ -17,7 +17,11 @@
     "example:git": "tsx examples/test-git-processor.ts",
     "example:files": "tsx examples/file-processing-demo.ts",
     "setup:parsers": "node scripts/download-parsers.js",
-    "example:babel": "tsx examples/babel-analyzer-demo.ts"
+    "example:babel": "tsx examples/babel-analyzer-demo.ts",
+    "example:language": "tsx examples/language-detection-demo.ts",
+    "example:framework": "tsx examples/framework-detection-demo.ts",
+    "example:full": "tsx examples/full-analysis-demo.ts"
+
   },
   "keywords": [
     "code-analysis",

@@ -12,3 +12,8 @@ export {
   type ProcessingOptions,
   type FileProcessingResult
 } from './file-processor.js';
+export { LanguageDetector } from './language-detector.js';
+export {
+  AnalysisCoordinator,
+  type AnalysisResult as CoordinatorAnalysisResult
+} from './analysis-coordinator.js';

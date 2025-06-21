@@ -20,11 +20,35 @@ import { ANALYSIS_ENGINE_VERSION } from './types/index.js';
 // Export all type definitions
 export * from './types/index.js';
 // Export core functionality
-export { GitProcessor, FileProcessor, DEFAULT_PROCESSING_OPTIONS } from './core/index.js';
-export type { ProcessingOptions, FileProcessingResult } from './core/index.js';
+// Export core functionality
+// Export core functionality
+export {
+  GitProcessor,
+  FileProcessor,
+  DEFAULT_PROCESSING_OPTIONS,
+  LanguageDetector,
+  AnalysisCoordinator
+} from './core/index.js';
+export type {
+  ProcessingOptions,
+  FileProcessingResult,
+  CoordinatorAnalysisResult
+} from './core/index.js';
+
 // Export parser functionality
 export { TreeSitterManager, BabelAnalyzer } from './parsers/index.js';
 export type { QueryCapture } from './parsers/index.js';
+// Export pattern detection functionality
+export {
+  FrameworkDetector,
+  ALL_FRAMEWORK_SIGNATURES,
+  getFrameworkSignature,
+  getSupportedFrameworks,
+  type FrameworkSignature,
+  type PatternDefinition
+} from './patterns/index.js';
+
+
 /**
  * Temporary placeholder function for development validation
  * This will be replaced with the real analyzer in future tasks

@@ -110,6 +110,7 @@ export type SupportedLanguage =
   | 'swift'
   | 'kotlin'
   | 'scala'
+  | 'r'              // Add R language support
   | 'html'
   | 'css'
   | 'json'
