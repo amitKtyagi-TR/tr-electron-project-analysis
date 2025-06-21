@@ -20,6 +20,8 @@
     "example:babel": "tsx examples/babel-analyzer-demo.ts",
     "example:language": "tsx examples/language-detection-demo.ts",
     "example:framework": "tsx examples/framework-detection-demo.ts",
+    "example:api": "tsx examples/api-detection-demo.ts",
+    "example:state": "tsx examples/state-detection-demo.ts",
     "example:full": "tsx examples/full-analysis-demo.ts"
 
   },

@@ -8,6 +8,14 @@
 // Export the main framework detector
 export { FrameworkDetector } from './framework-detector.js';
 
+// Export the API endpoint detector
+export { ApiDetector } from './api-detector.js';
+export type { DetailedApiEndpoint, ApiDetectionStats } from './api-detector.js';
+
+// Export the state management detector
+export { StateDetector } from './state-detector.js';
+export type { DetailedStatePattern, StateDetectionStats } from './state-detector.js';
+
 // Export pattern definitions and utilities
 export {
   ALL_FRAMEWORK_SIGNATURES,

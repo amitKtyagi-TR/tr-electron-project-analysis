@@ -39,13 +39,20 @@ export type {
 export { TreeSitterManager, BabelAnalyzer } from './parsers/index.js';
 export type { QueryCapture } from './parsers/index.js';
 // Export pattern detection functionality
+// Export pattern detection functionality
 export {
   FrameworkDetector,
+  ApiDetector,
+  StateDetector,
   ALL_FRAMEWORK_SIGNATURES,
   getFrameworkSignature,
   getSupportedFrameworks,
   type FrameworkSignature,
-  type PatternDefinition
+  type PatternDefinition,
+  type DetailedApiEndpoint,
+  type ApiDetectionStats,
+  type DetailedStatePattern,
+  type StateDetectionStats
 } from './patterns/index.js';
 
 
