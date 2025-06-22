@@ -16,6 +16,10 @@ export type { DetailedApiEndpoint, ApiDetectionStats } from './api-detector.js';
 export { StateDetector } from './state-detector.js';
 export type { DetailedStatePattern, StateDetectionStats } from './state-detector.js';
 
+// Export the event handler detector
+export { EventDetector } from './event-detector.js';
+export type { DetailedEventHandler, EventDetectionStats } from './event-detector.js';
+
 // Export pattern definitions and utilities
 export {
   ALL_FRAMEWORK_SIGNATURES,

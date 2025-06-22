@@ -44,6 +44,7 @@ export {
   FrameworkDetector,
   ApiDetector,
   StateDetector,
+  EventDetector,
   ALL_FRAMEWORK_SIGNATURES,
   getFrameworkSignature,
   getSupportedFrameworks,
@@ -52,7 +53,9 @@ export {
   type DetailedApiEndpoint,
   type ApiDetectionStats,
   type DetailedStatePattern,
-  type StateDetectionStats
+  type StateDetectionStats,
+  type DetailedEventHandler,
+  type EventDetectionStats
 } from './patterns/index.js';
 
 
