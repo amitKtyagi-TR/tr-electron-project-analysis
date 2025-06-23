@@ -1,21 +1,67 @@
-# Repository Analysis: /Users/amitk/Development/GitHub/iit-patna-fe
+# Repository Analysis: /Users/amitk/Development/GitHub/bazoo-frontend
 
 ## Summary
-- Total Files: 0
-- Total Lines: 0
+- Total Files: 84
+- Total Lines: 6,370
 
 ## Languages
+- typescript: 67 files (79.8%)
+- unknown: 5 files (6.0%)
+- javascript: 5 files (6.0%)
+- json: 5 files (6.0%)
+- python: 1 files (1.2%)
+- html: 1 files (1.2%)
+
+## Detected Frameworks
+- React: 100.0% confidence
+- React Native: 27.2% confidence
 
 ## File Extensions
 
 ## Folder Structure
-- Total Folders: 0
+- Total Folders: 27
+- (root): 17 files
+- src/features/catalog: 12 files
+- src/shared/components/atoms: 9 files
+- src: 6 files
+- src/features/auth/components: 5 files
+- src/app/layouts: 4 files
+- src/shared/components/layout: 4 files
+- src/app/providers: 3 files
+- src/shared/hooks: 3 files
+- src/app/routes: 2 files
 
 ## Dependencies
-- Files with dependencies: 0
-- Total dependency relationships: 0
+- Files with dependencies: 62
+- Total dependency relationships: 300
+
+### Top External Dependencies
+- __exports__: used in 60 files
+- react: used in 46 files
+- @chakra-ui/react: used in 38 files
+- react-router-dom: used in 12 files
+- @tanstack/react-query: used in 11 files
+- react-hook-form: used in 5 files
+- axios: used in 4 files
+- @chakra-ui/icons: used in 3 files
+- react from 'eslint-plugin-react': used in 1 files
+- @eslint/js: used in 1 files
+- eslint-plugin-react-hooks: used in 1 files
+- eslint-plugin-react-refresh: used in 1 files
+- globals: used in 1 files
+- typescript-eslint: used in 1 files
+- @tanstack/react-query-devtools: used in 1 files
+- papaparse: used in 1 files
+- react-dom/client: used in 1 files
+- @vitejs/plugin-react: used in 1 files
+- vite: used in 1 files
+
+## Pattern Detection Summary
+- Total patterns detected: 145
+- State management patterns: 84
+- Event handlers: 61
 
 ## Analysis Details
-- Timestamp: 2025-06-23T15:55:26.133Z
-- Duration: 11ms
+- Timestamp: 2025-06-23T16:27:20.802Z
+- Duration: 190ms
 - Engine Version: 0.1.0

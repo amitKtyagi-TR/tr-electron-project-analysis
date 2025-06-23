@@ -118,6 +118,186 @@ export const REACT_PATTERNS: FrameworkSignature = {
   ]
 };
 
+
+/**
+ * React Native Framework Patterns
+ */
+export const REACT_NATIVE_PATTERNS: FrameworkSignature = {
+  name: 'React Native',
+  minConfidence: 0.25,
+  primaryLanguages: ['javascript', 'typescript'],
+  patterns: [
+    {
+      id: 'react_native_import',
+      description: 'React Native core import',
+      weight: 9,
+      type: 'import',
+      pattern: /^react-native$/,
+      languages: ['javascript', 'typescript']
+    },
+    {
+      id: 'react_native_community_import',
+      description: 'React Native Community packages',
+      weight: 7,
+      type: 'import',
+      pattern: /^@react-native-community\//,
+      languages: ['javascript', 'typescript']
+    },
+    {
+      id: 'react_native_async_storage',
+      description: 'React Native AsyncStorage import',
+      weight: 6,
+      type: 'import',
+      pattern: /^@react-native-async-storage\/async-storage$/,
+      languages: ['javascript', 'typescript']
+    },
+    {
+      id: 'react_navigation_import',
+      description: 'React Navigation import',
+      weight: 7,
+      type: 'import',
+      pattern: /^@react-navigation\//,
+      languages: ['javascript', 'typescript']
+    },
+    {
+      id: 'expo_import',
+      description: 'Expo framework import',
+      weight: 8,
+      type: 'import',
+      pattern: /^expo$/,
+      languages: ['javascript', 'typescript']
+    },
+    {
+      id: 'react_native_view_component',
+      description: 'React Native View component usage',
+      weight: 8,
+      type: 'function_call',
+      pattern: /View/,
+      context: 'has_react_native_import',
+      languages: ['javascript', 'typescript']
+    },
+    {
+      id: 'react_native_text_component',
+      description: 'React Native Text component usage',
+      weight: 7,
+      type: 'function_call',
+      pattern: /Text/,
+      context: 'has_react_native_import',
+      languages: ['javascript', 'typescript']
+    },
+    {
+      id: 'react_native_scrollview',
+      description: 'React Native ScrollView component',
+      weight: 6,
+      type: 'function_call',
+      pattern: /ScrollView/,
+      context: 'has_react_native_import',
+      languages: ['javascript', 'typescript']
+    },
+    {
+      id: 'react_native_touchable',
+      description: 'React Native Touchable components',
+      weight: 6,
+      type: 'function_call',
+      pattern: /Touchable(Opacity|Highlight|WithoutFeedback)/,
+      context: 'has_react_native_import',
+      languages: ['javascript', 'typescript']
+    },
+    {
+      id: 'react_native_flatlist',
+      description: 'React Native FlatList component',
+      weight: 6,
+      type: 'function_call',
+      pattern: /FlatList/,
+      context: 'has_react_native_import',
+      languages: ['javascript', 'typescript']
+    },
+    {
+      id: 'react_native_platform_api',
+      description: 'React Native Platform API usage',
+      weight: 7,
+      type: 'function_call',
+      pattern: /Platform\.(OS|select)/,
+      languages: ['javascript', 'typescript']
+    },
+    {
+      id: 'react_native_dimensions_api',
+      description: 'React Native Dimensions API',
+      weight: 6,
+      type: 'function_call',
+      pattern: /Dimensions\.get/,
+      languages: ['javascript', 'typescript']
+    },
+    {
+      id: 'react_native_stylesheet',
+      description: 'React Native StyleSheet usage',
+      weight: 8,
+      type: 'function_call',
+      pattern: /StyleSheet\.(create|compose)/,
+      languages: ['javascript', 'typescript']
+    },
+    {
+      id: 'react_native_alert_api',
+      description: 'React Native Alert API',
+      weight: 5,
+      type: 'function_call',
+      pattern: /Alert\.(alert|prompt)/,
+      languages: ['javascript', 'typescript']
+    },
+    {
+      id: 'react_native_animated_api',
+      description: 'React Native Animated API',
+      weight: 6,
+      type: 'function_call',
+      pattern: /Animated\.(Value|timing|spring)/,
+      languages: ['javascript', 'typescript']
+    },
+    {
+      id: 'app_json_config',
+      description: 'React Native app.json configuration',
+      weight: 7,
+      type: 'file_name',
+      pattern: /app\.json$/
+    },
+    {
+      id: 'metro_config',
+      description: 'Metro bundler configuration',
+      weight: 6,
+      type: 'file_name',
+      pattern: /metro\.config\.js$/
+    },
+    {
+      id: 'react_native_config_js',
+      description: 'React Native configuration files',
+      weight: 5,
+      type: 'file_name',
+      pattern: /react-native\.config\.js$/
+    },
+    {
+      id: 'expo_app_config',
+      description: 'Expo app configuration',
+      weight: 7,
+      type: 'file_name',
+      pattern: /app\.(json|config\.(js|ts))$/,
+      context: 'has_expo_dependency'
+    },
+    {
+      id: 'native_module_android',
+      description: 'Android native module files',
+      weight: 4,
+      type: 'file_name',
+      pattern: /android\/.*\.(java|kt)$/
+    },
+    {
+      id: 'native_module_ios',
+      description: 'iOS native module files',
+      weight: 4,
+      type: 'file_name',
+      pattern: /ios\/.*\.(m|h|swift)$/
+    }
+  ]
+};
+
 /**
  * Django Framework Patterns
  */
@@ -435,6 +615,7 @@ export const EXPRESS_PATTERNS: FrameworkSignature = {
  */
 export const ALL_FRAMEWORK_SIGNATURES: FrameworkSignature[] = [
   REACT_PATTERNS,
+  REACT_NATIVE_PATTERNS,
   DJANGO_PATTERNS,
   NESTJS_PATTERNS,
   FLUTTER_PATTERNS,

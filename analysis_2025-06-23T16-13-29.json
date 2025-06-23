@@ -1,0 +1,4275 @@
+{
+  "folder_structure": {
+    "root": [
+      {
+        "path": ".gitignore",
+        "language": "ruby",
+        "imports": {},
+        "functions": {},
+        "classes": {},
+        "lines": 191,
+        "characters": 2724,
+        "non_empty_lines": 144,
+        "avg_line_length": 14.261780104712042
+      },
+      {
+        "path": ".prettierrc.json",
+        "language": "json",
+        "imports": {},
+        "functions": {},
+        "classes": {},
+        "lines": 9,
+        "characters": 126,
+        "non_empty_lines": 8,
+        "avg_line_length": 14
+      },
+      {
+        "language": "javascript",
+        "imports": {},
+        "functions": {},
+        "classes": {},
+        "path": "my_analysis_flat.txt",
+        "error": "Babel parsing failed: Unexpected token (1:1)"
+      },
+      {
+        "path": "my_analysis_report.txt",
+        "language": "unknown",
+        "imports": {},
+        "functions": {},
+        "classes": {},
+        "lines": 59,
+        "characters": 1329,
+        "non_empty_lines": 50,
+        "avg_line_length": 22.52542372881356
+      },
+      {
+        "language": "javascript",
+        "imports": {},
+        "functions": {},
+        "classes": {},
+        "path": "my_analysis.json",
+        "error": "Babel parsing failed: Missing semicolon. (2:20)"
+      },
+      {
+        "path": "package-lock.json",
+        "language": "json",
+        "imports": {},
+        "functions": {},
+        "classes": {},
+        "lines": 4964,
+        "characters": 169394,
+        "non_empty_lines": 4963,
+        "avg_line_length": 34.12449637389202
+      },
+      {
+        "path": "package.json",
+        "language": "json",
+        "imports": {},
+        "functions": {},
+        "classes": {},
+        "lines": 64,
+        "characters": 2166,
+        "non_empty_lines": 63,
+        "avg_line_length": 33.84375
+      },
+      {
+        "path": "README.md",
+        "language": "markdown",
+        "imports": {},
+        "functions": {},
+        "classes": {},
+        "lines": 37,
+        "characters": 911,
+        "non_empty_lines": 23,
+        "avg_line_length": 24.62162162162162
+      },
+      {
+        "path": "tsconfig.json",
+        "language": "json",
+        "imports": {},
+        "functions": {},
+        "classes": {},
+        "lines": 41,
+        "characters": 902,
+        "non_empty_lines": 40,
+        "avg_line_length": 22
+      }
+    ],
+    "examples": [
+      {
+        "language": "typescript",
+        "imports": {
+          "../src/index.js": [
+            "analyzeRepository"
+          ],
+          "../src/core/results-aggregator.js": [
+            "ResultsAggregator"
+          ]
+        },
+        "functions": {
+          "runAggregationDemo()": {
+            "docstring": "",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": true,
+            "parameters": [],
+            "line_number": 11
+          }
+        },
+        "classes": {},
+        "path": "examples/aggregation-demo.ts",
+        "event_handlers": [
+          {
+            "type": "dom_event",
+            "event": "callback",
+            "handler": "runAggregationDemo",
+            "line": 11,
+            "framework": "Custom"
+          },
+          {
+            "type": "dom_event",
+            "event": "unknown",
+            "handler": "runAggregationDemo",
+            "line": 11,
+            "framework": "Generic"
+          }
+        ]
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "../src/index.js": [
+            "ApiDetector",
+            "AnalysisCoordinator",
+            "DetailedApiEndpoint",
+            "FileAnalysis"
+          ]
+        },
+        "functions": {
+          "createSampleAnalyses()": {
+            "docstring": "Sample file analyses representing different frameworks",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [],
+            "line_number": 18
+          },
+          "demonstrateApiDetection()": {
+            "docstring": "Demonstrate API endpoint detection",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": true,
+            "parameters": [],
+            "line_number": 228
+          }
+        },
+        "classes": {},
+        "path": "examples/api-detection-demo.ts"
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "../src/index.js": [
+            "BabelAnalyzer"
+          ]
+        },
+        "functions": {
+          "demonstrateBabelAnalyzer()": {
+            "docstring": "Analyzes code samples and displays results",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": true,
+            "parameters": [],
+            "line_number": 160
+          }
+        },
+        "classes": {},
+        "path": "examples/babel-analyzer-demo.ts"
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "fs": [
+            "writeFileSync"
+          ],
+          "path": [
+            "resolve"
+          ],
+          "../src/index.js": [
+            "analyzeRepository"
+          ],
+          "../src/types/index.js": [
+            "AnalysisResult"
+          ],
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {
+          "formatAsText(results, repositoryPath)": {
+            "docstring": "Format analysis results as human-readable text (matching Python output)",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [
+              "results",
+              "repositoryPath"
+            ],
+            "line_number": 16
+          },
+          "quickAnalyze(repositoryPath, limit)": {
+            "docstring": "Analyze repository with progress display (matching Python quick_analyze)",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": true,
+            "parameters": [
+              "repositoryPath",
+              "limit"
+            ],
+            "line_number": 162
+          },
+          "fullAnalyze(repositoryPath)": {
+            "docstring": "Full analysis returning structured data (matching Python full_analyze)",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": true,
+            "parameters": [
+              "repositoryPath"
+            ],
+            "line_number": 183
+          },
+          "saveAnalysis(repositoryPath, outputFile)": {
+            "docstring": "Analyze and save results to file (matching Python save_analysis)",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": true,
+            "parameters": [
+              "repositoryPath",
+              "outputFile"
+            ],
+            "line_number": 202
+          },
+          "analyzeRepositoryEnhanced(repositoryPath, saveToFile)": {
+            "docstring": "Enhanced analysis with detailed pattern breakdown",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": true,
+            "parameters": [
+              "repositoryPath",
+              "saveToFile"
+            ],
+            "line_number": 236
+          },
+          "main()": {
+            "docstring": "",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": true,
+            "parameters": [],
+            "line_number": 321
+          }
+        },
+        "classes": {},
+        "path": "examples/complete-analysis.ts"
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "../src/index.js": [
+            "EventDetector",
+            "AnalysisCoordinator",
+            "DetailedEventHandler",
+            "FileAnalysis"
+          ]
+        },
+        "functions": {
+          "createSampleEventAnalyses()": {
+            "docstring": "Sample file analyses representing different event handler patterns",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [],
+            "line_number": 18
+          },
+          "demonstrateEventDetection()": {
+            "docstring": "Demonstrate event handler detection",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": true,
+            "parameters": [],
+            "line_number": 207
+          }
+        },
+        "classes": {},
+        "path": "examples/event-detection-demo.ts"
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "../src/index.js": [
+            "GitProcessor",
+            "FileProcessor"
+          ]
+        },
+        "functions": {
+          "analyzeFileContent(content, filePath)": {
+            "docstring": "Simple file analyzer that counts lines and characters",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": true,
+            "parameters": [
+              "content",
+              "filePath"
+            ],
+            "line_number": 13
+          },
+          "demonstrateFileProcessing()": {
+            "docstring": "Demo function that processes current repository",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": true,
+            "parameters": [],
+            "line_number": 28
+          }
+        },
+        "classes": {},
+        "path": "examples/file-processing-demo.ts"
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "../src/patterns/framework-detector.js": [
+            "FrameworkDetector"
+          ],
+          "../src/patterns/pattern-definitions.js": [
+            "getSupportedFrameworks"
+          ],
+          "../src/types/index.js": [
+            "FileAnalysis"
+          ]
+        },
+        "functions": {
+          "createSampleProject()": {
+            "docstring": "Create sample file analyses for different frameworks",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [],
+            "line_number": 15
+          },
+          "demonstrateFrameworkDetection()": {
+            "docstring": "Demonstrate framework detection capabilities",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": true,
+            "parameters": [],
+            "line_number": 304
+          }
+        },
+        "classes": {},
+        "path": "examples/framework-detection-demo.ts"
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "../src/index.js": [
+            "GitProcessor",
+            "FileProcessor",
+            "AnalysisCoordinator",
+            "CoordinatorAnalysisResult"
+          ]
+        },
+        "functions": {
+          "demonstrateFullAnalysis()": {
+            "docstring": "Main demo function that orchestrates the complete analysis pipeline",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": true,
+            "parameters": [],
+            "line_number": 106
+          }
+        },
+        "classes": {
+          "AnalysisStats": {
+            "docstring": "Statistics collector for analysis results",
+            "methods": {
+              "addResult(filePath, result)": {
+                "docstring": "",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "filePath",
+                  "result"
+                ],
+                "line_number": 22
+              },
+              "getLanguageDistribution()": {
+                "docstring": "",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [],
+                "line_number": 26
+              },
+              "getParserUsage()": {
+                "docstring": "",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [],
+                "line_number": 35
+              },
+              "getPerformanceStats()": {
+                "docstring": "",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [],
+                "line_number": 44
+              },
+              "getFallbackStats()": {
+                "docstring": "",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [],
+                "line_number": 55
+              },
+              "getDetailedResults()": {
+                "docstring": "",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [],
+                "line_number": 71
+              },
+              "hasDocstrings(analysis)": {
+                "docstring": "",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "analysis"
+                ],
+                "line_number": 93
+              }
+            },
+            "base_classes": [],
+            "line_number": 19
+          }
+        },
+        "path": "examples/full-analysis-demo.ts"
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "../src/index.js": [
+            "LanguageDetector",
+            "GitProcessor"
+          ]
+        },
+        "functions": {
+          "demonstrateLanguageDetection()": {
+            "docstring": "Demonstrates language detection capabilities",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": true,
+            "parameters": [],
+            "line_number": 430
+          }
+        },
+        "classes": {},
+        "path": "examples/language-detection-demo.ts"
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "../src/index.js": [
+            "StateDetector",
+            "AnalysisCoordinator",
+            "DetailedStatePattern",
+            "FileAnalysis"
+          ]
+        },
+        "functions": {
+          "createSampleStateAnalyses()": {
+            "docstring": "Sample file analyses representing different state management patterns",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [],
+            "line_number": 18
+          },
+          "demonstrateStateDetection()": {
+            "docstring": "Demonstrate state management pattern detection",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": true,
+            "parameters": [],
+            "line_number": 236
+          }
+        },
+        "classes": {},
+        "path": "examples/state-detection-demo.ts"
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "../src/index.js": [
+            "GitProcessor"
+          ]
+        },
+        "functions": {
+          "testCurrentRepository()": {
+            "docstring": "",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": true,
+            "parameters": [],
+            "line_number": 8
+          }
+        },
+        "classes": {},
+        "path": "examples/test-git-processor.ts"
+      }
+    ],
+    "scripts": [
+      {
+        "language": "typescript",
+        "imports": {
+          "fs": [
+            "readFileSync",
+            "writeFileSync"
+          ],
+          "path": [
+            "resolve"
+          ],
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {
+          "isEmpty(value)": {
+            "docstring": "Check if a value is empty",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [
+              "value"
+            ],
+            "line_number": 78
+          },
+          "formatValue(value)": {
+            "docstring": "Format a value for output",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [
+              "value"
+            ],
+            "line_number": 89
+          },
+          "getKey(key, config)": {
+            "docstring": "Get abbreviated key if available",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [
+              "key",
+              "config"
+            ],
+            "line_number": 107
+          },
+          "shouldSkipKey(key, config)": {
+            "docstring": "Should skip this key based on configuration",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [
+              "key",
+              "config"
+            ],
+            "line_number": 117
+          },
+          "formatArray(arr)": {
+            "docstring": "Format array values compactly",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [
+              "arr"
+            ],
+            "line_number": 127
+          },
+          "formatObject(obj, inline)": {
+            "docstring": "Format object as compact text",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [
+              "obj",
+              "inline"
+            ],
+            "line_number": 154
+          },
+          "extractFileInfo(data)": {
+            "docstring": "Extract file information from the folder structure",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [
+              "data"
+            ],
+            "line_number": 183
+          },
+          "processFolder(folderData, parentPath)": {
+            "docstring": "",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [
+              "folderData",
+              "parentPath"
+            ],
+            "line_number": 188
+          },
+          "formatFileContent(filePath, fileData, config)": {
+            "docstring": "Format file content as text",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [
+              "filePath",
+              "fileData",
+              "config"
+            ],
+            "line_number": 219
+          },
+          "convertToFlatFormat(inputFile, outputFile, config)": {
+            "docstring": "Convert analysis JSON to flat file format",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [
+              "inputFile",
+              "outputFile",
+              "config"
+            ],
+            "line_number": 339
+          },
+          "showConversionPreview(inputFile, config)": {
+            "docstring": "Show conversion preview",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [
+              "inputFile",
+              "config"
+            ],
+            "line_number": 421
+          },
+          "main()": {
+            "docstring": "Main CLI function",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [],
+            "line_number": 450
+          }
+        },
+        "classes": {},
+        "path": "scripts/clean-analysis.ts",
+        "event_handlers": [
+          {
+            "type": "dom_event",
+            "event": "callback",
+            "handler": "showConversionPreview",
+            "line": 421,
+            "framework": "Custom"
+          },
+          {
+            "type": "dom_event",
+            "event": "unknown",
+            "handler": "showConversionPreview",
+            "line": 421,
+            "framework": "Generic"
+          }
+        ]
+      },
+      {
+        "language": "javascript",
+        "imports": {
+          "node:fs/promises": [
+            "mkdir",
+            "writeFile"
+          ],
+          "node:path": [
+            "join"
+          ],
+          "node:url": [
+            "fileURLToPath"
+          ]
+        },
+        "functions": {
+          "downloadFile(url, filename)": {
+            "docstring": "Download a file from URL",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": true,
+            "parameters": [
+              "url",
+              "filename"
+            ],
+            "line_number": 27
+          },
+          "downloadParsers()": {
+            "docstring": "Main download function",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": true,
+            "parameters": [],
+            "line_number": 55
+          }
+        },
+        "classes": {},
+        "path": "scripts/download-parsers.js",
+        "event_handlers": [
+          {
+            "type": "dom_event",
+            "event": "load",
+            "handler": "downloadFile",
+            "line": 27,
+            "framework": "DOM"
+          },
+          {
+            "type": "dom_event",
+            "event": "load",
+            "handler": "downloadParsers",
+            "line": 55,
+            "framework": "DOM"
+          }
+        ]
+      }
+    ],
+    "src/core": [
+      {
+        "language": "typescript",
+        "imports": {
+          "../parsers/tree-sitter-manager.js": [
+            "TreeSitterManager"
+          ],
+          "../parsers/babel-analyzer.js": [
+            "BabelAnalyzer"
+          ],
+          "../parsers/python-analyzer.js": [
+            "PythonAnalyzer"
+          ],
+          "./language-detector.js": [
+            "LanguageDetector"
+          ],
+          "../types/index.js": [
+            "FileAnalysis",
+            "SupportedLanguage",
+            "AnalysisOptions"
+          ],
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {},
+        "classes": {
+          "AnalysisCoordinator": {
+            "docstring": "Analysis coordinator that manages multiple parsers\nThis class provides a unified interface for analyzing source code files\nregardless of their programming language. It automatically detects languages\nand routes files to the most appropriate parser.",
+            "methods": {
+              "constructor()": {
+                "docstring": "Create a new AnalysisCoordinator",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [],
+                "line_number": 52
+              },
+              "initialize()": {
+                "docstring": "Initialize all parsers and analyzers\n@returns Promise that resolves when initialization is complete",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": true,
+                "parameters": [],
+                "line_number": 64
+              },
+              "analyzeFile(filePath, content, options)": {
+                "docstring": "Analyze a single file with automatic parser routing\n@param filePath - Path to the file relative to repository root\n@param content - File content\n@param options - Analysis options\n@returns Promise that resolves to analysis result with metadata",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": true,
+                "parameters": [
+                  "filePath",
+                  "content",
+                  "options"
+                ],
+                "line_number": 90
+              },
+              "analyzeFiles(files, options)": {
+                "docstring": "Analyze multiple files with progress tracking\n@param files - Map of file paths to content\n@param options - Analysis options including progress callback\n@returns Promise that resolves to map of results",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": true,
+                "parameters": [
+                  "files",
+                  "options"
+                ],
+                "line_number": 188
+              },
+              "shouldUseBabelParser(language)": {
+                "docstring": "Check if Babel parser should be used for a language\n@param language - Detected language\n@returns True if Babel should be used\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "language"
+                ],
+                "line_number": 245
+              },
+              "shouldUsePythonParser(language)": {
+                "docstring": "Check if Python parser should be used for a language\n@param language - Detected language\n@returns True if Python parser should be used\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "language"
+                ],
+                "line_number": 256
+              },
+              "shouldUseTreeSitter(language)": {
+                "docstring": "Check if Tree-sitter should be used for a language\n@param language - Detected language\n@returns True if Tree-sitter should be used\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "language"
+                ],
+                "line_number": 267
+              },
+              "analyzeWithBabel(content, language, filePath)": {
+                "docstring": "Analyze file using Babel parser\n@param content - File content\n@param language - JavaScript or TypeScript\n@param filePath - File path for context\n@returns Promise that resolves to file analysis\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": true,
+                "parameters": [
+                  "content",
+                  "language",
+                  "filePath"
+                ],
+                "line_number": 282
+              },
+              "analyzeWithPython(content, filePath)": {
+                "docstring": "Analyze file using Python parser\n@param content - File content\n@param filePath - File path for context\n@returns Promise that resolves to file analysis\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": true,
+                "parameters": [
+                  "content",
+                  "filePath"
+                ],
+                "line_number": 307
+              },
+              "analyzeWithTreeSitter(content, language, filePath)": {
+                "docstring": "Analyze file using Tree-sitter parser\n@param content - File content\n@param language - Programming language\n@param filePath - File path for context\n@returns Promise that resolves to file analysis\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": true,
+                "parameters": [
+                  "content",
+                  "language",
+                  "filePath"
+                ],
+                "line_number": 323
+              },
+              "analyzeWithTreeSitterFallback(content, language, filePath)": {
+                "docstring": "Fallback Tree-sitter analysis when Babel fails\n@param content - File content\n@param language - Programming language\n@param filePath - File path for context\n@returns Promise that resolves to basic file analysis\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": true,
+                "parameters": [
+                  "content",
+                  "language",
+                  "filePath"
+                ],
+                "line_number": 357
+              },
+              "analyzeWithFallback(content, language, filePath)": {
+                "docstring": "General fallback analysis when primary parser fails\n@param content - File content\n@param language - Programming language\n@param filePath - File path for context\n@returns Promise that resolves to basic file analysis\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": true,
+                "parameters": [
+                  "content",
+                  "language",
+                  "filePath"
+                ],
+                "line_number": 378
+              },
+              "analyzeBasic(content, filePath, language)": {
+                "docstring": "Basic analysis for unsupported languages or when parsers fail\n@param content - File content\n@param filePath - File path for context\n@param language - Detected language\n@returns Promise that resolves to basic file metrics\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": true,
+                "parameters": [
+                  "content",
+                  "filePath",
+                  "language"
+                ],
+                "line_number": 414
+              },
+              "getStatistics()": {
+                "docstring": "Get analysis statistics for debugging and monitoring\n@returns Object with coordinator statistics",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [],
+                "line_number": 440
+              }
+            },
+            "base_classes": [],
+            "line_number": 42
+          }
+        },
+        "path": "src/core/analysis-coordinator.ts"
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "node:fs/promises": [
+            "readFile",
+            "stat"
+          ],
+          "node:path": [
+            "join"
+          ],
+          "p-limit": [
+            "pLimit"
+          ],
+          "../types/index.js": [
+            "FileAnalysis"
+          ],
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {},
+        "classes": {
+          "FileProcessor": {
+            "docstring": "File processor with concurrent reading capabilities\nThis class handles reading multiple files concurrently while respecting\nsystem limits and providing progress feedback to the user.",
+            "methods": {
+              "constructor(repositoryPath)": {
+                "docstring": "Create a new FileProcessor\n@param repositoryPath - Absolute path to the repository root",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "repositoryPath"
+                ],
+                "line_number": 73
+              },
+              "processFiles(filePaths, processor, options)": {
+                "docstring": "Process multiple files concurrently with progress tracking\n@param filePaths - Array of file paths relative to repository root\n@param processor - Function to process each file's content\n@param options - Processing configuration options\n@returns Map of file paths to their analysis results",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": true,
+                "parameters": [
+                  "filePaths",
+                  "processor",
+                  "options"
+                ],
+                "line_number": 85
+              },
+              "readFile(filePath, options)": {
+                "docstring": "Read a single file with size and encoding validation\n@param filePath - Path to file relative to repository root\n@param options - Processing options\n@returns File processing result\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": true,
+                "parameters": [
+                  "filePath",
+                  "options"
+                ],
+                "line_number": 158
+              },
+              "updateProgress(onProgress, currentFile)": {
+                "docstring": "Update progress and call progress callback\n@param onProgress - Progress callback function\n@param currentFile - Currently processed file\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "onProgress",
+                  "currentFile"
+                ],
+                "line_number": 219
+              },
+              "checkCancellation(signal)": {
+                "docstring": "Check if operation should be cancelled\n@param signal - AbortSignal to check\n@throws {Error} If operation is cancelled\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "signal"
+                ],
+                "line_number": 237
+              },
+              "getRepositoryPath()": {
+                "docstring": "Get the repository path\n@returns Absolute path to repository",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [],
+                "line_number": 248
+              }
+            },
+            "base_classes": [],
+            "line_number": 63
+          }
+        },
+        "path": "src/core/file-processor.ts"
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "node:child_process": [
+            "execFile"
+          ],
+          "node:util": [
+            "promisify"
+          ],
+          "node:fs/promises": [
+            "access",
+            "stat"
+          ],
+          "node:path": [
+            "join",
+            "resolve",
+            "isAbsolute"
+          ],
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {},
+        "classes": {
+          "GitProcessor": {
+            "docstring": "Git repository processor for file discovery and validation\nThis class provides methods to interact with git repositories,\nincluding validating repository structure and discovering tracked files.",
+            "methods": {
+              "constructor(repoPath)": {
+                "docstring": "Create a new GitProcessor instance\n@param repoPath - Path to the git repository (can be relative or absolute)\n@throws {Error} If the repository path is invalid",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "repoPath"
+                ],
+                "line_number": 35
+              },
+              "isGitRepository()": {
+                "docstring": "Check if the specified directory is a valid git repository\n@returns Promise that resolves to true if valid git repository",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": true,
+                "parameters": [],
+                "line_number": 46
+              },
+              "getTrackedFiles()": {
+                "docstring": "Get all files tracked by git in the repository\n@returns Promise that resolves to array of file paths relative to repo root\n@throws {Error} If not a valid git repository or git command fails",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": true,
+                "parameters": [],
+                "line_number": 62
+              },
+              "runGitCommand(args)": {
+                "docstring": "Execute a git command in the repository directory\n@param args - Arguments to pass to git command\n@returns Promise that resolves to command stdout\n@throws {Error} If git command fails\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": true,
+                "parameters": [
+                  "args"
+                ],
+                "line_number": 100
+              },
+              "filterBinaryFiles(filePaths)": {
+                "docstring": "Check if files are binary using git attributes\n@param filePaths - Array of file paths to check\n@returns Promise that resolves to array of non-binary file paths\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": true,
+                "parameters": [
+                  "filePaths"
+                ],
+                "line_number": 129
+              },
+              "getRepositoryPath()": {
+                "docstring": "Get the absolute path to the repository\n@returns Absolute path to repository root",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [],
+                "line_number": 185
+              }
+            },
+            "base_classes": [],
+            "line_number": 25
+          }
+        },
+        "path": "src/core/git-processor.ts"
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {},
+        "classes": {},
+        "path": "src/core/index.ts"
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "node:fs/promises": [
+            "readFile"
+          ],
+          "node:path": [
+            "extname",
+            "basename"
+          ],
+          "../types/index.js": [
+            "SupportedLanguage"
+          ],
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {},
+        "classes": {
+          "LanguageDetector": {
+            "docstring": "Language detection service\nThis class provides comprehensive language detection using multiple strategies:\nfile extensions, shebang lines, and content analysis.",
+            "methods": {
+              "detectLanguage(filePath, content)": {
+                "docstring": "Detect the programming language of a file\n@param filePath - Path to the file\n@param content - Optional file content (if not provided, will try to read file)\n@returns Detected language or 'unknown'",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": true,
+                "parameters": [
+                  "filePath",
+                  "content"
+                ],
+                "line_number": 196
+              },
+              "detectByExtension(filePath)": {
+                "docstring": "Detect language by file extension\n@param filePath - File path or extension\n@returns Detected language or null if not found",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "filePath"
+                ],
+                "line_number": 232
+              },
+              "detectByShebang(content)": {
+                "docstring": "Detect language by shebang line\n@param content - File content\n@returns Detected language or null if no shebang match",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "content"
+                ],
+                "line_number": 243
+              },
+              "detectByContent(content)": {
+                "docstring": "Detect language by content analysis using heuristics\n@param content - File content\n@returns Detected language or null if no strong match",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "content"
+                ],
+                "line_number": 266
+              },
+              "isDefinitiveExtension(extension)": {
+                "docstring": "Check if a file extension provides definitive language identification\n@param extension - File extension\n@returns True if extension is definitive (not ambiguous)\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "extension"
+                ],
+                "line_number": 310
+              },
+              "getSupportedExtensions()": {
+                "docstring": "Get all supported file extensions\n@returns Array of supported file extensions",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [],
+                "line_number": 334
+              },
+              "supportsDeepAnalysis(language)": {
+                "docstring": "Check if a language is supported for deep analysis\n@param language - Language to check\n@returns True if language supports deep analysis (has dedicated parser)",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "language"
+                ],
+                "line_number": 344
+              }
+            },
+            "base_classes": [],
+            "line_number": 187
+          }
+        },
+        "path": "src/core/language-detector.ts"
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "path": [
+            "resolve",
+            "dirname",
+            "join",
+            "relative",
+            "sep"
+          ],
+          "../types/index.js": [
+            "AnalysisResult",
+            "FileAnalysis",
+            "ProjectSummary",
+            "DependencyGraph",
+            "AnalysisMetadata",
+            "FrameworkDetection",
+            "ANALYSIS_ENGINE_VERSION"
+          ],
+          "./analysis-coordinator.js": [
+            "AnalysisResult"
+          ],
+          "../patterns/api-detector.js": [
+            "DetailedApiEndpoint"
+          ],
+          "../patterns/state-detector.js": [
+            "DetailedStatePattern"
+          ],
+          "../patterns/event-detector.js": [
+            "DetailedEventHandler"
+          ],
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {
+          "dfs(file, path)": {
+            "docstring": "",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [
+              "file",
+              "path"
+            ],
+            "line_number": 401
+          }
+        },
+        "classes": {
+          "ResultsAggregator": {
+            "docstring": "Results aggregator that combines individual file analyses into final output",
+            "methods": {
+              "constructor(options)": {
+                "docstring": "",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "options"
+                ],
+                "line_number": 67
+              },
+              "aggregateResults(fileAnalyses, frameworkDetections, apiEndpoints, statePatterns, eventHandlers, startTime)": {
+                "docstring": "Aggregate all analysis results into final output format\n@param fileAnalyses - Individual file analysis results from coordinator\n@param frameworkDetections - Framework detection results\n@param apiEndpoints - API endpoint detection results\n@param statePatterns - State management pattern results\n@param eventHandlers - Event handler detection results\n@param startTime - Analysis start time for duration calculation\n@returns Complete analysis result matching Python format",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "fileAnalyses",
+                  "frameworkDetections",
+                  "apiEndpoints",
+                  "statePatterns",
+                  "eventHandlers",
+                  "startTime"
+                ],
+                "line_number": 87
+              },
+              "enrichFileAnalyses(fileAnalyses, apiEndpoints, statePatterns, eventHandlers)": {
+                "docstring": "Enrich file analyses with pattern detection results",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "fileAnalyses",
+                  "apiEndpoints",
+                  "statePatterns",
+                  "eventHandlers"
+                ],
+                "line_number": 131
+              },
+              "groupByFile(items)": {
+                "docstring": "Group pattern results by file path",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "items"
+                ],
+                "line_number": 188
+              },
+              "buildFolderStructure(analyses)": {
+                "docstring": "Build folder structure organization",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "analyses"
+                ],
+                "line_number": 203
+              },
+              "calculateSummary(analyses, frameworkDetections)": {
+                "docstring": "Calculate summary statistics",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "analyses",
+                  "frameworkDetections"
+                ],
+                "line_number": 234
+              },
+              "buildDependencyGraph(analyses)": {
+                "docstring": "Build dependency graph with relative import resolution",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "analyses"
+                ],
+                "line_number": 280
+              },
+              "resolveRelativeImport(fromFile, importPath, context)": {
+                "docstring": "Resolve relative import to absolute file path within the repository",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "fromFile",
+                  "importPath",
+                  "context"
+                ],
+                "line_number": 327
+              },
+              "detectCircularDependencies(dependencies)": {
+                "docstring": "Detect circular dependencies in the dependency graph",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "dependencies"
+                ],
+                "line_number": 392
+              },
+              "getAggregationStats(result)": {
+                "docstring": "Get detailed statistics about the aggregation process",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "result"
+                ],
+                "line_number": 450
+              }
+            },
+            "base_classes": [],
+            "line_number": 64
+          }
+        },
+        "path": "src/core/results-aggregator.ts"
+      }
+    ],
+    "src": [
+      {
+        "language": "typescript",
+        "imports": {
+          "./core/git-processor.js": [
+            "GitProcessor"
+          ],
+          "./core/file-processor.js": [
+            "FileProcessor"
+          ],
+          "./core/analysis-coordinator.js": [
+            "AnalysisCoordinator"
+          ],
+          "./core/results-aggregator.js": [
+            "ResultsAggregator"
+          ],
+          "./patterns/framework-detector.js": [
+            "FrameworkDetector"
+          ],
+          "./patterns/api-detector.js": [
+            "ApiDetector"
+          ],
+          "./patterns/state-detector.js": [
+            "StateDetector"
+          ],
+          "./patterns/event-detector.js": [
+            "EventDetector"
+          ],
+          "./types/index.js": [
+            "AnalysisResult",
+            "AnalysisOptions",
+            "ANALYSIS_ENGINE_VERSION"
+          ],
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {
+          "analyzeRepository(repositoryPath, options)": {
+            "docstring": "Analyze a git repository and return comprehensive analysis results\nThis is the main entry point for the analysis engine. It performs a complete\nanalysis of a git repository including:\n- Git-tracked file discovery\n- Multi-language parsing (JavaScript/TypeScript via Babel, others via Tree-sitter)\n- Framework detection (React, Django, NestJS, Flutter, Express)\n- API endpoint extraction\n- State management pattern detection\n- Event handler identification\n- Dependency graph construction\n- Results aggregation and formatting\n@param repositoryPath - Absolute or relative path to the git repository\n@param options - Configuration options for the analysis\n@returns Promise that resolves to comprehensive analysis results\n@example\n```typescript\nimport { analyzeRepository } from '@ai-assistant/code-analysis-engine';\nconst results = await analyzeRepository('./my-project', {\nextensions: ['.js', '.ts', '.py'],\nconcurrency: 5,\non_progress: (completed, total, current) => {\nconsole.log(`Progress: ${completed}/${total} - ${current}`);\n}\n});\nconsole.log(`Found ${results.summary.total_files} files`);\nconsole.log(`Detected frameworks:`, Object.keys(results.summary.frameworks || {}));\n```",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": true,
+            "parameters": [
+              "repositoryPath",
+              "options"
+            ],
+            "line_number": 87
+          },
+          "quickAnalyze(repositoryPath, limit)": {
+            "docstring": "Quick analysis function for testing and development\n@param repositoryPath - Path to repository\n@param limit - Maximum number of files to analyze\n@returns Analysis results with limited scope",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": true,
+            "parameters": [
+              "repositoryPath",
+              "limit"
+            ],
+            "line_number": 256
+          }
+        },
+        "classes": {},
+        "path": "src/index.ts"
+      }
+    ],
+    "src/parsers": [
+      {
+        "language": "typescript",
+        "imports": {
+          "@babel/parser": [
+            "parse",
+            "ParserOptions"
+          ],
+          "@babel/types": [
+            "* as t"
+          ],
+          "../types/index.js": [
+            "FileAnalysis",
+            "FunctionInfo",
+            "ClassInfo",
+            "Decorator",
+            "SupportedLanguage"
+          ],
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {},
+        "classes": {
+          "BabelAnalyzer": {
+            "docstring": "Babel-based analyzer for JavaScript and TypeScript files\nThis class provides comprehensive AST analysis using Babel's robust parser,\nextracting detailed information about code structure, patterns, and metadata.",
+            "methods": {
+              "parseJavaScript(content, language, filePath)": {
+                "docstring": "Parse and analyze a JavaScript or TypeScript file\n@param content - Source code content\n@param language - Programming language ('javascript' or 'typescript')\n@param filePath - File path for context (used in error messages)\n@returns Promise that resolves to detailed file analysis",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": true,
+                "parameters": [
+                  "content",
+                  "language",
+                  "filePath"
+                ],
+                "line_number": 79
+              },
+              "extractJSDocComments(ast, content)": {
+                "docstring": "Extract JSDoc comments from the AST\n@param ast - Babel AST\n@param content - Original source content\n@returns Map of line numbers to JSDoc content\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "ast",
+                  "content"
+                ],
+                "line_number": 165
+              },
+              "processImportDeclaration(path, analysis)": {
+                "docstring": "Process import declarations\n@param path - Babel node path for import\n@param analysis - Analysis result to update\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "path",
+                  "analysis"
+                ],
+                "line_number": 206
+              },
+              "processFunctionDeclaration(path, analysis, jsdocComments)": {
+                "docstring": "Process function declarations\n@param path - Babel node path for function\n@param analysis - Analysis result to update\n@param jsdocComments - Map of JSDoc comments\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "path",
+                  "analysis",
+                  "jsdocComments"
+                ],
+                "line_number": 241
+              },
+              "processVariableDeclarator(path, analysis, jsdocComments)": {
+                "docstring": "Process variable declarators (for arrow functions)\n@param path - Babel node path for variable declarator\n@param analysis - Analysis result to update\n@param jsdocComments - Map of JSDoc comments\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "path",
+                  "analysis",
+                  "jsdocComments"
+                ],
+                "line_number": 297
+              },
+              "getParamName(param)": {
+                "docstring": "Get parameter name from various parameter types\n@param param - Function parameter node\n@returns Parameter name as string\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "param"
+                ],
+                "line_number": 359
+              },
+              "findNearestJSDoc(line, jsdocComments)": {
+                "docstring": "Find the nearest JSDoc comment before a given line\n@param line - Line number to search near\n@param jsdocComments - Map of available JSDoc comments\n@returns JSDoc content or empty string\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "line",
+                  "jsdocComments"
+                ],
+                "line_number": 382
+              },
+              "processClassDeclaration(path, analysis, jsdocComments)": {
+                "docstring": "Process class declarations\n@param path - Babel node path for class\n@param analysis - Analysis result to update\n@param jsdocComments - Map of JSDoc comments\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "path",
+                  "analysis",
+                  "jsdocComments"
+                ],
+                "line_number": 406
+              },
+              "processClassMethod(path, analysis, jsdocComments)": {
+                "docstring": "Process class methods\n@param path - Babel node path for class method\n@param analysis - Analysis result to update\n@param jsdocComments - Map of JSDoc comments\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "path",
+                  "analysis",
+                  "jsdocComments"
+                ],
+                "line_number": 455
+              },
+              "processExportDeclaration(path, analysis)": {
+                "docstring": "Process export declarations\n@param path - Babel node path for export\n@param analysis - Analysis result to update\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "path",
+                  "analysis"
+                ],
+                "line_number": 507
+              }
+            },
+            "base_classes": [],
+            "line_number": 69
+          }
+        },
+        "path": "src/parsers/babel-analyzer.ts"
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {},
+        "classes": {},
+        "path": "src/parsers/index.ts"
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "../types/index.js": [
+            "FileAnalysis",
+            "FunctionInfo",
+            "ClassInfo",
+            "SupportedLanguage",
+            "ApiEndpoint",
+            "Decorator",
+            "HttpMethod"
+          ],
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {},
+        "classes": {
+          "PythonAnalyzer": {
+            "docstring": "Python code analyzer using regex patterns\nThis class provides comprehensive analysis of Python code, with special\nsupport for Django patterns, REST API endpoints, and Python-specific constructs.",
+            "methods": {
+              "analyzePython(content, filePath)": {
+                "docstring": "Analyze a Python file using regex patterns\n@param content - Python source code content\n@param filePath - File path for context (used in error messages)\n@returns Promise that resolves to detailed file analysis",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": true,
+                "parameters": [
+                  "content",
+                  "filePath"
+                ],
+                "line_number": 65
+              },
+              "extractImports(content, analysis)": {
+                "docstring": "Extract import statements from Python code\n@param content - Source code content\n@param analysis - Analysis result to update\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "content",
+                  "analysis"
+                ],
+                "line_number": 115
+              },
+              "parseImportLine(importLine, analysis)": {
+                "docstring": "Parse a single import line (which may be multi-line)\n@param importLine - Complete import statement\n@param analysis - Analysis result to update\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "importLine",
+                  "analysis"
+                ],
+                "line_number": 159
+              },
+              "getLineNumberAccurate(content, matchedString)": {
+                "docstring": "Get accurate line number for a matched string in the source\n@param content - Full source content\n@param matchedString - String that was matched\n@returns Line number (1-based)\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "content",
+                  "matchedString"
+                ],
+                "line_number": 213
+              },
+              "extractFunctions(content, lines, analysis)": {
+                "docstring": "Extract function definitions from Python code\n@param content - Source code content\n@param lines - Source code split into lines\n@param analysis - Analysis result to update\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "content",
+                  "lines",
+                  "analysis"
+                ],
+                "line_number": 226
+              },
+              "extractClasses(content, lines, analysis)": {
+                "docstring": "Extract class definitions from Python code\n@param content - Source code content\n@param lines - Source code split into lines\n@param analysis - Analysis result to update\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "content",
+                  "lines",
+                  "analysis"
+                ],
+                "line_number": 293
+              },
+              "parseParameters(paramString)": {
+                "docstring": "Parse function parameters from parameter string\n@param paramString - Function parameter string\n@returns Array of parameter names\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "paramString"
+                ],
+                "line_number": 350
+              },
+              "parseBaseClasses(inheritanceString)": {
+                "docstring": "Parse base classes from inheritance string\n@param inheritanceString - Class inheritance string\n@returns Array of base class names\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "inheritanceString"
+                ],
+                "line_number": 373
+              },
+              "findDecoratorsBeforeFunction(lines, functionLineNumber)": {
+                "docstring": "Find decorators before a function\n@param lines - Source code lines\n@param functionLineNumber - Line number of the function\n@returns Array of decorator names\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "lines",
+                  "functionLineNumber"
+                ],
+                "line_number": 392
+              },
+              "findDecoratorsBeforeClass(lines, classLineNumber)": {
+                "docstring": "Find decorators before a class\n@param lines - Source code lines\n@param classLineNumber - Line number of the class\n@returns Array of decorator names\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "lines",
+                  "classLineNumber"
+                ],
+                "line_number": 436
+              },
+              "findFunctionDocstring(lines, functionLineNumber)": {
+                "docstring": "Find docstring for a function\n@param lines - Source code lines\n@param functionLineNumber - Line number of the function\n@returns Docstring content or empty string\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "lines",
+                  "functionLineNumber"
+                ],
+                "line_number": 467
+              },
+              "findClassDocstring(lines, classLineNumber)": {
+                "docstring": "Find docstring for a class\n@param lines - Source code lines\n@param classLineNumber - Line number of the class\n@returns Docstring content or empty string\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "lines",
+                  "classLineNumber"
+                ],
+                "line_number": 491
+              },
+              "extractDocstring(lines, startLine)": {
+                "docstring": "Extract docstring content from lines\n@param lines - Source code lines\n@param startLine - Line where docstring starts\n@returns Docstring content\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "lines",
+                  "startLine"
+                ],
+                "line_number": 515
+              },
+              "extractClassMethods(content, lines, className, classLineNumber)": {
+                "docstring": "Extract methods from a class\n@param content - Source code content\n@param lines - Source code lines\n@param className - Name of the class\n@param classLineNumber - Line number where class starts\n@returns Object mapping method signatures to method info\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "content",
+                  "lines",
+                  "className",
+                  "classLineNumber"
+                ],
+                "line_number": 568
+              },
+              "findClassEndLine(lines, classLineNumber)": {
+                "docstring": "Find the end line of a class definition\n@param lines - Source code lines\n@param classLineNumber - Line number where class starts\n@returns Line number where class ends\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "lines",
+                  "classLineNumber"
+                ],
+                "line_number": 642
+              },
+              "getLineNumber(lines, matchedString)": {
+                "docstring": "Get line number for a matched string in the source\n@param lines - Source code lines\n@param matchedString - String that was matched\n@returns Line number (1-based)\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "lines",
+                  "matchedString"
+                ],
+                "line_number": 675
+              },
+              "isDjangoModel(baseClasses)": {
+                "docstring": "Check if class is a Django model\n@param baseClasses - Array of base class names\n@returns True if this is a Django model\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "baseClasses"
+                ],
+                "line_number": 697
+              },
+              "isDjangoSerializer(baseClasses)": {
+                "docstring": "Check if class is a Django serializer\n@param baseClasses - Array of base class names\n@returns True if this is a Django serializer\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "baseClasses"
+                ],
+                "line_number": 708
+              },
+              "isDjangoViewClass(baseClasses)": {
+                "docstring": "Check if class is a Django view class\n@param baseClasses - Array of base class names\n@returns True if this is a Django view class\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "baseClasses"
+                ],
+                "line_number": 719
+              },
+              "isHTTPMethod(functionName)": {
+                "docstring": "Check if function name is an HTTP method\n@param functionName - Name of the function\n@returns True if this is an HTTP method handler\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "functionName"
+                ],
+                "line_number": 736
+              },
+              "extractAPIEndpoints(decorators, functionName, lineNumber)": {
+                "docstring": "Extract API endpoints from decorators and function context\n@param decorators - Array of decorator names\n@param functionName - Name of the function\n@param lineNumber - Line number of the function\n@returns Array of API endpoint information\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "decorators",
+                  "functionName",
+                  "lineNumber"
+                ],
+                "line_number": 750
+              },
+              "getHttpMethodFromFunction(functionName)": {
+                "docstring": "Get HTTP method from function name\n@param functionName - Name of the function\n@returns HTTP method or undefined\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "functionName"
+                ],
+                "line_number": 791
+              }
+            },
+            "base_classes": [],
+            "line_number": 56
+          }
+        },
+        "path": "src/parsers/python-analyzer.ts"
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "web-tree-sitter": [
+            "Parser"
+          ],
+          "node:fs/promises": [
+            "readFile"
+          ],
+          "node:path": [
+            "join"
+          ],
+          "node:url": [
+            "fileURLToPath"
+          ],
+          "../types/index.js": [
+            "SupportedLanguage"
+          ],
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {},
+        "classes": {
+          "TreeSitterManager": {
+            "docstring": "Tree-sitter WebAssembly manager\nThis class handles loading and managing Tree-sitter parsers for multiple languages.\nIt provides a unified interface for parsing code and executing queries.",
+            "methods": {
+              "initialize()": {
+                "docstring": "Initialize Tree-sitter and load all language parsers\n@returns Promise that resolves when initialization is complete\n@throws {Error} If initialization fails",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": true,
+                "parameters": [],
+                "line_number": 80
+              },
+              "parseFile(content, language)": {
+                "docstring": "Parse source code using the appropriate language parser\n@param content - Source code content\n@param language - Programming language\n@returns Promise that resolves to syntax tree\n@throws {Error} If parsing fails or language not supported",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": true,
+                "parameters": [
+                  "content",
+                  "language"
+                ],
+                "line_number": 145
+              },
+              "query(tree, queryString, language)": {
+                "docstring": "Execute a Tree-sitter query on a syntax tree\n@param tree - Syntax tree from parseFile\n@param queryString - Tree-sitter query string\n@param language - Programming language (for language-specific queries)\n@returns Array of query capture results",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "tree",
+                  "queryString",
+                  "language"
+                ],
+                "line_number": 176
+              },
+              "hasParser(language)": {
+                "docstring": "Check if a language parser is available\n@param language - Programming language to check\n@returns True if parser is loaded and available",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "language"
+                ],
+                "line_number": 203
+              },
+              "getSupportedLanguages()": {
+                "docstring": "Get list of supported languages\n@returns Array of supported language identifiers",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [],
+                "line_number": 212
+              },
+              "loadParser(language)": {
+                "docstring": "Load a specific language parser\n@param language - Language to load\n@throws {Error} If parser loading fails\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": true,
+                "parameters": [
+                  "language"
+                ],
+                "line_number": 223
+              }
+            },
+            "base_classes": [],
+            "line_number": 69
+          }
+        },
+        "path": "src/parsers/tree-sitter-manager.ts"
+      }
+    ],
+    "src/parsers/queries": [
+      {
+        "path": "src/parsers/queries/dart.scm",
+        "language": "unknown",
+        "imports": {},
+        "functions": {},
+        "classes": {},
+        "lines": 36,
+        "characters": 986,
+        "non_empty_lines": 29,
+        "avg_line_length": 27.38888888888889
+      },
+      {
+        "path": "src/parsers/queries/javascript.scm",
+        "language": "unknown",
+        "imports": {},
+        "functions": {},
+        "classes": {},
+        "lines": 38,
+        "characters": 995,
+        "non_empty_lines": 30,
+        "avg_line_length": 26.18421052631579
+      },
+      {
+        "path": "src/parsers/queries/python.scm",
+        "language": "unknown",
+        "imports": {},
+        "functions": {},
+        "classes": {},
+        "lines": 32,
+        "characters": 828,
+        "non_empty_lines": 25,
+        "avg_line_length": 25.875
+      },
+      {
+        "path": "src/parsers/queries/typescript.scm",
+        "language": "unknown",
+        "imports": {},
+        "functions": {},
+        "classes": {},
+        "lines": 27,
+        "characters": 742,
+        "non_empty_lines": 21,
+        "avg_line_length": 27.48148148148148
+      }
+    ],
+    "src/parsers/wasm": [
+      {
+        "path": "src/parsers/wasm/tree-sitter-dart.wasm",
+        "language": "unknown",
+        "imports": {},
+        "functions": {},
+        "classes": {},
+        "lines": 1,
+        "characters": 50,
+        "non_empty_lines": 1,
+        "avg_line_length": 50
+      },
+      {
+        "path": "src/parsers/wasm/tree-sitter-javascript.wasm",
+        "language": "unknown",
+        "imports": {},
+        "functions": {},
+        "classes": {},
+        "lines": 1,
+        "characters": 56,
+        "non_empty_lines": 1,
+        "avg_line_length": 56
+      },
+      {
+        "path": "src/parsers/wasm/tree-sitter-python.wasm",
+        "language": "unknown",
+        "imports": {},
+        "functions": {},
+        "classes": {},
+        "lines": 1,
+        "characters": 52,
+        "non_empty_lines": 1,
+        "avg_line_length": 52
+      },
+      {
+        "path": "src/parsers/wasm/tree-sitter-typescript.wasm",
+        "language": "unknown",
+        "imports": {},
+        "functions": {},
+        "classes": {},
+        "lines": 1,
+        "characters": 56,
+        "non_empty_lines": 1,
+        "avg_line_length": 56
+      },
+      {
+        "path": "src/parsers/wasm/tree-sitter.wasm",
+        "language": "unknown",
+        "imports": {},
+        "functions": {},
+        "classes": {},
+        "lines": 1070,
+        "characters": 186487,
+        "non_empty_lines": 1040,
+        "avg_line_length": 174.28691588785045
+      }
+    ],
+    "src/patterns": [
+      {
+        "language": "typescript",
+        "imports": {
+          "../types/index.js": [
+            "FileAnalysis",
+            "HttpMethod",
+            "ApiEndpoint",
+            "SupportedLanguage"
+          ],
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {},
+        "classes": {
+          "ApiDetector": {
+            "docstring": "API endpoint detection engine\nThis class analyzes file analysis results to detect REST API endpoints\nacross multiple frameworks with detailed metadata extraction.",
+            "methods": {
+              "constructor(debugMode)": {
+                "docstring": "Create a new API detector\n@param debugMode - Enable debug logging for endpoint detection",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "debugMode"
+                ],
+                "line_number": 69
+              },
+              "detectEndpoints(fileAnalyses)": {
+                "docstring": "Detect API endpoints from analyzed files\n@param fileAnalyses - Map of file paths to their analysis results\n@returns Array of detected API endpoints with detailed information",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "fileAnalyses"
+                ],
+                "line_number": 79
+              },
+              "analyzeFileForEndpoints(filePath, analysis)": {
+                "docstring": "Analyze a single file for API endpoints\n@param filePath - Path to the file being analyzed\n@param analysis - File analysis result\n@returns Array of endpoints found in this file\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "filePath",
+                  "analysis"
+                ],
+                "line_number": 122
+              },
+              "detectExpressEndpoints(filePath, analysis)": {
+                "docstring": "Detect Express.js API endpoints\n@param filePath - File path\n@param analysis - File analysis\n@returns Express endpoints found\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "filePath",
+                  "analysis"
+                ],
+                "line_number": 148
+              },
+              "hasExpressImport(analysis)": {
+                "docstring": "Check if file imports Express\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "analysis"
+                ],
+                "line_number": 212
+              },
+              "parseExpressEndpoint(apiEndpoint, filePath, handlerFunction, lineNumber)": {
+                "docstring": "Parse an API endpoint detected by the analyzer into Express format\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "apiEndpoint",
+                  "filePath",
+                  "handlerFunction",
+                  "lineNumber"
+                ],
+                "line_number": 224
+              },
+              "isExpressEndpoint(apiEndpoint)": {
+                "docstring": "Check if an API endpoint is Express-style\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "apiEndpoint"
+                ],
+                "line_number": 260
+              },
+              "extractHttpMethod(apiEndpoint)": {
+                "docstring": "Extract HTTP method from API endpoint\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "apiEndpoint"
+                ],
+                "line_number": 280
+              },
+              "extractRoute(apiEndpoint)": {
+                "docstring": "Extract route from API endpoint\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "apiEndpoint"
+                ],
+                "line_number": 306
+              },
+              "extractRouteParameters(route)": {
+                "docstring": "Extract route parameters from a route pattern\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "route"
+                ],
+                "line_number": 314
+              },
+              "isValidHttpMethod(method)": {
+                "docstring": "Check if a string is a valid HTTP method\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "method"
+                ],
+                "line_number": 347
+              },
+              "detectExpressRoutePatterns(filePath, analysis)": {
+                "docstring": "Detect Express route patterns manually (fallback method)\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "filePath",
+                  "analysis"
+                ],
+                "line_number": 356
+              },
+              "findRouteHandlerPatterns(functionSignature, functionInfo)": {
+                "docstring": "Find route handler patterns in function signatures\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "functionSignature",
+                  "functionInfo"
+                ],
+                "line_number": 386
+              },
+              "detectNestJSEndpoints(filePath, analysis)": {
+                "docstring": "Detect NestJS API endpoints\n@param filePath - File path\n@param analysis - File analysis\n@returns NestJS endpoints found\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "filePath",
+                  "analysis"
+                ],
+                "line_number": 434
+              },
+              "hasNestJSImport(analysis)": {
+                "docstring": "Check if file imports NestJS\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "analysis"
+                ],
+                "line_number": 543
+              },
+              "extractControllerPrefix(analysis)": {
+                "docstring": "Extract controller prefix from @Controller decorator\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "analysis"
+                ],
+                "line_number": 555
+              },
+              "parseNestJSDecorator(decorator, filePath, handlerFunction, lineNumber, controllerPrefix)": {
+                "docstring": "Parse a NestJS decorator into an API endpoint\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "decorator",
+                  "filePath",
+                  "handlerFunction",
+                  "lineNumber",
+                  "controllerPrefix"
+                ],
+                "line_number": 581
+              },
+              "parseNestJSEndpoint(apiEndpoint, filePath, handlerFunction, lineNumber, controllerPrefix)": {
+                "docstring": "Parse a NestJS API endpoint detected by analyzer\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "apiEndpoint",
+                  "filePath",
+                  "handlerFunction",
+                  "lineNumber",
+                  "controllerPrefix"
+                ],
+                "line_number": 611
+              },
+              "isNestJSEndpoint(apiEndpoint)": {
+                "docstring": "Check if an API endpoint is NestJS-style\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "apiEndpoint"
+                ],
+                "line_number": 648
+              },
+              "extractNestJSMethod(decorator)": {
+                "docstring": "Extract HTTP method from NestJS decorator\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "decorator"
+                ],
+                "line_number": 671
+              },
+              "extractNestJSRoute(decorator, controllerPrefix)": {
+                "docstring": "Extract route from NestJS decorator\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "decorator",
+                  "controllerPrefix"
+                ],
+                "line_number": 704
+              },
+              "detectDjangoEndpoints(filePath, analysis)": {
+                "docstring": "Detect Django API endpoints\n@param filePath - File path\n@param analysis - File analysis\n@returns Django endpoints found\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "filePath",
+                  "analysis"
+                ],
+                "line_number": 735
+              },
+              "hasDjangoImport(analysis)": {
+                "docstring": "Check if file imports Django\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "analysis"
+                ],
+                "line_number": 810
+              },
+              "detectDjangoViews(filePath, analysis)": {
+                "docstring": "Detect Django view functions\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "filePath",
+                  "analysis"
+                ],
+                "line_number": 825
+              },
+              "isDjangoViewClass(classInfo)": {
+                "docstring": "Check if a class is a Django view class\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "classInfo"
+                ],
+                "line_number": 884
+              },
+              "extractDjangoViewMethods(classInfo)": {
+                "docstring": "Extract HTTP methods from Django view class\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "classInfo"
+                ],
+                "line_number": 917
+              },
+              "detectDjangoUrlPatterns(filePath, analysis)": {
+                "docstring": "Detect Django URL patterns\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "filePath",
+                  "analysis"
+                ],
+                "line_number": 948
+              },
+              "detectDjangoRestFramework(filePath, analysis)": {
+                "docstring": "Detect Django REST framework patterns\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "filePath",
+                  "analysis"
+                ],
+                "line_number": 977
+              },
+              "isDRFViewClass(classInfo)": {
+                "docstring": "Check if a class is a Django REST Framework view class\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "classInfo"
+                ],
+                "line_number": 1016
+              },
+              "extractDRFMethods(classInfo)": {
+                "docstring": "Extract HTTP methods from DRF view class\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "classInfo"
+                ],
+                "line_number": 1041
+              },
+              "parseDjangoDecorator(decorator, filePath, handlerFunction, lineNumber)": {
+                "docstring": "Parse a Django decorator into an API endpoint\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "decorator",
+                  "filePath",
+                  "handlerFunction",
+                  "lineNumber"
+                ],
+                "line_number": 1076
+              },
+              "extractMethodsFromApiViewDecorator(decorator)": {
+                "docstring": "Extract HTTP methods from @api_view decorator\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "decorator"
+                ],
+                "line_number": 1109
+              },
+              "parseDjangoEndpoint(apiEndpoint, filePath, handlerFunction, lineNumber)": {
+                "docstring": "Parse a Django API endpoint detected by analyzer\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "apiEndpoint",
+                  "filePath",
+                  "handlerFunction",
+                  "lineNumber"
+                ],
+                "line_number": 1134
+              },
+              "isDjangoEndpoint(apiEndpoint)": {
+                "docstring": "Check if an API endpoint is Django-style\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "apiEndpoint"
+                ],
+                "line_number": 1163
+              },
+              "inferDjangoRoute(name)": {
+                "docstring": "Infer Django route from function/class name\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "name"
+                ],
+                "line_number": 1180
+              },
+              "getDetectionStats(endpoints)": {
+                "docstring": "Generate API detection statistics\n@param endpoints - Array of detected endpoints\n@returns Statistical summary of API detection",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "endpoints"
+                ],
+                "line_number": 1199
+              },
+              "getDetectionReport(fileAnalyses)": {
+                "docstring": "Get detailed detection report for debugging\n@param fileAnalyses - Map of file analyses\n@returns Detailed detection report",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "fileAnalyses"
+                ],
+                "line_number": 1260
+              },
+              "getLanguageDistribution(fileAnalyses)": {
+                "docstring": "Get language distribution from file analyses\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "fileAnalyses"
+                ],
+                "line_number": 1292
+              }
+            },
+            "base_classes": [],
+            "line_number": 61
+          }
+        },
+        "path": "src/patterns/api-detector.ts"
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "../types/index.js": [
+            "FileAnalysis",
+            "EventHandler",
+            "EventHandlerType",
+            "SupportedLanguage"
+          ],
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {},
+        "classes": {
+          "EventDetector": {
+            "docstring": "Event handler detection engine\nThis class analyzes file analysis results to detect event handlers\nacross multiple frameworks with detailed metadata extraction.",
+            "methods": {
+              "constructor(debugMode)": {
+                "docstring": "Create a new event detector\n@param debugMode - Enable debug logging for event detection",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "debugMode"
+                ],
+                "line_number": 84
+              },
+              "detectEventHandlers(fileAnalyses)": {
+                "docstring": "Detect event handlers from analyzed files\n@param fileAnalyses - Map of file paths to their analysis results\n@returns Array of detected event handlers with detailed information",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "fileAnalyses"
+                ],
+                "line_number": 95
+              },
+              "analyzeFileForEventHandlers(filePath, analysis)": {
+                "docstring": "Analyze a single file for event handlers\n@param filePath - Path to the file being analyzed\n@param analysis - File analysis result\n@returns Array of event handlers found in this file\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "filePath",
+                  "analysis"
+                ],
+                "line_number": 138
+              },
+              "detectDOMEventHandlers(filePath, analysis)": {
+                "docstring": "Detect DOM event handlers\n@param filePath - File path\n@param analysis - File analysis\n@returns DOM event handlers found\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "filePath",
+                  "analysis"
+                ],
+                "line_number": 173
+              },
+              "detectReactEventHandlers(filePath, analysis)": {
+                "docstring": "Detect React event handlers\n@param filePath - File path\n@param analysis - File analysis\n@returns React event handlers found\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "filePath",
+                  "analysis"
+                ],
+                "line_number": 227
+              },
+              "detectElectronIPCHandlers(filePath, analysis)": {
+                "docstring": "Detect Electron IPC handlers\n@param filePath - File path\n@param analysis - File analysis\n@returns Electron IPC handlers found\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "filePath",
+                  "analysis"
+                ],
+                "line_number": 291
+              },
+              "detectCustomEventHandlers(filePath, analysis)": {
+                "docstring": "Detect custom event handlers\n@param filePath - File path\n@param analysis - File analysis\n@returns Custom event handlers found\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "filePath",
+                  "analysis"
+                ],
+                "line_number": 366
+              },
+              "detectDjangoEventHandlers(filePath, analysis)": {
+                "docstring": "Detect Django event handlers\n@param filePath - File path\n@param analysis - File analysis\n@returns Django event handlers found\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "filePath",
+                  "analysis"
+                ],
+                "line_number": 427
+              },
+              "detectGenericEventHandlers(filePath, analysis)": {
+                "docstring": "Detect generic event handlers\n@param filePath - File path\n@param analysis - File analysis\n@returns Generic event handlers found\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "filePath",
+                  "analysis"
+                ],
+                "line_number": 497
+              },
+              "hasReactImport(analysis)": {
+                "docstring": "Check if file imports React\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "analysis"
+                ],
+                "line_number": 540
+              },
+              "hasElectronImport(analysis)": {
+                "docstring": "Check if file imports Electron\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "analysis"
+                ],
+                "line_number": 553
+              },
+              "hasDjangoImport(analysis)": {
+                "docstring": "Check if file imports Django\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "analysis"
+                ],
+                "line_number": 566
+              },
+              "isDOMEventHandler(eventHandler)": {
+                "docstring": "Check if event handler is DOM-related\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "eventHandler"
+                ],
+                "line_number": 579
+              },
+              "isReactEventHandler(eventHandler)": {
+                "docstring": "Check if event handler is React-related\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "eventHandler"
+                ],
+                "line_number": 593
+              },
+              "isElectronIPCHandler(eventHandler)": {
+                "docstring": "Check if event handler is Electron IPC-related\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "eventHandler"
+                ],
+                "line_number": 606
+              },
+              "getDOMEventType(eventHandler)": {
+                "docstring": "Get DOM event type from handler string\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "eventHandler"
+                ],
+                "line_number": 619
+              },
+              "getReactEventType(eventHandler)": {
+                "docstring": "Get React event type from handler string\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "eventHandler"
+                ],
+                "line_number": 628
+              },
+              "getElectronIPCType(eventHandler)": {
+                "docstring": "Get Electron IPC type from handler string\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "eventHandler"
+                ],
+                "line_number": 639
+              },
+              "extractEventName(eventHandler)": {
+                "docstring": "Extract event name from handler string\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "eventHandler"
+                ],
+                "line_number": 649
+              },
+              "extractReactEventName(eventHandler)": {
+                "docstring": "Extract React event name from handler string\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "eventHandler"
+                ],
+                "line_number": 669
+              },
+              "extractIPCChannel(eventHandler)": {
+                "docstring": "Extract IPC channel from handler string\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "eventHandler"
+                ],
+                "line_number": 681
+              },
+              "detectDOMPatternsInFunction(filePath, functionName, functionInfo)": {
+                "docstring": "Detect DOM patterns in a function\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "filePath",
+                  "functionName",
+                  "functionInfo"
+                ],
+                "line_number": 693
+              },
+              "detectReactEventsByNaming(filePath, functionName, functionInfo)": {
+                "docstring": "Detect React events by naming conventions\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "filePath",
+                  "functionName",
+                  "functionInfo"
+                ],
+                "line_number": 732
+              },
+              "isIPCSetupFunction(functionName, functionInfo)": {
+                "docstring": "Check if function is an IPC setup function\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "functionName",
+                  "functionInfo"
+                ],
+                "line_number": 775
+              },
+              "inferIPCChannel(functionName)": {
+                "docstring": "Infer IPC channel from function name\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "functionName"
+                ],
+                "line_number": 790
+              },
+              "isEventEmitterPattern(functionName, functionInfo, analysis)": {
+                "docstring": "Check if function follows EventEmitter pattern\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "functionName",
+                  "functionInfo",
+                  "analysis"
+                ],
+                "line_number": 803
+              },
+              "isCallbackPattern(functionName, functionInfo)": {
+                "docstring": "Check if function is a callback pattern\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "functionName",
+                  "functionInfo"
+                ],
+                "line_number": 825
+              },
+              "extractCustomEventName(functionName)": {
+                "docstring": "Extract custom event name from function name\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "functionName"
+                ],
+                "line_number": 841
+              },
+              "isDjangoSignalDecorator(decorator)": {
+                "docstring": "Check if decorator is Django signal decorator\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "decorator"
+                ],
+                "line_number": 853
+              },
+              "extractSignalName(decorator)": {
+                "docstring": "Extract signal name from decorator\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "decorator"
+                ],
+                "line_number": 872
+              },
+              "isDjangoFormHandler(functionName, functionInfo, analysis)": {
+                "docstring": "Check if function is Django form handler\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "functionName",
+                  "functionInfo",
+                  "analysis"
+                ],
+                "line_number": 880
+              },
+              "hasEventHandlerNaming(functionName)": {
+                "docstring": "Check if function name suggests event handling\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "functionName"
+                ],
+                "line_number": 907
+              },
+              "inferEventTypeFromName(functionName)": {
+                "docstring": "Infer event type from function name\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "functionName"
+                ],
+                "line_number": 926
+              },
+              "extractEventFromName(functionName)": {
+                "docstring": "Extract event name from function name\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "functionName"
+                ],
+                "line_number": 941
+              },
+              "initializeEventPatterns()": {
+                "docstring": "Initialize event pattern configurations\n@returns Array of event pattern configurations\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [],
+                "line_number": 961
+              },
+              "getDetectionStats(handlers)": {
+                "docstring": "Generate event detection statistics\n@param handlers - Array of detected event handlers\n@returns Statistical summary of event detection",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "handlers"
+                ],
+                "line_number": 1041
+              },
+              "getDetectionReport(fileAnalyses)": {
+                "docstring": "Get detailed detection report for debugging\n@param fileAnalyses - Map of file analyses\n@returns Detailed detection report",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "fileAnalyses"
+                ],
+                "line_number": 1097
+              },
+              "getLanguageDistribution(fileAnalyses)": {
+                "docstring": "Get language distribution from file analyses\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "fileAnalyses"
+                ],
+                "line_number": 1135
+              }
+            },
+            "base_classes": [],
+            "line_number": 75
+          }
+        },
+        "path": "src/patterns/event-detector.ts"
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "../types/index.js": [
+            "FileAnalysis",
+            "FrameworkDetection",
+            "SupportedLanguage"
+          ],
+          "./pattern-definitions.js": [
+            "ALL_FRAMEWORK_SIGNATURES",
+            "FrameworkSignature",
+            "PatternDefinition"
+          ],
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {},
+        "classes": {
+          "FrameworkDetector": {
+            "docstring": "Framework detection engine\nAnalyzes a collection of file analyses to detect which frameworks\nare being used in the codebase with confidence scoring.",
+            "methods": {
+              "constructor(debugMode)": {
+                "docstring": "Create a new framework detector\n@param debugMode - Enable debug logging for pattern matching",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "debugMode"
+                ],
+                "line_number": 54
+              },
+              "detectFrameworks(fileAnalyses)": {
+                "docstring": "Detect frameworks from analyzed files\n@param fileAnalyses - Map of file paths to their analysis results\n@returns Array of detected frameworks with confidence scores",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "fileAnalyses"
+                ],
+                "line_number": 64
+              },
+              "analyzeFileForFrameworks(filePath, analysis, frameworkEvidence)": {
+                "docstring": "Analyze a single file for framework patterns\n@param filePath - Path to the file being analyzed\n@param analysis - File analysis result\n@param frameworkEvidence - Evidence collection for all frameworks\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "filePath",
+                  "analysis",
+                  "frameworkEvidence"
+                ],
+                "line_number": 137
+              },
+              "matchesPattern(filePath, analysis, pattern)": {
+                "docstring": "Check if a pattern matches against a file analysis\n@param filePath - Path to the file\n@param analysis - File analysis result\n@param pattern - Pattern to match\n@returns True if pattern matches\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "filePath",
+                  "analysis",
+                  "pattern"
+                ],
+                "line_number": 174
+              },
+              "matchFileNamePattern(filePath, pattern)": {
+                "docstring": "Match file name patterns\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "filePath",
+                  "pattern"
+                ],
+                "line_number": 213
+              },
+              "matchImportPattern(analysis, pattern)": {
+                "docstring": "Match import patterns\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "analysis",
+                  "pattern"
+                ],
+                "line_number": 222
+              },
+              "matchFunctionCallPattern(analysis, pattern)": {
+                "docstring": "Match function call patterns\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "analysis",
+                  "pattern"
+                ],
+                "line_number": 240
+              },
+              "matchClassNamePattern(analysis, pattern)": {
+                "docstring": "Match class name patterns\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "analysis",
+                  "pattern"
+                ],
+                "line_number": 296
+              },
+              "matchDecoratorPattern(analysis, pattern)": {
+                "docstring": "Match decorator patterns\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "analysis",
+                  "pattern"
+                ],
+                "line_number": 326
+              },
+              "matchContentPattern(analysis, pattern)": {
+                "docstring": "Match content patterns (requires reading file content)\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "analysis",
+                  "pattern"
+                ],
+                "line_number": 362
+              },
+              "calculateMaxPossibleScore(signature, fileAnalyses)": {
+                "docstring": "Calculate the maximum possible score for a framework given the available files\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "signature",
+                  "fileAnalyses"
+                ],
+                "line_number": 378
+              },
+              "getDetectionReport(fileAnalyses)": {
+                "docstring": "Get detailed detection report for debugging\n@param fileAnalyses - Map of file analyses\n@returns Detailed detection report",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "fileAnalyses"
+                ],
+                "line_number": 423
+              },
+              "getLanguageDistribution(fileAnalyses)": {
+                "docstring": "Get language distribution from file analyses\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "fileAnalyses"
+                ],
+                "line_number": 448
+              }
+            },
+            "base_classes": [],
+            "line_number": 46
+          }
+        },
+        "path": "src/patterns/framework-detector.ts"
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {},
+        "classes": {},
+        "path": "src/patterns/index.ts"
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "../types/index.js": [
+            "SupportedLanguage",
+            "FileAnalysis"
+          ],
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {
+          "getFrameworkSignature(name)": {
+            "docstring": "Get framework signature by name",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [
+              "name"
+            ],
+            "line_number": 447
+          },
+          "getSupportedFrameworks()": {
+            "docstring": "Get all supported framework names",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [],
+            "line_number": 454
+          }
+        },
+        "classes": {},
+        "path": "src/patterns/pattern-definitions.ts"
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "../types/index.js": [
+            "FileAnalysis",
+            "StateChange",
+            "StatePatternType",
+            "MutationType",
+            "SupportedLanguage"
+          ],
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {},
+        "classes": {
+          "StateDetector": {
+            "docstring": "State management pattern detection engine\nThis class analyzes file analysis results to detect state management patterns\nacross multiple frameworks with detailed metadata extraction.",
+            "methods": {
+              "constructor(debugMode)": {
+                "docstring": "Create a new state detector\n@param debugMode - Enable debug logging for state detection",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "debugMode"
+                ],
+                "line_number": 84
+              },
+              "detectStatePatterns(fileAnalyses)": {
+                "docstring": "Detect state management patterns from analyzed files\n@param fileAnalyses - Map of file paths to their analysis results\n@returns Array of detected state patterns with detailed information",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "fileAnalyses"
+                ],
+                "line_number": 95
+              },
+              "analyzeFileForStatePatterns(filePath, analysis)": {
+                "docstring": "Analyze a single file for state management patterns\n@param filePath - Path to the file being analyzed\n@param analysis - File analysis result\n@returns Array of state patterns found in this file\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "filePath",
+                  "analysis"
+                ],
+                "line_number": 138
+              },
+              "detectReactStatePatterns(filePath, analysis)": {
+                "docstring": "Detect React state management patterns\n@param filePath - File path\n@param analysis - File analysis\n@returns React state patterns found\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "filePath",
+                  "analysis"
+                ],
+                "line_number": 170
+              },
+              "hasReactImport(analysis)": {
+                "docstring": "Check if file imports React\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "analysis"
+                ],
+                "line_number": 238
+              },
+              "parseReactStateChange(stateChange, filePath, containerName, lineNumber, context)": {
+                "docstring": "Parse a React state change from analyzer results\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "stateChange",
+                  "filePath",
+                  "containerName",
+                  "lineNumber",
+                  "context"
+                ],
+                "line_number": 252
+              },
+              "detectReactHooksInFunction(filePath, functionName, functionInfo, analysis)": {
+                "docstring": "Detect React hooks in a function\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "filePath",
+                  "functionName",
+                  "functionInfo",
+                  "analysis"
+                ],
+                "line_number": 293
+              },
+              "isReactComponentClass(classInfo)": {
+                "docstring": "Check if a class is a React component\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "classInfo"
+                ],
+                "line_number": 373
+              },
+              "detectReactClassState(filePath, className, classInfo)": {
+                "docstring": "Detect React class component state patterns\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "filePath",
+                  "className",
+                  "classInfo"
+                ],
+                "line_number": 392
+              },
+              "extractVariableName(stateChange, pattern)": {
+                "docstring": "Extract variable name from state change pattern\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "stateChange",
+                  "pattern"
+                ],
+                "line_number": 485
+              },
+              "inferStateVariableName(functionName, pattern)": {
+                "docstring": "Infer state variable name from function name and pattern\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "functionName",
+                  "pattern"
+                ],
+                "line_number": 519
+              },
+              "detectReduxPatterns(filePath, analysis)": {
+                "docstring": "Detect Redux state management patterns\n@param filePath - File path\n@param analysis - File analysis\n@returns Redux state patterns found\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "filePath",
+                  "analysis"
+                ],
+                "line_number": 546
+              },
+              "hasReduxImport(analysis)": {
+                "docstring": "Check if file imports Redux\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "analysis"
+                ],
+                "line_number": 655
+              },
+              "isReduxActionCreator(functionName, functionInfo)": {
+                "docstring": "Check if a function is a Redux action creator\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "functionName",
+                  "functionInfo"
+                ],
+                "line_number": 670
+              },
+              "isReduxReducer(functionName, functionInfo)": {
+                "docstring": "Check if a function is a Redux reducer\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "functionName",
+                  "functionInfo"
+                ],
+                "line_number": 698
+              },
+              "isStoreCreation(functionName, functionInfo, analysis)": {
+                "docstring": "Check if a function creates a Redux store\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "functionName",
+                  "functionInfo",
+                  "analysis"
+                ],
+                "line_number": 727
+              },
+              "detectReduxToolkitPatterns(filePath, analysis)": {
+                "docstring": "Detect Redux Toolkit patterns (modern Redux)\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "filePath",
+                  "analysis"
+                ],
+                "line_number": 754
+              },
+              "extractActionType(functionName)": {
+                "docstring": "Extract action type from action creator name\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "functionName"
+                ],
+                "line_number": 818
+              },
+              "extractReducerStateType(functionName)": {
+                "docstring": "Extract state type from reducer name\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "functionName"
+                ],
+                "line_number": 830
+              },
+              "extractDispatchAction(dispatchCall)": {
+                "docstring": "Extract action from dispatch call\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "dispatchCall"
+                ],
+                "line_number": 841
+              },
+              "detectMobXPatterns(filePath, analysis)": {
+                "docstring": "Detect MobX state management patterns\n@param filePath - File path\n@param analysis - File analysis\n@returns MobX state patterns found\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "filePath",
+                  "analysis"
+                ],
+                "line_number": 868
+              },
+              "detectDjangoStatePatterns(filePath, analysis)": {
+                "docstring": "Detect Django state management patterns\n@param filePath - File path\n@param analysis - File analysis\n@returns Django state patterns found\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "filePath",
+                  "analysis"
+                ],
+                "line_number": 979
+              },
+              "detectGenericStatePatterns(filePath, analysis)": {
+                "docstring": "Detect generic state patterns that work across frameworks\n@param filePath - File path\n@param analysis - File analysis\n@returns Generic state patterns found\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "filePath",
+                  "analysis"
+                ],
+                "line_number": 1101
+              },
+              "hasMobXImport(analysis)": {
+                "docstring": "Check if file imports MobX\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "analysis"
+                ],
+                "line_number": 1153
+              },
+              "hasDjangoImport(analysis)": {
+                "docstring": "Check if file imports Django\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "analysis"
+                ],
+                "line_number": 1168
+              },
+              "hasMobXDecorators(classInfo)": {
+                "docstring": "Check if class has MobX decorators\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "classInfo"
+                ],
+                "line_number": 1181
+              },
+              "isMobXObservableCreation(functionName, functionInfo)": {
+                "docstring": "Check if function creates MobX observables\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "functionName",
+                  "functionInfo"
+                ],
+                "line_number": 1195
+              },
+              "extractObservableName(functionName)": {
+                "docstring": "Extract observable name from function name\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "functionName"
+                ],
+                "line_number": 1211
+              },
+              "parseDjangoStateChange(stateChange, filePath, containerName, lineNumber)": {
+                "docstring": "Parse Django state change patterns\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "stateChange",
+                  "filePath",
+                  "containerName",
+                  "lineNumber"
+                ],
+                "line_number": 1222
+              },
+              "isDjangoViewFunction(functionName, functionInfo, analysis)": {
+                "docstring": "Check if function is a Django view\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "functionName",
+                  "functionInfo",
+                  "analysis"
+                ],
+                "line_number": 1265
+              },
+              "isDjangoModelClass(classInfo)": {
+                "docstring": "Check if class is Django model\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "classInfo"
+                ],
+                "line_number": 1302
+              },
+              "isDjangoModelMethod(methodName)": {
+                "docstring": "Check if method is Django model method\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "methodName"
+                ],
+                "line_number": 1320
+              },
+              "getDjangoMethodMutationType(methodName)": {
+                "docstring": "Get mutation type for Django method\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "methodName"
+                ],
+                "line_number": 1337
+              },
+              "extractDjangoModelName(stateChange)": {
+                "docstring": "Extract model name from Django state change\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "stateChange"
+                ],
+                "line_number": 1354
+              },
+              "extractModelNameFromView(functionName)": {
+                "docstring": "Extract model name from view function name\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "functionName"
+                ],
+                "line_number": 1374
+              },
+              "isFrameworkSpecificPattern(stateChange)": {
+                "docstring": "Check if pattern is framework-specific\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "stateChange"
+                ],
+                "line_number": 1389
+              },
+              "parseGenericStatePattern(stateChange, filePath, containerName, lineNumber, language)": {
+                "docstring": "Parse generic state patterns\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "stateChange",
+                  "filePath",
+                  "containerName",
+                  "lineNumber",
+                  "language"
+                ],
+                "line_number": 1403
+              },
+              "detectStateVariablePatterns(filePath, analysis)": {
+                "docstring": "Detect state variable patterns\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "filePath",
+                  "analysis"
+                ],
+                "line_number": 1447
+              },
+              "extractGenericVariableName(stateChange)": {
+                "docstring": "Extract variable name from generic pattern\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "stateChange"
+                ],
+                "line_number": 1492
+              },
+              "initializeStatePatterns()": {
+                "docstring": "Initialize state pattern configurations\n@returns Array of state pattern configurations\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [],
+                "line_number": 1508
+              },
+              "getDetectionStats(patterns)": {
+                "docstring": "Generate state detection statistics\n@param patterns - Array of detected state patterns\n@returns Statistical summary of state detection",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "patterns"
+                ],
+                "line_number": 1588
+              },
+              "getDetectionReport(fileAnalyses)": {
+                "docstring": "Get detailed detection report for debugging\n@param fileAnalyses - Map of file analyses\n@returns Detailed detection report",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "fileAnalyses"
+                ],
+                "line_number": 1646
+              },
+              "getLanguageDistribution(fileAnalyses)": {
+                "docstring": "Get language distribution from file analyses\n@private",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "fileAnalyses"
+                ],
+                "line_number": 1684
+              }
+            },
+            "base_classes": [],
+            "line_number": 75
+          }
+        },
+        "path": "src/patterns/state-detector.ts"
+      }
+    ],
+    "src/types": [
+      {
+        "language": "typescript",
+        "imports": {
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {},
+        "classes": {},
+        "path": "src/types/babel-traverse.d.ts"
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {},
+        "classes": {},
+        "path": "src/types/index.ts"
+      }
+    ],
+    "tests": [
+      {
+        "language": "typescript",
+        "imports": {
+          "vitest": [
+            "describe",
+            "it",
+            "expect",
+            "beforeAll",
+            "beforeEach"
+          ],
+          "../src/core/analysis-coordinator.js": [
+            "AnalysisCoordinator"
+          ]
+        },
+        "functions": {},
+        "classes": {},
+        "path": "tests/analysis-coordinator.test.ts"
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "vitest": [
+            "describe",
+            "it",
+            "expect",
+            "beforeEach"
+          ],
+          "../src/parsers/babel-analyzer.js": [
+            "BabelAnalyzer"
+          ]
+        },
+        "functions": {},
+        "classes": {},
+        "path": "tests/babel-analyzer.test.ts"
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "vitest": [
+            "describe",
+            "it",
+            "expect",
+            "beforeAll",
+            "afterAll",
+            "vi"
+          ],
+          "node:fs/promises": [
+            "mkdir",
+            "writeFile",
+            "rmdir",
+            "chmod"
+          ],
+          "node:path": [
+            "join"
+          ],
+          "../src/core/file-processor.js": [
+            "FileProcessor",
+            "DEFAULT_PROCESSING_OPTIONS"
+          ]
+        },
+        "functions": {},
+        "classes": {},
+        "path": "tests/file-processor.test.ts"
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "vitest": [
+            "describe",
+            "it",
+            "expect",
+            "beforeEach"
+          ],
+          "../src/patterns/framework-detector.js": [
+            "FrameworkDetector"
+          ],
+          "../src/patterns/pattern-definitions.js": [
+            "REACT_PATTERNS",
+            "DJANGO_PATTERNS",
+            "NESTJS_PATTERNS",
+            "getSupportedFrameworks"
+          ],
+          "../src/types/index.js": [
+            "FileAnalysis"
+          ]
+        },
+        "functions": {},
+        "classes": {},
+        "path": "tests/framework-detector.test.ts"
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "vitest": [
+            "describe",
+            "it",
+            "expect",
+            "beforeAll",
+            "afterAll"
+          ],
+          "node:fs/promises": [
+            "mkdir",
+            "writeFile",
+            "rmdir"
+          ],
+          "node:child_process": [
+            "execFile"
+          ],
+          "node:util": [
+            "promisify"
+          ],
+          "node:path": [
+            "join"
+          ],
+          "../src/core/git-processor.js": [
+            "GitProcessor"
+          ]
+        },
+        "functions": {},
+        "classes": {},
+        "path": "tests/git-processor.test.ts"
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "vitest": [
+            "describe",
+            "it",
+            "expect",
+            "beforeEach"
+          ],
+          "../src/core/language-detector.js": [
+            "LanguageDetector"
+          ],
+          "../src/types/index.js": [
+            "SupportedLanguage"
+          ]
+        },
+        "functions": {},
+        "classes": {},
+        "path": "tests/language-detector.test.ts"
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "vitest": [
+            "describe",
+            "it",
+            "expect",
+            "beforeEach"
+          ],
+          "../src/parsers/python-analyzer.js": [
+            "PythonAnalyzer"
+          ]
+        },
+        "functions": {},
+        "classes": {},
+        "path": "tests/python-analyzer.test.ts"
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "vitest": [
+            "describe",
+            "it",
+            "expect"
+          ],
+          "../src/index.js": [
+            "hello",
+            "analyzeRepository",
+            "ANALYSIS_ENGINE_VERSION",
+            "AnalysisResult",
+            "AnalysisOptions"
+          ]
+        },
+        "functions": {},
+        "classes": {},
+        "path": "tests/setup.test.ts"
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "vitest": [
+            "describe",
+            "it",
+            "expect",
+            "beforeAll"
+          ],
+          "../src/parsers/tree-sitter-manager.js": [
+            "TreeSitterManager"
+          ]
+        },
+        "functions": {},
+        "classes": {},
+        "path": "tests/tree-sitter-manager.test.ts"
+      }
+    ]
+  },
+  "summary": {
+    "total_files": 59,
+    "total_lines": 6572,
+    "languages": {
+      "ruby": 1,
+      "json": 4,
+      "markdown": 1,
+      "typescript": 40,
+      "unknown": 10,
+      "javascript": 3
+    },
+    "extensions": {},
+    "frameworks": {
+      "React": 1
+    }
+  },
+  "dependencies": {
+    "examples/complete-analysis.ts": [
+      "__exports__",
+      "fs",
+      "path"
+    ],
+    "scripts/clean-analysis.ts": [
+      "__exports__",
+      "fs",
+      "path"
+    ],
+    "src/core/analysis-coordinator.ts": [
+      "__exports__"
+    ],
+    "scripts/download-parsers.js": [
+      "node:fs/promises",
+      "node:path",
+      "node:url"
+    ],
+    "src/core/file-processor.ts": [
+      "__exports__",
+      "node:fs/promises",
+      "node:path",
+      "p-limit"
+    ],
+    "src/core/results-aggregator.ts": [
+      "__exports__",
+      "path"
+    ],
+    "src/index.ts": [
+      "__exports__"
+    ],
+    "src/core/git-processor.ts": [
+      "__exports__",
+      "node:child_process",
+      "node:fs/promises",
+      "node:path",
+      "node:util"
+    ],
+    "src/parsers/index.ts": [
+      "__exports__"
+    ],
+    "src/parsers/babel-analyzer.ts": [
+      "@babel/parser",
+      "@babel/types",
+      "__exports__"
+    ],
+    "src/core/language-detector.ts": [
+      "__exports__",
+      "node:fs/promises",
+      "node:path"
+    ],
+    "src/core/index.ts": [
+      "__exports__"
+    ],
+    "src/parsers/python-analyzer.ts": [
+      "__exports__"
+    ],
+    "src/parsers/tree-sitter-manager.ts": [
+      "__exports__",
+      "node:fs/promises",
+      "node:path",
+      "node:url",
+      "web-tree-sitter"
+    ],
+    "src/patterns/api-detector.ts": [
+      "__exports__"
+    ],
+    "src/patterns/framework-detector.ts": [
+      "__exports__"
+    ],
+    "src/patterns/index.ts": [
+      "__exports__"
+    ],
+    "src/patterns/event-detector.ts": [
+      "__exports__"
+    ],
+    "src/patterns/pattern-definitions.ts": [
+      "__exports__"
+    ],
+    "src/patterns/state-detector.ts": [
+      "__exports__"
+    ],
+    "src/types/babel-traverse.d.ts": [
+      "__exports__"
+    ],
+    "src/types/index.ts": [
+      "__exports__"
+    ],
+    "tests/analysis-coordinator.test.ts": [
+      "vitest"
+    ],
+    "tests/babel-analyzer.test.ts": [
+      "vitest"
+    ],
+    "tests/file-processor.test.ts": [
+      "node:fs/promises",
+      "node:path",
+      "vitest"
+    ],
+    "tests/framework-detector.test.ts": [
+      "vitest"
+    ],
+    "tests/git-processor.test.ts": [
+      "node:child_process",
+      "node:fs/promises",
+      "node:path",
+      "node:util",
+      "vitest"
+    ],
+    "tests/language-detector.test.ts": [
+      "vitest"
+    ],
+    "tests/setup.test.ts": [
+      "vitest"
+    ],
+    "tests/python-analyzer.test.ts": [
+      "vitest"
+    ],
+    "tests/tree-sitter-manager.test.ts": [
+      "vitest"
+    ]
+  },
+  "metadata": {
+    "timestamp": "2025-06-23T16:13:29.964Z",
+    "duration_ms": 130,
+    "engine_version": "0.1.0",
+    "repository_path": "."
+  }
+}

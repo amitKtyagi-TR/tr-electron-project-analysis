@@ -73,6 +73,13 @@ const EXTENSION_MAP: Record<string, SupportedLanguage> = {
   '.markdown': 'markdown',
   '.rst': 'markdown',
   '.tex': 'unknown',
+  '.svg': 'unknown',
+  '.png': 'unknown',
+  '.jpg': 'unknown',
+  '.jpeg': 'unknown',
+  '.gif': 'unknown',
+  '.ico': 'unknown',
+  '.webp': 'unknown',
 } as const;
 
 /**

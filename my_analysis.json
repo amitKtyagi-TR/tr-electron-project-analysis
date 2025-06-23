@@ -1,16 +1,4425 @@
 {
-  "folder_structure": {},
-  "summary": {
-    "total_files": 0,
-    "total_lines": 0,
-    "languages": {},
-    "extensions": {}
+  "folder_structure": {
+    "root": [
+      {
+        "path": ".env.example",
+        "language": "unknown",
+        "imports": {},
+        "functions": {},
+        "classes": {},
+        "lines": 5,
+        "characters": 175,
+        "non_empty_lines": 4,
+        "avg_line_length": 35
+      },
+      {
+        "language": "javascript",
+        "imports": {},
+        "functions": {},
+        "classes": {},
+        "path": ".eslintrc.js"
+      },
+      {
+        "path": ".gitignore",
+        "language": "unknown",
+        "imports": {},
+        "functions": {},
+        "classes": {},
+        "lines": 89,
+        "characters": 988,
+        "non_empty_lines": 77,
+        "avg_line_length": 11.101123595505618
+      },
+      {
+        "path": ".prettierrc",
+        "language": "unknown",
+        "imports": {},
+        "functions": {},
+        "classes": {},
+        "lines": 7,
+        "characters": 116,
+        "non_empty_lines": 7,
+        "avg_line_length": 16.571428571428573
+      },
+      {
+        "language": "javascript",
+        "imports": {},
+        "functions": {},
+        "classes": {},
+        "path": "change.txt",
+        "error": "Babel parsing failed: Missing semicolon. (1:7)"
+      },
+      {
+        "language": "javascript",
+        "imports": {
+          "@eslint/js": [
+            "js"
+          ],
+          "globals": [
+            "globals"
+          ],
+          "eslint-plugin-react-hooks": [
+            "reactHooks"
+          ],
+          "eslint-plugin-react-refresh": [
+            "reactRefresh"
+          ],
+          "typescript-eslint": [
+            "tseslint"
+          ],
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {},
+        "classes": {},
+        "path": "eslint.config.js"
+      },
+      {
+        "path": "index.html",
+        "language": "html",
+        "imports": {},
+        "functions": {},
+        "classes": {},
+        "lines": 14,
+        "characters": 366,
+        "non_empty_lines": 13,
+        "avg_line_length": 26.142857142857142
+      },
+      {
+        "language": "javascript",
+        "imports": {},
+        "functions": {},
+        "classes": {},
+        "path": "jest.config.js"
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "@testing-library/jest-dom": []
+        },
+        "functions": {},
+        "classes": {},
+        "path": "jest.setup.ts"
+      },
+      {
+        "path": "package.json",
+        "language": "json",
+        "imports": {},
+        "functions": {},
+        "classes": {},
+        "lines": 66,
+        "characters": 2008,
+        "non_empty_lines": 65,
+        "avg_line_length": 30.424242424242426
+      },
+      {
+        "path": "README.md",
+        "language": "python",
+        "imports": {
+          "react from 'eslint-plugin-react'": [
+            "react from 'eslint-plugin-react'"
+          ]
+        },
+        "functions": {},
+        "classes": {},
+        "lines": 51,
+        "characters": 1607,
+        "non_empty_lines": 40,
+        "avg_line_length": 31.50980392156863
+      },
+      {
+        "path": "staticwebapp.config.json",
+        "language": "json",
+        "imports": {},
+        "functions": {},
+        "classes": {},
+        "lines": 13,
+        "characters": 222,
+        "non_empty_lines": 13,
+        "avg_line_length": 17.076923076923077
+      },
+      {
+        "path": "tsconfig.app.json",
+        "language": "json",
+        "imports": {},
+        "functions": {},
+        "classes": {},
+        "lines": 27,
+        "characters": 736,
+        "non_empty_lines": 25,
+        "avg_line_length": 27.25925925925926
+      },
+      {
+        "path": "tsconfig.json",
+        "language": "json",
+        "imports": {},
+        "functions": {},
+        "classes": {},
+        "lines": 8,
+        "characters": 119,
+        "non_empty_lines": 7,
+        "avg_line_length": 14.875
+      },
+      {
+        "path": "tsconfig.node.json",
+        "language": "json",
+        "imports": {},
+        "functions": {},
+        "classes": {},
+        "lines": 25,
+        "characters": 593,
+        "non_empty_lines": 22,
+        "avg_line_length": 23.72
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "vite": [
+            "defineConfig"
+          ],
+          "@vitejs/plugin-react": [
+            "react"
+          ],
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {},
+        "classes": {},
+        "path": "vite.config.ts"
+      },
+      {
+        "path": "yarn.lock",
+        "language": "unknown",
+        "imports": {},
+        "functions": {},
+        "classes": {},
+        "lines": 6060,
+        "characters": 279338,
+        "non_empty_lines": 5282,
+        "avg_line_length": 46.0953795379538
+      }
+    ],
+    ".github/workflows": [
+      {
+        "language": "javascript",
+        "imports": {},
+        "functions": {},
+        "classes": {},
+        "path": ".github/workflows/azure-static-web-apps-salmon-pond-00993830f.yml",
+        "error": "Babel parsing failed: Missing semicolon. (1:11)"
+      }
+    ],
+    ".husky": [
+      {
+        "path": ".husky/pre-commit",
+        "language": "unknown",
+        "imports": {},
+        "functions": {},
+        "classes": {},
+        "lines": 5,
+        "characters": 65,
+        "non_empty_lines": 3,
+        "avg_line_length": 13
+      }
+    ],
+    "public": [
+      {
+        "language": "typescript",
+        "imports": {},
+        "functions": {},
+        "classes": {},
+        "path": "public/vite.svg"
+      }
+    ],
+    "src": [
+      {
+        "language": "typescript",
+        "imports": {},
+        "functions": {},
+        "classes": {},
+        "path": "src/App.css",
+        "error": "Babel parsing failed: Private names are only allowed in property accesses (`obj.#root`) or in `in` expressions (`#root in obj`). (1:0)"
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "react": [
+            "useState"
+          ],
+          "./shared/components/atoms/Button": [
+            "Button"
+          ],
+          "./shared/components/atoms/Input": [
+            "Input"
+          ],
+          "./shared/components/atoms/Modal": [
+            "Modal"
+          ],
+          "./shared/components/atoms/Loader": [
+            "Loader"
+          ],
+          "./shared/components/atoms/Table": [
+            "Table"
+          ],
+          "./shared/components/atoms/Alert": [
+            "Alert"
+          ],
+          "./shared/components/atoms/EmptyState": [
+            "EmptyState"
+          ],
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {
+          "App()": {
+            "docstring": "",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [],
+            "line_number": 10,
+            "is_component": true
+          }
+        },
+        "classes": {},
+        "path": "src/App.tsx",
+        "state_changes": [
+          {
+            "type": "useState",
+            "line": 10,
+            "variable": "app",
+            "mutation_type": "update"
+          }
+        ]
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "@testing-library/jest-dom": []
+        },
+        "functions": {},
+        "classes": {},
+        "path": "src/jest-dom.d.ts"
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "react": [
+            "React"
+          ],
+          "react-dom/client": [
+            "ReactDOM"
+          ],
+          "@chakra-ui/react": [
+            "ChakraProvider"
+          ],
+          "./theme": [
+            "theme"
+          ],
+          "./app/routes/AppRoutes": [
+            "AppRoutes"
+          ],
+          "./app/ErrorBoundary": [
+            "ErrorBoundary"
+          ],
+          "./app/providers/LayoutContext": [
+            "LayoutProvider"
+          ],
+          "./app/providers/QueryClientProvider": [
+            "QueryClientProvider"
+          ],
+          "./app/providers/AuthContext": [
+            "AuthProvider"
+          ]
+        },
+        "functions": {},
+        "classes": {},
+        "path": "src/main.tsx"
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "@chakra-ui/react": [
+            "extendTheme",
+            "ThemeConfig"
+          ],
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {},
+        "classes": {},
+        "path": "src/theme.ts"
+      },
+      {
+        "language": "typescript",
+        "imports": {},
+        "functions": {},
+        "classes": {},
+        "path": "src/vite-env.d.ts"
+      }
+    ],
+    "src/app": [
+      {
+        "language": "typescript",
+        "imports": {
+          "react": [
+            "React",
+            "ErrorInfo"
+          ],
+          "../shared/components/atoms/Alert": [
+            "Alert"
+          ],
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {},
+        "classes": {
+          "ErrorBoundary": {
+            "docstring": "",
+            "methods": {
+              "constructor(props)": {
+                "docstring": "",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "props"
+                ],
+                "line_number": 21
+              },
+              "getDerivedStateFromError(error)": {
+                "docstring": "",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "error"
+                ],
+                "line_number": 26
+              },
+              "componentDidCatch(error, errorInfo)": {
+                "docstring": "",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "error",
+                  "errorInfo"
+                ],
+                "line_number": 31
+              },
+              "render()": {
+                "docstring": "",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [],
+                "line_number": 36
+              }
+            },
+            "base_classes": [],
+            "line_number": 17
+          }
+        },
+        "path": "src/app/ErrorBoundary.tsx"
+      }
+    ],
+    "src/app/layouts": [
+      {
+        "language": "typescript",
+        "imports": {
+          "react": [
+            "React",
+            "ReactNode"
+          ],
+          "@chakra-ui/react": [
+            "Flex"
+          ],
+          "../../shared/components/layout/Header": [
+            "Header"
+          ],
+          "../../shared/components/layout/Sidebar": [
+            "Sidebar"
+          ],
+          "../../shared/components/layout/Footer": [
+            "Footer"
+          ],
+          "../../shared/components/layout/MainContent": [
+            "MainContent"
+          ],
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {
+          "AdminLayout({ ... })": {
+            "docstring": "",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [
+              "{ ... }"
+            ],
+            "line_number": 15,
+            "is_component": true
+          }
+        },
+        "classes": {},
+        "path": "src/app/layouts/AdminLayout.tsx"
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "react": [
+            "React"
+          ],
+          "react-router-dom": [
+            "Outlet"
+          ],
+          "@chakra-ui/react": [
+            "Box",
+            "Flex"
+          ],
+          "../providers/LayoutContext": [
+            "LayoutProvider"
+          ],
+          "../../shared/components/layout/Header": [
+            "Header"
+          ],
+          "../../shared/components/layout/Sidebar": [
+            "Sidebar"
+          ],
+          "../../shared/components/layout/Footer": [
+            "Footer"
+          ],
+          "../../features/inventory/hooks/useInventoryCsv": [
+            "InventoryCsvProvider"
+          ],
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {
+          "CatalogManagerLayout()": {
+            "docstring": "CatalogManagerLayout wraps catalog manager portal pages.",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [],
+            "line_number": 17,
+            "is_component": true
+          }
+        },
+        "classes": {},
+        "path": "src/app/layouts/CatalogManagerLayout.tsx",
+        "state_changes": [
+          {
+            "type": "useState",
+            "line": 17,
+            "variable": "catalogmanagerlayout",
+            "mutation_type": "update"
+          }
+        ]
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "react": [
+            "React"
+          ],
+          "@chakra-ui/react": [
+            "Box",
+            "Flex"
+          ],
+          "../providers/LayoutContext": [
+            "LayoutProvider"
+          ],
+          "../../shared/components/layout/Header": [
+            "Header"
+          ],
+          "../../shared/components/layout/Sidebar": [
+            "Sidebar"
+          ],
+          "../../shared/components/layout/Footer": [
+            "Footer"
+          ],
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {
+          "PartnerLayout({ ... })": {
+            "docstring": "PartnerLayout wraps partner portal pages.",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [
+              "{ ... }"
+            ],
+            "line_number": 15,
+            "is_component": true
+          }
+        },
+        "classes": {},
+        "path": "src/app/layouts/PartnerLayout.tsx"
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "react": [
+            "React"
+          ],
+          "@chakra-ui/react": [
+            "Box",
+            "Flex"
+          ],
+          "../providers/LayoutContext": [
+            "LayoutProvider"
+          ],
+          "../../shared/components/layout/Header": [
+            "Header"
+          ],
+          "../../shared/components/layout/Sidebar": [
+            "Sidebar"
+          ],
+          "../../shared/components/layout/Footer": [
+            "Footer"
+          ],
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {
+          "SupportStaffLayout({ ... })": {
+            "docstring": "SupportStaffLayout wraps support staff portal pages.",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [
+              "{ ... }"
+            ],
+            "line_number": 15,
+            "is_component": true
+          }
+        },
+        "classes": {},
+        "path": "src/app/layouts/SupportStaffLayout.tsx"
+      }
+    ],
+    "src/app/providers": [
+      {
+        "language": "typescript",
+        "imports": {
+          "react": [
+            "React",
+            "createContext",
+            "useState",
+            "useContext",
+            "ReactNode"
+          ],
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {
+          "AuthProvider({ ... })": {
+            "docstring": "AuthProvider wraps parts of the app that require authentication state.\nIt manages authentication state including access and refresh tokens,\nand exposes actions to login, logout, and refresh tokens.",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [
+              "{ ... }"
+            ],
+            "line_number": 24,
+            "is_component": true
+          },
+          "login(accessToken, userRole, refreshToken)": {
+            "docstring": "",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [
+              "accessToken",
+              "userRole",
+              "refreshToken"
+            ],
+            "line_number": 38
+          },
+          "logout()": {
+            "docstring": "",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [],
+            "line_number": 50
+          },
+          "useAuthContext()": {
+            "docstring": "useAuthContext is a custom hook to access authentication state and actions.\n@throws Error if used outside AuthProvider.",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [],
+            "line_number": 67,
+            "is_hook": true
+          }
+        },
+        "classes": {},
+        "path": "src/app/providers/AuthContext.tsx",
+        "state_changes": [
+          {
+            "type": "useState",
+            "line": 24,
+            "variable": "authprovider",
+            "mutation_type": "update"
+          },
+          {
+            "type": "useState",
+            "line": 24,
+            "variable": "context",
+            "mutation_type": "read"
+          },
+          {
+            "type": "useState",
+            "line": 38,
+            "variable": "login",
+            "mutation_type": "update"
+          },
+          {
+            "type": "useState",
+            "line": 38,
+            "variable": "context",
+            "mutation_type": "read"
+          },
+          {
+            "type": "useState",
+            "line": 50,
+            "variable": "logout",
+            "mutation_type": "update"
+          },
+          {
+            "type": "useState",
+            "line": 50,
+            "variable": "context",
+            "mutation_type": "read"
+          },
+          {
+            "type": "useState",
+            "line": 67,
+            "variable": "authcontext",
+            "mutation_type": "update"
+          },
+          {
+            "type": "useState",
+            "line": 67,
+            "variable": "context",
+            "mutation_type": "read"
+          }
+        ]
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "react": [
+            "React",
+            "createContext",
+            "useReducer",
+            "useContext",
+            "ReactNode"
+          ],
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {
+          "layoutReducer(state, action)": {
+            "docstring": "",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [
+              "state",
+              "action"
+            ],
+            "line_number": 15
+          },
+          "LayoutProvider({ ... })": {
+            "docstring": "LayoutProvider wraps parts of the app that need layout state (e.g. sidebar open/close).",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [
+              "{ ... }"
+            ],
+            "line_number": 35,
+            "is_component": true
+          },
+          "toggleSidebar()": {
+            "docstring": "",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [],
+            "line_number": 41
+          },
+          "useLayout()": {
+            "docstring": "Custom hook to use the layout context.\n@throws Error if used outside LayoutProvider.",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [],
+            "line_number": 56,
+            "is_hook": true
+          }
+        },
+        "classes": {},
+        "path": "src/app/providers/LayoutContext.tsx",
+        "state_changes": [
+          {
+            "type": "useReducer",
+            "line": 15,
+            "variable": "layoutreducer",
+            "mutation_type": "update"
+          },
+          {
+            "type": "useState",
+            "line": 15,
+            "variable": "context",
+            "mutation_type": "read"
+          },
+          {
+            "type": "useReducer",
+            "line": 35,
+            "variable": "layoutprovider",
+            "mutation_type": "update"
+          },
+          {
+            "type": "useState",
+            "line": 35,
+            "variable": "context",
+            "mutation_type": "read"
+          },
+          {
+            "type": "useReducer",
+            "line": 41,
+            "variable": "togglesidebar",
+            "mutation_type": "update"
+          },
+          {
+            "type": "useState",
+            "line": 41,
+            "variable": "context",
+            "mutation_type": "read"
+          },
+          {
+            "type": "useState",
+            "line": 56,
+            "variable": "layout",
+            "mutation_type": "update"
+          },
+          {
+            "type": "useReducer",
+            "line": 56,
+            "variable": "layout",
+            "mutation_type": "update"
+          },
+          {
+            "type": "useState",
+            "line": 56,
+            "variable": "context",
+            "mutation_type": "read"
+          }
+        ]
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "react": [
+            "React"
+          ],
+          "@tanstack/react-query": [
+            "QueryClient",
+            "QueryClientProvider"
+          ],
+          "@tanstack/react-query-devtools": [
+            "ReactQueryDevtools"
+          ],
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {
+          "QueryClientProvider({ ... })": {
+            "docstring": "",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [
+              "{ ... }"
+            ],
+            "line_number": 34,
+            "is_component": true
+          }
+        },
+        "classes": {},
+        "path": "src/app/providers/QueryClientProvider.tsx"
+      }
+    ],
+    "src/app/routes": [
+      {
+        "language": "typescript",
+        "imports": {
+          "react": [
+            "React",
+            "Suspense",
+            "lazy"
+          ],
+          "react-router-dom": [
+            "BrowserRouter",
+            "Routes",
+            "Route",
+            "Navigate",
+            "Outlet"
+          ],
+          "./ProtectedRoute": [
+            "ProtectedRoute"
+          ],
+          "@chakra-ui/react": [
+            "Box"
+          ],
+          "../../shared/components/atoms/Loader": [
+            "Loader"
+          ],
+          "../../features/auth/components/CatalogLoginForm": [
+            "CatalogLoginForm"
+          ],
+          "../../features/auth/components/CatalogForgotPasswordForm": [
+            "CatalogForgotPasswordForm"
+          ],
+          "../../features/inventory/components/InventoryUploadScreen": [
+            "InventoryUploadScreen"
+          ],
+          "../../features/inventory/components/InventoryConfirmationScreen": [
+            "InventoryConfirmationScreen"
+          ],
+          "../../features/catalog/hooks/JsonBulkUploadContext": [
+            "JsonBulkUploadProvider"
+          ],
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {
+          "DashboardPage()": {
+            "docstring": "",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [],
+            "line_number": 13,
+            "is_component": true
+          },
+          "Unauthorized()": {
+            "docstring": "",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [],
+            "line_number": 63,
+            "is_component": true
+          },
+          "AppRoutes()": {
+            "docstring": "",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [],
+            "line_number": 72,
+            "is_component": true
+          }
+        },
+        "classes": {},
+        "path": "src/app/routes/AppRoutes.tsx"
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "react": [
+            "React"
+          ],
+          "react-router-dom": [
+            "Navigate",
+            "Outlet"
+          ],
+          "../../shared/hooks/usePermissions": [
+            "usePermissions"
+          ],
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {
+          "isAuthenticated()": {
+            "docstring": "",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [],
+            "line_number": 9
+          },
+          "ProtectedRoute({ ... })": {
+            "docstring": "",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [
+              "{ ... }"
+            ],
+            "line_number": 13,
+            "is_component": true
+          }
+        },
+        "classes": {},
+        "path": "src/app/routes/ProtectedRoute.tsx"
+      }
+    ],
+    "src/assets": [
+      {
+        "language": "typescript",
+        "imports": {},
+        "functions": {},
+        "classes": {},
+        "path": "src/assets/react.svg"
+      }
+    ],
+    "src/features/auth/components": [
+      {
+        "language": "typescript",
+        "imports": {
+          "react": [
+            "React",
+            "useState"
+          ],
+          "react-hook-form": [
+            "useForm",
+            "SubmitHandler"
+          ],
+          "@chakra-ui/react": [
+            "Box",
+            "Flex",
+            "Link"
+          ],
+          "react-router-dom": [
+            "Link"
+          ],
+          "axios": [
+            "axios"
+          ],
+          "../../../shared/components/atoms/Alert": [
+            "Alert"
+          ],
+          "../../../shared/components/atoms/Input": [
+            "Input"
+          ],
+          "../../../shared/components/atoms/Button": [
+            "Button"
+          ],
+          "../../../shared/api/axiosClient": [
+            "axiosClient"
+          ],
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {
+          "CatalogForgotPasswordForm()": {
+            "docstring": "CatalogForgotPasswordForm allows Catalog Managers\nto request password reset by providing their username.",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [],
+            "line_number": 22,
+            "is_component": true
+          },
+          "escapeHtml(str)": {
+            "docstring": "",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [
+              "str"
+            ],
+            "line_number": 34
+          },
+          "onSubmit(data)": {
+            "docstring": "",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": true,
+            "parameters": [
+              "data"
+            ],
+            "line_number": 42
+          }
+        },
+        "classes": {},
+        "path": "src/features/auth/components/CatalogForgotPasswordForm.tsx",
+        "state_changes": [
+          {
+            "type": "useState",
+            "line": 22,
+            "variable": "catalogforgotpasswordform",
+            "mutation_type": "update"
+          },
+          {
+            "type": "useState",
+            "line": 34,
+            "variable": "escapehtml",
+            "mutation_type": "update"
+          },
+          {
+            "type": "useState",
+            "line": 42,
+            "variable": "onsubmit",
+            "mutation_type": "update"
+          }
+        ],
+        "event_handlers": [
+          {
+            "type": "dom_event",
+            "event": "submit",
+            "handler": "onSubmit",
+            "line": 42,
+            "framework": "DOM"
+          },
+          {
+            "type": "dom_event",
+            "event": "callback",
+            "handler": "onSubmit",
+            "line": 42,
+            "framework": "Custom"
+          },
+          {
+            "type": "onSubmit",
+            "event": "submit",
+            "handler": "onSubmit",
+            "line": 42,
+            "framework": "Generic"
+          }
+        ]
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "react": [
+            "React",
+            "useState"
+          ],
+          "react-hook-form": [
+            "useForm",
+            "SubmitHandler"
+          ],
+          "@chakra-ui/react": [
+            "Box",
+            "Flex",
+            "Link"
+          ],
+          "react-router-dom": [
+            "Link",
+            "useNavigate"
+          ],
+          "axios": [
+            "axios"
+          ],
+          "../../../shared/components/atoms/Alert": [
+            "Alert"
+          ],
+          "../../../shared/components/atoms/Input": [
+            "Input"
+          ],
+          "../../../shared/components/atoms/Button": [
+            "Button"
+          ],
+          "../../../shared/api/axiosClient": [
+            "axiosClient"
+          ],
+          "../../../shared/hooks/useAuth": [
+            "useAuth"
+          ],
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {
+          "CatalogLoginForm()": {
+            "docstring": "CatalogLoginForm is a login form for Catalog Managers.\nIt uses react-hook-form for validation and axiosClient to call\nPOST /api/auth/login/catalog-manager/.",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [],
+            "line_number": 22,
+            "is_component": true
+          },
+          "escapeHtml(str)": {
+            "docstring": "",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [
+              "str"
+            ],
+            "line_number": 36
+          },
+          "onSubmit(data)": {
+            "docstring": "",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": true,
+            "parameters": [
+              "data"
+            ],
+            "line_number": 45
+          }
+        },
+        "classes": {},
+        "path": "src/features/auth/components/CatalogLoginForm.tsx",
+        "state_changes": [
+          {
+            "type": "useState",
+            "line": 22,
+            "variable": "catalogloginform",
+            "mutation_type": "update"
+          },
+          {
+            "type": "useState",
+            "line": 36,
+            "variable": "escapehtml",
+            "mutation_type": "update"
+          },
+          {
+            "type": "useState",
+            "line": 45,
+            "variable": "onsubmit",
+            "mutation_type": "update"
+          }
+        ],
+        "event_handlers": [
+          {
+            "type": "dom_event",
+            "event": "submit",
+            "handler": "onSubmit",
+            "line": 45,
+            "framework": "DOM"
+          },
+          {
+            "type": "dom_event",
+            "event": "callback",
+            "handler": "onSubmit",
+            "line": 45,
+            "framework": "Custom"
+          },
+          {
+            "type": "onSubmit",
+            "event": "submit",
+            "handler": "onSubmit",
+            "line": 45,
+            "framework": "Generic"
+          }
+        ]
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "react": [
+            "React"
+          ],
+          "@chakra-ui/react": [
+            "Box",
+            "Text"
+          ],
+          "../../../shared/hooks/useAuth": [
+            "useAuth"
+          ],
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {
+          "Dashboard()": {
+            "docstring": "Dashboard is a placeholder component displaying basic authentication info.",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [],
+            "line_number": 8,
+            "is_component": true
+          }
+        },
+        "classes": {},
+        "path": "src/features/auth/components/Dashboard.tsx"
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "react": [
+            "React"
+          ],
+          "react-hook-form": [
+            "useForm"
+          ],
+          "@chakra-ui/react": [
+            "Box",
+            "Flex"
+          ],
+          "../../../shared/components/atoms/Input": [
+            "Input"
+          ],
+          "../../../shared/components/atoms/Button": [
+            "Button"
+          ],
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {
+          "LoginForm()": {
+            "docstring": "LoginForm demonstrates the usage of React Hook Form with Chakra UI atoms.\nIt replaces the previous Tailwind-based implementation.",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [],
+            "line_number": 18,
+            "is_component": true
+          },
+          "onSubmit(data)": {
+            "docstring": "",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [
+              "data"
+            ],
+            "line_number": 25
+          }
+        },
+        "classes": {},
+        "path": "src/features/auth/components/LoginForm.tsx",
+        "event_handlers": [
+          {
+            "type": "dom_event",
+            "event": "submit",
+            "handler": "onSubmit",
+            "line": 25,
+            "framework": "DOM"
+          },
+          {
+            "type": "dom_event",
+            "event": "callback",
+            "handler": "onSubmit",
+            "line": 25,
+            "framework": "Custom"
+          },
+          {
+            "type": "onSubmit",
+            "event": "submit",
+            "handler": "onSubmit",
+            "line": 25,
+            "framework": "Generic"
+          }
+        ]
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "react": [
+            "React"
+          ],
+          "@chakra-ui/react": [
+            "Box",
+            "Text"
+          ],
+          "./../../../features/orders/hooks//useOrders": [
+            "useOrders"
+          ],
+          "../../../shared/components/atoms/Loader": [
+            "Loader"
+          ],
+          "../../../shared/components/atoms/EmptyState": [
+            "EmptyState"
+          ],
+          "../../../shared/components/atoms/ErrorMessage": [
+            "ErrorMessage"
+          ],
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {
+          "OrderList()": {
+            "docstring": "",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [],
+            "line_number": 16,
+            "is_component": true
+          }
+        },
+        "classes": {},
+        "path": "src/features/auth/components/OrderList.tsx"
+      }
+    ],
+    "src/features/catalog": [
+      {
+        "language": "typescript",
+        "imports": {
+          "react": [
+            "React",
+            "useState"
+          ],
+          "@chakra-ui/react": [
+            "Box",
+            "Text",
+            "Progress"
+          ],
+          "@tanstack/react-query": [
+            "useMutation"
+          ],
+          "../../shared/api/axiosClient": [
+            "axiosClient"
+          ],
+          "axios": [
+            "AxiosProgressEvent",
+            "AxiosError"
+          ],
+          "../../shared/components/atoms/Alert": [
+            "Alert"
+          ],
+          "../../shared/components/atoms/Button": [
+            "Button"
+          ],
+          "../../shared/components/atoms/Input": [
+            "Input"
+          ],
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {
+          "BulkUploadScreen()": {
+            "docstring": "",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [],
+            "line_number": 16,
+            "is_component": true
+          },
+          "handleFileChange(e)": {
+            "docstring": "",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [
+              "e"
+            ],
+            "line_number": 56
+          },
+          "handleUpload()": {
+            "docstring": "",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [],
+            "line_number": 64
+          }
+        },
+        "classes": {},
+        "path": "src/features/catalog/BulkUploadScreen.tsx",
+        "state_changes": [
+          {
+            "type": "useState",
+            "line": 16,
+            "variable": "bulkuploadscreen",
+            "mutation_type": "update"
+          },
+          {
+            "type": "useState",
+            "line": 56,
+            "variable": "handlefilechange",
+            "mutation_type": "update"
+          },
+          {
+            "type": "useState",
+            "line": 56,
+            "variable": "handlefilechange",
+            "mutation_type": "update"
+          },
+          {
+            "type": "useState",
+            "line": 64,
+            "variable": "handleupload",
+            "mutation_type": "update"
+          },
+          {
+            "type": "useState",
+            "line": 64,
+            "variable": "handleupload",
+            "mutation_type": "update"
+          }
+        ],
+        "event_handlers": [
+          {
+            "type": "dom_event",
+            "event": "load",
+            "handler": "BulkUploadScreen",
+            "line": 16,
+            "framework": "DOM"
+          },
+          {
+            "type": "dom_event",
+            "event": "change",
+            "handler": "handleFileChange",
+            "line": 56,
+            "framework": "DOM"
+          },
+          {
+            "type": "onChange",
+            "event": "change",
+            "handler": "handleFileChange",
+            "line": 56,
+            "framework": "Generic"
+          },
+          {
+            "type": "dom_event",
+            "event": "load",
+            "handler": "handleUpload",
+            "line": 64,
+            "framework": "DOM"
+          },
+          {
+            "type": "dom_event",
+            "event": "load",
+            "handler": "handleUpload",
+            "line": 64,
+            "framework": "Generic"
+          }
+        ]
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "react": [
+            "React"
+          ],
+          "@chakra-ui/icons": [
+            "ViewIcon",
+            "RepeatIcon",
+            "RepeatIcon"
+          ],
+          "@chakra-ui/react": [
+            "Box",
+            "Text",
+            "SimpleGrid",
+            "Flex",
+            "Icon",
+            "useColorModeValue",
+            "Button",
+            "Tooltip"
+          ],
+          "@tanstack/react-query": [
+            "useQuery"
+          ],
+          "../../shared/api/axiosClient": [
+            "axiosClient"
+          ],
+          "../../shared/components/atoms/Loader": [
+            "Loader"
+          ],
+          "../../shared/components/atoms/Alert": [
+            "Alert"
+          ],
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {
+          "StatCard({ ... })": {
+            "docstring": "",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [
+              "{ ... }"
+            ],
+            "line_number": 36,
+            "is_component": true
+          },
+          "Dashboard()": {
+            "docstring": "",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [],
+            "line_number": 74,
+            "is_component": true
+          },
+          "handleRefresh()": {
+            "docstring": "",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [],
+            "line_number": 90
+          }
+        },
+        "classes": {},
+        "path": "src/features/catalog/Dashboard.tsx",
+        "state_changes": [
+          {
+            "type": "useState",
+            "line": 90,
+            "variable": "handlerefresh",
+            "mutation_type": "update"
+          }
+        ],
+        "event_handlers": [
+          {
+            "type": "dom_event",
+            "event": "unknown",
+            "handler": "handleRefresh",
+            "line": 90,
+            "framework": "Generic"
+          }
+        ]
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "react": [
+            "React",
+            "useState"
+          ],
+          "@chakra-ui/react": [
+            "Flex",
+            "Text",
+            "IconButton",
+            "Input",
+            "useToast",
+            "FormLabel"
+          ],
+          "@chakra-ui/icons": [
+            "EditIcon",
+            "CheckIcon",
+            "CloseIcon"
+          ],
+          "../../shared/api/axiosClient": [
+            "axiosClient"
+          ],
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {
+          "EditableInfoItem({ ... })": {
+            "docstring": "",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [
+              "{ ... }"
+            ],
+            "line_number": 40,
+            "is_component": true
+          },
+          "handleSave()": {
+            "docstring": "",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": true,
+            "parameters": [],
+            "line_number": 53
+          },
+          "handleCancel()": {
+            "docstring": "",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [],
+            "line_number": 79
+          }
+        },
+        "classes": {},
+        "path": "src/features/catalog/EditableInfoItem.tsx",
+        "state_changes": [
+          {
+            "type": "useState",
+            "line": 40,
+            "variable": "editableinfoitem",
+            "mutation_type": "update"
+          },
+          {
+            "type": "useState",
+            "line": 53,
+            "variable": "handlesave",
+            "mutation_type": "update"
+          },
+          {
+            "type": "useState",
+            "line": 53,
+            "variable": "handlesave",
+            "mutation_type": "update"
+          },
+          {
+            "type": "useState",
+            "line": 79,
+            "variable": "handlecancel",
+            "mutation_type": "update"
+          },
+          {
+            "type": "useState",
+            "line": 79,
+            "variable": "handlecancel",
+            "mutation_type": "update"
+          }
+        ],
+        "event_handlers": [
+          {
+            "type": "dom_event",
+            "event": "unknown",
+            "handler": "handleSave",
+            "line": 53,
+            "framework": "Generic"
+          },
+          {
+            "type": "dom_event",
+            "event": "unknown",
+            "handler": "handleCancel",
+            "line": 79,
+            "framework": "Generic"
+          }
+        ]
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "react": [
+            "React",
+            "useState"
+          ],
+          "@chakra-ui/react": [
+            "Box",
+            "Flex",
+            "Input",
+            "Radio",
+            "RadioGroup",
+            "Stack",
+            "Text"
+          ],
+          "@tanstack/react-query": [
+            "useQuery",
+            "useMutation",
+            "useQueryClient"
+          ],
+          "../../shared/api/axiosClient": [
+            "axiosClient"
+          ],
+          "../../shared/components/atoms/Loader": [
+            "Loader"
+          ],
+          "../../shared/components/atoms/Alert": [
+            "Alert"
+          ],
+          "../../shared/components/atoms/Button": [
+            "Button"
+          ],
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {
+          "InventoryManagement()": {
+            "docstring": "",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [],
+            "line_number": 35,
+            "is_component": true
+          },
+          "handleUpdateChange(sku, field, value)": {
+            "docstring": "",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [
+              "sku",
+              "field",
+              "value"
+            ],
+            "line_number": 64
+          },
+          "handleSubmit()": {
+            "docstring": "",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [],
+            "line_number": 85
+          }
+        },
+        "classes": {},
+        "path": "src/features/catalog/InventoryManagement.tsx",
+        "state_changes": [
+          {
+            "type": "useState",
+            "line": 35,
+            "variable": "inventorymanagement",
+            "mutation_type": "update"
+          },
+          {
+            "type": "useState",
+            "line": 35,
+            "variable": "inventorymanagement",
+            "mutation_type": "update"
+          },
+          {
+            "type": "useState",
+            "line": 64,
+            "variable": "handleupdatechange",
+            "mutation_type": "update"
+          },
+          {
+            "type": "useState",
+            "line": 64,
+            "variable": "handleupdatechange",
+            "mutation_type": "update"
+          },
+          {
+            "type": "useState",
+            "line": 85,
+            "variable": "handlesubmit",
+            "mutation_type": "update"
+          },
+          {
+            "type": "useState",
+            "line": 85,
+            "variable": "handlesubmit",
+            "mutation_type": "update"
+          }
+        ],
+        "event_handlers": [
+          {
+            "type": "dom_event",
+            "event": "change",
+            "handler": "handleUpdateChange",
+            "line": 64,
+            "framework": "DOM"
+          },
+          {
+            "type": "onChange",
+            "event": "change",
+            "handler": "handleUpdateChange",
+            "line": 64,
+            "framework": "Generic"
+          },
+          {
+            "type": "dom_event",
+            "event": "submit",
+            "handler": "handleSubmit",
+            "line": 85,
+            "framework": "DOM"
+          },
+          {
+            "type": "onSubmit",
+            "event": "submit",
+            "handler": "handleSubmit",
+            "line": 85,
+            "framework": "Generic"
+          }
+        ]
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "react": [
+            "React",
+            "useState",
+            "useEffect",
+            "useCallback"
+          ],
+          "@chakra-ui/react": [
+            "Box",
+            "Container",
+            "Text",
+            "Progress",
+            "Flex",
+            "Table",
+            "Thead",
+            "Tbody",
+            "Tr",
+            "Th",
+            "Td"
+          ],
+          "../../shared/components/atoms/Button": [
+            "Button"
+          ],
+          "../../shared/components/atoms/Modal": [
+            "Modal"
+          ],
+          "./hooks/JsonBulkUploadContext": [
+            "useJsonBulkUpload"
+          ],
+          "../../shared/api/axiosClient": [
+            "axiosClient"
+          ],
+          "./utils/jsonBulkUploadValidation": [
+            "applyDefaultFields"
+          ],
+          "./types/jsonProduct": [
+            "JSONProduct"
+          ],
+          "react-router-dom": [
+            "useNavigate"
+          ],
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {
+          "JSONBulkUploadConfirmationScreen()": {
+            "docstring": "",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [],
+            "line_number": 28,
+            "is_component": true
+          },
+          "handleBeforeUnload(e)": {
+            "docstring": "",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [
+              "e"
+            ],
+            "line_number": 40
+          },
+          "handleSubmitUpload()": {
+            "docstring": "",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": true,
+            "parameters": [],
+            "line_number": 68
+          },
+          "handleReupload()": {
+            "docstring": "",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [],
+            "line_number": 95
+          }
+        },
+        "classes": {},
+        "path": "src/features/catalog/JSONBulkUploadConfirmationScreen.tsx",
+        "state_changes": [
+          {
+            "type": "useState",
+            "line": 28,
+            "variable": "jsonbulkuploadconfirmationscreen",
+            "mutation_type": "update"
+          },
+          {
+            "type": "useState",
+            "line": 40,
+            "variable": "handlebeforeunload",
+            "mutation_type": "update"
+          },
+          {
+            "type": "useState",
+            "line": 40,
+            "variable": "handlebeforeunload",
+            "mutation_type": "update"
+          },
+          {
+            "type": "useState",
+            "line": 68,
+            "variable": "handlesubmitupload",
+            "mutation_type": "update"
+          },
+          {
+            "type": "useState",
+            "line": 68,
+            "variable": "handlesubmitupload",
+            "mutation_type": "update"
+          },
+          {
+            "type": "useState",
+            "line": 95,
+            "variable": "handlereupload",
+            "mutation_type": "update"
+          },
+          {
+            "type": "useState",
+            "line": 95,
+            "variable": "handlereupload",
+            "mutation_type": "update"
+          }
+        ],
+        "event_handlers": [
+          {
+            "type": "dom_event",
+            "event": "load",
+            "handler": "JSONBulkUploadConfirmationScreen",
+            "line": 28,
+            "framework": "DOM"
+          },
+          {
+            "type": "dom_event",
+            "event": "callback",
+            "handler": "JSONBulkUploadConfirmationScreen",
+            "line": 28,
+            "framework": "Custom"
+          },
+          {
+            "type": "dom_event",
+            "event": "load",
+            "handler": "JSONBulkUploadConfirmationScreen",
+            "line": 28,
+            "framework": "Generic"
+          },
+          {
+            "type": "dom_event",
+            "event": "load",
+            "handler": "handleBeforeUnload",
+            "line": 40,
+            "framework": "DOM"
+          },
+          {
+            "type": "dom_event",
+            "event": "load",
+            "handler": "handleBeforeUnload",
+            "line": 40,
+            "framework": "Generic"
+          },
+          {
+            "type": "dom_event",
+            "event": "submit",
+            "handler": "handleSubmitUpload",
+            "line": 68,
+            "framework": "DOM"
+          },
+          {
+            "type": "dom_event",
+            "event": "load",
+            "handler": "handleSubmitUpload",
+            "line": 68,
+            "framework": "DOM"
+          },
+          {
+            "type": "onSubmit",
+            "event": "submit",
+            "handler": "handleSubmitUpload",
+            "line": 68,
+            "framework": "Generic"
+          },
+          {
+            "type": "dom_event",
+            "event": "load",
+            "handler": "handleReupload",
+            "line": 95,
+            "framework": "DOM"
+          },
+          {
+            "type": "dom_event",
+            "event": "load",
+            "handler": "handleReupload",
+            "line": 95,
+            "framework": "Generic"
+          }
+        ]
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "react": [
+            "React",
+            "useState"
+          ],
+          "@chakra-ui/react": [
+            "Box",
+            "Text"
+          ],
+          "../../shared/components/atoms/Button": [
+            "Button"
+          ],
+          "../../shared/components/atoms/Input": [
+            "Input"
+          ],
+          "../../shared/components/atoms/Alert": [
+            "Alert"
+          ],
+          "react-router-dom": [
+            "useNavigate"
+          ],
+          "./utils/jsonBulkUploadValidation": [
+            "validateBulkUploadJSON"
+          ],
+          "./hooks/JsonBulkUploadContext": [
+            "useJsonBulkUpload"
+          ],
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {
+          "JSONBulkUploadScreen()": {
+            "docstring": "",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [],
+            "line_number": 12,
+            "is_component": true
+          },
+          "handleFileChange(e)": {
+            "docstring": "",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [
+              "e"
+            ],
+            "line_number": 18
+          },
+          "handleValidate()": {
+            "docstring": "",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [],
+            "line_number": 31
+          }
+        },
+        "classes": {},
+        "path": "src/features/catalog/JSONBulkUploadScreen.tsx",
+        "state_changes": [
+          {
+            "type": "useState",
+            "line": 12,
+            "variable": "jsonbulkuploadscreen",
+            "mutation_type": "update"
+          },
+          {
+            "type": "useState",
+            "line": 18,
+            "variable": "handlefilechange",
+            "mutation_type": "update"
+          },
+          {
+            "type": "useState",
+            "line": 18,
+            "variable": "handlefilechange",
+            "mutation_type": "update"
+          },
+          {
+            "type": "useState",
+            "line": 31,
+            "variable": "handlevalidate",
+            "mutation_type": "update"
+          },
+          {
+            "type": "useState",
+            "line": 31,
+            "variable": "handlevalidate",
+            "mutation_type": "update"
+          }
+        ],
+        "event_handlers": [
+          {
+            "type": "dom_event",
+            "event": "load",
+            "handler": "JSONBulkUploadScreen",
+            "line": 12,
+            "framework": "DOM"
+          },
+          {
+            "type": "dom_event",
+            "event": "change",
+            "handler": "handleFileChange",
+            "line": 18,
+            "framework": "DOM"
+          },
+          {
+            "type": "onChange",
+            "event": "change",
+            "handler": "handleFileChange",
+            "line": 18,
+            "framework": "Generic"
+          },
+          {
+            "type": "dom_event",
+            "event": "unknown",
+            "handler": "handleValidate",
+            "line": 31,
+            "framework": "Generic"
+          }
+        ]
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "react": [
+            "React"
+          ],
+          "@chakra-ui/react": [
+            "Box",
+            "Button",
+            "FormControl",
+            "FormLabel",
+            "Input",
+            "Stack",
+            "Heading",
+            "useToast"
+          ],
+          "react-hook-form": [
+            "useForm",
+            "SubmitHandler"
+          ],
+          "@tanstack/react-query": [
+            "useMutation",
+            "useQueryClient"
+          ],
+          "../../shared/api/axiosClient": [
+            "axiosClient"
+          ],
+          "./productTypes": [
+            "IProduct"
+          ],
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {
+          "NewProductForm()": {
+            "docstring": "",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [],
+            "line_number": 45,
+            "is_component": true
+          },
+          "onSubmit(formData)": {
+            "docstring": "",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [
+              "formData"
+            ],
+            "line_number": 147
+          }
+        },
+        "classes": {},
+        "path": "src/features/catalog/NewProductForm.tsx",
+        "event_handlers": [
+          {
+            "type": "dom_event",
+            "event": "submit",
+            "handler": "onSubmit",
+            "line": 147,
+            "framework": "DOM"
+          },
+          {
+            "type": "dom_event",
+            "event": "callback",
+            "handler": "onSubmit",
+            "line": 147,
+            "framework": "Custom"
+          },
+          {
+            "type": "onSubmit",
+            "event": "submit",
+            "handler": "onSubmit",
+            "line": 147,
+            "framework": "Generic"
+          }
+        ]
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "react": [
+            "React",
+            "FC"
+          ],
+          "@chakra-ui/react": [
+            "Box",
+            "SimpleGrid",
+            "Heading",
+            "Text",
+            "Stack",
+            "Button",
+            "Spinner",
+            "Card",
+            "CardHeader",
+            "CardBody",
+            "Image",
+            "Grid",
+            "GridItem",
+            "Flex"
+          ],
+          "react-router-dom": [
+            "useParams",
+            "useNavigate"
+          ],
+          "@tanstack/react-query": [
+            "useQuery"
+          ],
+          "../../shared/api/axiosClient": [
+            "axiosClient"
+          ],
+          "./productTypes": [
+            "IProduct",
+            "getCustomAttribute"
+          ],
+          "./EditableInfoItem": [
+            "EditableInfoItem"
+          ],
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {
+          "fetchProductDetail(sku)": {
+            "docstring": "",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": true,
+            "parameters": [
+              "sku"
+            ],
+            "line_number": 25
+          },
+          "formatNumber(value)": {
+            "docstring": "",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [
+              "value"
+            ],
+            "line_number": 32
+          },
+          "formatCurrency(value)": {
+            "docstring": "",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [
+              "value"
+            ],
+            "line_number": 37
+          },
+          "InfoItem({ ... })": {
+            "docstring": "",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [
+              "{ ... }"
+            ],
+            "line_number": 47,
+            "is_component": true
+          },
+          "SectionCard({ ... })": {
+            "docstring": "",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [
+              "{ ... }"
+            ],
+            "line_number": 59,
+            "is_component": true
+          },
+          "ProductDetailView()": {
+            "docstring": "",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [],
+            "line_number": 68,
+            "is_component": true
+          }
+        },
+        "classes": {},
+        "path": "src/features/catalog/ProductDetailView.tsx",
+        "event_handlers": [
+          {
+            "type": "dom_event",
+            "event": "callback",
+            "handler": "SectionCard",
+            "line": 59,
+            "framework": "Custom"
+          },
+          {
+            "type": "dom_event",
+            "event": "unknown",
+            "handler": "SectionCard",
+            "line": 59,
+            "framework": "Generic"
+          }
+        ]
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "react": [
+            "React",
+            "useState",
+            "useMemo",
+            "useCallback"
+          ],
+          "@chakra-ui/react": [
+            "Box",
+            "Flex",
+            "Input",
+            "Text",
+            "Table",
+            "Thead",
+            "Tbody",
+            "Tr",
+            "Th",
+            "Td",
+            "TableContainer",
+            "Container",
+            "ThemeProvider",
+            "extendTheme"
+          ],
+          "@tanstack/react-query": [
+            "useQuery"
+          ],
+          "react-router-dom": [
+            "useNavigate"
+          ],
+          "../../shared/api/axiosClient": [
+            "axiosClient"
+          ],
+          "../../shared/components/atoms/Loader": [
+            "Loader"
+          ],
+          "../../shared/components/atoms/Alert": [
+            "Alert"
+          ],
+          "../../shared/components/atoms/Button": [
+            "Button"
+          ],
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {
+          "ProductListing()": {
+            "docstring": "",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [],
+            "line_number": 71,
+            "is_component": true
+          }
+        },
+        "classes": {},
+        "path": "src/features/catalog/ProductListing.tsx",
+        "state_changes": [
+          {
+            "type": "useState",
+            "line": 71,
+            "variable": "productlisting",
+            "mutation_type": "update"
+          }
+        ]
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {
+          "getCustomAttribute(product, code)": {
+            "docstring": "",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [
+              "product",
+              "code"
+            ],
+            "line_number": 232
+          }
+        },
+        "classes": {},
+        "path": "src/features/catalog/productTypes.ts"
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "react": [
+            "React"
+          ],
+          "@chakra-ui/react": [
+            "Box",
+            "Button",
+            "Flex",
+            "FormControl",
+            "FormLabel",
+            "Input",
+            "Text",
+            "useToast"
+          ],
+          "react-hook-form": [
+            "useForm"
+          ],
+          "@tanstack/react-query": [
+            "useQuery",
+            "useMutation",
+            "useQueryClient"
+          ],
+          "../../shared/api/axiosClient": [
+            "axiosClient"
+          ],
+          "../../shared/components/atoms/Loader": [
+            "Loader"
+          ],
+          "../../shared/components/atoms/Alert": [
+            "Alert"
+          ],
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {
+          "Profile()": {
+            "docstring": "",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [],
+            "line_number": 25,
+            "is_component": true
+          },
+          "onSubmit(data)": {
+            "docstring": "",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [
+              "data"
+            ],
+            "line_number": 72
+          }
+        },
+        "classes": {},
+        "path": "src/features/catalog/Profile.tsx",
+        "event_handlers": [
+          {
+            "type": "dom_event",
+            "event": "submit",
+            "handler": "onSubmit",
+            "line": 72,
+            "framework": "DOM"
+          },
+          {
+            "type": "dom_event",
+            "event": "callback",
+            "handler": "onSubmit",
+            "line": 72,
+            "framework": "Custom"
+          },
+          {
+            "type": "onSubmit",
+            "event": "submit",
+            "handler": "onSubmit",
+            "line": 72,
+            "framework": "Generic"
+          }
+        ]
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "react": [
+            "React",
+            "useState"
+          ],
+          "@chakra-ui/react": [
+            "Box",
+            "Input",
+            "Button",
+            "Flex",
+            "Text"
+          ],
+          "@tanstack/react-query": [
+            "useQuery"
+          ],
+          "../../shared/api/axiosClient": [
+            "axiosClient"
+          ],
+          "../../shared/components/atoms/Loader": [
+            "Loader"
+          ],
+          "../../shared/components/atoms/Alert": [
+            "Alert"
+          ],
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {
+          "Reports()": {
+            "docstring": "",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [],
+            "line_number": 19,
+            "is_component": true
+          },
+          "handleFetchReport()": {
+            "docstring": "",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [],
+            "line_number": 35
+          }
+        },
+        "classes": {},
+        "path": "src/features/catalog/Reports.tsx",
+        "state_changes": [
+          {
+            "type": "useState",
+            "line": 19,
+            "variable": "reports",
+            "mutation_type": "update"
+          },
+          {
+            "type": "useState",
+            "line": 35,
+            "variable": "handlefetchreport",
+            "mutation_type": "update"
+          },
+          {
+            "type": "useState",
+            "line": 35,
+            "variable": "handlefetchreport",
+            "mutation_type": "update"
+          }
+        ],
+        "event_handlers": [
+          {
+            "type": "dom_event",
+            "event": "unknown",
+            "handler": "handleFetchReport",
+            "line": 35,
+            "framework": "Generic"
+          }
+        ]
+      }
+    ],
+    "src/features/catalog/hooks": [
+      {
+        "language": "typescript",
+        "imports": {
+          "react": [
+            "React",
+            "createContext",
+            "useContext",
+            "useState",
+            "ReactNode"
+          ],
+          "../types/jsonProduct": [
+            "JSONProduct"
+          ],
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {
+          "JsonBulkUploadProvider({ ... })": {
+            "docstring": "",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [
+              "{ ... }"
+            ],
+            "line_number": 14,
+            "is_component": true
+          },
+          "clearProducts()": {
+            "docstring": "",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [],
+            "line_number": 19
+          },
+          "useJsonBulkUpload()": {
+            "docstring": "",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [],
+            "line_number": 32,
+            "is_hook": true
+          }
+        },
+        "classes": {},
+        "path": "src/features/catalog/hooks/JsonBulkUploadContext.tsx",
+        "state_changes": [
+          {
+            "type": "useState",
+            "line": 14,
+            "variable": "jsonbulkuploadprovider",
+            "mutation_type": "update"
+          },
+          {
+            "type": "useState",
+            "line": 14,
+            "variable": "context",
+            "mutation_type": "read"
+          },
+          {
+            "type": "useState",
+            "line": 19,
+            "variable": "clearproducts",
+            "mutation_type": "update"
+          },
+          {
+            "type": "useState",
+            "line": 19,
+            "variable": "context",
+            "mutation_type": "read"
+          },
+          {
+            "type": "useState",
+            "line": 32,
+            "variable": "jsonbulkupload",
+            "mutation_type": "update"
+          },
+          {
+            "type": "useState",
+            "line": 32,
+            "variable": "context",
+            "mutation_type": "read"
+          }
+        ],
+        "event_handlers": [
+          {
+            "type": "dom_event",
+            "event": "load",
+            "handler": "JsonBulkUploadProvider",
+            "line": 14,
+            "framework": "DOM"
+          },
+          {
+            "type": "dom_event",
+            "event": "callback",
+            "handler": "JsonBulkUploadProvider",
+            "line": 14,
+            "framework": "Custom"
+          },
+          {
+            "type": "dom_event",
+            "event": "load",
+            "handler": "JsonBulkUploadProvider",
+            "line": 14,
+            "framework": "Generic"
+          },
+          {
+            "type": "dom_event",
+            "event": "load",
+            "handler": "useJsonBulkUpload",
+            "line": 32,
+            "framework": "DOM"
+          },
+          {
+            "type": "dom_event",
+            "event": "callback",
+            "handler": "useJsonBulkUpload",
+            "line": 32,
+            "framework": "Custom"
+          },
+          {
+            "type": "dom_event",
+            "event": "load",
+            "handler": "useJsonBulkUpload",
+            "line": 32,
+            "framework": "Generic"
+          }
+        ]
+      }
+    ],
+    "src/features/demo": [
+      {
+        "language": "typescript",
+        "imports": {
+          "react": [
+            "React",
+            "useMemo"
+          ],
+          "@tanstack/react-query": [
+            "useQuery"
+          ],
+          "../../shared/components/atoms/Loader": [
+            "Loader"
+          ],
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {
+          "fetchData()": {
+            "docstring": "",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": true,
+            "parameters": [],
+            "line_number": 10
+          },
+          "QueryDemo()": {
+            "docstring": "",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [],
+            "line_number": 17,
+            "is_component": true
+          }
+        },
+        "classes": {},
+        "path": "src/features/demo/QueryDemo.tsx"
+      }
+    ],
+    "src/features/catalog/types": [
+      {
+        "language": "typescript",
+        "imports": {
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {},
+        "classes": {},
+        "path": "src/features/catalog/types/jsonProduct.ts"
+      }
+    ],
+    "src/features/catalog/utils": [
+      {
+        "language": "typescript",
+        "imports": {
+          "../types/jsonProduct": [
+            "JSONProduct"
+          ],
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {
+          "validateBulkUploadJSON(fileContent)": {
+            "docstring": "Validates and parses the uploaded JSON file for bulk product upload.\nIt enforces that the file is a JSON array of products (max 100)\nwhere each product must contain every mandatory field.\n@param fileContent - string content of the file.\n@returns ValidationResult with a valid flag, error message if any, and an array of products.",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [
+              "fileContent"
+            ],
+            "line_number": 39
+          },
+          "applyDefaultFields(product)": {
+            "docstring": "Applies default values to a product if missing optional fields.\nThese defaults are required by Magento and ensure consistency.\n@param product - JSONProduct object to apply default values.\n@returns The product with default fields populated.",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [
+              "product"
+            ],
+            "line_number": 94
+          }
+        },
+        "classes": {},
+        "path": "src/features/catalog/utils/jsonBulkUploadValidation.ts",
+        "event_handlers": [
+          {
+            "type": "dom_event",
+            "event": "load",
+            "handler": "validateBulkUploadJSON",
+            "line": 39,
+            "framework": "DOM"
+          }
+        ]
+      }
+    ],
+    "src/features/inventory/components": [
+      {
+        "language": "typescript",
+        "imports": {
+          "react": [
+            "React",
+            "useState",
+            "useCallback"
+          ],
+          "@chakra-ui/react": [
+            "Box",
+            "Text",
+            "Progress",
+            "TableContainer",
+            "Table",
+            "Thead",
+            "Tbody",
+            "Tr",
+            "Th",
+            "Td",
+            "Container"
+          ],
+          "../../../shared/components/atoms/Button": [
+            "Button"
+          ],
+          "../../../shared/components/atoms/Alert": [
+            "Alert"
+          ],
+          "../hooks/useInventoryCsv": [
+            "useInventoryCsv"
+          ],
+          "../inventoryService": [
+            "updateInventoryRow"
+          ],
+          "react-router-dom": [
+            "useNavigate"
+          ],
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {
+          "InventoryConfirmationScreen()": {
+            "docstring": "",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [],
+            "line_number": 21,
+            "is_component": true
+          },
+          "handleStartProcessing()": {
+            "docstring": "",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": true,
+            "parameters": [],
+            "line_number": 62
+          },
+          "handleCancel()": {
+            "docstring": "",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [],
+            "line_number": 93
+          },
+          "handleReset()": {
+            "docstring": "",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [],
+            "line_number": 97
+          }
+        },
+        "classes": {},
+        "path": "src/features/inventory/components/InventoryConfirmationScreen.tsx",
+        "state_changes": [
+          {
+            "type": "useState",
+            "line": 21,
+            "variable": "inventoryconfirmationscreen",
+            "mutation_type": "update"
+          },
+          {
+            "type": "useState",
+            "line": 62,
+            "variable": "handlestartprocessing",
+            "mutation_type": "update"
+          },
+          {
+            "type": "useState",
+            "line": 62,
+            "variable": "handlestartprocessing",
+            "mutation_type": "update"
+          },
+          {
+            "type": "useState",
+            "line": 93,
+            "variable": "handlecancel",
+            "mutation_type": "update"
+          },
+          {
+            "type": "useState",
+            "line": 93,
+            "variable": "handlecancel",
+            "mutation_type": "update"
+          },
+          {
+            "type": "useState",
+            "line": 97,
+            "variable": "handlereset",
+            "mutation_type": "update"
+          },
+          {
+            "type": "useState",
+            "line": 97,
+            "variable": "handlereset",
+            "mutation_type": "update"
+          }
+        ],
+        "event_handlers": [
+          {
+            "type": "dom_event",
+            "event": "callback",
+            "handler": "InventoryConfirmationScreen",
+            "line": 21,
+            "framework": "Custom"
+          },
+          {
+            "type": "dom_event",
+            "event": "unknown",
+            "handler": "InventoryConfirmationScreen",
+            "line": 21,
+            "framework": "Generic"
+          },
+          {
+            "type": "dom_event",
+            "event": "unknown",
+            "handler": "handleStartProcessing",
+            "line": 62,
+            "framework": "Generic"
+          },
+          {
+            "type": "dom_event",
+            "event": "unknown",
+            "handler": "handleCancel",
+            "line": 93,
+            "framework": "Generic"
+          },
+          {
+            "type": "dom_event",
+            "event": "unknown",
+            "handler": "handleReset",
+            "line": 97,
+            "framework": "Generic"
+          }
+        ]
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "react": [
+            "React",
+            "useState"
+          ],
+          "@chakra-ui/react": [
+            "Box",
+            "Text",
+            "Stack"
+          ],
+          "../../../shared/components/atoms/Button": [
+            "Button"
+          ],
+          "../../../shared/components/atoms/Input": [
+            "Input"
+          ],
+          "../../../shared/components/atoms/Alert": [
+            "Alert"
+          ],
+          "../hooks/useInventoryCsv": [
+            "parseInventoryCsv",
+            "useInventoryCsv"
+          ],
+          "react-router-dom": [
+            "useNavigate"
+          ],
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {
+          "InventoryUploadScreen()": {
+            "docstring": "",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [],
+            "line_number": 9,
+            "is_component": true
+          },
+          "handleFileChange(e)": {
+            "docstring": "",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [
+              "e"
+            ],
+            "line_number": 15
+          },
+          "handleUploadAndValidate()": {
+            "docstring": "",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": true,
+            "parameters": [],
+            "line_number": 23
+          }
+        },
+        "classes": {},
+        "path": "src/features/inventory/components/InventoryUploadScreen.tsx",
+        "state_changes": [
+          {
+            "type": "useState",
+            "line": 9,
+            "variable": "inventoryuploadscreen",
+            "mutation_type": "update"
+          },
+          {
+            "type": "useState",
+            "line": 15,
+            "variable": "handlefilechange",
+            "mutation_type": "update"
+          },
+          {
+            "type": "useState",
+            "line": 15,
+            "variable": "handlefilechange",
+            "mutation_type": "update"
+          },
+          {
+            "type": "useState",
+            "line": 23,
+            "variable": "handleuploadandvalidate",
+            "mutation_type": "update"
+          },
+          {
+            "type": "useState",
+            "line": 23,
+            "variable": "handleuploadandvalidate",
+            "mutation_type": "update"
+          }
+        ],
+        "event_handlers": [
+          {
+            "type": "dom_event",
+            "event": "load",
+            "handler": "InventoryUploadScreen",
+            "line": 9,
+            "framework": "DOM"
+          },
+          {
+            "type": "dom_event",
+            "event": "change",
+            "handler": "handleFileChange",
+            "line": 15,
+            "framework": "DOM"
+          },
+          {
+            "type": "onChange",
+            "event": "change",
+            "handler": "handleFileChange",
+            "line": 15,
+            "framework": "Generic"
+          },
+          {
+            "type": "dom_event",
+            "event": "load",
+            "handler": "handleUploadAndValidate",
+            "line": 23,
+            "framework": "DOM"
+          },
+          {
+            "type": "dom_event",
+            "event": "load",
+            "handler": "handleUploadAndValidate",
+            "line": 23,
+            "framework": "Generic"
+          }
+        ]
+      }
+    ],
+    "src/features/inventory": [
+      {
+        "language": "typescript",
+        "imports": {
+          "../../shared/api/axiosClient": [
+            "axiosClient"
+          ],
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {
+          "updateInventoryRow(payload)": {
+            "docstring": "updateInventoryRow(payload: InventoryUpdatePayload):\nPerforms the POST to /api/cm/inventory\nReturns a promise that resolves if successful, rejects if error",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": true,
+            "parameters": [
+              "payload"
+            ],
+            "line_number": 17
+          }
+        },
+        "classes": {},
+        "path": "src/features/inventory/inventoryService.ts"
+      }
+    ],
+    "src/features/inventory/hooks": [
+      {
+        "language": "typescript",
+        "imports": {
+          "papaparse": [
+            "Papa"
+          ],
+          "react": [
+            "React",
+            "createContext",
+            "useState",
+            "useContext",
+            "ReactNode",
+            "useCallback"
+          ],
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {
+          "parseInventoryCsv(file)": {
+            "docstring": "parseInventoryCsv(file: File):\n- Reads and parses the CSV.\n- Ensures required columns (sku, source_code, quantity) are present.\n- Any row with invalid numeric 'quantity' triggers parse failure.\n- If valid, returns rows with status=\"Pending\".",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": true,
+            "parameters": [
+              "file"
+            ],
+            "line_number": 40
+          },
+          "InventoryCsvProvider({ ... })": {
+            "docstring": "",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [
+              "{ ... }"
+            ],
+            "line_number": 158,
+            "is_component": true
+          },
+          "useInventoryCsv()": {
+            "docstring": "",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [],
+            "line_number": 180,
+            "is_hook": true
+          }
+        },
+        "classes": {},
+        "path": "src/features/inventory/hooks/useInventoryCsv.tsx",
+        "state_changes": [
+          {
+            "type": "useState",
+            "line": 40,
+            "variable": "parseinventorycsv",
+            "mutation_type": "update"
+          },
+          {
+            "type": "useState",
+            "line": 40,
+            "variable": "context",
+            "mutation_type": "read"
+          },
+          {
+            "type": "useState",
+            "line": 158,
+            "variable": "inventorycsvprovider",
+            "mutation_type": "update"
+          },
+          {
+            "type": "useState",
+            "line": 158,
+            "variable": "context",
+            "mutation_type": "read"
+          },
+          {
+            "type": "useState",
+            "line": 180,
+            "variable": "inventorycsv",
+            "mutation_type": "update"
+          },
+          {
+            "type": "useState",
+            "line": 180,
+            "variable": "context",
+            "mutation_type": "read"
+          }
+        ]
+      }
+    ],
+    "src/features/orders/hooks": [
+      {
+        "language": "typescript",
+        "imports": {
+          "@tanstack/react-query": [
+            "useQuery"
+          ],
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {
+          "useOrders()": {
+            "docstring": "",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [],
+            "line_number": 12,
+            "is_hook": true
+          }
+        },
+        "classes": {},
+        "path": "src/features/orders/hooks/useOrders.ts"
+      }
+    ],
+    "src/shared/api": [
+      {
+        "language": "typescript",
+        "imports": {
+          "axios": [
+            "axios",
+            "AxiosError",
+            "InternalAxiosRequestConfig",
+            "AxiosResponse"
+          ],
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {},
+        "classes": {},
+        "path": "src/shared/api/axiosClient.ts"
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {
+          "getCsrfToken()": {
+            "docstring": "csrf.ts provides a basic setup for CSRF protection.\nThis file can be extended to include specific configurations if required by the backend.",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [],
+            "line_number": 5
+          }
+        },
+        "classes": {},
+        "path": "src/shared/api/csrf.ts"
+      }
+    ],
+    "src/shared/components/atoms": [
+      {
+        "language": "typescript",
+        "imports": {
+          "react": [
+            "React"
+          ],
+          "@chakra-ui/react": [
+            "Alert",
+            "AlertIcon",
+            "AlertTitle",
+            "AlertDescription",
+            "Box"
+          ],
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {
+          "Alert({ ... })": {
+            "docstring": "",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [
+              "{ ... }"
+            ],
+            "line_number": 16,
+            "is_component": true
+          }
+        },
+        "classes": {},
+        "path": "src/shared/components/atoms/Alert.tsx"
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "@chakra-ui/react": [
+            "Button",
+            "ButtonProps"
+          ],
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {
+          "Button({ ... })": {
+            "docstring": "",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [
+              "{ ... }"
+            ],
+            "line_number": 10,
+            "is_component": true
+          }
+        },
+        "classes": {},
+        "path": "src/shared/components/atoms/Button.tsx"
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "react": [
+            "React"
+          ],
+          "@chakra-ui/react": [
+            "Center",
+            "Text"
+          ],
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {
+          "EmptyState({ ... })": {
+            "docstring": "",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [
+              "{ ... }"
+            ],
+            "line_number": 9,
+            "is_component": true
+          }
+        },
+        "classes": {},
+        "path": "src/shared/components/atoms/EmptyState.tsx",
+        "state_changes": [
+          {
+            "type": "useState",
+            "line": 9,
+            "variable": "emptystate",
+            "mutation_type": "update"
+          }
+        ]
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "react": [
+            "React"
+          ],
+          "@chakra-ui/react": [
+            "Alert",
+            "AlertIcon",
+            "AlertDescription"
+          ],
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {
+          "ErrorMessage({ ... })": {
+            "docstring": "",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [
+              "{ ... }"
+            ],
+            "line_number": 9,
+            "is_component": true
+          }
+        },
+        "classes": {},
+        "path": "src/shared/components/atoms/ErrorMessage.tsx"
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "react": [
+            "React"
+          ],
+          "@chakra-ui/react": [
+            "FormControl",
+            "FormLabel",
+            "Input",
+            "FormErrorMessage",
+            "InputProps"
+          ],
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {},
+        "classes": {},
+        "path": "src/shared/components/atoms/Input.tsx"
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "react": [
+            "React"
+          ],
+          "@chakra-ui/react": [
+            "Spinner",
+            "Box"
+          ],
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {},
+        "classes": {},
+        "path": "src/shared/components/atoms/Loader.tsx"
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "react": [
+            "React"
+          ],
+          "@chakra-ui/react": [
+            "Modal",
+            "ModalOverlay",
+            "ModalContent",
+            "ModalCloseButton",
+            "ModalBody",
+            "ModalProps"
+          ],
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {
+          "Modal({ ... })": {
+            "docstring": "Modal component that displays content in an overlay using Chakra UI.\n@example\n<Modal isOpen={isModalOpen} onClose={() => setModalOpen(false)}>\n<div>Modal Content</div>\n</Modal>",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [
+              "{ ... }"
+            ],
+            "line_number": 25,
+            "is_component": true
+          }
+        },
+        "classes": {},
+        "path": "src/shared/components/atoms/Modal.tsx"
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "react": [
+            "React"
+          ],
+          "@chakra-ui/react": [
+            "Image",
+            "ImageProps"
+          ],
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {
+          "OptimizedImage({ ... })": {
+            "docstring": "OptimizedImage\nA wrapper over Chakra UI's Image that sets loading=\"lazy\" to defer off-screen image loading.\nThis component can be used throughout the application to ensure optimized image delivery.\n@param {ImageProps} props - Props passed to the Chakra Image component.",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [
+              "{ ... }"
+            ],
+            "line_number": 12,
+            "is_component": true
+          }
+        },
+        "classes": {},
+        "path": "src/shared/components/atoms/OptimizedImage.tsx"
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "react": [
+            "React"
+          ],
+          "@chakra-ui/react": [
+            "Table",
+            "Thead",
+            "Tbody",
+            "Tr",
+            "Th",
+            "Td",
+            "TableContainer"
+          ],
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {},
+        "classes": {},
+        "path": "src/shared/components/atoms/Table.tsx"
+      }
+    ],
+    "src/shared/components/layout": [
+      {
+        "language": "typescript",
+        "imports": {
+          "react": [
+            "React"
+          ],
+          "@chakra-ui/react": [
+            "Box",
+            "Text"
+          ],
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {
+          "Footer()": {
+            "docstring": "Footer component, displayed at the bottom of the application.",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [],
+            "line_number": 7,
+            "is_component": true
+          }
+        },
+        "classes": {},
+        "path": "src/shared/components/layout/Footer.tsx"
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "react": [
+            "React"
+          ],
+          "@chakra-ui/react": [
+            "Flex",
+            "IconButton",
+            "Box",
+            "Heading"
+          ],
+          "@chakra-ui/icons": [
+            "HamburgerIcon"
+          ],
+          "../../../app/providers/LayoutContext": [
+            "useLayout"
+          ],
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {
+          "Header()": {
+            "docstring": "Header component for the application.\nProvides a hamburger button to toggle the sidebar and displays the portal title.",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [],
+            "line_number": 10,
+            "is_component": true
+          }
+        },
+        "classes": {},
+        "path": "src/shared/components/layout/Header.tsx"
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "react": [
+            "React"
+          ],
+          "@chakra-ui/react": [
+            "Box"
+          ],
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {
+          "MainContent({ ... })": {
+            "docstring": "MainContent component encapsulates the primary content area.",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [
+              "{ ... }"
+            ],
+            "line_number": 11,
+            "is_component": true
+          }
+        },
+        "classes": {},
+        "path": "src/shared/components/layout/MainContent.tsx"
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "react": [
+            "React"
+          ],
+          "@chakra-ui/react": [
+            "Box",
+            "VStack",
+            "Link",
+            "Heading"
+          ],
+          "react-router-dom": [
+            "Link"
+          ],
+          "../../../app/providers/LayoutContext": [
+            "useLayout"
+          ],
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {
+          "Sidebar()": {
+            "docstring": "",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [],
+            "line_number": 6,
+            "is_component": true
+          }
+        },
+        "classes": {},
+        "path": "src/shared/components/layout/Sidebar.tsx"
+      }
+    ],
+    "src/shared/hooks": [
+      {
+        "language": "typescript",
+        "imports": {
+          "../../app/providers/AuthContext": [
+            "useAuthContext"
+          ],
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {
+          "useAuth()": {
+            "docstring": "",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [],
+            "line_number": 3,
+            "is_hook": true
+          }
+        },
+        "classes": {},
+        "path": "src/shared/hooks/useAuth.ts"
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "./useAuth": [
+            "useAuth"
+          ],
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {
+          "usePermissions(allowedRoles)": {
+            "docstring": "usePermissions hook checks if the current user’s role is included in allowedRoles.\n@param allowedRoles - An array of permitted roles.\n@returns Boolean indicating if the user has permission.",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [
+              "allowedRoles"
+            ],
+            "line_number": 9,
+            "is_hook": true
+          }
+        },
+        "classes": {},
+        "path": "src/shared/hooks/usePermissions.ts"
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "react": [
+            "useEffect"
+          ],
+          "./useAuth": [
+            "useAuth"
+          ],
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {
+          "useSession()": {
+            "docstring": "useSession hook monitors the current session token.\nIt can be extended for token expiry or idle timeout management.",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [],
+            "line_number": 8,
+            "is_hook": true
+          }
+        },
+        "classes": {},
+        "path": "src/shared/hooks/useSession.ts",
+        "state_changes": [
+          {
+            "type": "useState",
+            "line": 8,
+            "variable": "session",
+            "mutation_type": "update"
+          }
+        ]
+      }
+    ],
+    "src/shared/types": [
+      {
+        "language": "typescript",
+        "imports": {
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {},
+        "classes": {},
+        "path": "src/shared/types/loadingState.ts"
+      }
+    ],
+    "src/shared/utils": [
+      {
+        "language": "typescript",
+        "imports": {
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {
+          "sanitizeInput(input)": {
+            "docstring": "",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [
+              "input"
+            ],
+            "line_number": 5
+          }
+        },
+        "classes": {},
+        "path": "src/shared/utils/sanitize.ts"
+      }
+    ],
+    "src/types": [
+      {
+        "language": "typescript",
+        "imports": {},
+        "functions": {},
+        "classes": {},
+        "path": "src/types/env.d.ts"
+      }
+    ]
   },
-  "dependencies": {},
+  "summary": {
+    "total_files": 84,
+    "total_lines": 6370,
+    "languages": {
+      "unknown": 5,
+      "javascript": 5,
+      "python": 1,
+      "json": 5,
+      "html": 1,
+      "typescript": 67
+    },
+    "extensions": {},
+    "frameworks": {
+      "React": 1,
+      "React Native": 0.2716049382716049
+    }
+  },
+  "dependencies": {
+    "README.md": [
+      "react from 'eslint-plugin-react'"
+    ],
+    "eslint.config.js": [
+      "@eslint/js",
+      "__exports__",
+      "eslint-plugin-react-hooks",
+      "eslint-plugin-react-refresh",
+      "globals",
+      "typescript-eslint"
+    ],
+    "src/app/ErrorBoundary.tsx": [
+      "__exports__",
+      "react",
+      "src/shared/components/atoms/Alert.tsx"
+    ],
+    "src/App.tsx": [
+      "__exports__",
+      "react",
+      "src/shared/components/atoms/Alert.tsx",
+      "src/shared/components/atoms/Button.tsx",
+      "src/shared/components/atoms/EmptyState.tsx",
+      "src/shared/components/atoms/Input.tsx",
+      "src/shared/components/atoms/Loader.tsx",
+      "src/shared/components/atoms/Modal.tsx",
+      "src/shared/components/atoms/Table.tsx"
+    ],
+    "src/app/layouts/AdminLayout.tsx": [
+      "@chakra-ui/react",
+      "__exports__",
+      "react",
+      "src/shared/components/layout/Footer.tsx",
+      "src/shared/components/layout/Header.tsx",
+      "src/shared/components/layout/MainContent.tsx",
+      "src/shared/components/layout/Sidebar.tsx"
+    ],
+    "src/app/providers/AuthContext.tsx": [
+      "__exports__",
+      "react"
+    ],
+    "src/app/providers/LayoutContext.tsx": [
+      "__exports__",
+      "react"
+    ],
+    "src/app/layouts/CatalogManagerLayout.tsx": [
+      "@chakra-ui/react",
+      "__exports__",
+      "react",
+      "react-router-dom",
+      "src/app/providers/LayoutContext.tsx",
+      "src/features/inventory/hooks/useInventoryCsv.tsx",
+      "src/shared/components/layout/Footer.tsx",
+      "src/shared/components/layout/Header.tsx",
+      "src/shared/components/layout/Sidebar.tsx"
+    ],
+    "src/app/providers/QueryClientProvider.tsx": [
+      "@tanstack/react-query",
+      "@tanstack/react-query-devtools",
+      "__exports__",
+      "react"
+    ],
+    "src/app/layouts/PartnerLayout.tsx": [
+      "@chakra-ui/react",
+      "__exports__",
+      "react",
+      "src/app/providers/LayoutContext.tsx",
+      "src/shared/components/layout/Footer.tsx",
+      "src/shared/components/layout/Header.tsx",
+      "src/shared/components/layout/Sidebar.tsx"
+    ],
+    "src/app/layouts/SupportStaffLayout.tsx": [
+      "@chakra-ui/react",
+      "__exports__",
+      "react",
+      "src/app/providers/LayoutContext.tsx",
+      "src/shared/components/layout/Footer.tsx",
+      "src/shared/components/layout/Header.tsx",
+      "src/shared/components/layout/Sidebar.tsx"
+    ],
+    "src/app/routes/ProtectedRoute.tsx": [
+      "__exports__",
+      "react",
+      "react-router-dom",
+      "src/shared/hooks/usePermissions.ts"
+    ],
+    "src/app/routes/AppRoutes.tsx": [
+      "@chakra-ui/react",
+      "__exports__",
+      "react",
+      "react-router-dom",
+      "src/app/routes/ProtectedRoute.tsx",
+      "src/features/auth/components/CatalogForgotPasswordForm.tsx",
+      "src/features/auth/components/CatalogLoginForm.tsx",
+      "src/features/catalog/hooks/JsonBulkUploadContext.tsx",
+      "src/features/inventory/components/InventoryConfirmationScreen.tsx",
+      "src/features/inventory/components/InventoryUploadScreen.tsx",
+      "src/shared/components/atoms/Loader.tsx"
+    ],
+    "src/features/auth/components/Dashboard.tsx": [
+      "@chakra-ui/react",
+      "__exports__",
+      "react",
+      "src/shared/hooks/useAuth.ts"
+    ],
+    "src/features/auth/components/CatalogForgotPasswordForm.tsx": [
+      "@chakra-ui/react",
+      "__exports__",
+      "axios",
+      "react",
+      "react-hook-form",
+      "react-router-dom",
+      "src/shared/api/axiosClient.ts",
+      "src/shared/components/atoms/Alert.tsx",
+      "src/shared/components/atoms/Button.tsx",
+      "src/shared/components/atoms/Input.tsx"
+    ],
+    "src/features/auth/components/LoginForm.tsx": [
+      "@chakra-ui/react",
+      "__exports__",
+      "react",
+      "react-hook-form",
+      "src/shared/components/atoms/Button.tsx",
+      "src/shared/components/atoms/Input.tsx"
+    ],
+    "src/features/auth/components/OrderList.tsx": [
+      "@chakra-ui/react",
+      "__exports__",
+      "react",
+      "src/features/orders/hooks/useOrders.ts",
+      "src/shared/components/atoms/EmptyState.tsx",
+      "src/shared/components/atoms/ErrorMessage.tsx",
+      "src/shared/components/atoms/Loader.tsx"
+    ],
+    "src/features/auth/components/CatalogLoginForm.tsx": [
+      "@chakra-ui/react",
+      "__exports__",
+      "axios",
+      "react",
+      "react-hook-form",
+      "react-router-dom",
+      "src/shared/api/axiosClient.ts",
+      "src/shared/components/atoms/Alert.tsx",
+      "src/shared/components/atoms/Button.tsx",
+      "src/shared/components/atoms/Input.tsx",
+      "src/shared/hooks/useAuth.ts"
+    ],
+    "src/features/catalog/BulkUploadScreen.tsx": [
+      "@chakra-ui/react",
+      "@tanstack/react-query",
+      "__exports__",
+      "axios",
+      "react",
+      "src/shared/api/axiosClient.ts",
+      "src/shared/components/atoms/Alert.tsx",
+      "src/shared/components/atoms/Button.tsx",
+      "src/shared/components/atoms/Input.tsx"
+    ],
+    "src/features/catalog/Dashboard.tsx": [
+      "@chakra-ui/icons",
+      "@chakra-ui/react",
+      "@tanstack/react-query",
+      "__exports__",
+      "react",
+      "src/shared/api/axiosClient.ts",
+      "src/shared/components/atoms/Alert.tsx",
+      "src/shared/components/atoms/Loader.tsx"
+    ],
+    "src/features/catalog/InventoryManagement.tsx": [
+      "@chakra-ui/react",
+      "@tanstack/react-query",
+      "__exports__",
+      "react",
+      "src/shared/api/axiosClient.ts",
+      "src/shared/components/atoms/Alert.tsx",
+      "src/shared/components/atoms/Button.tsx",
+      "src/shared/components/atoms/Loader.tsx"
+    ],
+    "src/features/catalog/EditableInfoItem.tsx": [
+      "@chakra-ui/icons",
+      "@chakra-ui/react",
+      "__exports__",
+      "react",
+      "src/shared/api/axiosClient.ts"
+    ],
+    "src/features/catalog/JSONBulkUploadScreen.tsx": [
+      "@chakra-ui/react",
+      "__exports__",
+      "react",
+      "react-router-dom",
+      "src/features/catalog/hooks/JsonBulkUploadContext.tsx",
+      "src/features/catalog/utils/jsonBulkUploadValidation.ts",
+      "src/shared/components/atoms/Alert.tsx",
+      "src/shared/components/atoms/Button.tsx",
+      "src/shared/components/atoms/Input.tsx"
+    ],
+    "src/features/catalog/NewProductForm.tsx": [
+      "@chakra-ui/react",
+      "@tanstack/react-query",
+      "__exports__",
+      "react",
+      "react-hook-form",
+      "src/features/catalog/productTypes.ts",
+      "src/shared/api/axiosClient.ts"
+    ],
+    "src/features/catalog/JSONBulkUploadConfirmationScreen.tsx": [
+      "@chakra-ui/react",
+      "__exports__",
+      "react",
+      "react-router-dom",
+      "src/features/catalog/hooks/JsonBulkUploadContext.tsx",
+      "src/features/catalog/types/jsonProduct.ts",
+      "src/features/catalog/utils/jsonBulkUploadValidation.ts",
+      "src/shared/api/axiosClient.ts",
+      "src/shared/components/atoms/Button.tsx",
+      "src/shared/components/atoms/Modal.tsx"
+    ],
+    "src/features/catalog/ProductDetailView.tsx": [
+      "@chakra-ui/react",
+      "@tanstack/react-query",
+      "__exports__",
+      "react",
+      "react-router-dom",
+      "src/features/catalog/EditableInfoItem.tsx",
+      "src/features/catalog/productTypes.ts",
+      "src/shared/api/axiosClient.ts"
+    ],
+    "src/features/catalog/ProductListing.tsx": [
+      "@chakra-ui/react",
+      "@tanstack/react-query",
+      "__exports__",
+      "react",
+      "react-router-dom",
+      "src/shared/api/axiosClient.ts",
+      "src/shared/components/atoms/Alert.tsx",
+      "src/shared/components/atoms/Button.tsx",
+      "src/shared/components/atoms/Loader.tsx"
+    ],
+    "src/features/catalog/Profile.tsx": [
+      "@chakra-ui/react",
+      "@tanstack/react-query",
+      "__exports__",
+      "react",
+      "react-hook-form",
+      "src/shared/api/axiosClient.ts",
+      "src/shared/components/atoms/Alert.tsx",
+      "src/shared/components/atoms/Loader.tsx"
+    ],
+    "src/features/catalog/Reports.tsx": [
+      "@chakra-ui/react",
+      "@tanstack/react-query",
+      "__exports__",
+      "react",
+      "src/shared/api/axiosClient.ts",
+      "src/shared/components/atoms/Alert.tsx",
+      "src/shared/components/atoms/Loader.tsx"
+    ],
+    "src/features/catalog/hooks/JsonBulkUploadContext.tsx": [
+      "__exports__",
+      "react",
+      "src/features/catalog/types/jsonProduct.ts"
+    ],
+    "src/features/demo/QueryDemo.tsx": [
+      "@tanstack/react-query",
+      "__exports__",
+      "react",
+      "src/shared/components/atoms/Loader.tsx"
+    ],
+    "src/features/catalog/types/jsonProduct.ts": [
+      "__exports__"
+    ],
+    "src/features/catalog/utils/jsonBulkUploadValidation.ts": [
+      "__exports__",
+      "src/features/catalog/types/jsonProduct.ts"
+    ],
+    "src/features/catalog/productTypes.ts": [
+      "__exports__"
+    ],
+    "src/features/inventory/components/InventoryUploadScreen.tsx": [
+      "@chakra-ui/react",
+      "__exports__",
+      "react",
+      "react-router-dom",
+      "src/features/inventory/hooks/useInventoryCsv.tsx",
+      "src/shared/components/atoms/Alert.tsx",
+      "src/shared/components/atoms/Button.tsx",
+      "src/shared/components/atoms/Input.tsx"
+    ],
+    "src/features/inventory/components/InventoryConfirmationScreen.tsx": [
+      "@chakra-ui/react",
+      "__exports__",
+      "react",
+      "react-router-dom",
+      "src/features/inventory/hooks/useInventoryCsv.tsx",
+      "src/features/inventory/inventoryService.ts",
+      "src/shared/components/atoms/Alert.tsx",
+      "src/shared/components/atoms/Button.tsx"
+    ],
+    "src/features/inventory/inventoryService.ts": [
+      "__exports__",
+      "src/shared/api/axiosClient.ts"
+    ],
+    "src/features/inventory/hooks/useInventoryCsv.tsx": [
+      "__exports__",
+      "papaparse",
+      "react"
+    ],
+    "src/features/orders/hooks/useOrders.ts": [
+      "@tanstack/react-query",
+      "__exports__"
+    ],
+    "src/shared/api/csrf.ts": [
+      "__exports__"
+    ],
+    "src/shared/components/atoms/Alert.tsx": [
+      "@chakra-ui/react",
+      "__exports__",
+      "react"
+    ],
+    "src/main.tsx": [
+      "@chakra-ui/react",
+      "react",
+      "react-dom/client",
+      "src/app/ErrorBoundary.tsx",
+      "src/app/providers/AuthContext.tsx",
+      "src/app/providers/LayoutContext.tsx",
+      "src/app/providers/QueryClientProvider.tsx",
+      "src/app/routes/AppRoutes.tsx",
+      "src/theme.ts"
+    ],
+    "src/shared/components/atoms/EmptyState.tsx": [
+      "@chakra-ui/react",
+      "__exports__",
+      "react"
+    ],
+    "src/shared/components/atoms/ErrorMessage.tsx": [
+      "@chakra-ui/react",
+      "__exports__",
+      "react"
+    ],
+    "src/shared/api/axiosClient.ts": [
+      "__exports__",
+      "axios"
+    ],
+    "src/shared/components/atoms/Button.tsx": [
+      "@chakra-ui/react",
+      "__exports__"
+    ],
+    "src/shared/components/atoms/Loader.tsx": [
+      "@chakra-ui/react",
+      "__exports__",
+      "react"
+    ],
+    "src/shared/components/atoms/Input.tsx": [
+      "@chakra-ui/react",
+      "__exports__",
+      "react"
+    ],
+    "src/shared/components/atoms/OptimizedImage.tsx": [
+      "@chakra-ui/react",
+      "__exports__",
+      "react"
+    ],
+    "src/shared/components/atoms/Modal.tsx": [
+      "@chakra-ui/react",
+      "__exports__",
+      "react"
+    ],
+    "src/shared/components/layout/Footer.tsx": [
+      "@chakra-ui/react",
+      "__exports__",
+      "react"
+    ],
+    "src/shared/components/layout/MainContent.tsx": [
+      "@chakra-ui/react",
+      "__exports__",
+      "react"
+    ],
+    "src/shared/components/atoms/Table.tsx": [
+      "@chakra-ui/react",
+      "__exports__",
+      "react"
+    ],
+    "src/shared/hooks/useAuth.ts": [
+      "__exports__",
+      "src/app/providers/AuthContext.tsx"
+    ],
+    "src/shared/hooks/usePermissions.ts": [
+      "__exports__",
+      "src/shared/hooks/useAuth.ts"
+    ],
+    "src/shared/components/layout/Header.tsx": [
+      "@chakra-ui/icons",
+      "@chakra-ui/react",
+      "__exports__",
+      "react",
+      "src/app/providers/LayoutContext.tsx"
+    ],
+    "src/shared/components/layout/Sidebar.tsx": [
+      "@chakra-ui/react",
+      "__exports__",
+      "react",
+      "react-router-dom",
+      "src/app/providers/LayoutContext.tsx"
+    ],
+    "src/shared/hooks/useSession.ts": [
+      "__exports__",
+      "react",
+      "src/shared/hooks/useAuth.ts"
+    ],
+    "src/shared/types/loadingState.ts": [
+      "__exports__"
+    ],
+    "src/shared/utils/sanitize.ts": [
+      "__exports__"
+    ],
+    "src/theme.ts": [
+      "@chakra-ui/react",
+      "__exports__"
+    ],
+    "vite.config.ts": [
+      "@vitejs/plugin-react",
+      "__exports__",
+      "vite"
+    ]
+  },
   "metadata": {
-    "timestamp": "2025-06-23T15:55:26.133Z",
-    "duration_ms": 11,
+    "timestamp": "2025-06-23T16:27:20.802Z",
+    "duration_ms": 190,
     "engine_version": "0.1.0",
-    "repository_path": "/Users/amitk/Development/GitHub/iit-patna-fe"
+    "repository_path": "/Users/amitk/Development/GitHub/bazoo-frontend"
   }
 }
