@@ -1,66 +1,21 @@
-# Repository Analysis: /Users/amitk/Development/GitHub/bazoo-backend
+# Repository Analysis: /Users/amitk/Development/GitHub/iit-patna-fe
 
 ## Summary
-- Total Files: 174
-- Total Lines: 11,799
+- Total Files: 0
+- Total Lines: 0
 
 ## Languages
-- python: 163 files (93.7%)
-- unknown: 7 files (4.0%)
-- typescript: 2 files (1.1%)
-- yaml: 1 files (0.6%)
-- json: 1 files (0.6%)
-
-## Detected Frameworks
-- Django: 100.0% confidence
 
 ## File Extensions
 
 ## Folder Structure
-- Total Folders: 38
-- accounts/migrations: 14 files
-- catalog: 12 files
-- (root): 11 files
-- accounts: 9 files
-- partners: 9 files
-- integration: 8 files
-- invoices: 8 files
-- walletCreditRequests: 8 files
-- core: 7 files
-- invoices/services: 7 files
+- Total Folders: 0
 
 ## Dependencies
-- Files with dependencies: 127
-- Total dependency relationships: 321
-
-### Top External Dependencies
-- django.db: used in 40 files
-- logging: used in 19 files
-- django.contrib: used in 16 files
-- django.apps: used in 15 files
-- django.test: used in 14 files
-- rest_framework: used in 13 files
-- core.magento: used in 12 files
-- django.shortcuts: used in 12 files
-- accounts.models: used in 9 files
-- django.db.models.deletion: used in 8 files
-- django.urls: used in 8 files
-- typing: used in 7 files
-- django.core.exceptions: used in 6 files
-- datetime: used in 6 files
-- rest_framework.permissions: used in 6 files
-- rest_framework.response: used in 6 files
-- django.conf: used in 5 files
-- django.core.validators: used in 4 files
-- django.core.cache: used in 4 files
-- django.utils: used in 4 files
-
-## Pattern Detection Summary
-- Total patterns detected: 26
-- State management patterns: 21
-- Event handlers: 5
+- Files with dependencies: 0
+- Total dependency relationships: 0
 
 ## Analysis Details
-- Timestamp: 2025-06-23T14:43:14.968Z
-- Duration: 136ms
+- Timestamp: 2025-06-23T15:55:26.133Z
+- Duration: 11ms
 - Engine Version: 0.1.0
