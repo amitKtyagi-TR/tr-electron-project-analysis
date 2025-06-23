@@ -183,3 +183,8 @@ coverage/
 
 # Test outputs
 test-results/
+
+my_analysis_cleaned.json
+project_analysis.txt
+my_analysis_report.txt
+my_analysis.json

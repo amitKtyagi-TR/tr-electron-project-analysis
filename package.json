@@ -28,7 +28,9 @@
     "analyze": "tsx examples/complete-analysis.ts",
     "analyze:quick": "tsx examples/complete-analysis.ts quick",
     "analyze:full": "tsx examples/complete-analysis.ts full",
-    "analyze:save": "tsx examples/complete-analysis.ts save"
+    "analyze:save": "tsx examples/complete-analysis.ts save",
+    "clean-json": "tsx scripts/clean-analysis.ts",
+    "clean-json:stats": "tsx scripts/clean-analysis.ts stats"
   },
   "keywords": [
     "code-analysis",
