@@ -1,56 +1,67 @@
-# Repository Analysis: /Users/amitk/Development/GitHub/sl-rh-frontend
+# Repository Analysis: /Users/amitk/Development/GitHub/bazoo-backend
 
 ## Summary
-- Total Files: 86
-- Total Lines: 1,072
+- Total Files: 174
+- Total Lines: 11,799
 
 ## Languages
-- typescript: 51 files (59.3%)
-- json: 12 files (14.0%)
-- unknown: 11 files (12.8%)
-- html: 5 files (5.8%)
-- javascript: 4 files (4.7%)
-- markdown: 3 files (3.5%)
+- python: 163 files (93.7%)
+- unknown: 7 files (4.0%)
+- typescript: 2 files (1.1%)
+- yaml: 1 files (0.6%)
+- json: 1 files (0.6%)
 
 ## Detected Frameworks
-- React: 100.0% confidence
+- Django: 100.0% confidence
 
 ## File Extensions
 
 ## Folder Structure
-- Total Folders: 31
-- (root): 20 files
-- src/app: 6 files
-- src/app/core/services: 5 files
-- src/app/auth/components/login: 4 files
-- src/app/resthour-demo: 4 files
-- src: 4 files
-- .vscode: 3 files
-- cypress/support: 3 files
-- src/app/auth: 3 files
-- src/app/auth/models: 3 files
+- Total Folders: 38
+- accounts/migrations: 14 files
+- catalog: 12 files
+- (root): 11 files
+- accounts: 9 files
+- partners: 9 files
+- integration: 8 files
+- invoices: 8 files
+- walletCreditRequests: 8 files
+- core: 7 files
+- invoices/services: 7 files
 
 ## Dependencies
-- Files with dependencies: 34
-- Total dependency relationships: 163
+- Files with dependencies: 127
+- Total dependency relationships: 321
 
 ### Top External Dependencies
-- __exports__: used in 27 files
-- @angular/core: used in 23 files
-- rxjs: used in 14 files
-- @angular/router: used in 9 files
-- @angular/core/testing: used in 6 files
-- @angular/common/http: used in 6 files
-- @angular/forms: used in 4 files
-- @angular/common: used in 3 files
-- rxjs/operators: used in 3 files
-- @angular/common/http/testing: used in 2 files
-- cypress: used in 1 files
-- @angular/router/testing: used in 1 files
-- @angular/platform-browser: used in 1 files
-- @angular/platform-browser-dynamic: used in 1 files
+- django.db: used in 40 files
+- logging: used in 19 files
+- django.contrib: used in 16 files
+- django.apps: used in 15 files
+- django.test: used in 14 files
+- rest_framework: used in 13 files
+- core.magento: used in 12 files
+- django.shortcuts: used in 12 files
+- accounts.models: used in 9 files
+- django.db.models.deletion: used in 8 files
+- django.urls: used in 8 files
+- typing: used in 7 files
+- django.core.exceptions: used in 6 files
+- datetime: used in 6 files
+- rest_framework.permissions: used in 6 files
+- rest_framework.response: used in 6 files
+- django.conf: used in 5 files
+- django.core.validators: used in 4 files
+- django.core.cache: used in 4 files
+- django.utils: used in 4 files
+
+## Pattern Detection Summary
+- Total patterns detected: 206
+- API endpoints: 143
+- State management patterns: 58
+- Event handlers: 5
 
 ## Analysis Details
-- Timestamp: 2025-06-23T10:13:03.795Z
-- Duration: 205ms
+- Timestamp: 2025-06-23T14:23:47.253Z
+- Duration: 164ms
 - Engine Version: 0.1.0

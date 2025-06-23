@@ -8,6 +8,7 @@
 
 import { TreeSitterManager } from '../parsers/tree-sitter-manager.js';
 import { BabelAnalyzer } from '../parsers/babel-analyzer.js';
+import { PythonAnalyzer } from '../parsers/python-analyzer.js';
 import { LanguageDetector } from './language-detector.js';
 import type {
   FileAnalysis,
@@ -22,7 +23,7 @@ export interface AnalysisResult {
   /** The file analysis result */
   analysis: FileAnalysis;
   /** Which parser was used */
-  parser: 'babel' | 'tree-sitter' | 'basic' | 'error';
+  parser: 'babel' | 'tree-sitter' | 'python' | 'basic' | 'error';
   /** Language that was detected */
   detectedLanguage: SupportedLanguage;
   /** Whether fallback parsing was used */
@@ -41,6 +42,7 @@ export interface AnalysisResult {
 export class AnalysisCoordinator {
   private treeSitterManager: TreeSitterManager;
   private babelAnalyzer: BabelAnalyzer;
+  private pythonAnalyzer: PythonAnalyzer;
   private languageDetector: LanguageDetector;
   private initialized = false;
 
@@ -50,6 +52,7 @@ export class AnalysisCoordinator {
   constructor() {
     this.treeSitterManager = new TreeSitterManager();
     this.babelAnalyzer = new BabelAnalyzer();
+    this.pythonAnalyzer = new PythonAnalyzer();
     this.languageDetector = new LanguageDetector();
   }
 
@@ -68,7 +71,7 @@ export class AnalysisCoordinator {
       await this.treeSitterManager.initialize();
 
       this.initialized = true;
-      console.log('🎯 AnalysisCoordinator initialized successfully');
+      console.log('🎯 AnalysisCoordinator initialized successfully with Python analyzer');
     } catch (error) {
       console.warn('⚠️  AnalysisCoordinator initialization warning:', error);
       // Continue without Tree-sitter in development mode
@@ -111,7 +114,18 @@ export class AnalysisCoordinator {
           analysis = await this.analyzeWithBabel(content, detectedLanguage as 'javascript' | 'typescript', filePath);
           parser = 'babel';
         } catch (error) {
-          console.warn(`Babel parsing failed for ${filePath}, trying Tree-sitter fallback:`, error);
+          console.warn(`Babel parsing failed for ${filePath}, trying fallback:`, error);
+          analysis = await this.analyzeWithFallback(content, detectedLanguage, filePath);
+          parser = 'basic';
+          usedFallback = true;
+        }
+      } else if (this.shouldUsePythonParser(detectedLanguage)) {
+        // Use Python analyzer for Python files
+        try {
+          analysis = await this.analyzeWithPython(content, filePath);
+          parser = 'python';
+        } catch (error) {
+          console.warn(`Python parsing failed for ${filePath}, trying Tree-sitter fallback:`, error);
           analysis = await this.analyzeWithTreeSitterFallback(content, detectedLanguage, filePath);
           parser = 'tree-sitter';
           usedFallback = true;
@@ -233,6 +247,17 @@ export class AnalysisCoordinator {
   }
 
   /**
+   * Check if Python parser should be used for a language
+   *
+   * @param language - Detected language
+   * @returns True if Python parser should be used
+   * @private
+   */
+  private shouldUsePythonParser(language: SupportedLanguage): boolean {
+    return language === 'python';
+  }
+
+  /**
    * Check if Tree-sitter should be used for a language
    *
    * @param language - Detected language
@@ -240,8 +265,8 @@ export class AnalysisCoordinator {
    * @private
    */
   private shouldUseTreeSitter(language: SupportedLanguage): boolean {
-    // Use Tree-sitter for languages that have parsers available
-    const treeSitterLanguages: SupportedLanguage[] = ['python', 'dart', 'java', 'cpp', 'c'];
+    // Use Tree-sitter for languages that have parsers available (excluding Python which has dedicated parser)
+    const treeSitterLanguages: SupportedLanguage[] = ['dart', 'java', 'cpp', 'c'];
     return treeSitterLanguages.includes(language) && this.treeSitterManager.hasParser(language);
   }
 
@@ -269,6 +294,21 @@ export class AnalysisCoordinator {
       classes: {},
       ...analysis, // This will override the defaults above and set the correct path
     };
+  }
+
+  /**
+   * Analyze file using Python parser
+   *
+   * @param content - File content
+   * @param filePath - File path for context
+   * @returns Promise that resolves to file analysis
+   * @private
+   */
+  private async analyzeWithPython(
+    content: string,
+    filePath: string
+  ): Promise<FileAnalysis> {
+    return await this.pythonAnalyzer.analyzePython(content, filePath);
   }
 
   /**
@@ -327,6 +367,42 @@ export class AnalysisCoordinator {
   }
 
   /**
+   * General fallback analysis when primary parser fails
+   *
+   * @param content - File content
+   * @param language - Programming language
+   * @param filePath - File path for context
+   * @returns Promise that resolves to basic file analysis
+   * @private
+   */
+  private async analyzeWithFallback(
+    content: string,
+    language: SupportedLanguage,
+    filePath: string
+  ): Promise<FileAnalysis> {
+    // Try Python parser if it's a Python file
+    if (language === 'python') {
+      try {
+        return await this.analyzeWithPython(content, filePath);
+      } catch (error) {
+        console.warn(`Python parser fallback failed for ${filePath}:`, error);
+      }
+    }
+
+    // Try Tree-sitter fallback
+    if (this.treeSitterManager.hasParser(language)) {
+      try {
+        return await this.analyzeWithTreeSitter(content, language, filePath);
+      } catch (error) {
+        console.warn(`Tree-sitter fallback failed for ${filePath}:`, error);
+      }
+    }
+
+    // Ultimate fallback to basic analysis
+    return this.analyzeBasic(content, filePath, language);
+  }
+
+  /**
    * Basic analysis for unsupported languages or when parsers fail
    *
    * @param content - File content
@@ -367,6 +443,7 @@ export class AnalysisCoordinator {
       treeSitterAvailable: this.treeSitterManager.getSupportedLanguages().length > 0,
       supportedLanguages: {
         babel: ['javascript', 'typescript'],
+        python: ['python'],
         treeSitter: this.treeSitterManager.getSupportedLanguages(),
         deepAnalysis: this.languageDetector.getSupportedExtensions()
           .map(ext => this.languageDetector.detectByExtension(`test${ext}`))

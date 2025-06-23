@@ -127,7 +127,7 @@ describe('AnalysisCoordinator', () => {
       expect(result.processingTime).toBeGreaterThanOrEqual(0);
 
       // Parser could be tree-sitter or basic depending on availability
-      expect(['tree-sitter', 'basic']).toContain(result.parser);
+      expect(result.parser).toBe('python');
     });
 
     it('should analyze unknown languages with basic analysis', async () => {
@@ -306,9 +306,9 @@ print("Hello from Python")
       expect(result.parser).toBe('babel');
     });
 
-    it('should route Python to Tree-sitter or basic parser', async () => {
+    it('should route Python to dedicated Python parser', async () => {
       const result = await coordinator.analyzeFile('test.py', 'print("test")');
-      expect(['tree-sitter', 'basic']).toContain(result.parser);
+      expect(result.parser).toBe('python');
     });
 
     it('should route unknown languages to basic parser', async () => {
