@@ -17,3 +17,8 @@ export {
   AnalysisCoordinator,
   type AnalysisResult as CoordinatorAnalysisResult
 } from './analysis-coordinator.js';
+export {
+  ResultsAggregator,
+  type AggregationOptions,
+  type CircularDependency
+} from './results-aggregator.js';

@@ -23,8 +23,8 @@
     "example:api": "tsx examples/api-detection-demo.ts",
     "example:state": "tsx examples/state-detection-demo.ts",
     "example:events": "tsx examples/event-detection-demo.ts",
-    "example:full": "tsx examples/full-analysis-demo.ts"
-
+    "example:full": "tsx examples/full-analysis-demo.ts",
+    "example:aggregation": "tsx examples/aggregation-demo.ts"
   },
   "keywords": [
     "code-analysis",
