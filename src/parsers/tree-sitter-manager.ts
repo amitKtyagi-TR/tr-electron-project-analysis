@@ -228,8 +228,8 @@ export class TreeSitterManager {
 
     try {
       // For now, create a mock parser since WASM files might not be available
-      const parser = new Parser();
-
+      const ParserClass = (Parser as any).default || Parser;
+      const parser = new ParserClass();
       // Try to load the actual language WASM
       const wasmPath = join(wasmDir, config.wasmFile);
 
