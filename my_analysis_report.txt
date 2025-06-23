@@ -1,67 +1,65 @@
-# Repository Analysis: /Users/amitk/Development/GitHub/bazoo-frontend
+# Repository Analysis: /Users/amitk/Development/GitHub/tr-electron-project-analysis
 
 ## Summary
-- Total Files: 84
-- Total Lines: 6,370
+- Total Files: 65
+- Total Lines: 6,520
 
 ## Languages
-- typescript: 67 files (79.8%)
-- unknown: 5 files (6.0%)
-- javascript: 5 files (6.0%)
-- json: 5 files (6.0%)
-- python: 1 files (1.2%)
-- html: 1 files (1.2%)
+- typescript: 41 files (63.1%)
+- unknown: 13 files (20.0%)
+- json: 7 files (10.8%)
+- javascript: 2 files (3.1%)
+- ruby: 1 files (1.5%)
+- markdown: 1 files (1.5%)
 
 ## Detected Frameworks
 - React: 100.0% confidence
-- React Native: 27.2% confidence
+- React Native: 46.9% confidence
 
 ## File Extensions
 
 ## Folder Structure
-- Total Folders: 27
-- (root): 17 files
-- src/features/catalog: 12 files
-- src/shared/components/atoms: 9 files
-- src: 6 files
-- src/features/auth/components: 5 files
-- src/app/layouts: 4 files
-- src/shared/components/layout: 4 files
-- src/app/providers: 3 files
-- src/shared/hooks: 3 files
-- src/app/routes: 2 files
+- Total Folders: 11
+- (root): 15 files
+- examples: 11 files
+- tests: 9 files
+- src/core: 6 files
+- src/patterns: 6 files
+- src/parsers/wasm: 5 files
+- src/parsers: 4 files
+- src/parsers/queries: 4 files
+- scripts: 2 files
+- src/types: 2 files
 
 ## Dependencies
-- Files with dependencies: 62
-- Total dependency relationships: 300
+- Files with dependencies: 33
+- Total dependency relationships: 67
 
 ### Top External Dependencies
-- __exports__: used in 60 files
-- react: used in 46 files
-- @chakra-ui/react: used in 38 files
-- react-router-dom: used in 12 files
-- @tanstack/react-query: used in 11 files
-- react-hook-form: used in 5 files
-- axios: used in 4 files
-- @chakra-ui/icons: used in 3 files
-- react from 'eslint-plugin-react': used in 1 files
-- @eslint/js: used in 1 files
-- eslint-plugin-react-hooks: used in 1 files
-- eslint-plugin-react-refresh: used in 1 files
-- globals: used in 1 files
-- typescript-eslint: used in 1 files
-- @tanstack/react-query-devtools: used in 1 files
-- papaparse: used in 1 files
-- react-dom/client: used in 1 files
-- @vitejs/plugin-react: used in 1 files
-- vite: used in 1 files
+- __exports__: used in 23 files
+- vitest: used in 9 files
+- node:fs/promises: used in 7 files
+- node:path: used in 7 files
+- path: used in 3 files
+- fs: used in 2 files
+- node:url: used in 2 files
+- node:child_process: used in 2 files
+- node:util: used in 2 files
+- react: used in 2 files
+- react-native: used in 2 files
+- p-limit: used in 1 files
+- @babel/parser: used in 1 files
+- @babel/types: used in 1 files
+- web-tree-sitter: used in 1 files
+- @react-native-async-storage/async-storage: used in 1 files
+- @react-navigation/native: used in 1 files
 
 ## Pattern Detection Summary
-- Total patterns detected: 145
-- State management patterns: 84
-- Event handlers: 61
+- Total patterns detected: 21
+- State management patterns: 10
+- Event handlers: 11
 
 ## Analysis Details
-- Timestamp: 2025-06-23T16:27:20.802Z
-- Duration: 190ms
+- Timestamp: 2025-06-23T16:47:11.313Z
+- Duration: 251ms
 - Engine Version: 0.1.0

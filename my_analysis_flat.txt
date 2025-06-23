@@ -1,1183 +1,677 @@
-[.env.example]
-
-  lang: unknown
-
-[.eslintrc.js]
-
-  lang: javascript
-
-[.github/workflows/azure-static-web-apps-salmon-pond-00993830f.yml]
-
-  lang: javascript
-  error: Babel parsing failed: Missing semicolon. (1:11)
-
 [.gitignore]
 
-  lang: unknown
+  lang: ruby
 
-[.husky/pre-commit]
+[.prettierrc.json]
 
-  lang: unknown
-
-[.prettierrc]
-
-  lang: unknown
+  lang: json
 
 [README.md]
 
-  lang: python
-  imp: {react from 'eslint-plugin-react':[react from 'eslint-plugin-react']}
+  lang: markdown
 
-[change.txt]
+[analysis_2025-06-23T16-13-29.json]
 
-  lang: javascript
-  error: Babel parsing failed: Missing semicolon. (1:7)
+  lang: json
 
-[eslint.config.js]
+[analysis_2025-06-23T16-13-29_report.txt]
 
-  lang: javascript
-  imp:
-    @eslint/js:[js]
-      globals:[globals]
-      eslint-plugin-react-hooks:[reactHooks]
-      eslint-plugin-react-refresh:[reactRefresh]
-      typescript-eslint:[tseslint]
-      __exports__:[default]
+  lang: unknown
 
-[index.html]
+[analysis_2025-06-23T16-18-48.json]
 
-  lang: html
+  lang: json
 
-[jest.config.js]
+[analysis_2025-06-23T16-18-48_report.txt]
 
-  lang: javascript
+  lang: unknown
 
-[jest.setup.ts]
+[examples/aggregation-demo.ts]
 
   lang: typescript
-  imp: {}
+  imp:
+    ../src/index.js:[analyzeRepository]
+      ../src/core/results-aggregator.js:[ResultsAggregator]
+  fn:
+    async runAggregationDemo()
+  events:
+    [0] t:dom_event, event:callback, hdl:runAggregationDemo, framework:Custom
+        [1] t:dom_event, event:unknown, hdl:runAggregationDemo, framework:Generic
+
+[examples/api-detection-demo.ts]
+
+  lang: typescript
+  imp: {../src/index.js:[ApiDetector, AnalysisCoordinator, DetailedApiEndpoint, FileAnalysis]}
+  fn:
+    createSampleAnalyses()
+      doc: Sample file analyses representing different frameworks
+    async demonstrateApiDetection()
+      doc: Demonstrate API endpoint detection
+
+[examples/babel-analyzer-demo.ts]
+
+  lang: typescript
+  imp: {../src/index.js:[BabelAnalyzer]}
+  fn:
+    async demonstrateBabelAnalyzer()
+      doc: Analyzes code samples and displays results
+
+[examples/complete-analysis.ts]
+
+  lang: typescript
+  imp:
+    fs:[writeFileSync]
+      p:[resolve]
+      ../src/index.js:[analyzeRepository]
+      ../src/types/index.js:[AnalysisResult]
+      __exports__:[default]
+  fn:
+    formatAsText(results, repositoryPath)(results, repositoryPath)
+      doc: Format analysis results as human-readable text (matching Python output)
+    async quickAnalyze(repositoryPath, limit)(repositoryPath, limit)
+      doc: Analyze repository with progress display (matching Python quick_analyze)
+    async fullAnalyze(repositoryPath)(repositoryPath)
+      doc: Full analysis returning structured data (matching Python full_analyze)
+    async saveAnalysis(repositoryPath, outputFile)(repositoryPath, outputFile)
+      doc: Analyze and save results to file (matching Python save_analysis)
+    async analyzeRepositoryEnhanced(repositoryPath, saveToFile)(repositoryPath, saveToFile)
+      doc: Enhanced analysis with detailed pattern breakdown
+    async main()
+
+[examples/event-detection-demo.ts]
+
+  lang: typescript
+  imp: {../src/index.js:[EventDetector, AnalysisCoordinator, DetailedEventHandler, FileAnalysis]}
+  fn:
+    createSampleEventAnalyses()
+      doc: Sample file analyses representing different event handler patterns
+    async demonstrateEventDetection()
+      doc: Demonstrate event handler detection
+
+[examples/file-processing-demo.ts]
+
+  lang: typescript
+  imp: {../src/index.js:[GitProcessor, FileProcessor]}
+  fn:
+    async analyzeFileContent(content, filePath)(content, filePath)
+      doc: Simple file analyzer that counts lines and characters
+    async demonstrateFileProcessing()
+      doc: Demo function that processes current repository
+
+[examples/framework-detection-demo.ts]
+
+  lang: typescript
+  imp:
+    ../src/patterns/framework-detector.js:[FrameworkDetector]
+      ../src/patterns/pattern-definitions.js:[getSupportedFrameworks]
+      ../src/types/index.js:[FileAnalysis]
+  fn:
+    createSampleProject()
+      doc: Create sample file analyses for different frameworks
+    async demonstrateFrameworkDetection()
+      doc: Demonstrate framework detection capabilities
+
+[examples/full-analysis-demo.ts]
+
+  lang: typescript
+  imp: {../src/index.js:[GitProcessor, FileProcessor, AnalysisCoordinator, CoordinatorAnalysisResult]}
+  fn:
+    async demonstrateFullAnalysis()
+      doc: Main demo function that orchestrates the complete analysis pipeline
+  cls:
+    AnalysisStats
+      doc: Statistics collector for analysis results
+      mth: addResult(filePath, result), getLanguageDistribution(), getParserUsage(), getPerformanceStats(), getFallbackStats(), getDetailedResults(), hasDocstrings(analysis)
+
+[examples/language-detection-demo.ts]
+
+  lang: typescript
+  imp: {../src/index.js:[LanguageDetector, GitProcessor]}
+  fn:
+    async demonstrateLanguageDetection()
+      doc: Demonstrates language detection capabilities
+
+[examples/state-detection-demo.ts]
+
+  lang: typescript
+  imp: {../src/index.js:[StateDetector, AnalysisCoordinator, DetailedStatePattern, FileAnalysis]}
+  fn:
+    createSampleStateAnalyses()
+      doc: Sample file analyses representing different state management patterns
+    async demonstrateStateDetection()
+      doc: Demonstrate state management pattern detection
+
+[examples/test-git-processor.ts]
+
+  lang: typescript
+  imp: {../src/index.js:[GitProcessor]}
+  fn:
+    async testCurrentRepository()
+
+[my_analysis.json]
+
+  lang: json
+
+[my_analysis_flat.txt]
+
+  lang: unknown
+
+[my_analysis_report.txt]
+
+  lang: unknown
+
+[package-lock.json]
+
+  lang: json
 
 [package.json]
 
   lang: json
 
-[public/vite.svg]
-
-  lang: typescript
-
-[src/App.css]
-
-  lang: typescript
-  error: Babel parsing failed: Private names are only allowed in property accesses (`obj.#root`) or in `in` expressions (`#root in obj`). (1:0)
-
-[src/App.tsx]
+[scripts/clean-analysis.ts]
 
   lang: typescript
   imp:
-    react:[useState]
-      ./shared/components/atoms/Button:[Button]
-      ./shared/components/atoms/Input:[Input]
-      ./shared/components/atoms/Modal:[Modal]
-      ./shared/components/atoms/Loader:[Loader]
-      ./shared/components/atoms/Table:[Table]
-      ./shared/components/atoms/Alert:[Alert]
-      ./shared/components/atoms/EmptyState:[EmptyState]
+    fs:[readFileSync, writeFileSync]
+      p:[resolve]
       __exports__:[default]
   fn:
-    App()
-  states: [0] t:useState, var:app, mut:update
+    isEmpty(value)(value)
+      doc: Check if a value is empty
+    formatValue(value)(value)
+      doc: Format a value for output
+    getKey(key, config)(key, config)
+      doc: Get abbreviated key if available
+    shouldSkipKey(key, config)(key, config)
+      doc: Should skip this key based on configuration
+    formatArray(arr)(arr)
+      doc: Format array values compactly
+    formatObject(obj, inline)(obj, inline)
+      doc: Format object as compact text
+    extractFileInfo(data)(data)
+      doc: Extract file information from the folder structure
+    processFolder(folderData, parentPath)(folderData, parentPath)
+    formatFileContent(filePath, fileData, config)(filePath, fileData, config)
+      doc: Format file content as text
+    convertToFlatFormat(inputFile, outputFile, config)(inputFile, outputFile, config)
+      doc: Convert analysis JSON to flat file format
+    showConversionPreview(inputFile, config)(inputFile, config)
+      doc: Show conversion preview
+    main()
+      doc: Main CLI function
+  events:
+    [0] t:dom_event, event:callback, hdl:showConversionPreview, framework:Custom
+        [1] t:dom_event, event:unknown, hdl:showConversionPreview, framework:Generic
 
-[src/app/ErrorBoundary.tsx]
+[scripts/download-parsers.js]
+
+  lang: javascript
+  imp:
+    node:fs/promises:[mkdir, writeFile]
+      node:path:[join]
+      node:url:[fileURLToPath]
+  fn:
+    async downloadFile(url, filename)(url, filename)
+      doc: Download a file from URL
+    async downloadParsers()
+      doc: Main download function
+  events:
+    [0] t:dom_event, event:load, hdl:downloadFile, framework:DOM
+        [1] t:dom_event, event:load, hdl:downloadParsers, framework:DOM
+
+[src/core/analysis-coordinator.ts]
 
   lang: typescript
   imp:
-    react:[React, ErrorInfo]
-      ../shared/components/atoms/Alert:[Alert]
+    ../parsers/tree-sitter-manager.js:[TreeSitterManager]
+      ../parsers/babel-analyzer.js:[BabelAnalyzer]
+      ../parsers/python-analyzer.js:[PythonAnalyzer]
+      ./language-detector.js:[LanguageDetector]
+      ../types/index.js:[FileAnalysis, SupportedLanguage, AnalysisOptions]
       __exports__:[default]
   cls:
-    ErrorBoundary
-      mth: constructor(props), getDerivedStateFromError(error), componentDidCatch(error, errorInfo), render()
+    AnalysisCoordinator
+      doc: "Analysis coordinator that manages multiple parsers\nThis class provides a unified interface for analyzing source code files\nregardless of their programming language. It automatically detects languages\nand routes files to the most appropriate parser."
+      mth: constructor(), initialize(), analyzeFile(filePath, content, options), analyzeFiles(files, options), shouldUseBabelParser(language), shouldUsePythonParser(language), shouldUseTreeSitter(language), analyzeWithBabel(content, language, filePath), analyzeWithPython(content, filePath), analyzeWithTreeSitter(content, language, filePath), analyzeWithTreeSitterFallback(content, language, filePath), analyzeWithFallback(content, language, filePath), analyzeBasic(content, filePath, language), getStatistics()
 
-[src/app/layouts/AdminLayout.tsx]
-
-  lang: typescript
-  imp:
-    react:[React, ReactNode]
-      @chakra-ui/react:[Flex]
-      ../../shared/components/layout/Header:[Header]
-      ../../shared/components/layout/Sidebar:[Sidebar]
-      ../../shared/components/layout/Footer:[Footer]
-      ../../shared/components/layout/MainContent:[MainContent]
-      __exports__:[default]
-  fn:
-    AdminLayout({ ... })({ ... })
-
-[src/app/layouts/CatalogManagerLayout.tsx]
+[src/core/file-processor.ts]
 
   lang: typescript
   imp:
-    react:[React]
-      react-router-dom:[Outlet]
-      @chakra-ui/react:[Box, Flex]
-      ../providers/LayoutContext:[LayoutProvider]
-      ../../shared/components/layout/Header:[Header]
-      ../../shared/components/layout/Sidebar:[Sidebar]
-      ../../shared/components/layout/Footer:[Footer]
-      ../../features/inventory/hooks/useInventoryCsv:[InventoryCsvProvider]
+    node:fs/promises:[readFile, stat]
+      node:path:[join]
+      p-limit:[pLimit]
+      ../types/index.js:[FileAnalysis]
       __exports__:[default]
-  fn:
-    CatalogManagerLayout()
-      doc: CatalogManagerLayout wraps catalog manager portal pages.
-  states: [0] t:useState, var:catalogmanagerlayout, mut:update
+  cls:
+    FileProcessor
+      doc: "File processor with concurrent reading capabilities\nThis class handles reading multiple files concurrently while respecting\nsystem limits and providing progress feedback to the user."
+      mth: constructor(repositoryPath), processFiles(filePaths, processor, options), readFile(filePath, options), updateProgress(onProgress, currentFile), checkCancellation(signal), getRepositoryPath()
 
-[src/app/layouts/PartnerLayout.tsx]
+[src/core/git-processor.ts]
 
   lang: typescript
   imp:
-    react:[React]
-      @chakra-ui/react:[Box, Flex]
-      ../providers/LayoutContext:[LayoutProvider]
-      ../../shared/components/layout/Header:[Header]
-      ../../shared/components/layout/Sidebar:[Sidebar]
-      ../../shared/components/layout/Footer:[Footer]
+    node:child_process:[execFile]
+      node:util:[promisify]
+      node:fs/promises:[access, stat]
+      node:path:[join, resolve, isAbsolute]
       __exports__:[default]
-  fn:
-    PartnerLayout({ ... })({ ... })
-      doc: PartnerLayout wraps partner portal pages.
+  cls:
+    GitProcessor
+      doc: "Git repository processor for file discovery and validation\nThis class provides methods to interact with git repositories,\nincluding validating repository structure and discovering tracked files."
+      mth: constructor(repoPath), isGitRepository(), getTrackedFiles(), runGitCommand(args), filterBinaryFiles(filePaths), getRepositoryPath()
 
-[src/app/layouts/SupportStaffLayout.tsx]
+[src/core/index.ts]
+
+  lang: typescript
+  imp: {__exports__:[default]}
+
+[src/core/language-detector.ts]
 
   lang: typescript
   imp:
-    react:[React]
-      @chakra-ui/react:[Box, Flex]
-      ../providers/LayoutContext:[LayoutProvider]
-      ../../shared/components/layout/Header:[Header]
-      ../../shared/components/layout/Sidebar:[Sidebar]
-      ../../shared/components/layout/Footer:[Footer]
+    node:fs/promises:[readFile]
+      node:path:[extname, basename]
+      ../types/index.js:[SupportedLanguage]
       __exports__:[default]
-  fn:
-    SupportStaffLayout({ ... })({ ... })
-      doc: SupportStaffLayout wraps support staff portal pages.
+  cls:
+    LanguageDetector
+      doc: "Language detection service\nThis class provides comprehensive language detection using multiple strategies:\nfile extensions, shebang lines, and content analysis."
+      mth: detectLanguage(filePath, content), detectByExtension(filePath), detectByShebang(content), detectByContent(content), isDefinitiveExtension(extension), getSupportedExtensions(), supportsDeepAnalysis(language)
 
-[src/app/providers/AuthContext.tsx]
+[src/core/results-aggregator.ts]
 
   lang: typescript
   imp:
-    react:[React, createContext, useState, useContext, ReactNode]
+    p:[resolve, dirname, join, relative, sep]
+      ../types/index.js:[AnalysisResult, FileAnalysis, ProjectSummary, DependencyGraph, AnalysisMetadata, FrameworkDetection, ANALYSIS_ENGINE_VERSION]
+      ./analysis-coordinator.js:[AnalysisResult]
+      ../patterns/api-detector.js:[DetailedApiEndpoint]
+      ../patterns/state-detector.js:[DetailedStatePattern]
+      ../patterns/event-detector.js:[DetailedEventHandler]
       __exports__:[default]
   fn:
-    AuthProvider({ ... })({ ... })
-      doc: "AuthProvider wraps parts of the app that require authentication state.\nIt manages authentication state including access and refresh tokens,\nand exposes actions to login, logout, and refresh tokens."
-    login(accessToken, userRole, refreshToken)(accessToken, userRole, refreshToken)
-    logout()
-    useAuthContext()
-      doc: "useAuthContext is a custom hook to access authentication state and actions.\n@throws Error if used outside AuthProvider."
+    dfs(file, path)(file, path)
+  cls:
+    ResultsAggregator
+      doc: Results aggregator that combines individual file analyses into final output
+      mth: constructor(options), aggregateResults(fileAnalyses, frameworkDetections, apiEndpoints, statePatterns, eventHandlers, startTime), enrichFileAnalyses(fileAnalyses, apiEndpoints, statePatterns, eventHandlers), groupByFile(items), buildFolderStructure(analyses), calculateSummary(analyses, frameworkDetections), buildDependencyGraph(analyses), resolveRelativeImport(fromFile, importPath, context), detectCircularDependencies(dependencies), getAggregationStats(result)
+
+[src/index.ts]
+
+  lang: typescript
+  imp:
+    ./core/git-processor.js:[GitProcessor]
+      ./core/file-processor.js:[FileProcessor]
+      ./core/analysis-coordinator.js:[AnalysisCoordinator]
+      ./core/results-aggregator.js:[ResultsAggregator]
+      ./patterns/framework-detector.js:[FrameworkDetector]
+      ./patterns/api-detector.js:[ApiDetector]
+      ./patterns/state-detector.js:[StateDetector]
+      ./patterns/event-detector.js:[EventDetector]
+      ./types/index.js:[AnalysisResult, AnalysisOptions, ANALYSIS_ENGINE_VERSION]
+      __exports__:[default]
+  fn:
+    async analyzeRepository(repositoryPath, options)(repositoryPath, options)
+      doc: "Analyze a git repository and return comprehensive analysis results\nThis is the main entry point for the analysis engine. It performs a complete\nanalysis of a git repository including:\n- Git-tracked file discovery\n- Multi-language parsing (JavaScript/TypeScript via Babel, others via Tree-sitter)\n- Framework detection (React, Django, NestJS, Flutter, Express)\n- API endpoint extraction\n- State management pattern detection\n- Event handler identification\n- Dependency graph construction\n- Results aggregation and formatting\n@param repositoryPath - Absolute or relative path to the git repository\n@param options - Configuration options for the analysis\n@returns Promise that resolves to comprehensive analysis results\n@example\n```typescript\nimport { analyzeRepository } from '@ai-assistant/code-analysis-engine';\nconst results = await analyzeRepository('./my-project', {\nextensions: ['.js', '.ts', '.py'],\nconcurrency: 5,\non_progress: (completed, total, current) => {\nconsole.log(`Progress: ${completed}/${total} - ${current}`);\n}\n});\nconsole.log(`Found ${results.summary.total_files} files`);\nconsole.log(`Detected frameworks:`, Object.keys(results.summary.frameworks || {}));\n```"
+    async quickAnalyze(repositoryPath, limit)(repositoryPath, limit)
+      doc: "Quick analysis function for testing and development\n@param repositoryPath - Path to repository\n@param limit - Maximum number of files to analyze\n@returns Analysis results with limited scope"
+
+[src/parsers/babel-analyzer.ts]
+
+  lang: typescript
+  imp:
+    @babel/parser:[parse, ParserOptions]
+      @babel/types:[* as t]
+      ../types/index.js:[FileAnalysis, FunctionInfo, ClassInfo, Decorator, SupportedLanguage]
+      __exports__:[default]
+  cls:
+    BabelAnalyzer
+      doc: "Babel-based analyzer for JavaScript and TypeScript files\nThis class provides comprehensive AST analysis using Babel's robust parser,\nextracting detailed information about code structure, patterns, and metadata."
+      mth: parseJavaScript(content, language, filePath), extractJSDocComments(ast, content), processImportDeclaration(path, analysis), processFunctionDeclaration(path, analysis, jsdocComments), processVariableDeclarator(path, analysis, jsdocComments), getParamName(param), findNearestJSDoc(line, jsdocComments), processClassDeclaration(path, analysis, jsdocComments), processClassMethod(path, analysis, jsdocComments), processExportDeclaration(path, analysis)
+
+[src/parsers/index.ts]
+
+  lang: typescript
+  imp: {__exports__:[default]}
+
+[src/parsers/python-analyzer.ts]
+
+  lang: typescript
+  imp:
+    ../types/index.js:[FileAnalysis, FunctionInfo, ClassInfo, SupportedLanguage, ApiEndpoint, Decorator, HttpMethod]
+      __exports__:[default]
+  cls:
+    PythonAnalyzer
+      doc: "Python code analyzer using regex patterns\nThis class provides comprehensive analysis of Python code, with special\nsupport for Django patterns, REST API endpoints, and Python-specific constructs."
+      mth: analyzePython(content, filePath), extractImports(content, analysis), parseImportLine(importLine, analysis), getLineNumberAccurate(content, matchedString), extractFunctions(content, lines, analysis), extractClasses(content, lines, analysis), parseParameters(paramString), parseBaseClasses(inheritanceString), findDecoratorsBeforeFunction(lines, functionLineNumber), findDecoratorsBeforeClass(lines, classLineNumber), findFunctionDocstring(lines, functionLineNumber), findClassDocstring(lines, classLineNumber), extractDocstring(lines, startLine), extractClassMethods(content, lines, className, classLineNumber), findClassEndLine(lines, classLineNumber), getLineNumber(lines, matchedString), isDjangoModel(baseClasses), isDjangoSerializer(baseClasses), isDjangoViewClass(baseClasses), isHTTPMethod(functionName), extractAPIEndpoints(decorators, functionName, lineNumber), getHttpMethodFromFunction(functionName)
+
+[src/parsers/queries/dart.scm]
+
+  lang: unknown
+
+[src/parsers/queries/javascript.scm]
+
+  lang: unknown
+
+[src/parsers/queries/python.scm]
+
+  lang: unknown
+
+[src/parsers/queries/typescript.scm]
+
+  lang: unknown
+
+[src/parsers/tree-sitter-manager.ts]
+
+  lang: typescript
+  imp:
+    web-tree-sitter:[Parser]
+      node:fs/promises:[readFile]
+      node:path:[join]
+      node:url:[fileURLToPath]
+      ../types/index.js:[SupportedLanguage]
+      __exports__:[default]
+  cls:
+    TreeSitterManager
+      doc: "Tree-sitter WebAssembly manager\nThis class handles loading and managing Tree-sitter parsers for multiple languages.\nIt provides a unified interface for parsing code and executing queries."
+      mth: initialize(), parseFile(content, language), query(tree, queryString, language), hasParser(language), getSupportedLanguages(), loadParser(language)
+
+[src/parsers/wasm/tree-sitter-dart.wasm]
+
+  lang: unknown
+
+[src/parsers/wasm/tree-sitter-javascript.wasm]
+
+  lang: unknown
+
+[src/parsers/wasm/tree-sitter-python.wasm]
+
+  lang: unknown
+
+[src/parsers/wasm/tree-sitter-typescript.wasm]
+
+  lang: unknown
+
+[src/parsers/wasm/tree-sitter.wasm]
+
+  lang: unknown
+
+[src/patterns/api-detector.ts]
+
+  lang: typescript
+  imp:
+    ../types/index.js:[FileAnalysis, HttpMethod, ApiEndpoint, SupportedLanguage]
+      __exports__:[default]
+  cls:
+    ApiDetector
+      doc: "API endpoint detection engine\nThis class analyzes file analysis results to detect REST API endpoints\nacross multiple frameworks with detailed metadata extraction."
+      mth: constructor(debugMode), detectEndpoints(fileAnalyses), analyzeFileForEndpoints(filePath, analysis), detectExpressEndpoints(filePath, analysis), hasExpressImport(analysis), parseExpressEndpoint(apiEndpoint, filePath, handlerFunction, lineNumber), isExpressEndpoint(apiEndpoint), extractHttpMethod(apiEndpoint), extractRoute(apiEndpoint), extractRouteParameters(route), isValidHttpMethod(method), detectExpressRoutePatterns(filePath, analysis), findRouteHandlerPatterns(functionSignature, functionInfo), detectNestJSEndpoints(filePath, analysis), hasNestJSImport(analysis), extractControllerPrefix(analysis), parseNestJSDecorator(decorator, filePath, handlerFunction, lineNumber, controllerPrefix), parseNestJSEndpoint(apiEndpoint, filePath, handlerFunction, lineNumber, controllerPrefix), isNestJSEndpoint(apiEndpoint), extractNestJSMethod(decorator), extractNestJSRoute(decorator, controllerPrefix), detectDjangoEndpoints(filePath, analysis), hasDjangoImport(analysis), detectDjangoViews(filePath, analysis), isDjangoViewClass(classInfo), extractDjangoViewMethods(classInfo), detectDjangoUrlPatterns(filePath, analysis), detectDjangoRestFramework(filePath, analysis), isDRFViewClass(classInfo), extractDRFMethods(classInfo), parseDjangoDecorator(decorator, filePath, handlerFunction, lineNumber), extractMethodsFromApiViewDecorator(decorator), parseDjangoEndpoint(apiEndpoint, filePath, handlerFunction, lineNumber), isDjangoEndpoint(apiEndpoint), inferDjangoRoute(name), getDetectionStats(endpoints), getDetectionReport(fileAnalyses), getLanguageDistribution(fileAnalyses)
+
+[src/patterns/event-detector.ts]
+
+  lang: typescript
+  imp:
+    ../types/index.js:[FileAnalysis, EventHandler, EventHandlerType, SupportedLanguage]
+      __exports__:[default]
+  cls:
+    EventDetector
+      doc: "Event handler detection engine\nThis class analyzes file analysis results to detect event handlers\nacross multiple frameworks with detailed metadata extraction."
+      mth: constructor(debugMode), detectEventHandlers(fileAnalyses), analyzeFileForEventHandlers(filePath, analysis), detectDOMEventHandlers(filePath, analysis), detectReactEventHandlers(filePath, analysis), detectElectronIPCHandlers(filePath, analysis), detectCustomEventHandlers(filePath, analysis), detectDjangoEventHandlers(filePath, analysis), detectGenericEventHandlers(filePath, analysis), hasReactImport(analysis), hasElectronImport(analysis), hasDjangoImport(analysis), isDOMEventHandler(eventHandler), isReactEventHandler(eventHandler), isElectronIPCHandler(eventHandler), getDOMEventType(eventHandler), getReactEventType(eventHandler), getElectronIPCType(eventHandler), extractEventName(eventHandler), extractReactEventName(eventHandler), extractIPCChannel(eventHandler), detectDOMPatternsInFunction(filePath, functionName, functionInfo), detectReactEventsByNaming(filePath, functionName, functionInfo), isIPCSetupFunction(functionName, functionInfo), inferIPCChannel(functionName), isEventEmitterPattern(functionName, functionInfo, analysis), isCallbackPattern(functionName, functionInfo), extractCustomEventName(functionName), isDjangoSignalDecorator(decorator), extractSignalName(decorator), isDjangoFormHandler(functionName, functionInfo, analysis), hasEventHandlerNaming(functionName), inferEventTypeFromName(functionName), extractEventFromName(functionName), initializeEventPatterns(), getDetectionStats(handlers), getDetectionReport(fileAnalyses), getLanguageDistribution(fileAnalyses)
+
+[src/patterns/framework-detector.ts]
+
+  lang: typescript
+  imp:
+    ../types/index.js:[FileAnalysis, FrameworkDetection, SupportedLanguage]
+      ./pattern-definitions.js:[ALL_FRAMEWORK_SIGNATURES, FrameworkSignature, PatternDefinition]
+      __exports__:[default]
+  cls:
+    FrameworkDetector
+      doc: "Framework detection engine\nAnalyzes a collection of file analyses to detect which frameworks\nare being used in the codebase with confidence scoring."
+      mth: constructor(debugMode), detectFrameworks(fileAnalyses), analyzeFileForFrameworks(filePath, analysis, frameworkEvidence), matchesPattern(filePath, analysis, pattern), matchFileNamePattern(filePath, pattern), matchImportPattern(analysis, pattern), matchFunctionCallPattern(analysis, pattern), matchClassNamePattern(analysis, pattern), matchDecoratorPattern(analysis, pattern), matchContentPattern(analysis, pattern), calculateMaxPossibleScore(signature, fileAnalyses), getDetectionReport(fileAnalyses), getLanguageDistribution(fileAnalyses)
+
+[src/patterns/index.ts]
+
+  lang: typescript
+  imp: {__exports__:[default]}
+
+[src/patterns/pattern-definitions.ts]
+
+  lang: typescript
+  imp:
+    ../types/index.js:[SupportedLanguage, FileAnalysis]
+      __exports__:[default]
+  fn:
+    getFrameworkSignature(name)(name)
+      doc: Get framework signature by name
+    getSupportedFrameworks()
+      doc: Get all supported framework names
+
+[src/patterns/state-detector.ts]
+
+  lang: typescript
+  imp:
+    ../types/index.js:[FileAnalysis, StateChange, StatePatternType, MutationType, SupportedLanguage]
+      __exports__:[default]
+  cls:
+    StateDetector
+      doc: "State management pattern detection engine\nThis class analyzes file analysis results to detect state management patterns\nacross multiple frameworks with detailed metadata extraction."
+      mth: constructor(debugMode), detectStatePatterns(fileAnalyses), analyzeFileForStatePatterns(filePath, analysis), detectReactStatePatterns(filePath, analysis), hasReactImport(analysis), parseReactStateChange(stateChange, filePath, containerName, lineNumber, context), detectReactHooksInFunction(filePath, functionName, functionInfo, analysis), isReactComponentClass(classInfo), detectReactClassState(filePath, className, classInfo), extractVariableName(stateChange, pattern), inferStateVariableName(functionName, pattern), detectReduxPatterns(filePath, analysis), hasReduxImport(analysis), isReduxActionCreator(functionName, functionInfo), isReduxReducer(functionName, functionInfo), isStoreCreation(functionName, functionInfo, analysis), detectReduxToolkitPatterns(filePath, analysis), extractActionType(functionName), extractReducerStateType(functionName), extractDispatchAction(dispatchCall), detectMobXPatterns(filePath, analysis), detectDjangoStatePatterns(filePath, analysis), detectGenericStatePatterns(filePath, analysis), hasMobXImport(analysis), hasDjangoImport(analysis), hasMobXDecorators(classInfo), isMobXObservableCreation(functionName, functionInfo), extractObservableName(functionName), parseDjangoStateChange(stateChange, filePath, containerName, lineNumber), isDjangoViewFunction(functionName, functionInfo, analysis), isDjangoModelClass(classInfo), isDjangoModelMethod(methodName), getDjangoMethodMutationType(methodName), extractDjangoModelName(stateChange), extractModelNameFromView(functionName), isFrameworkSpecificPattern(stateChange), parseGenericStatePattern(stateChange, filePath, containerName, lineNumber, language), detectStateVariablePatterns(filePath, analysis), extractGenericVariableName(stateChange), initializeStatePatterns(), getDetectionStats(patterns), getDetectionReport(fileAnalyses), getLanguageDistribution(fileAnalyses)
+
+[src/types/babel-traverse.d.ts]
+
+  lang: typescript
+  imp: {__exports__:[default]}
+
+[src/types/index.ts]
+
+  lang: typescript
+  imp: {__exports__:[default]}
+
+[test-react-app.jsx]
+
+  lang: javascript
+  imp:
+    react:[React, useState, useEffect]
+      react-native:[View, Text, Button, StyleSheet]
+      __exports__:[default]
+  fn:
+    MyReactComponent({ ... })({ ... })
+    handlePress()
+    async handleSubmit(event)(event)
   states:
-    [0] t:useState, var:authprovider, mut:update
-        [1] t:useState, var:context, mut:read
-        [2] t:useState, var:login, mut:update
-        [3] t:useState, var:context, mut:read
-        [4] t:useState, var:logout, mut:update
-        [5] t:useState, var:context, mut:read
-        [6] t:useState, var:authcontext, mut:update
-        [7] t:useState, var:context, mut:read
-
-[src/app/providers/LayoutContext.tsx]
-
-  lang: typescript
-  imp:
-    react:[React, createContext, useReducer, useContext, ReactNode]
-      __exports__:[default]
-  fn:
-    layoutReducer(state, action)(state, action)
-    LayoutProvider({ ... })({ ... })
-      doc: LayoutProvider wraps parts of the app that need layout state (e.g. sidebar open/close).
-    toggleSidebar()
-    useLayout()
-      doc: "Custom hook to use the layout context.\n@throws Error if used outside LayoutProvider."
-  states:
-    [0] t:useReducer, var:layoutreducer, mut:update
-        [1] t:useState, var:context, mut:read
-        [2] t:useReducer, var:layoutprovider, mut:update
-        [3] t:useState, var:context, mut:read
-        [4] t:useReducer, var:togglesidebar, mut:update
-        [5] t:useState, var:context, mut:read
-        [6] t:useState, var:layout, mut:update
-        [7] t:useReducer, var:layout, mut:update
-        [8] t:useState, var:context, mut:read
-
-[src/app/providers/QueryClientProvider.tsx]
-
-  lang: typescript
-  imp:
-    react:[React]
-      @tanstack/react-query:[QueryClient, QueryClientProvider]
-      @tanstack/react-query-devtools:[ReactQueryDevtools]
-      __exports__:[default]
-  fn:
-    QueryClientProvider({ ... })({ ... })
-
-[src/app/routes/AppRoutes.tsx]
-
-  lang: typescript
-  imp:
-    react:[React, Suspense, lazy]
-      react-router-dom:[BrowserRouter, Routes, Route, Navigate, Outlet]
-      ./ProtectedRoute:[ProtectedRoute]
-      @chakra-ui/react:[Box]
-      ../../shared/components/atoms/Loader:[Loader]
-      ../../features/auth/components/CatalogLoginForm:[CatalogLoginForm]
-      ../../features/auth/components/CatalogForgotPasswordForm:[CatalogForgotPasswordForm]
-      ../../features/inventory/components/InventoryUploadScreen:[InventoryUploadScreen]
-      ../../features/inventory/components/InventoryConfirmationScreen:[InventoryConfirmationScreen]
-      ../../features/catalog/hooks/JsonBulkUploadContext:[JsonBulkUploadProvider]
-      __exports__:[default]
-  fn:
-    DashboardPage()
-    Unauthorized()
-    AppRoutes()
-
-[src/app/routes/ProtectedRoute.tsx]
-
-  lang: typescript
-  imp:
-    react:[React]
-      react-router-dom:[Navigate, Outlet]
-      ../../shared/hooks/usePermissions:[usePermissions]
-      __exports__:[default]
-  fn:
-    isAuthenticated()
-    ProtectedRoute({ ... })({ ... })
-
-[src/assets/react.svg]
-
-  lang: typescript
-
-[src/features/auth/components/CatalogForgotPasswordForm.tsx]
-
-  lang: typescript
-  imp:
-    react:[React, useState]
-      react-hook-form:[useForm, SubmitHandler]
-      @chakra-ui/react:[Box, Flex, Link]
-      react-router-dom:[Link]
-      axios:[axios]
-      ../../../shared/components/atoms/Alert:[Alert]
-      ../../../shared/components/atoms/Input:[Input]
-      ../../../shared/components/atoms/Button:[Button]
-      ../../../shared/api/axiosClient:[axiosClient]
-      __exports__:[default]
-  fn:
-    CatalogForgotPasswordForm()
-      doc: "CatalogForgotPasswordForm allows Catalog Managers\nto request password reset by providing their username."
-    escapeHtml(str)(str)
-    async onSubmit(data)(data)
-  states:
-    [0] t:useState, var:catalogforgotpasswordform, mut:update
-        [1] t:useState, var:escapehtml, mut:update
-        [2] t:useState, var:onsubmit, mut:update
-  events:
-    [0] t:dom_event, event:submit, hdl:onSubmit, framework:DOM
-        [1] t:dom_event, event:callback, hdl:onSubmit, framework:Custom
-        [2] t:onSubmit, event:submit, hdl:onSubmit, framework:Generic
-
-[src/features/auth/components/CatalogLoginForm.tsx]
-
-  lang: typescript
-  imp:
-    react:[React, useState]
-      react-hook-form:[useForm, SubmitHandler]
-      @chakra-ui/react:[Box, Flex, Link]
-      react-router-dom:[Link, useNavigate]
-      axios:[axios]
-      ../../../shared/components/atoms/Alert:[Alert]
-      ../../../shared/components/atoms/Input:[Input]
-      ../../../shared/components/atoms/Button:[Button]
-      ../../../shared/api/axiosClient:[axiosClient]
-      ../../../shared/hooks/useAuth:[useAuth]
-      __exports__:[default]
-  fn:
-    CatalogLoginForm()
-      doc: "CatalogLoginForm is a login form for Catalog Managers.\nIt uses react-hook-form for validation and axiosClient to call\nPOST /api/auth/login/catalog-manager/."
-    escapeHtml(str)(str)
-    async onSubmit(data)(data)
-  states:
-    [0] t:useState, var:catalogloginform, mut:update
-        [1] t:useState, var:escapehtml, mut:update
-        [2] t:useState, var:onsubmit, mut:update
-  events:
-    [0] t:dom_event, event:submit, hdl:onSubmit, framework:DOM
-        [1] t:dom_event, event:callback, hdl:onSubmit, framework:Custom
-        [2] t:onSubmit, event:submit, hdl:onSubmit, framework:Generic
-
-[src/features/auth/components/Dashboard.tsx]
-
-  lang: typescript
-  imp:
-    react:[React]
-      @chakra-ui/react:[Box, Text]
-      ../../../shared/hooks/useAuth:[useAuth]
-      __exports__:[default]
-  fn:
-    Dashboard()
-      doc: Dashboard is a placeholder component displaying basic authentication info.
-
-[src/features/auth/components/LoginForm.tsx]
-
-  lang: typescript
-  imp:
-    react:[React]
-      react-hook-form:[useForm]
-      @chakra-ui/react:[Box, Flex]
-      ../../../shared/components/atoms/Input:[Input]
-      ../../../shared/components/atoms/Button:[Button]
-      __exports__:[default]
-  fn:
-    LoginForm()
-      doc: "LoginForm demonstrates the usage of React Hook Form with Chakra UI atoms.\nIt replaces the previous Tailwind-based implementation."
-    onSubmit(data)(data)
-  events:
-    [0] t:dom_event, event:submit, hdl:onSubmit, framework:DOM
-        [1] t:dom_event, event:callback, hdl:onSubmit, framework:Custom
-        [2] t:onSubmit, event:submit, hdl:onSubmit, framework:Generic
-
-[src/features/auth/components/OrderList.tsx]
-
-  lang: typescript
-  imp:
-    react:[React]
-      @chakra-ui/react:[Box, Text]
-      ./../../../features/orders/hooks//useOrders:[useOrders]
-      ../../../shared/components/atoms/Loader:[Loader]
-      ../../../shared/components/atoms/EmptyState:[EmptyState]
-      ../../../shared/components/atoms/ErrorMessage:[ErrorMessage]
-      __exports__:[default]
-  fn:
-    OrderList()
-
-[src/features/catalog/BulkUploadScreen.tsx]
-
-  lang: typescript
-  imp:
-    react:[React, useState]
-      @chakra-ui/react:[Box, Text, Progress]
-      @tanstack/react-query:[useMutation]
-      ../../shared/api/axiosClient:[axiosClient]
-      axios:[AxiosProgressEvent, AxiosError]
-      ../../shared/components/atoms/Alert:[Alert]
-      ../../shared/components/atoms/Button:[Button]
-      ../../shared/components/atoms/Input:[Input]
-      __exports__:[default]
-  fn:
-    BulkUploadScreen()
-    handleFileChange(e)(e)
-    handleUpload()
-  states:
-    [0] t:useState, var:bulkuploadscreen, mut:update
-        [1] t:useState, var:handlefilechange, mut:update
-        [2] t:useState, var:handlefilechange, mut:update
-        [3] t:useState, var:handleupload, mut:update
-        [4] t:useState, var:handleupload, mut:update
-  events:
-    [0] t:dom_event, event:load, hdl:BulkUploadScreen, framework:DOM
-        [1] t:dom_event, event:change, hdl:handleFileChange, framework:DOM
-        [2] t:onChange, event:change, hdl:handleFileChange, framework:Generic
-        [3] t:dom_event, event:load, hdl:handleUpload, framework:DOM
-        [4] t:dom_event, event:load, hdl:handleUpload, framework:Generic
-
-[src/features/catalog/Dashboard.tsx]
-
-  lang: typescript
-  imp:
-    react:[React]
-      @chakra-ui/icons:[ViewIcon, RepeatIcon, RepeatIcon]
-      @chakra-ui/react:[Box, Text, SimpleGrid, Flex, Icon, useColorModeValue, Button, Tooltip]
-      @tanstack/react-query:[useQuery]
-      ../../shared/api/axiosClient:[axiosClient]
-      ../../shared/components/atoms/Loader:[Loader]
-      ../../shared/components/atoms/Alert:[Alert]
-      __exports__:[default]
-  fn:
-    StatCard({ ... })({ ... })
-    Dashboard()
-    handleRefresh()
-  states: [0] t:useState, var:handlerefresh, mut:update
-  events: [0] t:dom_event, event:unknown, hdl:handleRefresh, framework:Generic
-
-[src/features/catalog/EditableInfoItem.tsx]
-
-  lang: typescript
-  imp:
-    react:[React, useState]
-      @chakra-ui/react:[Flex, Text, IconButton, Input, useToast, FormLabel]
-      @chakra-ui/icons:[EditIcon, CheckIcon, CloseIcon]
-      ../../shared/api/axiosClient:[axiosClient]
-      __exports__:[default]
-  fn:
-    EditableInfoItem({ ... })({ ... })
-    async handleSave()
-    handleCancel()
-  states:
-    [0] t:useState, var:editableinfoitem, mut:update
-        [1] t:useState, var:handlesave, mut:update
-        [2] t:useState, var:handlesave, mut:update
-        [3] t:useState, var:handlecancel, mut:update
-        [4] t:useState, var:handlecancel, mut:update
-  events:
-    [0] t:dom_event, event:unknown, hdl:handleSave, framework:Generic
-        [1] t:dom_event, event:unknown, hdl:handleCancel, framework:Generic
-
-[src/features/catalog/InventoryManagement.tsx]
-
-  lang: typescript
-  imp:
-    react:[React, useState]
-      @chakra-ui/react:[Box, Flex, Input, Radio, RadioGroup, Stack, Text]
-      @tanstack/react-query:[useQuery, useMutation, useQueryClient]
-      ../../shared/api/axiosClient:[axiosClient]
-      ../../shared/components/atoms/Loader:[Loader]
-      ../../shared/components/atoms/Alert:[Alert]
-      ../../shared/components/atoms/Button:[Button]
-      __exports__:[default]
-  fn:
-    InventoryManagement()
-    handleUpdateChange(sku, field, value)(sku, field, value)
-    handleSubmit()
-  states:
-    [0] t:useState, var:inventorymanagement, mut:update
-        [1] t:useState, var:inventorymanagement, mut:update
-        [2] t:useState, var:handleupdatechange, mut:update
-        [3] t:useState, var:handleupdatechange, mut:update
+    [0] t:useState, var:myreact, mut:update
+        [1] t:useState, var:handlepress, mut:update
+        [2] t:useState, var:handlepress, mut:update
+        [3] t:useState, var:handlesubmit, mut:update
         [4] t:useState, var:handlesubmit, mut:update
-        [5] t:useState, var:handlesubmit, mut:update
   events:
-    [0] t:dom_event, event:change, hdl:handleUpdateChange, framework:DOM
-        [1] t:onChange, event:change, hdl:handleUpdateChange, framework:Generic
-        [2] t:dom_event, event:submit, hdl:handleSubmit, framework:DOM
-        [3] t:onSubmit, event:submit, hdl:handleSubmit, framework:Generic
+    [0] t:dom_event, event:unknown, hdl:handlePress, framework:Generic
+        [1] t:dom_event, event:submit, hdl:handleSubmit, framework:DOM
+        [2] t:onSubmit, event:submit, hdl:handleSubmit, framework:Generic
 
-[src/features/catalog/JSONBulkUploadConfirmationScreen.tsx]
+[test-react-native-app.tsx]
 
   lang: typescript
   imp:
-    react:[React, useState, useEffect, useCallback]
-      @chakra-ui/react:[Box, Container, Text, Progress, Flex, Table, Thead, Tbody, Tr, Th, Td]
-      ../../shared/components/atoms/Button:[Button]
-      ../../shared/components/atoms/Modal:[Modal]
-      ./hooks/JsonBulkUploadContext:[useJsonBulkUpload]
-      ../../shared/api/axiosClient:[axiosClient]
-      ./utils/jsonBulkUploadValidation:[applyDefaultFields]
-      ./types/jsonProduct:[JSONProduct]
-      react-router-dom:[useNavigate]
+    react:[React, useState, useEffect]
+      react-native:[View, Text, ScrollView, TouchableOpacity, StyleSheet, Platform, Dimensions, Alert, FlatList, Animated]
+      @react-native-async-storage/async-storage:[AsyncStorage]
+      @react-navigation/native:[NavigationContainer]
       __exports__:[default]
   fn:
-    JSONBulkUploadConfirmationScreen()
-    handleBeforeUnload(e)(e)
-    async handleSubmitUpload()
-    handleReupload()
+    MyReactNativeApp()
+    async loadData()
+    handlePress()
+    renderItem({ ... })({ ... })
   states:
-    [0] t:useState, var:jsonbulkuploadconfirmationscreen, mut:update
-        [1] t:useState, var:handlebeforeunload, mut:update
-        [2] t:useState, var:handlebeforeunload, mut:update
-        [3] t:useState, var:handlesubmitupload, mut:update
-        [4] t:useState, var:handlesubmitupload, mut:update
-        [5] t:useState, var:handlereupload, mut:update
-        [6] t:useState, var:handlereupload, mut:update
+    [0] t:useState, var:myreactnativeapp, mut:update
+        [1] t:useState, var:loaddata, mut:update
+        [2] t:useState, var:handlepress, mut:update
+        [3] t:useState, var:handlepress, mut:update
+        [4] t:useState, var:renderitem, mut:update
   events:
-    [0] t:dom_event, event:load, hdl:JSONBulkUploadConfirmationScreen, framework:DOM
-        [1] t:dom_event, event:callback, hdl:JSONBulkUploadConfirmationScreen, framework:Custom
-        [2] t:dom_event, event:load, hdl:JSONBulkUploadConfirmationScreen, framework:Generic
-        [3] t:dom_event, event:load, hdl:handleBeforeUnload, framework:DOM
-        [4] t:dom_event, event:load, hdl:handleBeforeUnload, framework:Generic
-        [5] t:dom_event, event:submit, hdl:handleSubmitUpload, framework:DOM
-        [6] t:dom_event, event:load, hdl:handleSubmitUpload, framework:DOM
-        [7] t:onSubmit, event:submit, hdl:handleSubmitUpload, framework:Generic
-        [8] t:dom_event, event:load, hdl:handleReupload, framework:DOM
-        [9] t:dom_event, event:load, hdl:handleReupload, framework:Generic
+    [0] t:dom_event, event:load, hdl:loadData, framework:DOM
+        [1] t:dom_event, event:unknown, hdl:handlePress, framework:Generic
 
-[src/features/catalog/JSONBulkUploadScreen.tsx]
+[tests/analysis-coordinator.test.ts]
 
   lang: typescript
   imp:
-    react:[React, useState]
-      @chakra-ui/react:[Box, Text]
-      ../../shared/components/atoms/Button:[Button]
-      ../../shared/components/atoms/Input:[Input]
-      ../../shared/components/atoms/Alert:[Alert]
-      react-router-dom:[useNavigate]
-      ./utils/jsonBulkUploadValidation:[validateBulkUploadJSON]
-      ./hooks/JsonBulkUploadContext:[useJsonBulkUpload]
-      __exports__:[default]
-  fn:
-    JSONBulkUploadScreen()
-    handleFileChange(e)(e)
-    handleValidate()
-  states:
-    [0] t:useState, var:jsonbulkuploadscreen, mut:update
-        [1] t:useState, var:handlefilechange, mut:update
-        [2] t:useState, var:handlefilechange, mut:update
-        [3] t:useState, var:handlevalidate, mut:update
-        [4] t:useState, var:handlevalidate, mut:update
-  events:
-    [0] t:dom_event, event:load, hdl:JSONBulkUploadScreen, framework:DOM
-        [1] t:dom_event, event:change, hdl:handleFileChange, framework:DOM
-        [2] t:onChange, event:change, hdl:handleFileChange, framework:Generic
-        [3] t:dom_event, event:unknown, hdl:handleValidate, framework:Generic
+    vitest:[describe, it, expect, beforeAll, beforeEach]
+      ../src/core/analysis-coordinator.js:[AnalysisCoordinator]
 
-[src/features/catalog/NewProductForm.tsx]
+[tests/babel-analyzer.test.ts]
 
   lang: typescript
   imp:
-    react:[React]
-      @chakra-ui/react:[Box, Button, FormControl, FormLabel, Input, Stack, Heading, useToast]
-      react-hook-form:[useForm, SubmitHandler]
-      @tanstack/react-query:[useMutation, useQueryClient]
-      ../../shared/api/axiosClient:[axiosClient]
-      ./productTypes:[IProduct]
-      __exports__:[default]
-  fn:
-    NewProductForm()
-    onSubmit(formData)(formData)
-  events:
-    [0] t:dom_event, event:submit, hdl:onSubmit, framework:DOM
-        [1] t:dom_event, event:callback, hdl:onSubmit, framework:Custom
-        [2] t:onSubmit, event:submit, hdl:onSubmit, framework:Generic
+    vitest:[describe, it, expect, beforeEach]
+      ../src/parsers/babel-analyzer.js:[BabelAnalyzer]
 
-[src/features/catalog/ProductDetailView.tsx]
+[tests/file-processor.test.ts]
 
   lang: typescript
   imp:
-    react:[React, FC]
-      @chakra-ui/react:[Box, SimpleGrid, Heading, Text, Stack, Button, Spinner, Card, CardHeader, CardBody, Image, Grid, GridItem, Flex]
-      react-router-dom:[useParams, useNavigate]
-      @tanstack/react-query:[useQuery]
-      ../../shared/api/axiosClient:[axiosClient]
-      ./productTypes:[IProduct, getCustomAttribute]
-      ./EditableInfoItem:[EditableInfoItem]
-      __exports__:[default]
-  fn:
-    async fetchProductDetail(sku)(sku)
-    formatNumber(value)(value)
-    formatCurrency(value)(value)
-    InfoItem({ ... })({ ... })
-    SectionCard({ ... })({ ... })
-    ProductDetailView()
-  events:
-    [0] t:dom_event, event:callback, hdl:SectionCard, framework:Custom
-        [1] t:dom_event, event:unknown, hdl:SectionCard, framework:Generic
+    vitest:[describe, it, expect, beforeAll, afterAll, vi]
+      node:fs/promises:[mkdir, writeFile, rmdir, chmod]
+      node:path:[join]
+      ../src/core/file-processor.js:[FileProcessor, DEFAULT_PROCESSING_OPTIONS]
 
-[src/features/catalog/ProductListing.tsx]
+[tests/framework-detector.test.ts]
 
   lang: typescript
   imp:
-    react:[React, useState, useMemo, useCallback]
-      @chakra-ui/react:[Box, Flex, Input, Text, Table, Thead, Tbody, Tr, Th, Td, TableContainer, Container, ThemeProvider, extendTheme]
-      @tanstack/react-query:[useQuery]
-      react-router-dom:[useNavigate]
-      ../../shared/api/axiosClient:[axiosClient]
-      ../../shared/components/atoms/Loader:[Loader]
-      ../../shared/components/atoms/Alert:[Alert]
-      ../../shared/components/atoms/Button:[Button]
-      __exports__:[default]
-  fn:
-    ProductListing()
-  states: [0] t:useState, var:productlisting, mut:update
+    vitest:[describe, it, expect, beforeEach]
+      ../src/patterns/framework-detector.js:[FrameworkDetector]
+      ../src/patterns/pattern-definitions.js:[REACT_PATTERNS, DJANGO_PATTERNS, NESTJS_PATTERNS, getSupportedFrameworks]
+      ../src/types/index.js:[FileAnalysis]
 
-[src/features/catalog/Profile.tsx]
+[tests/git-processor.test.ts]
 
   lang: typescript
   imp:
-    react:[React]
-      @chakra-ui/react:[Box, Button, Flex, FormControl, FormLabel, Input, Text, useToast]
-      react-hook-form:[useForm]
-      @tanstack/react-query:[useQuery, useMutation, useQueryClient]
-      ../../shared/api/axiosClient:[axiosClient]
-      ../../shared/components/atoms/Loader:[Loader]
-      ../../shared/components/atoms/Alert:[Alert]
-      __exports__:[default]
-  fn:
-    Profile()
-    onSubmit(data)(data)
-  events:
-    [0] t:dom_event, event:submit, hdl:onSubmit, framework:DOM
-        [1] t:dom_event, event:callback, hdl:onSubmit, framework:Custom
-        [2] t:onSubmit, event:submit, hdl:onSubmit, framework:Generic
+    vitest:[describe, it, expect, beforeAll, afterAll]
+      node:fs/promises:[mkdir, writeFile, rmdir]
+      node:child_process:[execFile]
+      node:util:[promisify]
+      node:path:[join]
+      ../src/core/git-processor.js:[GitProcessor]
 
-[src/features/catalog/Reports.tsx]
+[tests/language-detector.test.ts]
 
   lang: typescript
   imp:
-    react:[React, useState]
-      @chakra-ui/react:[Box, Input, Button, Flex, Text]
-      @tanstack/react-query:[useQuery]
-      ../../shared/api/axiosClient:[axiosClient]
-      ../../shared/components/atoms/Loader:[Loader]
-      ../../shared/components/atoms/Alert:[Alert]
-      __exports__:[default]
-  fn:
-    Reports()
-    handleFetchReport()
-  states:
-    [0] t:useState, var:reports, mut:update
-        [1] t:useState, var:handlefetchreport, mut:update
-        [2] t:useState, var:handlefetchreport, mut:update
-  events: [0] t:dom_event, event:unknown, hdl:handleFetchReport, framework:Generic
+    vitest:[describe, it, expect, beforeEach]
+      ../src/core/language-detector.js:[LanguageDetector]
+      ../src/types/index.js:[SupportedLanguage]
 
-[src/features/catalog/hooks/JsonBulkUploadContext.tsx]
+[tests/python-analyzer.test.ts]
 
   lang: typescript
   imp:
-    react:[React, createContext, useContext, useState, ReactNode]
-      ../types/jsonProduct:[JSONProduct]
-      __exports__:[default]
-  fn:
-    JsonBulkUploadProvider({ ... })({ ... })
-    clearProducts()
-    useJsonBulkUpload()
-  states:
-    [0] t:useState, var:jsonbulkuploadprovider, mut:update
-        [1] t:useState, var:context, mut:read
-        [2] t:useState, var:clearproducts, mut:update
-        [3] t:useState, var:context, mut:read
-        [4] t:useState, var:jsonbulkupload, mut:update
-        [5] t:useState, var:context, mut:read
-  events:
-    [0] t:dom_event, event:load, hdl:JsonBulkUploadProvider, framework:DOM
-        [1] t:dom_event, event:callback, hdl:JsonBulkUploadProvider, framework:Custom
-        [2] t:dom_event, event:load, hdl:JsonBulkUploadProvider, framework:Generic
-        [3] t:dom_event, event:load, hdl:useJsonBulkUpload, framework:DOM
-        [4] t:dom_event, event:callback, hdl:useJsonBulkUpload, framework:Custom
-        [5] t:dom_event, event:load, hdl:useJsonBulkUpload, framework:Generic
+    vitest:[describe, it, expect, beforeEach]
+      ../src/parsers/python-analyzer.js:[PythonAnalyzer]
 
-[src/features/catalog/productTypes.ts]
-
-  lang: typescript
-  imp: {__exports__:[default]}
-  fn:
-    getCustomAttribute(product, code)(product, code)
-
-[src/features/catalog/types/jsonProduct.ts]
-
-  lang: typescript
-  imp: {__exports__:[default]}
-
-[src/features/catalog/utils/jsonBulkUploadValidation.ts]
+[tests/setup.test.ts]
 
   lang: typescript
   imp:
-    ../types/jsonProduct:[JSONProduct]
-      __exports__:[default]
-  fn:
-    validateBulkUploadJSON(fileContent)(fileContent)
-      doc: "Validates and parses the uploaded JSON file for bulk product upload.\nIt enforces that the file is a JSON array of products (max 100)\nwhere each product must contain every mandatory field.\n@param fileContent - string content of the file.\n@returns ValidationResult with a valid flag, error message if any, and an array of products."
-    applyDefaultFields(product)(product)
-      doc: "Applies default values to a product if missing optional fields.\nThese defaults are required by Magento and ensure consistency.\n@param product - JSONProduct object to apply default values.\n@returns The product with default fields populated."
-  events: [0] t:dom_event, event:load, hdl:validateBulkUploadJSON, framework:DOM
+    vitest:[describe, it, expect]
+      ../src/index.js:[hello, analyzeRepository, ANALYSIS_ENGINE_VERSION, AnalysisResult, AnalysisOptions]
 
-[src/features/demo/QueryDemo.tsx]
+[tests/tree-sitter-manager.test.ts]
 
   lang: typescript
   imp:
-    react:[React, useMemo]
-      @tanstack/react-query:[useQuery]
-      ../../shared/components/atoms/Loader:[Loader]
-      __exports__:[default]
-  fn:
-    async fetchData()
-    QueryDemo()
-
-[src/features/inventory/components/InventoryConfirmationScreen.tsx]
-
-  lang: typescript
-  imp:
-    react:[React, useState, useCallback]
-      @chakra-ui/react:[Box, Text, Progress, TableContainer, Table, Thead, Tbody, Tr, Th, Td, Container]
-      ../../../shared/components/atoms/Button:[Button]
-      ../../../shared/components/atoms/Alert:[Alert]
-      ../hooks/useInventoryCsv:[useInventoryCsv]
-      ../inventoryService:[updateInventoryRow]
-      react-router-dom:[useNavigate]
-      __exports__:[default]
-  fn:
-    InventoryConfirmationScreen()
-    async handleStartProcessing()
-    handleCancel()
-    handleReset()
-  states:
-    [0] t:useState, var:inventoryconfirmationscreen, mut:update
-        [1] t:useState, var:handlestartprocessing, mut:update
-        [2] t:useState, var:handlestartprocessing, mut:update
-        [3] t:useState, var:handlecancel, mut:update
-        [4] t:useState, var:handlecancel, mut:update
-        [5] t:useState, var:handlereset, mut:update
-        [6] t:useState, var:handlereset, mut:update
-  events:
-    [0] t:dom_event, event:callback, hdl:InventoryConfirmationScreen, framework:Custom
-        [1] t:dom_event, event:unknown, hdl:InventoryConfirmationScreen, framework:Generic
-        [2] t:dom_event, event:unknown, hdl:handleStartProcessing, framework:Generic
-        [3] t:dom_event, event:unknown, hdl:handleCancel, framework:Generic
-        [4] t:dom_event, event:unknown, hdl:handleReset, framework:Generic
-
-[src/features/inventory/components/InventoryUploadScreen.tsx]
-
-  lang: typescript
-  imp:
-    react:[React, useState]
-      @chakra-ui/react:[Box, Text, Stack]
-      ../../../shared/components/atoms/Button:[Button]
-      ../../../shared/components/atoms/Input:[Input]
-      ../../../shared/components/atoms/Alert:[Alert]
-      ../hooks/useInventoryCsv:[parseInventoryCsv, useInventoryCsv]
-      react-router-dom:[useNavigate]
-      __exports__:[default]
-  fn:
-    InventoryUploadScreen()
-    handleFileChange(e)(e)
-    async handleUploadAndValidate()
-  states:
-    [0] t:useState, var:inventoryuploadscreen, mut:update
-        [1] t:useState, var:handlefilechange, mut:update
-        [2] t:useState, var:handlefilechange, mut:update
-        [3] t:useState, var:handleuploadandvalidate, mut:update
-        [4] t:useState, var:handleuploadandvalidate, mut:update
-  events:
-    [0] t:dom_event, event:load, hdl:InventoryUploadScreen, framework:DOM
-        [1] t:dom_event, event:change, hdl:handleFileChange, framework:DOM
-        [2] t:onChange, event:change, hdl:handleFileChange, framework:Generic
-        [3] t:dom_event, event:load, hdl:handleUploadAndValidate, framework:DOM
-        [4] t:dom_event, event:load, hdl:handleUploadAndValidate, framework:Generic
-
-[src/features/inventory/hooks/useInventoryCsv.tsx]
-
-  lang: typescript
-  imp:
-    papaparse:[Papa]
-      react:[React, createContext, useState, useContext, ReactNode, useCallback]
-      __exports__:[default]
-  fn:
-    async parseInventoryCsv(file)(file)
-      doc: "parseInventoryCsv(file: File):\n- Reads and parses the CSV.\n- Ensures required columns (sku, source_code, quantity) are present.\n- Any row with invalid numeric 'quantity' triggers parse failure.\n- If valid, returns rows with status=\"Pending\"."
-    InventoryCsvProvider({ ... })({ ... })
-    useInventoryCsv()
-  states:
-    [0] t:useState, var:parseinventorycsv, mut:update
-        [1] t:useState, var:context, mut:read
-        [2] t:useState, var:inventorycsvprovider, mut:update
-        [3] t:useState, var:context, mut:read
-        [4] t:useState, var:inventorycsv, mut:update
-        [5] t:useState, var:context, mut:read
-
-[src/features/inventory/inventoryService.ts]
-
-  lang: typescript
-  imp:
-    ../../shared/api/axiosClient:[axiosClient]
-      __exports__:[default]
-  fn:
-    async updateInventoryRow(payload)(payload)
-      doc: "updateInventoryRow(payload: InventoryUpdatePayload):\nPerforms the POST to /api/cm/inventory\nReturns a promise that resolves if successful, rejects if error"
-
-[src/features/orders/hooks/useOrders.ts]
-
-  lang: typescript
-  imp:
-    @tanstack/react-query:[useQuery]
-      __exports__:[default]
-  fn:
-    useOrders()
-
-[src/jest-dom.d.ts]
-
-  lang: typescript
-  imp: {}
-
-[src/main.tsx]
-
-  lang: typescript
-  imp:
-    react:[React]
-      react-dom/client:[ReactDOM]
-      @chakra-ui/react:[ChakraProvider]
-      ./theme:[theme]
-      ./app/routes/AppRoutes:[AppRoutes]
-      ./app/ErrorBoundary:[ErrorBoundary]
-      ./app/providers/LayoutContext:[LayoutProvider]
-      ./app/providers/QueryClientProvider:[QueryClientProvider]
-      ./app/providers/AuthContext:[AuthProvider]
-
-[src/shared/api/axiosClient.ts]
-
-  lang: typescript
-  imp:
-    axios:[axios, AxiosError, InternalAxiosRequestConfig, AxiosResponse]
-      __exports__:[default]
-
-[src/shared/api/csrf.ts]
-
-  lang: typescript
-  imp: {__exports__:[default]}
-  fn:
-    getCsrfToken()
-      doc: "csrf.ts provides a basic setup for CSRF protection.\nThis file can be extended to include specific configurations if required by the backend."
-
-[src/shared/components/atoms/Alert.tsx]
-
-  lang: typescript
-  imp:
-    react:[React]
-      @chakra-ui/react:[Alert, AlertIcon, AlertTitle, AlertDescription, Box]
-      __exports__:[default]
-  fn:
-    Alert({ ... })({ ... })
-
-[src/shared/components/atoms/Button.tsx]
-
-  lang: typescript
-  imp:
-    @chakra-ui/react:[Button, ButtonProps]
-      __exports__:[default]
-  fn:
-    Button({ ... })({ ... })
-
-[src/shared/components/atoms/EmptyState.tsx]
-
-  lang: typescript
-  imp:
-    react:[React]
-      @chakra-ui/react:[Center, Text]
-      __exports__:[default]
-  fn:
-    EmptyState({ ... })({ ... })
-  states: [0] t:useState, var:emptystate, mut:update
-
-[src/shared/components/atoms/ErrorMessage.tsx]
-
-  lang: typescript
-  imp:
-    react:[React]
-      @chakra-ui/react:[Alert, AlertIcon, AlertDescription]
-      __exports__:[default]
-  fn:
-    ErrorMessage({ ... })({ ... })
-
-[src/shared/components/atoms/Input.tsx]
-
-  lang: typescript
-  imp:
-    react:[React]
-      @chakra-ui/react:[FormControl, FormLabel, Input, FormErrorMessage, InputProps]
-      __exports__:[default]
-
-[src/shared/components/atoms/Loader.tsx]
-
-  lang: typescript
-  imp:
-    react:[React]
-      @chakra-ui/react:[Spinner, Box]
-      __exports__:[default]
-
-[src/shared/components/atoms/Modal.tsx]
-
-  lang: typescript
-  imp:
-    react:[React]
-      @chakra-ui/react:[Modal, ModalOverlay, ModalContent, ModalCloseButton, ModalBody, ModalProps]
-      __exports__:[default]
-  fn:
-    Modal({ ... })({ ... })
-      doc: "Modal component that displays content in an overlay using Chakra UI.\n@example\n<Modal isOpen={isModalOpen} onClose={() => setModalOpen(false)}>\n<div>Modal Content</div>\n</Modal>"
-
-[src/shared/components/atoms/OptimizedImage.tsx]
-
-  lang: typescript
-  imp:
-    react:[React]
-      @chakra-ui/react:[Image, ImageProps]
-      __exports__:[default]
-  fn:
-    OptimizedImage({ ... })({ ... })
-      doc: "OptimizedImage\nA wrapper over Chakra UI's Image that sets loading=\"lazy\" to defer off-screen image loading.\nThis component can be used throughout the application to ensure optimized image delivery.\n@param {ImageProps} props - Props passed to the Chakra Image component."
-
-[src/shared/components/atoms/Table.tsx]
-
-  lang: typescript
-  imp:
-    react:[React]
-      @chakra-ui/react:[Table, Thead, Tbody, Tr, Th, Td, TableContainer]
-      __exports__:[default]
-
-[src/shared/components/layout/Footer.tsx]
-
-  lang: typescript
-  imp:
-    react:[React]
-      @chakra-ui/react:[Box, Text]
-      __exports__:[default]
-  fn:
-    Footer()
-      doc: Footer component, displayed at the bottom of the application.
-
-[src/shared/components/layout/Header.tsx]
-
-  lang: typescript
-  imp:
-    react:[React]
-      @chakra-ui/react:[Flex, IconButton, Box, Heading]
-      @chakra-ui/icons:[HamburgerIcon]
-      ../../../app/providers/LayoutContext:[useLayout]
-      __exports__:[default]
-  fn:
-    Header()
-      doc: "Header component for the application.\nProvides a hamburger button to toggle the sidebar and displays the portal title."
-
-[src/shared/components/layout/MainContent.tsx]
-
-  lang: typescript
-  imp:
-    react:[React]
-      @chakra-ui/react:[Box]
-      __exports__:[default]
-  fn:
-    MainContent({ ... })({ ... })
-      doc: MainContent component encapsulates the primary content area.
-
-[src/shared/components/layout/Sidebar.tsx]
-
-  lang: typescript
-  imp:
-    react:[React]
-      @chakra-ui/react:[Box, VStack, Link, Heading]
-      react-router-dom:[Link]
-      ../../../app/providers/LayoutContext:[useLayout]
-      __exports__:[default]
-  fn:
-    Sidebar()
-
-[src/shared/hooks/useAuth.ts]
-
-  lang: typescript
-  imp:
-    ../../app/providers/AuthContext:[useAuthContext]
-      __exports__:[default]
-  fn:
-    useAuth()
-
-[src/shared/hooks/usePermissions.ts]
-
-  lang: typescript
-  imp:
-    ./useAuth:[useAuth]
-      __exports__:[default]
-  fn:
-    usePermissions(allowedRoles)(allowedRoles)
-      doc: "usePermissions hook checks if the current user’s role is included in allowedRoles.\n@param allowedRoles - An array of permitted roles.\n@returns Boolean indicating if the user has permission."
-
-[src/shared/hooks/useSession.ts]
-
-  lang: typescript
-  imp:
-    react:[useEffect]
-      ./useAuth:[useAuth]
-      __exports__:[default]
-  fn:
-    useSession()
-      doc: "useSession hook monitors the current session token.\nIt can be extended for token expiry or idle timeout management."
-  states: [0] t:useState, var:session, mut:update
-
-[src/shared/types/loadingState.ts]
-
-  lang: typescript
-  imp: {__exports__:[default]}
-
-[src/shared/utils/sanitize.ts]
-
-  lang: typescript
-  imp: {__exports__:[default]}
-  fn:
-    sanitizeInput(input)(input)
-
-[src/theme.ts]
-
-  lang: typescript
-  imp:
-    @chakra-ui/react:[extendTheme, ThemeConfig]
-      __exports__:[default]
-
-[src/types/env.d.ts]
-
-  lang: typescript
-
-[src/vite-env.d.ts]
-
-  lang: typescript
-
-[staticwebapp.config.json]
-
-  lang: json
-
-[tsconfig.app.json]
-
-  lang: json
+    vitest:[describe, it, expect, beforeAll]
+      ../src/parsers/tree-sitter-manager.js:[TreeSitterManager]
 
 [tsconfig.json]
 
   lang: json
 
-[tsconfig.node.json]
-
-  lang: json
-
-[vite.config.ts]
-
-  lang: typescript
-  imp:
-    vite:[defineConfig]
-      @vitejs/plugin-react:[react]
-      __exports__:[default]
-
-[yarn.lock]
-
-  lang: unknown
-
 
 [PROJECT_SUMMARY]
 
-  total_files: 84
+  total_files: 65
   languages:
-    unknown:5
-      javascript:5
-      python:1
-      json:5
-      html:1
-      typescript:67
+    json:7
+      unknown:13
+      ruby:1
+      markdown:1
+      typescript:41
+      javascript:2
   fw:
     React:1
-      React Native:0.2716049382716049
+      React Native:0.4691358024691358
 
 
 [FILE_DEPENDENCIES]
 
-  README.md: react from 'eslint-plugin-react'
+  examples/complete-analysis.ts: __exports__, fs, path
 
-  eslint.config.js: @eslint/js, __exports__, eslint-plugin-react-hooks, eslint-plugin-react-refresh, globals, typescript-eslint
+  src/core/analysis-coordinator.ts: __exports__
 
-  src/app/ErrorBoundary.tsx: __exports__, react, src/shared/components/atoms/Alert.tsx
+  src/core/file-processor.ts: __exports__, node:fs/promises, node:path, p-limit
 
-  src/App.tsx: __exports__, react, src/shared/components/atoms/Alert.tsx, src/shared/components/atoms/Button.tsx, src/shared/components/atoms/EmptyState.tsx, src/shared/components/atoms/Input.tsx, src/shared/components/atoms/Loader.tsx, src/shared/components/atoms/Modal.tsx, src/shared/components/atoms/Table.tsx
+  scripts/download-parsers.js: node:fs/promises, node:path, node:url
 
-  src/app/layouts/AdminLayout.tsx: @chakra-ui/react, __exports__, react, src/shared/components/layout/Footer.tsx, src/shared/components/layout/Header.tsx, src/shared/components/layout/MainContent.tsx, src/shared/components/layout/Sidebar.tsx
+  src/core/git-processor.ts: __exports__, node:child_process, node:fs/promises, node:path, node:util
 
-  src/app/providers/AuthContext.tsx: __exports__, react
+  src/core/index.ts: __exports__
 
-  src/app/providers/LayoutContext.tsx: __exports__, react
+  src/core/language-detector.ts: __exports__, node:fs/promises, node:path
 
-  src/app/layouts/CatalogManagerLayout.tsx: @chakra-ui/react, __exports__, react, react-router-dom, src/app/providers/LayoutContext.tsx, src/features/inventory/hooks/useInventoryCsv.tsx, src/shared/components/layout/Footer.tsx, src/shared/components/layout/Header.tsx, src/shared/components/layout/Sidebar.tsx
+  scripts/clean-analysis.ts: __exports__, fs, path
 
-  src/app/providers/QueryClientProvider.tsx: @tanstack/react-query, @tanstack/react-query-devtools, __exports__, react
+  src/core/results-aggregator.ts: __exports__, path
 
-  src/app/layouts/PartnerLayout.tsx: @chakra-ui/react, __exports__, react, src/app/providers/LayoutContext.tsx, src/shared/components/layout/Footer.tsx, src/shared/components/layout/Header.tsx, src/shared/components/layout/Sidebar.tsx
+  src/index.ts: __exports__
 
-  src/app/layouts/SupportStaffLayout.tsx: @chakra-ui/react, __exports__, react, src/app/providers/LayoutContext.tsx, src/shared/components/layout/Footer.tsx, src/shared/components/layout/Header.tsx, src/shared/components/layout/Sidebar.tsx
+  src/parsers/babel-analyzer.ts: @babel/parser, @babel/types, __exports__
 
-  src/app/routes/ProtectedRoute.tsx: __exports__, react, react-router-dom, src/shared/hooks/usePermissions.ts
+  src/parsers/python-analyzer.ts: __exports__
 
-  src/app/routes/AppRoutes.tsx: @chakra-ui/react, __exports__, react, react-router-dom, src/app/routes/ProtectedRoute.tsx, src/features/auth/components/CatalogForgotPasswordForm.tsx, src/features/auth/components/CatalogLoginForm.tsx, src/features/catalog/hooks/JsonBulkUploadContext.tsx, src/features/inventory/components/InventoryConfirmationScreen.tsx, src/features/inventory/components/InventoryUploadScreen.tsx, src/shared/components/atoms/Loader.tsx
+  src/parsers/index.ts: __exports__
 
-  src/features/auth/components/Dashboard.tsx: @chakra-ui/react, __exports__, react, src/shared/hooks/useAuth.ts
+  src/parsers/tree-sitter-manager.ts: __exports__, node:fs/promises, node:path, node:url, web-tree-sitter
 
-  src/features/auth/components/CatalogForgotPasswordForm.tsx: @chakra-ui/react, __exports__, axios, react, react-hook-form, react-router-dom, src/shared/api/axiosClient.ts, src/shared/components/atoms/Alert.tsx, src/shared/components/atoms/Button.tsx, src/shared/components/atoms/Input.tsx
+  src/patterns/api-detector.ts: __exports__
 
-  src/features/auth/components/LoginForm.tsx: @chakra-ui/react, __exports__, react, react-hook-form, src/shared/components/atoms/Button.tsx, src/shared/components/atoms/Input.tsx
+  src/patterns/event-detector.ts: __exports__
 
-  src/features/auth/components/OrderList.tsx: @chakra-ui/react, __exports__, react, src/features/orders/hooks/useOrders.ts, src/shared/components/atoms/EmptyState.tsx, src/shared/components/atoms/ErrorMessage.tsx, src/shared/components/atoms/Loader.tsx
+  src/patterns/framework-detector.ts: __exports__
 
-  src/features/auth/components/CatalogLoginForm.tsx: @chakra-ui/react, __exports__, axios, react, react-hook-form, react-router-dom, src/shared/api/axiosClient.ts, src/shared/components/atoms/Alert.tsx, src/shared/components/atoms/Button.tsx, src/shared/components/atoms/Input.tsx, src/shared/hooks/useAuth.ts
+  src/patterns/index.ts: __exports__
 
-  src/features/catalog/BulkUploadScreen.tsx: @chakra-ui/react, @tanstack/react-query, __exports__, axios, react, src/shared/api/axiosClient.ts, src/shared/components/atoms/Alert.tsx, src/shared/components/atoms/Button.tsx, src/shared/components/atoms/Input.tsx
+  src/patterns/pattern-definitions.ts: __exports__
 
-  src/features/catalog/Dashboard.tsx: @chakra-ui/icons, @chakra-ui/react, @tanstack/react-query, __exports__, react, src/shared/api/axiosClient.ts, src/shared/components/atoms/Alert.tsx, src/shared/components/atoms/Loader.tsx
+  src/patterns/state-detector.ts: __exports__
 
-  src/features/catalog/InventoryManagement.tsx: @chakra-ui/react, @tanstack/react-query, __exports__, react, src/shared/api/axiosClient.ts, src/shared/components/atoms/Alert.tsx, src/shared/components/atoms/Button.tsx, src/shared/components/atoms/Loader.tsx
+  src/types/index.ts: __exports__
 
-  src/features/catalog/EditableInfoItem.tsx: @chakra-ui/icons, @chakra-ui/react, __exports__, react, src/shared/api/axiosClient.ts
+  src/types/babel-traverse.d.ts: __exports__
 
-  src/features/catalog/JSONBulkUploadScreen.tsx: @chakra-ui/react, __exports__, react, react-router-dom, src/features/catalog/hooks/JsonBulkUploadContext.tsx, src/features/catalog/utils/jsonBulkUploadValidation.ts, src/shared/components/atoms/Alert.tsx, src/shared/components/atoms/Button.tsx, src/shared/components/atoms/Input.tsx
+  test-react-app.jsx: __exports__, react, react-native
 
-  src/features/catalog/NewProductForm.tsx: @chakra-ui/react, @tanstack/react-query, __exports__, react, react-hook-form, src/features/catalog/productTypes.ts, src/shared/api/axiosClient.ts
+  test-react-native-app.tsx: @react-native-async-storage/async-storage, @react-navigation/native, __exports__, react, react-native
 
-  src/features/catalog/JSONBulkUploadConfirmationScreen.tsx: @chakra-ui/react, __exports__, react, react-router-dom, src/features/catalog/hooks/JsonBulkUploadContext.tsx, src/features/catalog/types/jsonProduct.ts, src/features/catalog/utils/jsonBulkUploadValidation.ts, src/shared/api/axiosClient.ts, src/shared/components/atoms/Button.tsx, src/shared/components/atoms/Modal.tsx
+  tests/file-processor.test.ts: node:fs/promises, node:path, vitest
 
-  src/features/catalog/ProductDetailView.tsx: @chakra-ui/react, @tanstack/react-query, __exports__, react, react-router-dom, src/features/catalog/EditableInfoItem.tsx, src/features/catalog/productTypes.ts, src/shared/api/axiosClient.ts
+  tests/analysis-coordinator.test.ts: vitest
 
-  src/features/catalog/ProductListing.tsx: @chakra-ui/react, @tanstack/react-query, __exports__, react, react-router-dom, src/shared/api/axiosClient.ts, src/shared/components/atoms/Alert.tsx, src/shared/components/atoms/Button.tsx, src/shared/components/atoms/Loader.tsx
+  tests/babel-analyzer.test.ts: vitest
 
-  src/features/catalog/Profile.tsx: @chakra-ui/react, @tanstack/react-query, __exports__, react, react-hook-form, src/shared/api/axiosClient.ts, src/shared/components/atoms/Alert.tsx, src/shared/components/atoms/Loader.tsx
+  tests/framework-detector.test.ts: vitest
 
-  src/features/catalog/Reports.tsx: @chakra-ui/react, @tanstack/react-query, __exports__, react, src/shared/api/axiosClient.ts, src/shared/components/atoms/Alert.tsx, src/shared/components/atoms/Loader.tsx
+  tests/git-processor.test.ts: node:child_process, node:fs/promises, node:path, node:util, vitest
 
-  src/features/catalog/hooks/JsonBulkUploadContext.tsx: __exports__, react, src/features/catalog/types/jsonProduct.ts
+  tests/language-detector.test.ts: vitest
 
-  src/features/demo/QueryDemo.tsx: @tanstack/react-query, __exports__, react, src/shared/components/atoms/Loader.tsx
+  tests/tree-sitter-manager.test.ts: vitest
 
-  src/features/catalog/types/jsonProduct.ts: __exports__
+  tests/setup.test.ts: vitest
 
-  src/features/catalog/utils/jsonBulkUploadValidation.ts: __exports__, src/features/catalog/types/jsonProduct.ts
-
-  src/features/catalog/productTypes.ts: __exports__
-
-  src/features/inventory/components/InventoryUploadScreen.tsx: @chakra-ui/react, __exports__, react, react-router-dom, src/features/inventory/hooks/useInventoryCsv.tsx, src/shared/components/atoms/Alert.tsx, src/shared/components/atoms/Button.tsx, src/shared/components/atoms/Input.tsx
-
-  src/features/inventory/components/InventoryConfirmationScreen.tsx: @chakra-ui/react, __exports__, react, react-router-dom, src/features/inventory/hooks/useInventoryCsv.tsx, src/features/inventory/inventoryService.ts, src/shared/components/atoms/Alert.tsx, src/shared/components/atoms/Button.tsx
-
-  src/features/inventory/inventoryService.ts: __exports__, src/shared/api/axiosClient.ts
-
-  src/features/inventory/hooks/useInventoryCsv.tsx: __exports__, papaparse, react
-
-  src/features/orders/hooks/useOrders.ts: @tanstack/react-query, __exports__
-
-  src/shared/api/csrf.ts: __exports__
-
-  src/shared/components/atoms/Alert.tsx: @chakra-ui/react, __exports__, react
-
-  src/main.tsx: @chakra-ui/react, react, react-dom/client, src/app/ErrorBoundary.tsx, src/app/providers/AuthContext.tsx, src/app/providers/LayoutContext.tsx, src/app/providers/QueryClientProvider.tsx, src/app/routes/AppRoutes.tsx, src/theme.ts
-
-  src/shared/components/atoms/EmptyState.tsx: @chakra-ui/react, __exports__, react
-
-  src/shared/components/atoms/ErrorMessage.tsx: @chakra-ui/react, __exports__, react
-
-  src/shared/api/axiosClient.ts: __exports__, axios
-
-  src/shared/components/atoms/Button.tsx: @chakra-ui/react, __exports__
-
-  src/shared/components/atoms/Loader.tsx: @chakra-ui/react, __exports__, react
-
-  src/shared/components/atoms/Input.tsx: @chakra-ui/react, __exports__, react
-
-  src/shared/components/atoms/OptimizedImage.tsx: @chakra-ui/react, __exports__, react
-
-  src/shared/components/atoms/Modal.tsx: @chakra-ui/react, __exports__, react
-
-  src/shared/components/layout/Footer.tsx: @chakra-ui/react, __exports__, react
-
-  src/shared/components/layout/MainContent.tsx: @chakra-ui/react, __exports__, react
-
-  src/shared/components/atoms/Table.tsx: @chakra-ui/react, __exports__, react
-
-  src/shared/hooks/useAuth.ts: __exports__, src/app/providers/AuthContext.tsx
-
-  src/shared/hooks/usePermissions.ts: __exports__, src/shared/hooks/useAuth.ts
-
-  src/shared/components/layout/Header.tsx: @chakra-ui/icons, @chakra-ui/react, __exports__, react, src/app/providers/LayoutContext.tsx
-
-  src/shared/components/layout/Sidebar.tsx: @chakra-ui/react, __exports__, react, react-router-dom, src/app/providers/LayoutContext.tsx
-
-  src/shared/hooks/useSession.ts: __exports__, react, src/shared/hooks/useAuth.ts
-
-  src/shared/types/loadingState.ts: __exports__
-
-  src/shared/utils/sanitize.ts: __exports__
-
-  src/theme.ts: @chakra-ui/react, __exports__
-
-  vite.config.ts: @vitejs/plugin-react, __exports__, vite
+  tests/python-analyzer.test.ts: vitest
