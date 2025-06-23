@@ -1,0 +1,2611 @@
+{
+  "folder_structure": {
+    "root": [
+      {
+        "language": "javascript",
+        "imports": {},
+        "functions": {},
+        "classes": {},
+        "path": ".commitlintrc.js"
+      },
+      {
+        "path": ".editorconfig",
+        "language": "unknown",
+        "imports": {},
+        "functions": {},
+        "classes": {},
+        "lines": 17,
+        "characters": 274,
+        "non_empty_lines": 13,
+        "avg_line_length": 16.11764705882353
+      },
+      {
+        "path": ".gitignore",
+        "language": "unknown",
+        "imports": {},
+        "functions": {},
+        "classes": {},
+        "lines": 48,
+        "characters": 616,
+        "non_empty_lines": 40,
+        "avg_line_length": 12.833333333333334
+      },
+      {
+        "path": ".nvmrc",
+        "language": "unknown",
+        "imports": {},
+        "functions": {},
+        "classes": {},
+        "lines": 2,
+        "characters": 3,
+        "non_empty_lines": 1,
+        "avg_line_length": 1.5
+      },
+      {
+        "path": ".prettierignore",
+        "language": "unknown",
+        "imports": {},
+        "functions": {},
+        "classes": {},
+        "lines": 10,
+        "characters": 130,
+        "non_empty_lines": 8,
+        "avg_line_length": 13
+      },
+      {
+        "path": ".prettierrc",
+        "language": "unknown",
+        "imports": {},
+        "functions": {},
+        "classes": {},
+        "lines": 9,
+        "characters": 107,
+        "non_empty_lines": 7,
+        "avg_line_length": 11.88888888888889
+      },
+      {
+        "path": "angular.json",
+        "language": "json",
+        "imports": {},
+        "functions": {},
+        "classes": {},
+        "lines": 156,
+        "characters": 4264,
+        "non_empty_lines": 154,
+        "avg_line_length": 27.333333333333332
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "cypress": [
+            "defineConfig"
+          ],
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {},
+        "classes": {},
+        "path": "cypress.config.ts"
+      },
+      {
+        "path": "cypress.env.json",
+        "language": "json",
+        "imports": {},
+        "functions": {},
+        "classes": {},
+        "lines": 13,
+        "characters": 201,
+        "non_empty_lines": 11,
+        "avg_line_length": 15.461538461538462
+      },
+      {
+        "path": "deploy-local.sh",
+        "language": "unknown",
+        "imports": {},
+        "functions": {},
+        "classes": {},
+        "lines": 30,
+        "characters": 772,
+        "non_empty_lines": 22,
+        "avg_line_length": 25.733333333333334
+      },
+      {
+        "language": "javascript",
+        "imports": {},
+        "functions": {},
+        "classes": {},
+        "path": "eslint.config.js"
+      },
+      {
+        "language": "typescript",
+        "imports": {},
+        "functions": {},
+        "classes": {},
+        "path": "package-lock.json",
+        "error": "Babel parsing failed: Missing semicolon. (2:8)"
+      },
+      {
+        "path": "package.json",
+        "language": "json",
+        "imports": {},
+        "functions": {},
+        "classes": {},
+        "lines": 80,
+        "characters": 2759,
+        "non_empty_lines": 79,
+        "avg_line_length": 34.4875
+      },
+      {
+        "path": "proxy.conf.json",
+        "language": "json",
+        "imports": {},
+        "functions": {},
+        "classes": {},
+        "lines": 21,
+        "characters": 499,
+        "non_empty_lines": 19,
+        "avg_line_length": 23.761904761904763
+      },
+      {
+        "language": "typescript",
+        "imports": {},
+        "functions": {},
+        "classes": {},
+        "path": "README.md",
+        "error": "Babel parsing failed: Unexpected token (2:0)"
+      },
+      {
+        "path": "test-backend-endpoints.md",
+        "language": "markdown",
+        "imports": {},
+        "functions": {},
+        "classes": {},
+        "lines": 43,
+        "characters": 1302,
+        "non_empty_lines": 29,
+        "avg_line_length": 30.27906976744186
+      },
+      {
+        "path": "tsconfig.app.json",
+        "language": "json",
+        "imports": {},
+        "functions": {},
+        "classes": {},
+        "lines": 20,
+        "characters": 273,
+        "non_empty_lines": 18,
+        "avg_line_length": 13.65
+      },
+      {
+        "path": "tsconfig.json",
+        "language": "json",
+        "imports": {},
+        "functions": {},
+        "classes": {},
+        "lines": 34,
+        "characters": 901,
+        "non_empty_lines": 33,
+        "avg_line_length": 26.5
+      },
+      {
+        "path": "tsconfig.spec.json",
+        "language": "json",
+        "imports": {},
+        "functions": {},
+        "classes": {},
+        "lines": 15,
+        "characters": 273,
+        "non_empty_lines": 14,
+        "avg_line_length": 18.2
+      },
+      {
+        "language": "javascript",
+        "imports": {},
+        "functions": {},
+        "classes": {},
+        "path": "webpack.config.mf.js"
+      }
+    ],
+    ".husky": [
+      {
+        "path": ".husky/commit-msg",
+        "language": "unknown",
+        "imports": {},
+        "functions": {},
+        "classes": {},
+        "lines": 5,
+        "characters": 85,
+        "non_empty_lines": 3,
+        "avg_line_length": 17
+      },
+      {
+        "path": ".husky/pre-commit",
+        "language": "unknown",
+        "imports": {},
+        "functions": {},
+        "classes": {},
+        "lines": 5,
+        "characters": 66,
+        "non_empty_lines": 3,
+        "avg_line_length": 13.2
+      }
+    ],
+    ".vscode": [
+      {
+        "path": ".vscode/extensions.json",
+        "language": "json",
+        "imports": {},
+        "functions": {},
+        "classes": {},
+        "lines": 5,
+        "characters": 130,
+        "non_empty_lines": 4,
+        "avg_line_length": 26
+      },
+      {
+        "path": ".vscode/launch.json",
+        "language": "json",
+        "imports": {},
+        "functions": {},
+        "classes": {},
+        "lines": 21,
+        "characters": 470,
+        "non_empty_lines": 20,
+        "avg_line_length": 22.38095238095238
+      },
+      {
+        "path": ".vscode/tasks.json",
+        "language": "json",
+        "imports": {},
+        "functions": {},
+        "classes": {},
+        "lines": 43,
+        "characters": 938,
+        "non_empty_lines": 42,
+        "avg_line_length": 21.813953488372093
+      }
+    ],
+    "cypress/e2e": [
+      {
+        "language": "typescript",
+        "imports": {},
+        "functions": {},
+        "classes": {},
+        "path": "cypress/e2e/authentication.cy.ts"
+      }
+    ],
+    "cypress/fixtures": [
+      {
+        "path": "cypress/fixtures/example.json",
+        "language": "json",
+        "imports": {},
+        "functions": {},
+        "classes": {},
+        "lines": 6,
+        "characters": 155,
+        "non_empty_lines": 5,
+        "avg_line_length": 25.833333333333332
+      }
+    ],
+    "cypress/support": [
+      {
+        "language": "typescript",
+        "imports": {},
+        "functions": {},
+        "classes": {},
+        "path": "cypress/support/commands.ts"
+      },
+      {
+        "language": "typescript",
+        "imports": {},
+        "functions": {},
+        "classes": {},
+        "path": "cypress/support/e2e.ts"
+      },
+      {
+        "language": "typescript",
+        "imports": {},
+        "functions": {},
+        "classes": {},
+        "path": "cypress/support/index.d.ts"
+      }
+    ],
+    "cypress": [
+      {
+        "path": "cypress/tsconfig.json",
+        "language": "json",
+        "imports": {},
+        "functions": {},
+        "classes": {},
+        "lines": 10,
+        "characters": 139,
+        "non_empty_lines": 8,
+        "avg_line_length": 13.9
+      }
+    ],
+    "docs/architecture": [
+      {
+        "path": "docs/architecture/overview.md",
+        "language": "markdown",
+        "imports": {},
+        "functions": {},
+        "classes": {},
+        "lines": 49,
+        "characters": 1737,
+        "non_empty_lines": 32,
+        "avg_line_length": 35.44897959183673
+      }
+    ],
+    "cypress/videos": [
+      {
+        "language": "typescript",
+        "imports": {},
+        "functions": {},
+        "classes": {},
+        "path": "cypress/videos/authentication.cy.ts.mp4",
+        "error": "Babel parsing failed: Unexpected character '\u0000'. (1:0)"
+      }
+    ],
+    "docs": [
+      {
+        "language": "typescript",
+        "imports": {},
+        "functions": {},
+        "classes": {},
+        "path": "docs/auth-implementation.md",
+        "error": "Babel parsing failed: Unexpected token (2:0)"
+      }
+    ],
+    "docs/guides": [
+      {
+        "path": "docs/guides/cypress-use.md",
+        "language": "markdown",
+        "imports": {},
+        "functions": {},
+        "classes": {},
+        "lines": 44,
+        "characters": 1324,
+        "non_empty_lines": 37,
+        "avg_line_length": 30.09090909090909
+      }
+    ],
+    "scripts": [
+      {
+        "language": "javascript",
+        "imports": {},
+        "functions": {
+          "getGzippedSize(filePath)": {
+            "docstring": "",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [
+              "filePath"
+            ],
+            "line_number": 15
+          },
+          "formatSize(bytes)": {
+            "docstring": "",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [
+              "bytes"
+            ],
+            "line_number": 26
+          },
+          "checkBundleSize()": {
+            "docstring": "",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [],
+            "line_number": 30
+          }
+        },
+        "classes": {},
+        "path": "scripts/check-bundle-size.js"
+      },
+      {
+        "path": "scripts/run-e2e-tests.sh",
+        "language": "unknown",
+        "imports": {},
+        "functions": {},
+        "classes": {},
+        "lines": 35,
+        "characters": 545,
+        "non_empty_lines": 24,
+        "avg_line_length": 15.571428571428571
+      }
+    ],
+    "src/app": [
+      {
+        "language": "typescript",
+        "imports": {
+          "@angular/core": [
+            "NgModule"
+          ],
+          "@angular/router": [
+            "RouterModule",
+            "Routes"
+          ],
+          "./resthour-demo/resthour-demo.component": [
+            "ResthourDemoComponent"
+          ],
+          "./auth/components/login/login.component": [
+            "LoginComponent"
+          ],
+          "./auth/guards/auth.guard": [
+            "AuthGuard"
+          ],
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {},
+        "classes": {
+          "AppRoutingModule": {
+            "docstring": "",
+            "methods": {},
+            "base_classes": [],
+            "line_number": 19
+          }
+        },
+        "path": "src/app/app-routing.module.ts"
+      },
+      {
+        "language": "typescript",
+        "imports": {},
+        "functions": {},
+        "classes": {},
+        "path": "src/app/app.component.html",
+        "error": "Babel parsing failed: Unexpected token (7:36)"
+      },
+      {
+        "language": "typescript",
+        "imports": {},
+        "functions": {},
+        "classes": {},
+        "path": "src/app/app.component.scss",
+        "error": "Babel parsing failed: Unexpected token (1:0)"
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "@angular/core/testing": [
+            "TestBed"
+          ],
+          "@angular/router/testing": [
+            "RouterTestingModule"
+          ],
+          "./app.component": [
+            "AppComponent"
+          ],
+          "./auth/auth.service": [
+            "AuthService"
+          ],
+          "rxjs": [
+            "of"
+          ],
+          "@angular/core": [
+            "NO_ERRORS_SCHEMA",
+            "Component"
+          ]
+        },
+        "functions": {},
+        "classes": {
+          "MockLoginComponent": {
+            "docstring": "",
+            "methods": {},
+            "base_classes": [],
+            "line_number": 9,
+            "is_component": true
+          },
+          "MockHomeComponent": {
+            "docstring": "",
+            "methods": {},
+            "base_classes": [],
+            "line_number": 12,
+            "is_component": true
+          }
+        },
+        "path": "src/app/app.component.spec.ts"
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "@angular/core": [
+            "Component",
+            "OnInit"
+          ],
+          "./auth/auth.service": [
+            "AuthService"
+          ],
+          "rxjs": [
+            "Observable"
+          ],
+          "./auth/models/user.model": [
+            "User"
+          ],
+          "@angular/router": [
+            "Router"
+          ],
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {},
+        "classes": {
+          "AppComponent": {
+            "docstring": "Root component for the SafeLanes Rest Hour application.\nThis component serves as the main container for the application\nand handles the initial routing setup.",
+            "methods": {
+              "constructor(param, param)": {
+                "docstring": "Current year for the footer copyright",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "param",
+                  "param"
+                ],
+                "line_number": 35
+              },
+              "ngOnInit()": {
+                "docstring": "Lifecycle hook that runs on component initialization",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [],
+                "line_number": 45
+              },
+              "logout()": {
+                "docstring": "Logout the current user",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [],
+                "line_number": 56
+              }
+            },
+            "base_classes": [],
+            "line_number": 13,
+            "is_component": true
+          }
+        },
+        "path": "src/app/app.component.ts"
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "@angular/core": [
+            "NgModule"
+          ],
+          "@angular/platform-browser": [
+            "BrowserModule"
+          ],
+          "@angular/common/http": [
+            "HTTP_INTERCEPTORS",
+            "provideHttpClient",
+            "withInterceptorsFromDi"
+          ],
+          "@angular/forms": [
+            "ReactiveFormsModule"
+          ],
+          "./app-routing.module": [
+            "AppRoutingModule"
+          ],
+          "./app.component": [
+            "AppComponent"
+          ],
+          "./resthour-demo/resthour-demo.component": [
+            "ResthourDemoComponent"
+          ],
+          "./auth/interceptors/auth.interceptor": [
+            "AuthInterceptor"
+          ],
+          "./auth/auth.module": [
+            "AuthModule"
+          ],
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {},
+        "classes": {
+          "AppModule": {
+            "docstring": "",
+            "methods": {},
+            "base_classes": [],
+            "line_number": 13
+          }
+        },
+        "path": "src/app/app.module.ts"
+      }
+    ],
+    "src/app/auth": [
+      {
+        "language": "typescript",
+        "imports": {
+          "@angular/core": [
+            "NgModule"
+          ],
+          "@angular/common": [
+            "CommonModule"
+          ],
+          "@angular/forms": [
+            "ReactiveFormsModule"
+          ],
+          "@angular/router": [
+            "RouterModule"
+          ],
+          "./components/login/login.component": [
+            "LoginComponent"
+          ],
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {},
+        "classes": {
+          "AuthModule": {
+            "docstring": "",
+            "methods": {},
+            "base_classes": [],
+            "line_number": 8
+          }
+        },
+        "path": "src/app/auth/auth.module.ts"
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "@angular/core/testing": [
+            "TestBed",
+            "fakeAsync",
+            "tick"
+          ],
+          "@angular/common/http/testing": [
+            "HttpTestingController",
+            "provideHttpClientTesting"
+          ],
+          "@angular/common/http": [
+            "HttpClient",
+            "provideHttpClient",
+            "withInterceptorsFromDi"
+          ],
+          "./auth.service": [
+            "AuthService"
+          ],
+          "./models/auth.models": [
+            "LoginResponse"
+          ],
+          "./models/user.model": [
+            "User"
+          ]
+        },
+        "functions": {},
+        "classes": {},
+        "path": "src/app/auth/auth.service.spec.ts"
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "@angular/core": [
+            "Injectable",
+            "OnDestroy"
+          ],
+          "@angular/common/http": [
+            "HttpClient"
+          ],
+          "rxjs": [
+            "BehaviorSubject",
+            "Observable",
+            "Subject",
+            "throwError",
+            "timer"
+          ],
+          "rxjs/operators": [
+            "catchError",
+            "map",
+            "take",
+            "takeUntil"
+          ],
+          "./models/auth.models": [
+            "LoginRequest",
+            "LoginResponse"
+          ],
+          "./models/user.model": [
+            "User"
+          ],
+          "./models/auth-state.model": [
+            "AuthState"
+          ],
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {},
+        "classes": {
+          "AuthService": {
+            "docstring": "Authentication service for handling login, logout, and JWT token management\nThis service manages the entire authentication lifecycle including:\n- User login with JWT token retrieval\n- Token storage and retrieval\n- Automatic token expiration handling\n- User state management via observables\n- Persistent authentication across page reloads",
+            "methods": {
+              "constructor(param)": {
+                "docstring": "Creates an instance of AuthService and initializes authentication state\nfrom local storage if available, also sets up auto-logout mechanism.\n@param http - The HttpClient for making API requests",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "param"
+                ],
+                "line_number": 62
+              },
+              "initializeFromStorage()": {
+                "docstring": "Initialize authentication state from local storage",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [],
+                "line_number": 73
+              },
+              "setupAutoLogout()": {
+                "docstring": "Set up timer to log out automatically before token expires",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [],
+                "line_number": 109
+              },
+              "login(credentials)": {
+                "docstring": "Authenticate user with username and password\n@param credentials Login credentials\n@returns Observable with login response",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "credentials"
+                ],
+                "line_number": 145
+              },
+              "storeAuthData(token, user, expiresAt)": {
+                "docstring": "Store authentication data in local storage and update state\n@param token JWT token\n@param user User object\n@param expiresAt Token expiration timestamp",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "token",
+                  "user",
+                  "expiresAt"
+                ],
+                "line_number": 189
+              },
+              "setAuthState(state)": {
+                "docstring": "Update authentication state\n@param state New authentication state",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "state"
+                ],
+                "line_number": 211
+              },
+              "getToken()": {
+                "docstring": "Get the current authentication token\n@returns JWT token or null",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [],
+                "line_number": 219
+              },
+              "getCurrentUser()": {
+                "docstring": "Get the current authenticated user\n@returns User object or null",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [],
+                "line_number": 227
+              },
+              "isAuthenticated()": {
+                "docstring": "Check if user is authenticated\n@returns true if user is authenticated",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [],
+                "line_number": 235
+              },
+              "logout()": {
+                "docstring": "Log out the current user",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [],
+                "line_number": 242
+              },
+              "clearStorage()": {
+                "docstring": "Clear authentication data from storage",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [],
+                "line_number": 255
+              },
+              "ngOnDestroy()": {
+                "docstring": "Cleanup on service destruction",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [],
+                "line_number": 264
+              }
+            },
+            "base_classes": [],
+            "line_number": 19
+          }
+        },
+        "path": "src/app/auth/auth.service.ts"
+      }
+    ],
+    "src/app/auth/components/login": [
+      {
+        "path": "src/app/auth/components/login/login.component.html",
+        "language": "html",
+        "imports": {},
+        "functions": {},
+        "classes": {},
+        "lines": 67,
+        "characters": 1921,
+        "non_empty_lines": 62,
+        "avg_line_length": 28.671641791044777
+      },
+      {
+        "language": "typescript",
+        "imports": {},
+        "functions": {},
+        "classes": {},
+        "path": "src/app/auth/components/login/login.component.scss",
+        "error": "Babel parsing failed: Unexpected token (1:0)"
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "@angular/core/testing": [
+            "ComponentFixture",
+            "TestBed"
+          ],
+          "@angular/forms": [
+            "ReactiveFormsModule"
+          ],
+          "@angular/router": [
+            "Router",
+            "ActivatedRoute"
+          ],
+          "rxjs": [
+            "of",
+            "throwError"
+          ],
+          "./login.component": [
+            "LoginComponent"
+          ],
+          "../../auth.service": [
+            "AuthService"
+          ],
+          "../../models/user.model": [
+            "User"
+          ]
+        },
+        "functions": {},
+        "classes": {},
+        "path": "src/app/auth/components/login/login.component.spec.ts"
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "@angular/core": [
+            "ChangeDetectionStrategy",
+            "Component",
+            "OnInit"
+          ],
+          "@angular/forms": [
+            "FormBuilder",
+            "FormGroup",
+            "Validators"
+          ],
+          "@angular/router": [
+            "Router",
+            "ActivatedRoute"
+          ],
+          "rxjs/operators": [
+            "finalize"
+          ],
+          "../../auth.service": [
+            "AuthService"
+          ],
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {},
+        "classes": {
+          "LoginComponent": {
+            "docstring": "Login Component\nDisplays the login form and handles user authentication.\nUses reactive forms with validation and provides error handling.\nImplements OnPush change detection for better performance.",
+            "methods": {
+              "constructor(param, param, param, param)": {
+                "docstring": "Creates an instance of LoginComponent\n@param formBuilder - Service to create reactive forms\n@param authService - Service to handle authentication operations\n@param router - Service to handle navigation after login\n@param route - Current activated route with query parameters",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "param",
+                  "param",
+                  "param",
+                  "param"
+                ],
+                "line_number": 41
+              },
+              "ngOnInit()": {
+                "docstring": "Lifecycle hook that runs on component initialization",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [],
+                "line_number": 57
+              },
+              "onSubmit()": {
+                "docstring": "Handle form submission for login",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [],
+                "line_number": 70
+              },
+              "markFormGroupTouched(formGroup)": {
+                "docstring": "Marks all controls in a form group as touched\n@param formGroup - The form group to touch",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "formGroup"
+                ],
+                "line_number": 107
+              },
+              "isFieldInvalid(controlName)": {
+                "docstring": "Check if a form control is invalid and touched\n@param controlName - The name of the control to check\n@returns True if the control is invalid and touched",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "controlName"
+                ],
+                "line_number": 121
+              }
+            },
+            "base_classes": [],
+            "line_number": 14,
+            "is_component": true
+          }
+        },
+        "path": "src/app/auth/components/login/login.component.ts"
+      }
+    ],
+    "src/app/auth/guards": [
+      {
+        "language": "typescript",
+        "imports": {
+          "@angular/core": [
+            "Injectable"
+          ],
+          "@angular/router": [
+            "ActivatedRouteSnapshot",
+            "RouterStateSnapshot",
+            "UrlTree",
+            "Router"
+          ],
+          "rxjs": [
+            "Observable"
+          ],
+          "../auth.service": [
+            "AuthService"
+          ],
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {},
+        "classes": {
+          "AuthGuard": {
+            "docstring": "Authentication Guard\nProtects routes that require authentication by checking if the user is logged in.\nRedirects to the login page with a return URL if not authenticated.\n@example\n```\nconst routes: Routes = [\n{\npath: 'protected',\ncomponent: ProtectedComponent,\ncanActivate: [AuthGuard]\n}\n];\n```",
+            "methods": {
+              "constructor(param, param)": {
+                "docstring": "Creates an instance of AuthGuard\n@param authService - Service used to check authentication status\n@param router - Router used to redirect unauthenticated users",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "param",
+                  "param"
+                ],
+                "line_number": 33
+              },
+              "canActivate(route, state)": {
+                "docstring": "Determines if a route can be activated based on authentication status\n@param route - The route being activated\n@param state - The router state snapshot\n@returns Boolean or UrlTree to redirect to login",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "route",
+                  "state"
+                ],
+                "line_number": 46
+              }
+            },
+            "base_classes": [],
+            "line_number": 23
+          }
+        },
+        "path": "src/app/auth/guards/auth.guard.ts"
+      }
+    ],
+    "src/app/auth/interceptors": [
+      {
+        "language": "typescript",
+        "imports": {
+          "@angular/core/testing": [
+            "TestBed"
+          ],
+          "@angular/common/http/testing": [
+            "HttpTestingController",
+            "provideHttpClientTesting"
+          ],
+          "@angular/common/http": [
+            "HTTP_INTERCEPTORS",
+            "HttpClient",
+            "provideHttpClient",
+            "withInterceptorsFromDi"
+          ],
+          "@angular/router": [
+            "Router"
+          ],
+          "./auth.interceptor": [
+            "AuthInterceptor"
+          ],
+          "../auth.service": [
+            "AuthService"
+          ],
+          "../models/auth.models": [
+            "ApiEnvelope"
+          ]
+        },
+        "functions": {},
+        "classes": {},
+        "path": "src/app/auth/interceptors/auth.interceptor.spec.ts"
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "@angular/core": [
+            "Injectable"
+          ],
+          "@angular/common/http": [
+            "HttpRequest",
+            "HttpHandler",
+            "HttpEvent",
+            "HttpInterceptor",
+            "HttpErrorResponse",
+            "HttpResponse"
+          ],
+          "rxjs": [
+            "Observable",
+            "throwError"
+          ],
+          "rxjs/operators": [
+            "catchError",
+            "map"
+          ],
+          "../auth.service": [
+            "AuthService"
+          ],
+          "../models/auth.models": [
+            "ApiEnvelope"
+          ],
+          "@angular/router": [
+            "Router"
+          ],
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {},
+        "classes": {
+          "AuthInterceptor": {
+            "docstring": "Auth Interceptor\nThis interceptor:\n1. Adds the JWT token to all outgoing HTTP requests\n2. Unwraps the API envelope and returns only the payload\n3. Handles 401 errors by logging out the user\n@example\n```typescript\n// In your app.module.ts:\nproviders: [\n{ provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }\n]\n```",
+            "methods": {
+              "constructor(param, param)": {
+                "docstring": "Creates an instance of AuthInterceptor\n@param authService - Service to access authentication tokens\n@param router - Router service for navigation after logout",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "param",
+                  "param"
+                ],
+                "line_number": 40
+              },
+              "intercept(request, next)": {
+                "docstring": "Intercepts HTTP requests to add auth token and process responses\n@param request - The outgoing HTTP request\n@param next - The next interceptor in the chain\n@returns An observable of the HTTP event stream",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "request",
+                  "next"
+                ],
+                "line_number": 52
+              },
+              "isApiEnvelope(obj)": {
+                "docstring": "Check if an object conforms to the ApiEnvelope structure\n@param obj - Object to check\n@returns Type predicate indicating if the object is an ApiEnvelope",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "obj"
+                ],
+                "line_number": 111
+              }
+            },
+            "base_classes": [],
+            "line_number": 32
+          }
+        },
+        "path": "src/app/auth/interceptors/auth.interceptor.ts"
+      }
+    ],
+    "src/app/auth/models": [
+      {
+        "language": "typescript",
+        "imports": {
+          "./user.model": [
+            "User"
+          ],
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {},
+        "classes": {},
+        "path": "src/app/auth/models/auth-state.model.ts"
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {},
+        "classes": {},
+        "path": "src/app/auth/models/auth.models.ts"
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {},
+        "classes": {},
+        "path": "src/app/auth/models/user.model.ts"
+      }
+    ],
+    "src/app/components/hello": [
+      {
+        "language": "typescript",
+        "imports": {
+          "@angular/core": [
+            "Component"
+          ],
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {},
+        "classes": {
+          "HelloComponent": {
+            "docstring": "Hello Component - Temporary component for Module Federation testing\nThis component serves as a placeholder to keep the build green during Phase 1\nand will be replaced with actual Rest Hours components in Phase 2",
+            "methods": {},
+            "base_classes": [],
+            "line_number": 9,
+            "is_component": true
+          }
+        },
+        "path": "src/app/components/hello/hello.component.ts"
+      }
+    ],
+    "src/app/core/components/version-compatibility-modal": [
+      {
+        "path": "src/app/core/components/version-compatibility-modal/version-compatibility-modal.component.html",
+        "language": "html",
+        "imports": {},
+        "functions": {},
+        "classes": {},
+        "lines": 87,
+        "characters": 2990,
+        "non_empty_lines": 78,
+        "avg_line_length": 34.367816091954026
+      },
+      {
+        "language": "typescript",
+        "imports": {},
+        "functions": {},
+        "classes": {},
+        "path": "src/app/core/components/version-compatibility-modal/version-compatibility-modal.component.scss",
+        "error": "Babel parsing failed: Unexpected token (2:0)"
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "@angular/core": [
+            "Component",
+            "Input",
+            "Output",
+            "EventEmitter",
+            "ChangeDetectionStrategy"
+          ],
+          "../../models/version.models": [
+            "VersionInfo"
+          ],
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {},
+        "classes": {
+          "VersionCompatibilityModalComponent": {
+            "docstring": "Version Compatibility Modal Component\nDisplays version compatibility warnings or blocks based on compatibility level",
+            "methods": {
+              "isBlocking()": {
+                "docstring": "Check if the modal should block user interaction",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [],
+                "line_number": 24
+              },
+              "isWarning()": {
+                "docstring": "Check if this is a warning modal",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [],
+                "line_number": 31
+              },
+              "modalTitle()": {
+                "docstring": "Get the appropriate modal title",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [],
+                "line_number": 38
+              },
+              "iconClass()": {
+                "docstring": "Get the appropriate icon class",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [],
+                "line_number": 52
+              },
+              "onDismiss()": {
+                "docstring": "Handle dismiss action (only for warning modals)",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [],
+                "line_number": 66
+              },
+              "onAcknowledge()": {
+                "docstring": "Handle acknowledge action",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [],
+                "line_number": 75
+              },
+              "onBackdropClick()": {
+                "docstring": "Handle backdrop click (only dismiss for warnings)\nNote: Backdrop clicks are not keyboard accessible by design",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [],
+                "line_number": 83
+              }
+            },
+            "base_classes": [],
+            "line_number": 9,
+            "is_component": true
+          }
+        },
+        "path": "src/app/core/components/version-compatibility-modal/version-compatibility-modal.component.ts"
+      }
+    ],
+    "src/app/core/models": [
+      {
+        "language": "typescript",
+        "imports": {
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {},
+        "classes": {},
+        "path": "src/app/core/models/user.models.ts"
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {},
+        "classes": {},
+        "path": "src/app/core/models/version.models.ts"
+      }
+    ],
+    "src/app/core": [
+      {
+        "language": "typescript",
+        "imports": {
+          "@angular/core": [
+            "NgModule"
+          ],
+          "@angular/common": [
+            "CommonModule"
+          ],
+          "./services/version.service": [
+            "VersionService"
+          ],
+          "./services/http-test.service": [
+            "HttpTestService"
+          ],
+          "./services/auth-adapter.service": [
+            "AuthAdapterService"
+          ],
+          "./services/host-auth-detector.service": [
+            "HostAuthDetectorService"
+          ],
+          "./components/version-compatibility-modal/version-compatibility-modal.component": [
+            "VersionCompatibilityModalComponent"
+          ],
+          "./providers/auth.providers": [
+            "SHARED_AUTH_PROVIDERS"
+          ],
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {},
+        "classes": {
+          "CoreModule": {
+            "docstring": "Core Module for Rest Hours Module Federation\nContains shared services and components used across the Rest Hours module\nIncludes auth service sharing with host application",
+            "methods": {},
+            "base_classes": [],
+            "line_number": 16
+          }
+        },
+        "path": "src/app/core/core.module.ts"
+      }
+    ],
+    "src/app/core/providers": [
+      {
+        "language": "typescript",
+        "imports": {
+          "@angular/core": [
+            "Provider"
+          ],
+          "../tokens/auth.tokens": [
+            "SHARED_AUTH_SERVICE",
+            "ISharedAuthService"
+          ],
+          "../services/auth-adapter.service": [
+            "AuthAdapterService"
+          ],
+          "../services/host-auth-detector.service": [
+            "HostAuthDetectorService"
+          ],
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {
+          "authServiceFactory(authAdapter, hostDetector)": {
+            "docstring": "Factory function to provide the appropriate AuthService\nUses host auth if available, falls back to local auth",
+            "state_changes": [],
+            "event_handlers": [],
+            "api_endpoints": [],
+            "is_async": false,
+            "parameters": [
+              "authAdapter",
+              "hostDetector"
+            ],
+            "line_number": 11
+          }
+        },
+        "classes": {},
+        "path": "src/app/core/providers/auth.providers.ts"
+      }
+    ],
+    "src/app/core/services": [
+      {
+        "language": "typescript",
+        "imports": {
+          "@angular/core": [
+            "Injectable"
+          ],
+          "rxjs": [
+            "Observable"
+          ],
+          "../../auth/auth.service": [
+            "AuthService"
+          ],
+          "../tokens/auth.tokens": [
+            "ISharedAuthService"
+          ],
+          "../models/user.models": [
+            "RestHourUser"
+          ],
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {},
+        "classes": {
+          "AuthAdapterService": {
+            "docstring": "Auth Service Adapter\nAdapts the local AuthService to the ISharedAuthService interface\nThis ensures compatibility whether running standalone or in Module Federation",
+            "methods": {
+              "constructor(param)": {
+                "docstring": "",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "param"
+                ],
+                "line_number": 18
+              },
+              "currentUser$()": {
+                "docstring": "Current user observable - adapted from the local auth service",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [],
+                "line_number": 23
+              },
+              "isAuthenticated()": {
+                "docstring": "Check if user is authenticated",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [],
+                "line_number": 39
+              },
+              "getToken()": {
+                "docstring": "Get current JWT token",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [],
+                "line_number": 46
+              },
+              "getCurrentUser()": {
+                "docstring": "Get current user information - adapted to RestHourUser interface",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [],
+                "line_number": 53
+              },
+              "hasRole(role)": {
+                "docstring": "Check if user has specific role\nImplement role checking logic since it doesn't exist in local AuthService",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "role"
+                ],
+                "line_number": 74
+              },
+              "logout()": {
+                "docstring": "Logout user",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [],
+                "line_number": 87
+              }
+            },
+            "base_classes": [],
+            "line_number": 13
+          }
+        },
+        "path": "src/app/core/services/auth-adapter.service.ts"
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "@angular/core": [
+            "Injectable"
+          ],
+          "../tokens/auth.tokens": [
+            "ISharedAuthService"
+          ],
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {},
+        "classes": {
+          "HostAuthDetectorService": {
+            "docstring": "Host Auth Detector Service\nAttempts to detect and use the host application's AuthService\nFalls back to local AuthService if host service is not available",
+            "methods": {
+              "detectHostAuthService()": {
+                "docstring": "Attempt to get the host's AuthService\nReturns null if not available (standalone mode)",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [],
+                "line_number": 40
+              },
+              "isValidAuthService(obj)": {
+                "docstring": "Check if the provided object implements ISharedAuthService interface",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "obj"
+                ],
+                "line_number": 73
+              }
+            },
+            "base_classes": [],
+            "line_number": 31
+          }
+        },
+        "path": "src/app/core/services/host-auth-detector.service.ts"
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "@angular/core": [
+            "Injectable"
+          ],
+          "@angular/common/http": [
+            "HttpClient"
+          ],
+          "rxjs": [
+            "Observable"
+          ],
+          "../models/user.models": [
+            "ApiResponse"
+          ],
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {},
+        "classes": {
+          "HttpTestService": {
+            "docstring": "HTTP Test Service\nTests that HTTP interceptors are working correctly\nUsed to verify JWT tokens are automatically attached",
+            "methods": {
+              "constructor(param)": {
+                "docstring": "",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "param"
+                ],
+                "line_number": 17
+              },
+              "testAuthenticatedRequest()": {
+                "docstring": "Test endpoint that requires authentication\nShould automatically include JWT token via interceptor",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [],
+                "line_number": 23
+              },
+              "testPingRequest()": {
+                "docstring": "Test ping endpoint\nShould work without authentication",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [],
+                "line_number": 31
+              },
+              "testInterceptorWorking()": {
+                "docstring": "Test that demonstrates interceptor is working\nMakes a request and checks if Authorization header is present",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [],
+                "line_number": 39
+              }
+            },
+            "base_classes": [],
+            "line_number": 12
+          }
+        },
+        "path": "src/app/core/services/http-test.service.ts"
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "@angular/core/testing": [
+            "TestBed"
+          ],
+          "./version.service": [
+            "VersionService"
+          ]
+        },
+        "functions": {},
+        "classes": {},
+        "path": "src/app/core/services/version.service.spec.ts"
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "@angular/core": [
+            "Injectable"
+          ],
+          "rxjs": [
+            "BehaviorSubject",
+            "Observable"
+          ],
+          "../models/version.models": [
+            "VersionInfo",
+            "CompatibilityLevel",
+            "HostVersionInfo"
+          ],
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {},
+        "classes": {
+          "VersionService": {
+            "docstring": "Version Compatibility Service\nChecks version compatibility between Rest Hours module and Sail App host\nProvides reactive compatibility status for UI components",
+            "methods": {
+              "constructor()": {
+                "docstring": "",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [],
+                "line_number": 34
+              },
+              "compatibilityLevel()": {
+                "docstring": "Observable for compatibility level changes",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [],
+                "line_number": 46
+              },
+              "versionInfo()": {
+                "docstring": "Observable for version information",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [],
+                "line_number": 53
+              },
+              "currentCompatibilityLevel()": {
+                "docstring": "Current compatibility level value",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [],
+                "line_number": 60
+              },
+              "recheckCompatibility()": {
+                "docstring": "Force recheck compatibility (useful for testing)",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [],
+                "line_number": 67
+              },
+              "checkCompatibility()": {
+                "docstring": "Check version compatibility with host application",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [],
+                "line_number": 74
+              },
+              "compareVersions(moduleVersion, hostVersion)": {
+                "docstring": "Compare two parsed version objects and determine compatibility",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "moduleVersion",
+                  "hostVersion"
+                ],
+                "line_number": 127
+              },
+              "updateCompatibilityStatus(level, info)": {
+                "docstring": "Update compatibility status and broadcast to subscribers",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "level",
+                  "info"
+                ],
+                "line_number": 145
+              },
+              "getHostVersionInfo()": {
+                "docstring": "Get host version information from global scope\nThis would be injected by the Sail App host",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [],
+                "line_number": 154
+              },
+              "getModuleVersion()": {
+                "docstring": "Get module version (normally from package.json)\nIn production, this would be injected via webpack DefinePlugin",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [],
+                "line_number": 184
+              },
+              "parseVersion(version)": {
+                "docstring": "Parse version string into components",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "version"
+                ],
+                "line_number": 193
+              }
+            },
+            "base_classes": [],
+            "line_number": 24
+          }
+        },
+        "path": "src/app/core/services/version.service.ts"
+      }
+    ],
+    "src/app/core/tokens": [
+      {
+        "language": "typescript",
+        "imports": {
+          "@angular/core": [
+            "InjectionToken"
+          ],
+          "rxjs": [
+            "Observable"
+          ],
+          "../models/user.models": [
+            "RestHourUser"
+          ],
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {},
+        "classes": {},
+        "path": "src/app/core/tokens/auth.tokens.ts"
+      }
+    ],
+    "src/app/modules/resthour/components/auth-demo": [
+      {
+        "path": "src/app/modules/resthour/components/auth-demo/auth-demo.component.html",
+        "language": "html",
+        "imports": {},
+        "functions": {},
+        "classes": {},
+        "lines": 107,
+        "characters": 3561,
+        "non_empty_lines": 96,
+        "avg_line_length": 33.2803738317757
+      },
+      {
+        "language": "typescript",
+        "imports": {},
+        "functions": {},
+        "classes": {},
+        "path": "src/app/modules/resthour/components/auth-demo/auth-demo.component.scss",
+        "error": "Babel parsing failed: Unexpected token (2:0)"
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "@angular/core": [
+            "Component",
+            "OnInit",
+            "OnDestroy",
+            "ChangeDetectionStrategy",
+            "ChangeDetectorRef",
+            "Inject"
+          ],
+          "rxjs": [
+            "Subject",
+            "takeUntil"
+          ],
+          "../../../../core/tokens/auth.tokens": [
+            "SHARED_AUTH_SERVICE",
+            "ISharedAuthService"
+          ],
+          "../../../../core/services/http-test.service": [
+            "HttpTestService"
+          ],
+          "../../../../core/models/user.models": [
+            "RestHourUser"
+          ],
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {},
+        "classes": {
+          "AuthDemoComponent": {
+            "docstring": "Auth Demo Component\nDemonstrates the shared AuthService functionality\nShows how JWT tokens and auth state are shared with host",
+            "methods": {
+              "constructor(param, param, param)": {
+                "docstring": "",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "param",
+                  "param",
+                  "param"
+                ],
+                "line_number": 28
+              },
+              "ngOnInit()": {
+                "docstring": "",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [],
+                "line_number": 34
+              },
+              "ngOnDestroy()": {
+                "docstring": "",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [],
+                "line_number": 49
+              },
+              "testInterceptor()": {
+                "docstring": "Test HTTP interceptor functionality",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": true,
+                "parameters": [],
+                "line_number": 57
+              },
+              "testAuthRequest()": {
+                "docstring": "Test authenticated HTTP request",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [],
+                "line_number": 69
+              },
+              "testPingRequest()": {
+                "docstring": "Test ping request (no auth required)",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [],
+                "line_number": 87
+              },
+              "testLogout()": {
+                "docstring": "Test logout functionality",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [],
+                "line_number": 105
+              },
+              "clearResults()": {
+                "docstring": "Clear test results",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [],
+                "line_number": 114
+              },
+              "hasRole(role)": {
+                "docstring": "Check if user has specific role",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "role"
+                ],
+                "line_number": 122
+              },
+              "getDisplayToken()": {
+                "docstring": "Get truncated token for display",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [],
+                "line_number": 129
+              },
+              "addTestResult(result)": {
+                "docstring": "Add test result to the list",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "result"
+                ],
+                "line_number": 139
+              }
+            },
+            "base_classes": [],
+            "line_number": 13,
+            "is_component": true
+          }
+        },
+        "path": "src/app/modules/resthour/components/auth-demo/auth-demo.component.ts"
+      }
+    ],
+    "src/app/modules/resthour/components/version-demo": [
+      {
+        "path": "src/app/modules/resthour/components/version-demo/version-demo.component.html",
+        "language": "html",
+        "imports": {},
+        "functions": {},
+        "classes": {},
+        "lines": 67,
+        "characters": 2284,
+        "non_empty_lines": 60,
+        "avg_line_length": 34.08955223880597
+      },
+      {
+        "language": "typescript",
+        "imports": {},
+        "functions": {},
+        "classes": {},
+        "path": "src/app/modules/resthour/components/version-demo/version-demo.component.scss",
+        "error": "Babel parsing failed: Unexpected token (2:0)"
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "@angular/core": [
+            "Component",
+            "OnInit",
+            "OnDestroy",
+            "ChangeDetectionStrategy",
+            "ChangeDetectorRef"
+          ],
+          "rxjs": [
+            "Subject",
+            "takeUntil"
+          ],
+          "../../../../core/services/version.service": [
+            "VersionService"
+          ],
+          "../../../../core/models/version.models": [
+            "VersionInfo",
+            "CompatibilityLevel"
+          ],
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {},
+        "classes": {
+          "VersionDemoComponent": {
+            "docstring": "Version Demo Component\nDemonstrates the Version Compatibility Service functionality\nShows the version compatibility modal in different states",
+            "methods": {
+              "constructor(param, param)": {
+                "docstring": "",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "param",
+                  "param"
+                ],
+                "line_number": 35
+              },
+              "ngOnInit()": {
+                "docstring": "",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [],
+                "line_number": 40
+              },
+              "ngOnDestroy()": {
+                "docstring": "",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [],
+                "line_number": 57
+              },
+              "simulateHostVersion(version)": {
+                "docstring": "Simulate different host versions for testing",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "version"
+                ],
+                "line_number": 65
+              },
+              "showCompatibilityModal()": {
+                "docstring": "Show the compatibility modal",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [],
+                "line_number": 79
+              },
+              "onModalDismissed()": {
+                "docstring": "Handle modal dismissed",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [],
+                "line_number": 87
+              },
+              "onModalAcknowledged()": {
+                "docstring": "Handle modal acknowledged",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [],
+                "line_number": 95
+              },
+              "getStatusClass()": {
+                "docstring": "Get status badge class",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [],
+                "line_number": 103
+              }
+            },
+            "base_classes": [],
+            "line_number": 22,
+            "is_component": true
+          }
+        },
+        "path": "src/app/modules/resthour/components/version-demo/version-demo.component.ts"
+      }
+    ],
+    "src/app/modules/resthour": [
+      {
+        "language": "typescript",
+        "imports": {
+          "@angular/core": [
+            "NgModule"
+          ],
+          "@angular/common": [
+            "CommonModule"
+          ],
+          "@angular/router": [
+            "RouterModule",
+            "Routes"
+          ],
+          "../../components/hello/hello.component": [
+            "HelloComponent"
+          ],
+          "../../core/core.module": [
+            "CoreModule"
+          ],
+          "./components/version-demo/version-demo.component": [
+            "VersionDemoComponent"
+          ],
+          "./components/auth-demo/auth-demo.component": [
+            "AuthDemoComponent"
+          ],
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {},
+        "classes": {
+          "RestHourModule": {
+            "docstring": "",
+            "methods": {},
+            "base_classes": [],
+            "line_number": 31
+          }
+        },
+        "path": "src/app/modules/resthour/resthour.module.ts"
+      }
+    ],
+    "src/app/resthour-demo": [
+      {
+        "language": "typescript",
+        "imports": {},
+        "functions": {},
+        "classes": {},
+        "path": "src/app/resthour-demo/resthour-demo.component.html",
+        "error": "Babel parsing failed: Unexpected token (7:25)"
+      },
+      {
+        "language": "typescript",
+        "imports": {},
+        "functions": {},
+        "classes": {},
+        "path": "src/app/resthour-demo/resthour-demo.component.scss",
+        "error": "Babel parsing failed: Unexpected token (1:0)"
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "@angular/core/testing": [
+            "ComponentFixture",
+            "TestBed"
+          ],
+          "./resthour-demo.component": [
+            "ResthourDemoComponent"
+          ],
+          "../auth/auth.service": [
+            "AuthService"
+          ],
+          "rxjs": [
+            "of"
+          ],
+          "@angular/core": [
+            "NO_ERRORS_SCHEMA"
+          ]
+        },
+        "functions": {},
+        "classes": {},
+        "path": "src/app/resthour-demo/resthour-demo.component.spec.ts"
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "@angular/core": [
+            "Component"
+          ],
+          "../auth/auth.service": [
+            "AuthService"
+          ],
+          "rxjs": [
+            "Observable"
+          ],
+          "../auth/models/user.model": [
+            "User"
+          ],
+          "__exports__": [
+            "default"
+          ]
+        },
+        "functions": {},
+        "classes": {
+          "ResthourDemoComponent": {
+            "docstring": "Demo component for Rest Hour Logging system\nThis component serves as an introduction to the SafeLanes Rest Hour Logging System.\nIt displays welcome information and a brief description of the system's purpose.\nIn future sprints, this component will be expanded to include interactive elements\nand actual rest hour logging functionality.\n@example\n<sl-resthour-demo></sl-resthour-demo>\n@usageNotes\nThis component is currently used as the default route landing page.\nIt doesn't accept any inputs or emit any events.",
+            "methods": {
+              "constructor(param)": {
+                "docstring": "Creates an instance of ResthourDemoComponent\n@param authService - Service to access user data",
+                "state_changes": [],
+                "event_handlers": [],
+                "api_endpoints": [],
+                "is_async": false,
+                "parameters": [
+                  "param"
+                ],
+                "line_number": 53
+              }
+            },
+            "base_classes": [],
+            "line_number": 21,
+            "is_component": true
+          }
+        },
+        "path": "src/app/resthour-demo/resthour-demo.component.ts"
+      }
+    ],
+    "src/assets": [
+      {
+        "path": "src/assets/.gitkeep",
+        "language": "unknown",
+        "imports": {},
+        "functions": {},
+        "classes": {},
+        "lines": 1,
+        "characters": 0,
+        "non_empty_lines": 0,
+        "avg_line_length": 0
+      }
+    ],
+    "src": [
+      {
+        "path": "src/favicon.ico",
+        "language": "unknown",
+        "imports": {},
+        "functions": {},
+        "classes": {},
+        "lines": 8,
+        "characters": 899,
+        "non_empty_lines": 8,
+        "avg_line_length": 112.375
+      },
+      {
+        "path": "src/index.html",
+        "language": "html",
+        "imports": {},
+        "functions": {},
+        "classes": {},
+        "lines": 14,
+        "characters": 315,
+        "non_empty_lines": 13,
+        "avg_line_length": 22.5
+      },
+      {
+        "language": "typescript",
+        "imports": {
+          "@angular/platform-browser-dynamic": [
+            "platformBrowserDynamic"
+          ],
+          "./app/app.module": [
+            "AppModule"
+          ]
+        },
+        "functions": {},
+        "classes": {},
+        "path": "src/main.ts"
+      },
+      {
+        "language": "typescript",
+        "imports": {},
+        "functions": {},
+        "classes": {},
+        "path": "src/styles.scss",
+        "error": "Babel parsing failed: Unexpected token (2:0)"
+      }
+    ]
+  },
+  "summary": {
+    "total_files": 86,
+    "total_lines": 1072,
+    "languages": {
+      "unknown": 11,
+      "javascript": 4,
+      "json": 12,
+      "typescript": 51,
+      "markdown": 3,
+      "html": 5
+    },
+    "extensions": {},
+    "frameworks": {
+      "React": 1
+    }
+  },
+  "dependencies": {
+    "cypress.config.ts": [
+      "__exports__",
+      "cypress"
+    ],
+    "src/app/app-routing.module.ts": [
+      "@angular/core",
+      "@angular/router",
+      "__exports__",
+      "src/app/auth/components/login/login.component.ts",
+      "src/app/auth/guards/auth.guard.ts",
+      "src/app/resthour-demo/resthour-demo.component.ts"
+    ],
+    "src/app/app.component.ts": [
+      "@angular/core",
+      "@angular/router",
+      "__exports__",
+      "rxjs",
+      "src/app/auth/auth.service.ts",
+      "src/app/auth/models/user.model.ts"
+    ],
+    "src/app/app.component.spec.ts": [
+      "@angular/core",
+      "@angular/core/testing",
+      "@angular/router/testing",
+      "rxjs",
+      "src/app/app.component.ts",
+      "src/app/auth/auth.service.ts"
+    ],
+    "src/app/app.module.ts": [
+      "@angular/common/http",
+      "@angular/core",
+      "@angular/forms",
+      "@angular/platform-browser",
+      "__exports__",
+      "src/app/app-routing.module.ts",
+      "src/app/app.component.ts",
+      "src/app/auth/auth.module.ts",
+      "src/app/auth/interceptors/auth.interceptor.ts",
+      "src/app/resthour-demo/resthour-demo.component.ts"
+    ],
+    "src/app/auth/auth.module.ts": [
+      "@angular/common",
+      "@angular/core",
+      "@angular/forms",
+      "@angular/router",
+      "__exports__",
+      "src/app/auth/components/login/login.component.ts"
+    ],
+    "src/app/auth/auth.service.spec.ts": [
+      "@angular/common/http",
+      "@angular/common/http/testing",
+      "@angular/core/testing",
+      "src/app/auth/auth.service.ts",
+      "src/app/auth/models/auth.models.ts",
+      "src/app/auth/models/user.model.ts"
+    ],
+    "src/app/auth/auth.service.ts": [
+      "@angular/common/http",
+      "@angular/core",
+      "__exports__",
+      "rxjs",
+      "rxjs/operators",
+      "src/app/auth/models/auth-state.model.ts",
+      "src/app/auth/models/auth.models.ts",
+      "src/app/auth/models/user.model.ts"
+    ],
+    "src/app/auth/components/login/login.component.spec.ts": [
+      "@angular/core/testing",
+      "@angular/forms",
+      "@angular/router",
+      "rxjs",
+      "src/app/auth/auth.service.ts",
+      "src/app/auth/components/login/login.component.ts",
+      "src/app/auth/models/user.model.ts"
+    ],
+    "src/app/auth/guards/auth.guard.ts": [
+      "@angular/core",
+      "@angular/router",
+      "__exports__",
+      "rxjs",
+      "src/app/auth/auth.service.ts"
+    ],
+    "src/app/auth/components/login/login.component.ts": [
+      "@angular/core",
+      "@angular/forms",
+      "@angular/router",
+      "__exports__",
+      "rxjs/operators",
+      "src/app/auth/auth.service.ts"
+    ],
+    "src/app/auth/interceptors/auth.interceptor.spec.ts": [
+      "@angular/common/http",
+      "@angular/common/http/testing",
+      "@angular/core/testing",
+      "@angular/router",
+      "src/app/auth/auth.service.ts",
+      "src/app/auth/interceptors/auth.interceptor.ts",
+      "src/app/auth/models/auth.models.ts"
+    ],
+    "src/app/auth/interceptors/auth.interceptor.ts": [
+      "@angular/common/http",
+      "@angular/core",
+      "@angular/router",
+      "__exports__",
+      "rxjs",
+      "rxjs/operators",
+      "src/app/auth/auth.service.ts",
+      "src/app/auth/models/auth.models.ts"
+    ],
+    "src/app/auth/models/auth-state.model.ts": [
+      "__exports__",
+      "src/app/auth/models/user.model.ts"
+    ],
+    "src/app/auth/models/auth.models.ts": [
+      "__exports__"
+    ],
+    "src/app/components/hello/hello.component.ts": [
+      "@angular/core",
+      "__exports__"
+    ],
+    "src/app/auth/models/user.model.ts": [
+      "__exports__"
+    ],
+    "src/app/core/components/version-compatibility-modal/version-compatibility-modal.component.ts": [
+      "@angular/core",
+      "__exports__",
+      "src/app/core/models/version.models.ts"
+    ],
+    "src/app/core/models/version.models.ts": [
+      "__exports__"
+    ],
+    "src/app/core/core.module.ts": [
+      "@angular/common",
+      "@angular/core",
+      "__exports__",
+      "src/app/core/components/version-compatibility-modal/version-compatibility-modal.component.ts",
+      "src/app/core/providers/auth.providers.ts",
+      "src/app/core/services/auth-adapter.service.ts",
+      "src/app/core/services/host-auth-detector.service.ts",
+      "src/app/core/services/http-test.service.ts",
+      "src/app/core/services/version.service.ts"
+    ],
+    "src/app/core/providers/auth.providers.ts": [
+      "@angular/core",
+      "__exports__",
+      "src/app/core/services/auth-adapter.service.ts",
+      "src/app/core/services/host-auth-detector.service.ts",
+      "src/app/core/tokens/auth.tokens.ts"
+    ],
+    "src/app/core/models/user.models.ts": [
+      "__exports__"
+    ],
+    "src/app/core/services/auth-adapter.service.ts": [
+      "@angular/core",
+      "__exports__",
+      "rxjs",
+      "src/app/auth/auth.service.ts",
+      "src/app/core/models/user.models.ts",
+      "src/app/core/tokens/auth.tokens.ts"
+    ],
+    "src/app/core/services/host-auth-detector.service.ts": [
+      "@angular/core",
+      "__exports__",
+      "src/app/core/tokens/auth.tokens.ts"
+    ],
+    "src/app/core/services/version.service.ts": [
+      "@angular/core",
+      "__exports__",
+      "rxjs",
+      "src/app/core/models/version.models.ts"
+    ],
+    "src/app/core/services/version.service.spec.ts": [
+      "@angular/core/testing",
+      "src/app/core/services/version.service.ts"
+    ],
+    "src/app/core/services/http-test.service.ts": [
+      "@angular/common/http",
+      "@angular/core",
+      "__exports__",
+      "rxjs",
+      "src/app/core/models/user.models.ts"
+    ],
+    "src/app/core/tokens/auth.tokens.ts": [
+      "@angular/core",
+      "__exports__",
+      "rxjs",
+      "src/app/core/models/user.models.ts"
+    ],
+    "src/app/modules/resthour/components/auth-demo/auth-demo.component.ts": [
+      "@angular/core",
+      "__exports__",
+      "rxjs",
+      "src/app/core/models/user.models.ts",
+      "src/app/core/services/http-test.service.ts",
+      "src/app/core/tokens/auth.tokens.ts"
+    ],
+    "src/app/modules/resthour/resthour.module.ts": [
+      "@angular/common",
+      "@angular/core",
+      "@angular/router",
+      "__exports__",
+      "src/app/components/hello/hello.component.ts",
+      "src/app/core/core.module.ts",
+      "src/app/modules/resthour/components/auth-demo/auth-demo.component.ts",
+      "src/app/modules/resthour/components/version-demo/version-demo.component.ts"
+    ],
+    "src/app/modules/resthour/components/version-demo/version-demo.component.ts": [
+      "@angular/core",
+      "__exports__",
+      "rxjs",
+      "src/app/core/models/version.models.ts",
+      "src/app/core/services/version.service.ts"
+    ],
+    "src/app/resthour-demo/resthour-demo.component.ts": [
+      "@angular/core",
+      "__exports__",
+      "rxjs",
+      "src/app/auth/auth.service.ts",
+      "src/app/auth/models/user.model.ts"
+    ],
+    "src/app/resthour-demo/resthour-demo.component.spec.ts": [
+      "@angular/core",
+      "@angular/core/testing",
+      "rxjs",
+      "src/app/auth/auth.service.ts",
+      "src/app/resthour-demo/resthour-demo.component.ts"
+    ],
+    "src/main.ts": [
+      "@angular/platform-browser-dynamic",
+      "src/app/app.module.ts"
+    ]
+  },
+  "metadata": {
+    "timestamp": "2025-06-23T10:13:03.795Z",
+    "duration_ms": 205,
+    "engine_version": "0.1.0",
+    "repository_path": "/Users/amitk/Development/GitHub/sl-rh-frontend"
+  }
+}

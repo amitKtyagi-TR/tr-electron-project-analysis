@@ -1,0 +1,56 @@
+# Repository Analysis: /Users/amitk/Development/GitHub/sl-rh-frontend
+
+## Summary
+- Total Files: 86
+- Total Lines: 1,072
+
+## Languages
+- typescript: 51 files (59.3%)
+- json: 12 files (14.0%)
+- unknown: 11 files (12.8%)
+- html: 5 files (5.8%)
+- javascript: 4 files (4.7%)
+- markdown: 3 files (3.5%)
+
+## Detected Frameworks
+- React: 100.0% confidence
+
+## File Extensions
+
+## Folder Structure
+- Total Folders: 31
+- (root): 20 files
+- src/app: 6 files
+- src/app/core/services: 5 files
+- src/app/auth/components/login: 4 files
+- src/app/resthour-demo: 4 files
+- src: 4 files
+- .vscode: 3 files
+- cypress/support: 3 files
+- src/app/auth: 3 files
+- src/app/auth/models: 3 files
+
+## Dependencies
+- Files with dependencies: 34
+- Total dependency relationships: 163
+
+### Top External Dependencies
+- __exports__: used in 27 files
+- @angular/core: used in 23 files
+- rxjs: used in 14 files
+- @angular/router: used in 9 files
+- @angular/core/testing: used in 6 files
+- @angular/common/http: used in 6 files
+- @angular/forms: used in 4 files
+- @angular/common: used in 3 files
+- rxjs/operators: used in 3 files
+- @angular/common/http/testing: used in 2 files
+- cypress: used in 1 files
+- @angular/router/testing: used in 1 files
+- @angular/platform-browser: used in 1 files
+- @angular/platform-browser-dynamic: used in 1 files
+
+## Analysis Details
+- Timestamp: 2025-06-23T10:13:03.795Z
+- Duration: 205ms
+- Engine Version: 0.1.0

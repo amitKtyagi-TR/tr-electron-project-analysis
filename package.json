@@ -24,7 +24,11 @@
     "example:state": "tsx examples/state-detection-demo.ts",
     "example:events": "tsx examples/event-detection-demo.ts",
     "example:full": "tsx examples/full-analysis-demo.ts",
-    "example:aggregation": "tsx examples/aggregation-demo.ts"
+    "example:aggregation": "tsx examples/aggregation-demo.ts",
+    "analyze": "tsx examples/complete-analysis.ts",
+    "analyze:quick": "tsx examples/complete-analysis.ts quick",
+    "analyze:full": "tsx examples/complete-analysis.ts full",
+    "analyze:save": "tsx examples/complete-analysis.ts save"
   },
   "keywords": [
     "code-analysis",
