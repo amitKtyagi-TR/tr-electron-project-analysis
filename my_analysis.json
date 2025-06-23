@@ -1,18 +1,5 @@
 {
   "folder_structure": {
-    ".github/workflows": [
-      {
-        "path": ".github/workflows/main_bazoo-backend.yml",
-        "language": "yaml",
-        "imports": {},
-        "functions": {},
-        "classes": {},
-        "lines": 101,
-        "characters": 2820,
-        "non_empty_lines": 84,
-        "avg_line_length": 27.92079207920792
-      }
-    ],
     "root": [
       {
         "path": ".env.example",
@@ -148,6 +135,19 @@
         "characters": 5410,
         "non_empty_lines": 234,
         "avg_line_length": 22.827004219409282
+      }
+    ],
+    ".github/workflows": [
+      {
+        "path": ".github/workflows/main_bazoo-backend.yml",
+        "language": "yaml",
+        "imports": {},
+        "functions": {},
+        "classes": {},
+        "lines": 101,
+        "characters": 2820,
+        "non_empty_lines": 84,
+        "avg_line_length": 27.92079207920792
       }
     ],
     "accounts": [
@@ -2193,502 +2193,6 @@
         "characters": 61601,
         "non_empty_lines": 1510,
         "avg_line_length": 36.00292226767972,
-        "api_endpoints": [
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/housing-society-list-/",
-            "line": 65,
-            "framework": "Django"
-          },
-          {
-            "type": "Django REST Framework",
-            "method": "GET",
-            "route": "/housing-society-list-/",
-            "line": 65,
-            "framework": "Django REST Framework"
-          },
-          {
-            "type": "Django",
-            "method": "POST",
-            "route": "/buyer-login-/",
-            "line": 75,
-            "framework": "Django"
-          },
-          {
-            "type": "Django REST Framework",
-            "method": "POST",
-            "route": "/buyer-login-/",
-            "line": 75,
-            "framework": "Django REST Framework"
-          },
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/post/",
-            "line": 100,
-            "framework": "Django"
-          },
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/business-partner-login-/",
-            "line": 157,
-            "framework": "Django"
-          },
-          {
-            "type": "Django REST Framework",
-            "method": "GET",
-            "route": "/business-partner-login-/",
-            "line": 157,
-            "framework": "Django REST Framework"
-          },
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/administrator-login-/",
-            "line": 237,
-            "framework": "Django"
-          },
-          {
-            "type": "Django REST Framework",
-            "method": "GET",
-            "route": "/administrator-login-/",
-            "line": 237,
-            "framework": "Django REST Framework"
-          },
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/catalog-manager-login-/",
-            "line": 317,
-            "framework": "Django"
-          },
-          {
-            "type": "Django REST Framework",
-            "method": "GET",
-            "route": "/catalog-manager-login-/",
-            "line": 317,
-            "framework": "Django REST Framework"
-          },
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/support-staff-login-/",
-            "line": 400,
-            "framework": "Django"
-          },
-          {
-            "type": "Django REST Framework",
-            "method": "GET",
-            "route": "/support-staff-login-/",
-            "line": 400,
-            "framework": "Django REST Framework"
-          },
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/logout-/",
-            "line": 480,
-            "framework": "Django"
-          },
-          {
-            "type": "Django REST Framework",
-            "method": "GET",
-            "route": "/logout-/",
-            "line": 480,
-            "framework": "Django REST Framework"
-          },
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/password-reset-request-/",
-            "line": 592,
-            "framework": "Django"
-          },
-          {
-            "type": "Django REST Framework",
-            "method": "GET",
-            "route": "/password-reset-request-/",
-            "line": 592,
-            "framework": "Django REST Framework"
-          },
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/password-reset-confirm-/",
-            "line": 685,
-            "framework": "Django"
-          },
-          {
-            "type": "Django REST Framework",
-            "method": "GET",
-            "route": "/password-reset-confirm-/",
-            "line": 685,
-            "framework": "Django REST Framework"
-          },
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/send-o-t-p-/",
-            "line": 760,
-            "framework": "Django"
-          },
-          {
-            "type": "Django REST Framework",
-            "method": "GET",
-            "route": "/send-o-t-p-/",
-            "line": 760,
-            "framework": "Django REST Framework"
-          },
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/verify-o-t-p-/",
-            "line": 795,
-            "framework": "Django"
-          },
-          {
-            "type": "Django REST Framework",
-            "method": "GET",
-            "route": "/verify-o-t-p-/",
-            "line": 795,
-            "framework": "Django REST Framework"
-          },
-          {
-            "type": "Django",
-            "method": "PUT",
-            "route": "/buyer-registration-/",
-            "line": 826,
-            "framework": "Django"
-          },
-          {
-            "type": "Django REST Framework",
-            "method": "PUT",
-            "route": "/buyer-registration-/",
-            "line": 826,
-            "framework": "Django REST Framework"
-          },
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/put/",
-            "line": 833,
-            "framework": "Django"
-          },
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/user-profile-/",
-            "line": 958,
-            "framework": "Django"
-          },
-          {
-            "type": "Django REST Framework",
-            "method": "GET",
-            "route": "/user-profile-/",
-            "line": 958,
-            "framework": "Django REST Framework"
-          },
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/get/",
-            "line": 974,
-            "framework": "Django"
-          },
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/assign-business-partner-/",
-            "line": 1029,
-            "framework": "Django"
-          },
-          {
-            "type": "Django REST Framework",
-            "method": "GET",
-            "route": "/assign-business-partner-/",
-            "line": 1029,
-            "framework": "Django REST Framework"
-          },
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/address-view-set/",
-            "line": 1070,
-            "framework": "Django"
-          },
-          {
-            "type": "Django REST Framework",
-            "method": "GET",
-            "route": "/address-view-set/",
-            "line": 1070,
-            "framework": "Django REST Framework"
-          },
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/customer-lookup/",
-            "line": 1128,
-            "framework": "Django"
-          },
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/customer-lookup/",
-            "line": 1128,
-            "framework": "Django"
-          },
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/customer-lookup/",
-            "line": 1128,
-            "framework": "Django"
-          },
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/map-customer-to-bp/",
-            "line": 1232,
-            "framework": "Django"
-          },
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/map-customer-to-bp/",
-            "line": 1232,
-            "framework": "Django"
-          },
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/map-customer-to-bp/",
-            "line": 1232,
-            "framework": "Django"
-          },
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/create-customer/",
-            "line": 1279,
-            "framework": "Django"
-          },
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/create-customer/",
-            "line": 1279,
-            "framework": "Django"
-          },
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/create-customer/",
-            "line": 1279,
-            "framework": "Django"
-          },
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/sync-new-customers/",
-            "line": 1335,
-            "framework": "Django"
-          },
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/sync-new-customers/",
-            "line": 1335,
-            "framework": "Django"
-          },
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/sync-new-customers/",
-            "line": 1335,
-            "framework": "Django"
-          },
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/list-unassigned-buyers/",
-            "line": 1502,
-            "framework": "Django"
-          },
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/list-unassigned-buyers/",
-            "line": 1502,
-            "framework": "Django"
-          },
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/list-unassigned-buyers/",
-            "line": 1502,
-            "framework": "Django"
-          },
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/list-all-buyers-status/",
-            "line": 1543,
-            "framework": "Django"
-          },
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/list-all-buyers-status/",
-            "line": 1543,
-            "framework": "Django"
-          },
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/list-all-buyers-status/",
-            "line": 1543,
-            "framework": "Django"
-          },
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/update-buyer-bp-status/",
-            "line": 1577,
-            "framework": "Django"
-          },
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/update-buyer-bp-status/",
-            "line": 1577,
-            "framework": "Django"
-          },
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/update-buyer-bp-status/",
-            "line": 1577,
-            "framework": "Django"
-          },
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/bp-buyer-response/",
-            "line": 1624,
-            "framework": "Django"
-          },
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/bp-buyer-response/",
-            "line": 1624,
-            "framework": "Django"
-          },
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/bp-buyer-response/",
-            "line": 1624,
-            "framework": "Django"
-          },
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/create-admin-user/",
-            "line": 1672,
-            "framework": "Django"
-          },
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/create-admin-user/",
-            "line": 1672,
-            "framework": "Django"
-          },
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/create-admin-user/",
-            "line": 1672,
-            "framework": "Django"
-          }
-        ],
-        "state_changes": [
-          {
-            "type": "django_save",
-            "line": 100,
-            "variable": "post",
-            "mutation_type": "update"
-          },
-          {
-            "type": "django_save",
-            "line": 833,
-            "variable": "put",
-            "mutation_type": "update"
-          },
-          {
-            "type": "django_save",
-            "line": 974,
-            "variable": "get",
-            "mutation_type": "update"
-          },
-          {
-            "type": "django_save",
-            "line": 1128,
-            "variable": "customer_lookup",
-            "mutation_type": "update"
-          },
-          {
-            "type": "django_save",
-            "line": 1232,
-            "variable": "map_customer_to_bp",
-            "mutation_type": "update"
-          },
-          {
-            "type": "django_save",
-            "line": 1279,
-            "variable": "create_customer",
-            "mutation_type": "update"
-          },
-          {
-            "type": "django_save",
-            "line": 1335,
-            "variable": "sync_new_customers",
-            "mutation_type": "update"
-          },
-          {
-            "type": "django_save",
-            "line": 1502,
-            "variable": "list_unassigned_buyers",
-            "mutation_type": "update"
-          },
-          {
-            "type": "django_save",
-            "line": 1543,
-            "variable": "list_all_buyers_status",
-            "mutation_type": "update"
-          },
-          {
-            "type": "django_save",
-            "line": 1577,
-            "variable": "update_buyer_bp_status",
-            "mutation_type": "update"
-          },
-          {
-            "type": "django_save",
-            "line": 1624,
-            "variable": "bp_buyer_response",
-            "mutation_type": "update"
-          },
-          {
-            "type": "django_save",
-            "line": 1672,
-            "variable": "create_admin_user",
-            "mutation_type": "update"
-          }
-        ],
         "event_handlers": [
           {
             "type": "onSubmit",
@@ -3336,19 +2840,6 @@
         "avg_line_length": 15.75
       }
     ],
-    "administration/migrations": [
-      {
-        "path": "administration/migrations/__init__.py",
-        "language": "python",
-        "imports": {},
-        "functions": {},
-        "classes": {},
-        "lines": 1,
-        "characters": 0,
-        "non_empty_lines": 0,
-        "avg_line_length": 0
-      }
-    ],
     "administration/management/commands": [
       {
         "path": "administration/management/commands/add_warehouse.py",
@@ -3500,6 +2991,19 @@
             "framework": "Generic"
           }
         ]
+      }
+    ],
+    "administration/migrations": [
+      {
+        "path": "administration/migrations/__init__.py",
+        "language": "python",
+        "imports": {},
+        "functions": {},
+        "classes": {},
+        "lines": 1,
+        "characters": 0,
+        "non_empty_lines": 0,
+        "avg_line_length": 0
       }
     ],
     "analytics": [
@@ -3721,15 +3225,7 @@
         "lines": 81,
         "characters": 3196,
         "non_empty_lines": 67,
-        "avg_line_length": 39.45679012345679,
-        "state_changes": [
-          {
-            "type": "django_save",
-            "line": 26,
-            "variable": "__call__",
-            "mutation_type": "update"
-          }
-        ]
+        "avg_line_length": 39.45679012345679
       },
       {
         "path": "backend/settings.py",
@@ -4766,321 +4262,6 @@
         "characters": 37068,
         "non_empty_lines": 883,
         "avg_line_length": 37.36693548387097,
-        "api_endpoints": [
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/dashboard-/",
-            "line": 39,
-            "framework": "Django"
-          },
-          {
-            "type": "Django REST Framework",
-            "method": "GET",
-            "route": "/dashboard-/",
-            "line": 39,
-            "framework": "Django REST Framework"
-          },
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/get/",
-            "line": 41,
-            "framework": "Django"
-          },
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/product-list-/",
-            "line": 100,
-            "framework": "Django"
-          },
-          {
-            "type": "Django REST Framework",
-            "method": "GET",
-            "route": "/product-list-/",
-            "line": 100,
-            "framework": "Django REST Framework"
-          },
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/product-by-s-k-u-/",
-            "line": 147,
-            "framework": "Django"
-          },
-          {
-            "type": "Django REST Framework",
-            "method": "GET",
-            "route": "/product-by-s-k-u-/",
-            "line": 147,
-            "framework": "Django REST Framework"
-          },
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/get/",
-            "line": 149,
-            "framework": "Django"
-          },
-          {
-            "type": "Django",
-            "method": "POST",
-            "route": "/catalog-product-/",
-            "line": 174,
-            "framework": "Django"
-          },
-          {
-            "type": "Django",
-            "method": "PUT",
-            "route": "/catalog-product-/",
-            "line": 174,
-            "framework": "Django"
-          },
-          {
-            "type": "Django",
-            "method": "PATCH",
-            "route": "/catalog-product-/",
-            "line": 174,
-            "framework": "Django"
-          },
-          {
-            "type": "Django REST Framework",
-            "method": "POST",
-            "route": "/catalog-product-/",
-            "line": 174,
-            "framework": "Django REST Framework"
-          },
-          {
-            "type": "Django REST Framework",
-            "method": "PUT",
-            "route": "/catalog-product-/",
-            "line": 174,
-            "framework": "Django REST Framework"
-          },
-          {
-            "type": "Django REST Framework",
-            "method": "PATCH",
-            "route": "/catalog-product-/",
-            "line": 174,
-            "framework": "Django REST Framework"
-          },
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/post/",
-            "line": 285,
-            "framework": "Django"
-          },
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/put/",
-            "line": 323,
-            "framework": "Django"
-          },
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/patch/",
-            "line": 336,
-            "framework": "Django"
-          },
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/inventory-/",
-            "line": 400,
-            "framework": "Django"
-          },
-          {
-            "type": "Django REST Framework",
-            "method": "GET",
-            "route": "/inventory-/",
-            "line": 400,
-            "framework": "Django REST Framework"
-          },
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/profile-/",
-            "line": 550,
-            "framework": "Django"
-          },
-          {
-            "type": "Django REST Framework",
-            "method": "PUT",
-            "route": "/profile-/",
-            "line": 550,
-            "framework": "Django REST Framework"
-          },
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/update/",
-            "line": 564,
-            "framework": "Django"
-          },
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/reports-/",
-            "line": 576,
-            "framework": "Django"
-          },
-          {
-            "type": "Django REST Framework",
-            "method": "GET",
-            "route": "/reports-/",
-            "line": 576,
-            "framework": "Django REST Framework"
-          },
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/category-/",
-            "line": 673,
-            "framework": "Django"
-          },
-          {
-            "type": "Django",
-            "method": "PUT",
-            "route": "/category-/",
-            "line": 673,
-            "framework": "Django"
-          },
-          {
-            "type": "Django",
-            "method": "DELETE",
-            "route": "/category-/",
-            "line": 673,
-            "framework": "Django"
-          },
-          {
-            "type": "Django REST Framework",
-            "method": "GET",
-            "route": "/category-/",
-            "line": 673,
-            "framework": "Django REST Framework"
-          },
-          {
-            "type": "Django REST Framework",
-            "method": "PUT",
-            "route": "/category-/",
-            "line": 673,
-            "framework": "Django REST Framework"
-          },
-          {
-            "type": "Django REST Framework",
-            "method": "DELETE",
-            "route": "/category-/",
-            "line": 673,
-            "framework": "Django REST Framework"
-          },
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/get/",
-            "line": 724,
-            "framework": "Django"
-          },
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/-create-category/",
-            "line": 817,
-            "framework": "Django"
-          },
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/-assign-products-to-category/",
-            "line": 855,
-            "framework": "Django"
-          },
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/put/",
-            "line": 870,
-            "framework": "Django"
-          },
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/delete/",
-            "line": 929,
-            "framework": "Django"
-          }
-        ],
-        "state_changes": [
-          {
-            "type": "django_save",
-            "line": 41,
-            "variable": "get",
-            "mutation_type": "update"
-          },
-          {
-            "type": "django_save",
-            "line": 149,
-            "variable": "get",
-            "mutation_type": "update"
-          },
-          {
-            "type": "django_save",
-            "line": 285,
-            "variable": "post",
-            "mutation_type": "update"
-          },
-          {
-            "type": "django_save",
-            "line": 323,
-            "variable": "put",
-            "mutation_type": "update"
-          },
-          {
-            "type": "django_save",
-            "line": 336,
-            "variable": "patch",
-            "mutation_type": "update"
-          },
-          {
-            "type": "django_save",
-            "line": 564,
-            "variable": "update",
-            "mutation_type": "update"
-          },
-          {
-            "type": "django_save",
-            "line": 724,
-            "variable": "get",
-            "mutation_type": "update"
-          },
-          {
-            "type": "django_save",
-            "line": 817,
-            "variable": "_create_category",
-            "mutation_type": "update"
-          },
-          {
-            "type": "django_save",
-            "line": 855,
-            "variable": "_assign_products_to_category",
-            "mutation_type": "update"
-          },
-          {
-            "type": "django_save",
-            "line": 870,
-            "variable": "put",
-            "mutation_type": "update"
-          },
-          {
-            "type": "django_save",
-            "line": 929,
-            "variable": "delete",
-            "mutation_type": "update"
-          }
-        ],
         "event_handlers": [
           {
             "type": "onSubmit",
@@ -5812,100 +4993,7 @@
         "lines": 1024,
         "characters": 39360,
         "non_empty_lines": 934,
-        "avg_line_length": 38.4375,
-        "api_endpoints": [
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/product-performance-report-/",
-            "line": 29,
-            "framework": "Django"
-          },
-          {
-            "type": "Django REST Framework",
-            "method": "GET",
-            "route": "/product-performance-report-/",
-            "line": 29,
-            "framework": "Django REST Framework"
-          },
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/get/",
-            "line": 84,
-            "framework": "Django"
-          },
-          {
-            "type": "Django",
-            "method": "POST",
-            "route": "/inventory-adjustment-/",
-            "line": 211,
-            "framework": "Django"
-          },
-          {
-            "type": "Django REST Framework",
-            "method": "POST",
-            "route": "/inventory-adjustment-/",
-            "line": 211,
-            "framework": "Django REST Framework"
-          },
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/post/",
-            "line": 282,
-            "framework": "Django"
-          },
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/product-list-/",
-            "line": 439,
-            "framework": "Django"
-          },
-          {
-            "type": "Django REST Framework",
-            "method": "GET",
-            "route": "/product-list-/",
-            "line": 439,
-            "framework": "Django REST Framework"
-          },
-          {
-            "type": "Django",
-            "method": "PUT",
-            "route": "/catalog-manager-product-detail-/",
-            "line": 525,
-            "framework": "Django"
-          },
-          {
-            "type": "Django REST Framework",
-            "method": "PUT",
-            "route": "/catalog-manager-product-detail-/",
-            "line": 525,
-            "framework": "Django REST Framework"
-          },
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/put/",
-            "line": 571,
-            "framework": "Django"
-          },
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/catalog-manager-product-/",
-            "line": 803,
-            "framework": "Django"
-          },
-          {
-            "type": "Django REST Framework",
-            "method": "GET",
-            "route": "/catalog-manager-product-/",
-            "line": 803,
-            "framework": "Django REST Framework"
-          }
-        ]
+        "avg_line_length": 38.4375
       }
     ],
     "catalog/migrations": [
@@ -6530,27 +5618,7 @@
         "lines": 90,
         "characters": 2108,
         "non_empty_lines": 81,
-        "avg_line_length": 23.42222222222222,
-        "state_changes": [
-          {
-            "type": "django_save",
-            "line": 28,
-            "variable": "has_add_permission",
-            "mutation_type": "update"
-          },
-          {
-            "type": "django_save",
-            "line": 31,
-            "variable": "has_delete_permission",
-            "mutation_type": "update"
-          },
-          {
-            "type": "django_save",
-            "line": 87,
-            "variable": "has_add_permission",
-            "mutation_type": "update"
-          }
-        ]
+        "avg_line_length": 23.42222222222222
       },
       {
         "path": "invoices/apps.py",
@@ -6874,78 +5942,6 @@
         "characters": 10199,
         "non_empty_lines": 227,
         "avg_line_length": 36.425,
-        "api_endpoints": [
-          {
-            "type": "Django",
-            "method": "POST",
-            "route": "/batch-generate-invoice-/",
-            "line": 33,
-            "framework": "Django"
-          },
-          {
-            "type": "Django REST Framework",
-            "method": "POST",
-            "route": "/batch-generate-invoice-/",
-            "line": 33,
-            "framework": "Django REST Framework"
-          },
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/post/",
-            "line": 42,
-            "framework": "Django"
-          },
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/get-invoice-pdf-/",
-            "line": 76,
-            "framework": "Django"
-          },
-          {
-            "type": "Django REST Framework",
-            "method": "GET",
-            "route": "/get-invoice-pdf-/",
-            "line": 76,
-            "framework": "Django REST Framework"
-          },
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/get/",
-            "line": 88,
-            "framework": "Django"
-          },
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/get-shipping-label-details-/",
-            "line": 134,
-            "framework": "Django"
-          },
-          {
-            "type": "Django REST Framework",
-            "method": "GET",
-            "route": "/get-shipping-label-details-/",
-            "line": 134,
-            "framework": "Django REST Framework"
-          }
-        ],
-        "state_changes": [
-          {
-            "type": "django_save",
-            "line": 42,
-            "variable": "post",
-            "mutation_type": "update"
-          },
-          {
-            "type": "django_save",
-            "line": 88,
-            "variable": "get",
-            "mutation_type": "update"
-          }
-        ],
         "event_handlers": [
           {
             "type": "onSubmit",
@@ -7806,15 +6802,7 @@
         "lines": 19,
         "characters": 597,
         "non_empty_lines": 13,
-        "avg_line_length": 31.42105263157895,
-        "state_changes": [
-          {
-            "type": "django_save",
-            "line": 15,
-            "variable": "get_queryset",
-            "mutation_type": "update"
-          }
-        ]
+        "avg_line_length": 31.42105263157895
       },
       {
         "path": "partners/apps.py",
@@ -8440,134 +7428,6 @@
         "characters": 10006,
         "non_empty_lines": 249,
         "avg_line_length": 36.12274368231047,
-        "api_endpoints": [
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/create-bp-profile/",
-            "line": 35,
-            "framework": "Django"
-          },
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/create-bp-profile/",
-            "line": 35,
-            "framework": "Django"
-          },
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/create-bp-profile/",
-            "line": 35,
-            "framework": "Django"
-          },
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/update-bp-profile/",
-            "line": 74,
-            "framework": "Django"
-          },
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/update-bp-profile/",
-            "line": 74,
-            "framework": "Django"
-          },
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/update-bp-profile/",
-            "line": 74,
-            "framework": "Django"
-          },
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/list-bp-profiles/",
-            "line": 141,
-            "framework": "Django"
-          },
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/list-bp-profiles/",
-            "line": 141,
-            "framework": "Django"
-          },
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/list-bp-profiles/",
-            "line": 141,
-            "framework": "Django"
-          },
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/get-bp-profile/",
-            "line": 161,
-            "framework": "Django"
-          },
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/get-bp-profile/",
-            "line": 161,
-            "framework": "Django"
-          },
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/get-bp-profile/",
-            "line": 161,
-            "framework": "Django"
-          },
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/delete-bp-profile/",
-            "line": 195,
-            "framework": "Django"
-          },
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/delete-bp-profile/",
-            "line": 195,
-            "framework": "Django"
-          },
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/delete-bp-profile/",
-            "line": 195,
-            "framework": "Django"
-          },
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/find-bp-for-location/",
-            "line": 250,
-            "framework": "Django"
-          },
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/find-bp-for-location/",
-            "line": 250,
-            "framework": "Django"
-          },
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/find-bp-for-location/",
-            "line": 250,
-            "framework": "Django"
-          }
-        ],
         "state_changes": [
           {
             "type": "django_save",
@@ -8583,26 +7443,8 @@
           },
           {
             "type": "django_save",
-            "line": 141,
-            "variable": "list_bp_profiles",
-            "mutation_type": "update"
-          },
-          {
-            "type": "django_save",
-            "line": 161,
-            "variable": "get_bp_profile",
-            "mutation_type": "update"
-          },
-          {
-            "type": "django_save",
             "line": 195,
             "variable": "delete_bp_profile",
-            "mutation_type": "update"
-          },
-          {
-            "type": "django_save",
-            "line": 250,
-            "variable": "find_bp_for_location",
             "mutation_type": "update"
           }
         ]
@@ -9292,15 +8134,7 @@
         "lines": 23,
         "characters": 919,
         "non_empty_lines": 19,
-        "avg_line_length": 39.95652173913044,
-        "state_changes": [
-          {
-            "type": "django_save",
-            "line": 14,
-            "variable": "mark_as_completed",
-            "mutation_type": "update"
-          }
-        ]
+        "avg_line_length": 39.95652173913044
       },
       {
         "path": "walletCreditRequests/apps.py",
@@ -9611,92 +8445,7 @@
         "lines": 112,
         "characters": 4472,
         "non_empty_lines": 97,
-        "avg_line_length": 39.92857142857143,
-        "api_endpoints": [
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/add-store-credit/",
-            "line": 27,
-            "framework": "Django"
-          },
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/add-store-credit/",
-            "line": 27,
-            "framework": "Django"
-          },
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/add-store-credit/",
-            "line": 27,
-            "framework": "Django"
-          },
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/list-credit-requests/",
-            "line": 58,
-            "framework": "Django"
-          },
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/list-credit-requests/",
-            "line": 58,
-            "framework": "Django"
-          },
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/list-credit-requests/",
-            "line": 58,
-            "framework": "Django"
-          },
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/approve-credit-request/",
-            "line": 77,
-            "framework": "Django"
-          },
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/approve-credit-request/",
-            "line": 77,
-            "framework": "Django"
-          },
-          {
-            "type": "Django",
-            "method": "GET",
-            "route": "/approve-credit-request/",
-            "line": 77,
-            "framework": "Django"
-          }
-        ],
-        "state_changes": [
-          {
-            "type": "django_save",
-            "line": 27,
-            "variable": "add_store_credit",
-            "mutation_type": "update"
-          },
-          {
-            "type": "django_save",
-            "line": 58,
-            "variable": "list_credit_requests",
-            "mutation_type": "update"
-          },
-          {
-            "type": "django_save",
-            "line": 77,
-            "variable": "approve_credit_request",
-            "mutation_type": "update"
-          }
-        ]
+        "avg_line_length": 39.92857142857143
       }
     ],
     "walletCreditRequests/migrations": [
@@ -9745,8 +8494,8 @@
     "total_files": 174,
     "total_lines": 11799,
     "languages": {
-      "yaml": 1,
       "unknown": 7,
+      "yaml": 1,
       "python": 163,
       "typescript": 2,
       "json": 1
@@ -9760,19 +8509,30 @@
     "accounts/admin.py": [
       "django.contrib"
     ],
+    "accounts/migrations/0002_alter_usermapping_uid_and_more.py": [
+      "django.db"
+    ],
     "accounts/apps.py": [
       "django.apps"
+    ],
+    "accounts/migrations/0006_bphousingsocietymapping.py": [
+      "django.db",
+      "django.db.models.deletion"
     ],
     "accounts/migrations/0001_initial.py": [
       "django.db"
     ],
-    "accounts/migrations/0002_alter_usermapping_uid_and_more.py": [
+    "accounts/migrations/0005_usermapping_assigned_bp_usermapping_housing_society.py": [
+      "django.db",
+      "django.db.models.deletion"
+    ],
+    "accounts/migrations/0004_otpverification.py": [
       "django.db"
     ],
     "accounts/migrations/0003_housingsociety.py": [
       "django.db"
     ],
-    "accounts/migrations/0005_usermapping_assigned_bp_usermapping_housing_society.py": [
+    "accounts/migrations/0008_alter_usermapping_assigned_bp.py": [
       "django.db",
       "django.db.models.deletion"
     ],
@@ -9780,45 +8540,31 @@
       "django.db",
       "django.db.models.deletion"
     ],
-    "accounts/migrations/0004_otpverification.py": [
-      "django.db"
-    ],
     "accounts/migrations/0010_warehouse.py": [
       "django.db"
     ],
-    "accounts/migrations/0006_bphousingsocietymapping.py": [
-      "django.db",
-      "django.db.models.deletion"
-    ],
     "accounts/migrations/0009_bpwarehousemapping.py": [
-      "django.db",
-      "django.db.models.deletion"
-    ],
-    "accounts/migrations/0008_alter_usermapping_assigned_bp.py": [
       "django.db",
       "django.db.models.deletion"
     ],
     "accounts/migrations/0011_fix_bpwarehouse_unique_together.py": [
       "django.db"
     ],
-    "accounts/migrations/0012_usermapping_latlong_usermapping_mobile_number.py": [
+    "accounts/models.py": [
+      "django.contrib.auth.models",
+      "django.core.exceptions",
+      "django.db"
+    ],
+    "accounts/migrations/0013_usermapping_bp_map_status.py": [
       "django.db"
     ],
     "accounts/permissions.py": [
       "logging",
       "rest_framework"
     ],
-    "accounts/models.py": [
-      "django.contrib.auth.models",
-      "django.core.exceptions",
-      "django.db"
-    ],
     "accounts/serializers.py": [
       "django.core.validators",
       "rest_framework"
-    ],
-    "accounts/migrations/0013_usermapping_bp_map_status.py": [
-      "django.db"
     ],
     "accounts/tests/test_models.py": [
       "accounts.models",
@@ -9827,6 +8573,9 @@
       "pytest",
       "rest_framework",
       "rest_framework.test"
+    ],
+    "accounts/migrations/0012_usermapping_latlong_usermapping_mobile_number.py": [
+      "django.db"
     ],
     "accounts/utils.py": [
       "core.magento",
@@ -9842,23 +8591,6 @@
       "math",
       "requests",
       "requests_oauthlib"
-    ],
-    "administration/admin.py": [
-      "django.contrib"
-    ],
-    "administration/apps.py": [
-      "django.apps"
-    ],
-    "administration/management/commands/add_warehouse.py": [
-      "accounts.models",
-      "django.core.management.base",
-      "json"
-    ],
-    "administration/models.py": [
-      "django.db"
-    ],
-    "administration/tests.py": [
-      "django.test"
     ],
     "accounts/views.py": [
       "core.magento",
@@ -9877,9 +8609,26 @@
       "rest_framework.response",
       "rest_framework.views"
     ],
+    "administration/admin.py": [
+      "django.contrib"
+    ],
+    "administration/apps.py": [
+      "django.apps"
+    ],
+    "administration/management/commands/add_warehouse.py": [
+      "accounts.models",
+      "django.core.management.base",
+      "json"
+    ],
     "accounts/urls.py": [
       "django.urls",
       "rest_framework.routers"
+    ],
+    "administration/models.py": [
+      "django.db"
+    ],
+    "administration/tests.py": [
+      "django.test"
     ],
     "administration/views.py": [
       "django.shortcuts"
@@ -9890,14 +8639,18 @@
     "analytics/apps.py": [
       "django.apps"
     ],
-    "analytics/models.py": [
-      "django.db"
-    ],
     "analytics/tests.py": [
       "django.test"
     ],
+    "analytics/models.py": [
+      "django.db"
+    ],
     "analytics/views.py": [
       "django.shortcuts"
+    ],
+    "backend/asgi.py": [
+      "django.core.asgi",
+      "os"
     ],
     "backend/urls.py": [
       "accounts.views",
@@ -9909,10 +8662,6 @@
       "dotenv",
       "os",
       "pathlib"
-    ],
-    "backend/asgi.py": [
-      "django.core.asgi",
-      "os"
     ],
     "backend/wsgi.py": [
       "django.core.wsgi",
@@ -9926,6 +8675,13 @@
     ],
     "catalog/cm_serializers.py": [
       "rest_framework"
+    ],
+    "catalog/admin.py": [
+      "accounts.models",
+      "django.contrib"
+    ],
+    "catalog/apps.py": [
+      "django.apps"
     ],
     "catalog/cm_views.py": [
       "accounts.permissions",
@@ -9942,10 +8698,6 @@
       "rest_framework.response",
       "rest_framework.views"
     ],
-    "catalog/admin.py": [
-      "accounts.models",
-      "django.contrib"
-    ],
     "catalog/migrations/0001_initial.py": [
       "django.db",
       "django.db.models.deletion"
@@ -9956,15 +8708,12 @@
       "rest_framework",
       "rest_framework.exceptions"
     ],
+    "catalog/tests.py": [
+      "django.test"
+    ],
     "catalog/models.py": [
       "accounts.models",
       "django.db"
-    ],
-    "catalog/apps.py": [
-      "django.apps"
-    ],
-    "catalog/tests.py": [
-      "django.test"
     ],
     "catalog/urls.py": [
       "django.urls"
@@ -9974,11 +8723,16 @@
       "catalog.views",
       "django.urls"
     ],
-    "core/apps.py": [
-      "django.apps"
-    ],
-    "core/admin.py": [
-      "django.contrib"
+    "catalog/utils.py": [
+      "catalog.models",
+      "core.magento",
+      "datetime",
+      "decimal",
+      "django.core.cache",
+      "hashlib",
+      "logging",
+      "typing",
+      "urllib.parse"
     ],
     "catalog/views.py": [
       "accounts.permissions",
@@ -9995,16 +8749,11 @@
       "rest_framework.response",
       "rest_framework.views"
     ],
-    "catalog/utils.py": [
-      "catalog.models",
-      "core.magento",
-      "datetime",
-      "decimal",
-      "django.core.cache",
-      "hashlib",
-      "logging",
-      "typing",
-      "urllib.parse"
+    "core/admin.py": [
+      "django.contrib"
+    ],
+    "core/apps.py": [
+      "django.apps"
     ],
     "core/models.py": [
       "django.db"
@@ -10035,20 +8784,17 @@
     "integration/models.py": [
       "django.db"
     ],
-    "integration/tests.py": [
-      "django.test"
-    ],
-    "integration/views.py": [
-      "django.shortcuts"
-    ],
     "integration/azure_storage.py": [
       "azure.storage.blob",
       "datetime",
       "django.conf",
       "logging"
     ],
-    "invoices/admin.py": [
-      "django.contrib"
+    "integration/tests.py": [
+      "django.test"
+    ],
+    "integration/views.py": [
+      "django.shortcuts"
     ],
     "integration/utils.py": [
       "core.magento",
@@ -10057,6 +8803,9 @@
       "hashlib # Added import for hashlib Issue 2",
       "logging",
       "math # For batching source codes Issue 1"
+    ],
+    "invoices/admin.py": [
+      "django.contrib"
     ],
     "invoices/apps.py": [
       "django.apps"
@@ -10096,12 +8845,6 @@
       "logging",
       "typing"
     ],
-    "invoices/services/fetch.py": [
-      "core.magento",
-      "invoices.exceptions",
-      "logging",
-      "typing"
-    ],
     "invoices/services/pdf.py": [
       "core.magento",
       "datetime",
@@ -10125,6 +8868,12 @@
       "logging",
       "typing"
     ],
+    "invoices/services/fetch.py": [
+      "core.magento",
+      "invoices.exceptions",
+      "logging",
+      "typing"
+    ],
     "invoices/urls.py": [
       "django.urls",
       "invoices/__init__.py"
@@ -10136,6 +8885,11 @@
       "django.core.management",
       "os",
       "sys"
+    ],
+    "invoices/services/utils.py": [
+      "django.db",
+      "django.db.models.functions",
+      "invoices.models"
     ],
     "invoices/views.py": [
       "accounts.models",
@@ -10155,11 +8909,6 @@
     "notifications/admin.py": [
       "django.contrib"
     ],
-    "invoices/services/utils.py": [
-      "django.db",
-      "django.db.models.functions",
-      "invoices.models"
-    ],
     "notifications/apps.py": [
       "django.apps"
     ],
@@ -10175,33 +8924,43 @@
     "orders/apps.py": [
       "django.apps"
     ],
-    "orders/admin.py": [
-      "django.contrib"
-    ],
     "orders/models.py": [
       "django.db"
+    ],
+    "orders/admin.py": [
+      "django.contrib"
     ],
     "orders/tests.py": [
       "django.test"
     ],
-    "partners/apps.py": [
-      "django.apps"
-    ],
     "orders/views.py": [
       "django.shortcuts"
-    ],
-    "partners/admin.py": [
-      "django.contrib"
     ],
     "partners/location_utils.py": [
       "django.core.exceptions",
       "logging",
       "shapely.geometry"
     ],
+    "partners/apps.py": [
+      "django.apps"
+    ],
+    "partners/admin.py": [
+      "django.contrib"
+    ],
     "partners/management/commands/find_bp_for_location.py": [
       "django.core.exceptions",
       "django.core.management.base",
       "partners.location_utils"
+    ],
+    "partners/tests.py": [
+      "django.test"
+    ],
+    "partners/models.py": [
+      "accounts.models",
+      "django.core.exceptions",
+      "django.core.validators",
+      "django.db",
+      "django.db.models"
     ],
     "partners/migrations/0001_initial.py": [
       "django.core.validators",
@@ -10212,19 +8971,9 @@
       "accounts.models",
       "rest_framework"
     ],
-    "partners/tests.py": [
-      "django.test"
-    ],
     "partners/urls.py": [
       "django.urls",
       "partners/__init__.py"
-    ],
-    "partners/models.py": [
-      "accounts.models",
-      "django.core.exceptions",
-      "django.core.validators",
-      "django.db",
-      "django.db.models"
     ],
     "partners/views.py": [
       "accounts.models",
@@ -10237,20 +8986,20 @@
       "rest_framework.permissions",
       "rest_framework.response"
     ],
-    "rating/admin.py": [
-      "django.contrib"
-    ],
     "rating/apps.py": [
       "django.apps"
     ],
     "rating/tests.py": [
       "django.test"
     ],
-    "rating/views.py": [
-      "django.shortcuts"
-    ],
     "rating/models.py": [
       "django.db"
+    ],
+    "rating/admin.py": [
+      "django.contrib"
+    ],
+    "rating/views.py": [
+      "django.shortcuts"
     ],
     "returns/admin.py": [
       "django.contrib"
@@ -10261,11 +9010,11 @@
     "returns/models.py": [
       "django.db"
     ],
-    "returns/tests.py": [
-      "django.test"
-    ],
     "returns/views.py": [
       "django.shortcuts"
+    ],
+    "returns/tests.py": [
+      "django.test"
     ],
     "support/admin.py": [
       "django.contrib"
@@ -10279,14 +9028,14 @@
     "support/views.py": [
       "django.shortcuts"
     ],
-    "wallet/admin.py": [
-      "django.contrib"
+    "wallet/apps.py": [
+      "django.apps"
     ],
     "support/tests.py": [
       "django.test"
     ],
-    "wallet/apps.py": [
-      "django.apps"
+    "wallet/admin.py": [
+      "django.contrib"
     ],
     "wallet/models.py": [
       "django.db"
@@ -10295,22 +9044,22 @@
       "django.contrib",
       "django.utils"
     ],
-    "walletCreditRequests/apps.py": [
-      "django.apps"
-    ],
     "wallet/tests.py": [
       "django.test"
     ],
     "wallet/views.py": [
       "django.shortcuts"
     ],
-    "walletCreditRequests/migrations/0001_initial.py": [
-      "django.db",
-      "django.utils.timezone"
+    "walletCreditRequests/apps.py": [
+      "django.apps"
     ],
     "walletCreditRequests/models.py": [
       "django.db",
       "django.utils"
+    ],
+    "walletCreditRequests/migrations/0001_initial.py": [
+      "django.db",
+      "django.utils.timezone"
     ],
     "walletCreditRequests/tests.py": [
       "django.test"
@@ -10334,8 +9083,8 @@
     ]
   },
   "metadata": {
-    "timestamp": "2025-06-23T14:23:47.253Z",
-    "duration_ms": 164,
+    "timestamp": "2025-06-23T14:43:14.968Z",
+    "duration_ms": 136,
     "engine_version": "0.1.0",
     "repository_path": "/Users/amitk/Development/GitHub/bazoo-backend"
   }

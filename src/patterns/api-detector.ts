@@ -996,7 +996,7 @@ export class ApiDetector {
               method: method,
               route: this.inferDjangoRoute(className),
               line: classInfo.line_number || 0,
-              framework: 'Django REST Framework',
+              framework: 'Django',
               filePath: filePath,
               handlerFunction: className,
               parameters: []

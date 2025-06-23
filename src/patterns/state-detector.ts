@@ -1263,30 +1263,37 @@ export class StateDetector {
    * @private
    */
   private isDjangoViewFunction(functionName: string, functionInfo: any, analysis: FileAnalysis): boolean {
-    // Check if function has request parameter (typical Django view signature)
-    const hasRequestParam = functionInfo.parameters?.some((param: string) =>
-      param.toLowerCase().includes('request')
-    );
+      // Only consider it a state change if it's a view function AND has actual state operations
+      const hasRequestParam = functionInfo.parameters?.some((param: string) =>
+        param.toLowerCase().includes('request')
+      );
 
-    // Check if file imports Django views
-    const hasViewImports = analysis.imports && Object.keys(analysis.imports).some(moduleName =>
-      moduleName.includes('django.views') || moduleName.includes('django.shortcuts')
-    );
+      const hasViewImports = analysis.imports && Object.keys(analysis.imports).some(moduleName =>
+        moduleName.includes('django.views') || moduleName.includes('django.shortcuts')
+      );
 
-    // Check naming patterns
-    const viewPatterns = [
-      /.*View$/i,
-      /.*List$/i,
-      /.*Detail$/i,
-      /.*Create$/i,
-      /.*Update$/i,
-      /.*Delete$/i
-    ];
+      // NEW: Only return true if it's a view AND has clear state-changing indicators
+      if (hasRequestParam && hasViewImports) {
+        // Check function name for state-changing operations
+        const stateChangingNames = [
+          'create', 'save', 'update', 'delete', 'remove', 'destroy',
+          'register', 'signup', 'activate', 'sync', 'assign', 'map'
+        ];
 
-    const matchesViewPattern = viewPatterns.some(pattern => pattern.test(functionName));
+        const hasStateChangingName = stateChangingNames.some(operation =>
+          functionName.toLowerCase().includes(operation)
+        );
 
-    return hasRequestParam || (hasViewImports && matchesViewPattern);
-  }
+        // Check if function has API endpoints that suggest state changes (POST, PUT, PATCH, DELETE)
+        const hasStateChangingEndpoint = functionInfo.api_endpoints?.some((endpoint: any) =>
+          ['POST', 'PUT', 'PATCH', 'DELETE'].includes(endpoint.method)
+        );
+
+        return hasStateChangingName || hasStateChangingEndpoint;
+      }
+
+      return false;
+    }
 
   /**
    * Check if class is Django model

@@ -145,13 +145,13 @@ export class ResultsAggregator {
       const baseAnalysis = coordinatorResult.analysis;
 
       // Convert detailed pattern results to the format expected by FileAnalysis
-      const api_endpoints = apiEndpointsByFile.get(filePath)?.map(endpoint => ({
-        type: endpoint.framework,
-        method: endpoint.method,
-        route: endpoint.route,
-        line: endpoint.line,
-        framework: endpoint.framework
-      })) || [];
+    //   const api_endpoints = apiEndpointsByFile.get(filePath)?.map(endpoint => ({
+    //     type: endpoint.framework,
+    //     method: endpoint.method,
+    //     route: endpoint.route,
+    //     line: endpoint.line,
+    //     framework: endpoint.framework
+    //   })) || [];
 
       const state_changes = statePatternsByFile.get(filePath)?.map(pattern => ({
         type: pattern.type,
@@ -171,7 +171,7 @@ export class ResultsAggregator {
       // Create enriched file analysis
       const enrichedAnalysis: FileAnalysis = {
         ...baseAnalysis,
-        api_endpoints: api_endpoints.length > 0 ? api_endpoints : undefined,
+        // api_endpoints: api_endpoints.length > 0 ? api_endpoints : undefined,
         state_changes: state_changes.length > 0 ? state_changes : undefined,
         event_handlers: event_handlers.length > 0 ? event_handlers : undefined
       };

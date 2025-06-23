@@ -56,12 +56,11 @@
 - django.utils: used in 4 files
 
 ## Pattern Detection Summary
-- Total patterns detected: 206
-- API endpoints: 143
-- State management patterns: 58
+- Total patterns detected: 26
+- State management patterns: 21
 - Event handlers: 5
 
 ## Analysis Details
-- Timestamp: 2025-06-23T14:23:47.253Z
-- Duration: 164ms
+- Timestamp: 2025-06-23T14:43:14.968Z
+- Duration: 136ms
 - Engine Version: 0.1.0
