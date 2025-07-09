@@ -278,3 +278,367 @@ export async function quickAnalyze(
     concurrency: 5
   });
 }
+
+/**
+ * Configuration for flat text format conversion
+ */
+interface FlatConfig {
+  /** Whether to use abbreviated keys */
+  useAbbreviations: boolean;
+  /** Whether to skip empty values */
+  skipEmpty: boolean;
+  /** Whether to remove line numbers */
+  removeLineNumbers: boolean;
+  /** Separator between file entries */
+  fileSeparator: string;
+  /** Indent for file content */
+  contentIndent: string;
+}
+
+/**
+ * Default configuration for flat format conversion
+ */
+const DEFAULT_FLAT_CONFIG: FlatConfig = {
+  useAbbreviations: true,
+  skipEmpty: true,
+  removeLineNumbers: true,
+  fileSeparator: '\n\n',
+  contentIndent: '  '
+};
+
+/**
+ * Key abbreviations map - matches clean-analysis.ts
+ */
+const KEY_ABBREVIATIONS: Record<string, string> = {
+  'functions': 'fn',
+  'classes': 'cls',
+  'imports': 'imp',
+  'methods': 'mth',
+  'parameters': 'prm',
+  'base_classes': 'bc',
+  'decorators': 'dec',
+  'is_async': 'async',
+  'is_component': 'comp',
+  'api_endpoints': 'api',
+  'state_changes': 'states',
+  'event_handlers': 'events',
+  'language': 'lang',
+  'docstring': 'doc',
+  'variable': 'var',
+  'handler': 'hdl',
+  'mutation_type': 'mut',
+  'frameworks': 'fw',
+  'path': 'p',
+  'type': 't'
+};
+
+/**
+ * Keys to skip when removeLineNumbers is true
+ */
+const LINE_NUMBER_KEYS = [
+  'line_number', 'line', 'ln', 'start_line', 'end_line',
+  'lines', 'characters', 'non_empty_lines', 'avg_line_length',
+  'total_lines', 'blank_lines', 'comment_lines', 'code_lines',
+  'file_size', 'bytes', 'word_count', 'char_count'
+];
+
+/**
+ * Check if a value is empty
+ */
+function isEmpty(value: any): boolean {
+  if (value === null || value === undefined) return true;
+  if (value === '') return true;
+  if (Array.isArray(value) && value.length === 0) return true;
+  if (typeof value === 'object' && Object.keys(value).length === 0) return true;
+  return false;
+}
+
+/**
+ * Format a value for output
+ */
+function formatValue(value: any): string {
+  if (value === null) return 'null';
+  if (value === undefined) return 'undefined';
+  if (typeof value === 'boolean') return value ? '1' : '0';
+  if (typeof value === 'number') return value.toString();
+  if (typeof value === 'string') {
+    if (value.includes('\n') || value.includes('"')) {
+      return `"${value.replace(/"/g, '\\"').replace(/\n/g, '\\n')}"`;
+    }
+    return value;
+  }
+  return JSON.stringify(value);
+}
+
+/**
+ * Get abbreviated key if available
+ */
+function getKey(key: string, config: FlatConfig): string {
+  if (config.useAbbreviations && KEY_ABBREVIATIONS[key]) {
+    return KEY_ABBREVIATIONS[key];
+  }
+  return key;
+}
+
+/**
+ * Should skip this key based on configuration
+ */
+function shouldSkipKey(key: string, config: FlatConfig): boolean {
+  if (config.removeLineNumbers && LINE_NUMBER_KEYS.includes(key)) {
+    return true;
+  }
+  return false;
+}
+
+/**
+ * Format array values compactly
+ */
+function formatArray(arr: any[]): string {
+  if (arr.length === 0) return '[]';
+
+  const allSimple = arr.every(item =>
+    typeof item === 'string' ||
+    typeof item === 'number' ||
+    typeof item === 'boolean' ||
+    item === null
+  );
+
+  if (allSimple) {
+    return `[${arr.map(formatValue).join(', ')}]`;
+  }
+
+  return arr.map((item, index) => {
+    if (typeof item === 'object' && item !== null) {
+      return `[${index}] ${formatObject(item, true)}`;
+    }
+    return `[${index}] ${formatValue(item)}`;
+  }).join('\n    ');
+}
+
+/**
+ * Format object as compact text
+ */
+function formatObject(obj: any, inline: boolean = false): string {
+  if (obj === null || obj === undefined) return formatValue(obj);
+
+  const parts: string[] = [];
+
+  Object.entries(obj).forEach(([key, value]) => {
+    if (shouldSkipKey(key, DEFAULT_FLAT_CONFIG)) return;
+    if (DEFAULT_FLAT_CONFIG.skipEmpty && isEmpty(value)) return;
+
+    const displayKey = getKey(key, DEFAULT_FLAT_CONFIG);
+
+    if (Array.isArray(value)) {
+      if (value.length > 0) {
+        parts.push(`${displayKey}:${formatArray(value)}`);
+      }
+    } else if (typeof value === 'object' && value !== null) {
+      const objStr = formatObject(value, true);
+      parts.push(`${displayKey}:{${objStr}}`);
+    } else {
+      parts.push(`${displayKey}:${formatValue(value)}`);
+    }
+  });
+
+  return inline ? parts.join(', ') : parts.join('\n  ');
+}
+
+/**
+ * Extract file information from the analysis result
+ */
+function extractFileInfo(data: AnalysisResult): Map<string, any> {
+  const fileMap = new Map<string, any>();
+
+  // Handle folder_structure format
+  if (data.folder_structure) {
+    Object.values(data.folder_structure).forEach(files => {
+      files.forEach(file => {
+        if (file.path) {
+          fileMap.set(file.path, file);
+        }
+      });
+    });
+  }
+
+  return fileMap;
+}
+
+/**
+ * Format file content as text
+ */
+function formatFileContent(filePath: string, fileData: any, config: FlatConfig): string {
+  const lines: string[] = [];
+  const indent = config.contentIndent;
+  const skipKeys = ['path', 'p', 'language', 'lang', 'error'];
+
+  Object.entries(fileData).forEach(([key, value]) => {
+    if (skipKeys.includes(key)) return;
+    if (shouldSkipKey(key, config)) return;
+    if (config.skipEmpty && isEmpty(value)) return;
+
+    const displayKey = getKey(key, config);
+
+    if (Array.isArray(value)) {
+      if (value.length === 0) return;
+
+      if (key === 'imports' || key === 'imp') {
+        if (typeof value[0] === 'object') {
+          const imports: string[] = [];
+          Object.entries(value[0]).forEach(([module, items]) => {
+            if (Array.isArray(items) && items.length > 0) {
+              imports.push(`${module}:[${items.join(',')}]`);
+            } else {
+              imports.push(module);
+            }
+          });
+          lines.push(`${indent}${displayKey}: ${imports.join(', ')}`);
+        } else {
+          lines.push(`${indent}${displayKey}: ${value.join(', ')}`);
+        }
+      } else {
+        const formatted = formatArray(value);
+        if (formatted.includes('\n')) {
+          lines.push(`${indent}${displayKey}:`);
+          lines.push(`${indent}  ${formatted.replace(/\n/g, '\n' + indent + '  ')}`);
+        } else {
+          lines.push(`${indent}${displayKey}: ${formatted}`);
+        }
+      }
+    } else if (typeof value === 'object' && value !== null) {
+      const entries = Object.entries(value);
+      if (entries.length === 0) return;
+
+      if (key === 'classes' || key === 'cls') {
+        lines.push(`${indent}${displayKey}:`);
+        entries.forEach(([className, classData]: [string, any]) => {
+          const baseClasses = classData.base_classes || classData.bc || [];
+          const methods = classData.methods || classData.mth || [];
+          const isComponent = classData.is_component || classData.comp;
+          const docstring = classData.docstring || classData.doc;
+
+          let classLine = `${indent}  ${className}`;
+          if (baseClasses.length > 0) {
+            classLine += `(${baseClasses.join(', ')})`;
+          }
+          if (isComponent) {
+            classLine += ' [component]';
+          }
+          lines.push(classLine);
+
+          if (docstring && !isEmpty(docstring)) {
+            lines.push(`${indent}    doc: ${formatValue(docstring)}`);
+          }
+
+          if (methods.length > 0 || (typeof methods === 'object' && Object.keys(methods).length > 0)) {
+            const methodNames = Array.isArray(methods) ? methods : Object.keys(methods);
+            lines.push(`${indent}    mth: ${methodNames.join(', ')}`);
+          }
+        });
+      } else if (key === 'functions' || key === 'fn') {
+        lines.push(`${indent}${displayKey}:`);
+        entries.forEach(([funcName, funcData]: [string, any]) => {
+          const params = funcData.parameters || funcData.prm || [];
+          const isAsync = funcData.is_async || funcData.async;
+          const docstring = funcData.docstring || funcData.doc;
+
+          let funcLine = `${indent}  ${isAsync ? 'async ' : ''}${funcName}`;
+          if (params.length > 0) {
+            const paramStr = Array.isArray(params) ? params.join(', ') : Object.keys(params).join(', ');
+            funcLine += `(${paramStr})`;
+          }
+          lines.push(funcLine);
+
+          if (docstring && !isEmpty(docstring)) {
+            lines.push(`${indent}    doc: ${formatValue(docstring)}`);
+          }
+        });
+      } else {
+        const objStr = formatObject(value);
+        if (objStr.includes('\n')) {
+          lines.push(`${indent}${displayKey}:`);
+          lines.push(`${indent}  ${objStr.replace(/\n/g, '\n' + indent + '  ')}`);
+        } else {
+          lines.push(`${indent}${displayKey}: {${objStr}}`);
+        }
+      }
+    } else {
+      lines.push(`${indent}${displayKey}: ${formatValue(value)}`);
+    }
+  });
+
+  return lines.join('\n');
+}
+
+/**
+ * Convert analysis result to flat text format
+ */
+function convertAnalysisToFlatText(analysisResult: AnalysisResult, config: FlatConfig = DEFAULT_FLAT_CONFIG): string {
+  const fileMap = extractFileInfo(analysisResult);
+  const outputLines: string[] = [];
+
+  // Sort files by path for consistent output
+  const sortedPaths = Array.from(fileMap.keys()).sort();
+
+  sortedPaths.forEach(filePath => {
+    const fileData = fileMap.get(filePath);
+    const content = formatFileContent(filePath, fileData, config);
+    
+    if (content && content.trim().length > 0) {
+      outputLines.push(`<file path="${filePath}"/>`);
+      outputLines.push(content);
+    }
+  });
+
+  // Add dependencies if present
+  if (analysisResult.dependencies && Object.keys(analysisResult.dependencies).length > 0) {
+    outputLines.push('\n<dependencies>');
+    Object.entries(analysisResult.dependencies).forEach(([file, deps]) => {
+      if (Array.isArray(deps) && deps.length > 0) {
+        outputLines.push(`  ${file}: ${deps.join(', ')}`);
+      }
+    });
+    outputLines.push('</dependencies>');
+  }
+
+  return outputLines.join(config.fileSeparator);
+}
+
+/**
+ * Analyze a git repository and return the result as flat text format
+ * 
+ * This is a wrapper function that combines both analysis and flat text conversion.
+ * It performs the equivalent of running these two commands in sequence:
+ * 1. npm run analyze:save "/path/to/repo" temp.json
+ * 2. npm run clean-json temp.json output.txt
+ * 
+ * @param repositoryPath - Path to the git repository
+ * @param options - Analysis options (optional)
+ * @returns Promise that resolves to the flat text format
+ * 
+ * @example
+ * ```typescript
+ * import { analyzeRepositoryToText } from '@ai-assistant/code-analysis-engine';
+ * 
+ * const flatText = await analyzeRepositoryToText('/path/to/repo', {
+ *   on_progress: (completed, total, current) => {
+ *     console.log(`Progress: ${completed}/${total} - ${current}`);
+ *   }
+ * });
+ * 
+ * console.log(flatText);
+ * ```
+ */
+export async function analyzeRepositoryToText(
+  repositoryPath: string,
+  options: AnalysisOptions = {}
+): Promise<string> {
+  // Perform the analysis first (excluding test files by default like analyze:save)
+  const analysisResult = await analyzeRepository(repositoryPath, {
+    exclude_test_files: true,
+    ...options
+  });
+
+  // Convert to flat text format
+  return convertAnalysisToFlatText(analysisResult);
+}
