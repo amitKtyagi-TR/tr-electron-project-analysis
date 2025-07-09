@@ -220,8 +220,8 @@ function formatFileContent(filePath: string, fileData: any, config: FlatConfig):
   const lines: string[] = [];
   const indent = config.contentIndent;
 
-  // Skip the path key since it's redundant
-  const skipKeys = ['path', 'p'];
+  // Skip the path key since it's redundant, also skip language and error
+  const skipKeys = ['path', 'p', 'language', 'lang', 'error'];
 
   Object.entries(fileData).forEach(([key, value]) => {
     if (skipKeys.includes(key)) return;
@@ -364,18 +364,20 @@ function convertToFlatFormat(
 
     sortedPaths.forEach(filePath => {
       const fileData = fileMap.get(filePath);
-      outputLines.push(`[${filePath}]`);
       const content = formatFileContent(filePath, fileData, config);
-      if (content) {
+      
+      // Only add file entry if it has content
+      if (content && content.trim().length > 0) {
+        outputLines.push(`<file path="${filePath}"/>`);
         outputLines.push(content);
       }
     });
 
     // Add summary and metadata at the end
-    if (analysisData.summary) {
-      outputLines.push('\n[PROJECT_SUMMARY]');
-      outputLines.push(formatFileContent('summary', analysisData.summary, config));
-    }
+    // if (analysisData.summary) {
+    //   outputLines.push('\n[PROJECT_SUMMARY]');
+    //   outputLines.push(formatFileContent('summary', analysisData.summary, config));
+    // }
 
     // if (analysisData.metadata) {
     //   outputLines.push('\n[PROJECT_METADATA]');
@@ -383,12 +385,13 @@ function convertToFlatFormat(
     // }
 
     if (analysisData.dependencies) {
-      outputLines.push('\n[FILE_DEPENDENCIES]');
+      outputLines.push('\n<dependencies>');
       Object.entries(analysisData.dependencies).forEach(([file, deps]) => {
         if (Array.isArray(deps) && deps.length > 0) {
           outputLines.push(`  ${file}: ${deps.join(', ')}`);
         }
       });
+      outputLines.push('</dependencies>');
     }
 
     const outputText = outputLines.join(config.fileSeparator);

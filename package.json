@@ -40,7 +40,7 @@
     "static-analysis"
   ],
   "author": "AI Assistant Team",
-  "license": "MIT",
+  "license": "None",
   "devDependencies": {
     "@types/node": "^20.19.1",
     "@types/p-limit": "^2.1.0",

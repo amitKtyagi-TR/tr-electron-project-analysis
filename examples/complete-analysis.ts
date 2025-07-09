@@ -1,8 +1,8 @@
 /**
- * Complete Repository Analysis - Replicates Python Jupyter Functionality
+ * Complete Repository Analysis - Save to JSON
  *
- * This example provides the same functionality as the original Python implementation
- * with formatted text output and JSON export capabilities.
+ * Simplified version that analyzes repositories and saves results to JSON,
+ * excluding test files by default.
  */
 
 import { writeFileSync } from 'fs';
@@ -11,7 +11,7 @@ import { analyzeRepository } from '../src/index.js';
 import type { AnalysisResult } from '../src/types/index.js';
 
 /**
- * Format analysis results as human-readable text (matching Python output)
+ * Format analysis results as human-readable text
  */
 function formatAsText(results: AnalysisResult, repositoryPath: string): string {
   const output: string[] = [];
@@ -151,62 +151,28 @@ function formatAsText(results: AnalysisResult, repositoryPath: string): string {
     output.push(`- Timestamp: ${results.metadata.timestamp}`);
     output.push(`- Duration: ${results.metadata.duration_ms.toLocaleString()}ms`);
     output.push(`- Engine Version: ${results.metadata.engine_version}`);
+    output.push(`- Test files excluded: Yes`);
   }
 
   return output.join('\n');
 }
 
 /**
- * Analyze repository with progress display (matching Python quick_analyze)
- */
-async function quickAnalyze(repositoryPath: string = '.', limit?: number): Promise<void> {
-  console.log(`\n🔍 Quick Analysis: ${resolve(repositoryPath)}`);
-  console.log('='.repeat(60));
-
-  const results = await analyzeRepository(repositoryPath, {
-    limit,
-    on_progress: (completed, total, current) => {
-      const percent = Math.round((completed / total) * 100);
-      const bar = '█'.repeat(Math.round(percent / 5)) + '░'.repeat(20 - Math.round(percent / 5));
-      process.stdout.write(`\r[${bar}] ${percent}% (${completed}/${total}) ${current || ''}`);
-    }
-  });
-
-  console.log('\n'); // New line after progress bar
-  const textOutput = formatAsText(results, repositoryPath);
-  console.log(textOutput);
-}
-
-/**
- * Full analysis returning structured data (matching Python full_analyze)
- */
-async function fullAnalyze(repositoryPath: string = '.'): Promise<AnalysisResult> {
-  console.log(`\n📊 Full Analysis: ${resolve(repositoryPath)}`);
-  console.log('='.repeat(60));
-
-  const results = await analyzeRepository(repositoryPath, {
-    on_progress: (completed, total, current) => {
-      if (completed % 10 === 0 || completed === total) {
-        console.log(`   Progress: ${completed}/${total} files processed`);
-      }
-    }
-  });
-
-  console.log(`✅ Analysis complete: ${results.summary.total_files} files analyzed`);
-  return results;
-}
-
-/**
- * Analyze and save results to file (matching Python save_analysis)
+ * Analyze and save results to file (excluding test files by default)
  */
 async function saveAnalysis(
   repositoryPath: string = '.',
-  outputFile: string = 'codebase_analysis.json'
+  outputFile: string = 'codebase_analysis.json',
+  excludeTests: boolean = true
 ): Promise<void> {
   console.log(`\n💾 Analyzing and saving: ${resolve(repositoryPath)}`);
+  if (excludeTests) {
+    console.log('   🚫 Excluding test files from analysis');
+  }
   console.log('='.repeat(60));
 
   const results = await analyzeRepository(repositoryPath, {
+    exclude_test_files: excludeTests,
     on_progress: (completed, total, current) => {
       if (completed % 10 === 0 || completed === total) {
         console.log(`   Progress: ${completed}/${total} files processed`);
@@ -230,126 +196,19 @@ async function saveAnalysis(
   console.log(`   Lines of code: ${results.summary.total_lines.toLocaleString()}`);
 }
 
-/**
- * Enhanced analysis with detailed pattern breakdown
- */
-async function analyzeRepositoryEnhanced(repositoryPath: string, saveToFile: boolean = true): Promise<AnalysisResult> {
-  console.log(`\n🚀 Enhanced Repository Analysis`);
-  console.log('='.repeat(60));
-  console.log(`Repository: ${resolve(repositoryPath)}`);
-
-  const startTime = Date.now();
-
-  const results = await analyzeRepository(repositoryPath, {
-    on_progress: (completed, total, current) => {
-      const percent = Math.round((completed / total) * 100);
-      if (percent % 5 === 0 || completed === total) {
-        console.log(`   [${percent.toString().padStart(3)}%] ${completed}/${total} - ${current || ''}`);
-      }
-    }
-  });
-
-  const analysisTime = Date.now() - startTime;
-
-  // Display comprehensive results
-  console.log('\n📈 Analysis Results:');
-  console.log('='.repeat(40));
-
-  console.log(`📁 Files: ${results.summary.total_files.toLocaleString()}`);
-  console.log(`📏 Lines: ${results.summary.total_lines.toLocaleString()}`);
-  console.log(`⏱️  Time: ${analysisTime.toLocaleString()}ms`);
-  console.log(`🗂️  Folders: ${Object.keys(results.folder_structure).length}`);
-  console.log(`🔗 Dependencies: ${Object.keys(results.dependencies).length} files`);
-
-  // Language breakdown
-  console.log('\n🌐 Languages:');
-  Object.entries(results.summary.languages)
-    .sort(([,a], [,b]) => b - a)
-    .forEach(([lang, count]) => {
-      const percent = ((count / results.summary.total_files) * 100).toFixed(1);
-      console.log(`   ${lang}: ${count} files (${percent}%)`);
-    });
-
-  // Framework detection
-  if (results.summary.frameworks && Object.keys(results.summary.frameworks).length > 0) {
-    console.log('\n🏗️  Frameworks:');
-    Object.entries(results.summary.frameworks)
-      .sort(([,a], [,b]) => b - a)
-      .forEach(([framework, confidence]) => {
-        console.log(`   ${framework}: ${(confidence * 100).toFixed(1)}% confidence`);
-      });
-  }
-
-  // Pattern summary
-  let totalPatterns = 0;
-  const patternTypes: Record<string, number> = {};
-
-  for (const files of Object.values(results.folder_structure)) {
-    for (const file of files) {
-      if (file.api_endpoints) {
-        totalPatterns += file.api_endpoints.length;
-        patternTypes['API Endpoints'] = (patternTypes['API Endpoints'] || 0) + file.api_endpoints.length;
-      }
-      if (file.state_changes) {
-        totalPatterns += file.state_changes.length;
-        patternTypes['State Patterns'] = (patternTypes['State Patterns'] || 0) + file.state_changes.length;
-      }
-      if (file.event_handlers) {
-        totalPatterns += file.event_handlers.length;
-        patternTypes['Event Handlers'] = (patternTypes['Event Handlers'] || 0) + file.event_handlers.length;
-      }
-    }
-  }
-
-  if (totalPatterns > 0) {
-    console.log('\n🎯 Patterns Detected:');
-    console.log(`   Total: ${totalPatterns}`);
-    Object.entries(patternTypes).forEach(([type, count]) => {
-      console.log(`   ${type}: ${count}`);
-    });
-  }
-
-  if (saveToFile) {
-    const timestamp = new Date().toISOString().slice(0, 19).replace(/[:.]/g, '-');
-    await saveAnalysis(repositoryPath, `analysis_${timestamp}.json`);
-  }
-
-  return results;
-}
-
-// CLI Interface - Check command line arguments
+// Simple CLI Interface
 async function main() {
   const args = process.argv.slice(2);
   const command = args[0];
   const repositoryPath = args[1] || '.';
+  const outputFile = args[2] || 'codebase_analysis.json';
 
   try {
-    switch (command) {
-      case 'quick':
-        const limit = args[2] ? parseInt(args[2]) : undefined;
-        await quickAnalyze(repositoryPath, limit);
-        break;
-
-      case 'full':
-        const results = await fullAnalyze(repositoryPath);
-        console.log('\n📋 Analysis Summary:');
-        console.log(JSON.stringify({
-          total_files: results.summary.total_files,
-          total_lines: results.summary.total_lines,
-          languages: results.summary.languages,
-          frameworks: results.summary.frameworks
-        }, null, 2));
-        break;
-
-      case 'save':
-        const outputFile = args[2] || 'codebase_analysis.json';
-        await saveAnalysis(repositoryPath, outputFile);
-        break;
-
-      case 'enhanced':
-      default:
-        await analyzeRepositoryEnhanced(repositoryPath, true);
-        break;
+    if (command === 'save') {
+      await saveAnalysis(repositoryPath, outputFile);
+    } else {
+      console.error('❌ Unknown command. Use: tsx complete-analysis.ts save [path] [output.json]');
+      process.exit(1);
     }
   } catch (error) {
     console.error('❌ Analysis failed:');
@@ -358,14 +217,8 @@ async function main() {
   }
 }
 
-// Export functions for programmatic use
-export {
-  quickAnalyze,
-  fullAnalyze,
-  saveAnalysis,
-  analyzeRepositoryEnhanced,
-  formatAsText
-};
+// Export for programmatic use
+export { saveAnalysis, formatAsText };
 
 // Run CLI if this file is executed directly
 if (import.meta.url === `file://${process.argv[1]}`) {

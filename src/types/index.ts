@@ -263,7 +263,7 @@ export type EventHandlerType =
   | 'react_event';
 
 
-  /**
+/**
  * Configuration options for the analysis engine
  */
 export interface AnalysisOptions {
@@ -277,6 +277,8 @@ export interface AnalysisOptions {
   concurrency?: number;
   /** Whether to include basic metrics for unknown file types */
   include_unknown_files?: boolean;
+  /** Whether to exclude common test file patterns */
+  exclude_test_files?: boolean;
   /** Callback for progress updates */
   on_progress?: (completed: number, total: number, current_file?: string) => void;
   /** AbortSignal for cancellation */

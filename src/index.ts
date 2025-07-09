@@ -20,6 +20,7 @@ import type {
   AnalysisOptions
 } from './types/index.js';
 import { ANALYSIS_ENGINE_VERSION } from './types/index.js'; // Regular import for value
+import { shouldExcludeFile, filterTestFiles, getFilterStats } from './utils/test-file-filter.js';
 
 // Re-export core types for convenience
 export type {
@@ -118,10 +119,24 @@ export async function analyzeRepository(
 
     // Apply file filters if specified
     let filesToAnalyze = trackedFiles;
+    
+    // Filter by extensions first
     if (options.extensions) {
-      filesToAnalyze = trackedFiles.filter(file =>
+      filesToAnalyze = filesToAnalyze.filter(file =>
         options.extensions!.some(ext => file.endsWith(ext))
       );
+    }
+
+    // Filter out test files if requested
+    if (options.exclude_test_files) {
+      const beforeTestFilter = filesToAnalyze.length;
+      filesToAnalyze = filterTestFiles(filesToAnalyze);
+      const afterTestFilter = filesToAnalyze.length;
+      const excludedCount = beforeTestFilter - afterTestFilter;
+      
+      if (options.on_progress && excludedCount > 0) {
+        console.log(`   Excluded ${excludedCount} test files from analysis`);
+      }
     }
 
     // Apply limit if specified
