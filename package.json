@@ -5,11 +5,19 @@
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "exports": {
+  ".": {
+    "import": "./dist/index.js",
+    "types": "./dist/index.d.ts"
+    }
+    },
   "engines": {
     "node": ">=20.0.0"
   },
   "scripts": {
-    "build": "tsup src/index.ts --format esm --dts --clean",
+    "build": "tsup src/index.ts --format esm --dts --clean && tsup examples/complete-analysis.ts scripts/clean-analysis.ts --format esm --outDir dist && npm run copy-wasm",
+    "copy-wasm": "mkdir -p dist/parsers/wasm && cp src/parsers/wasm/*.wasm dist/parsers/wasm/",
+    "prebuild": "npm run copy-wasm",
     "dev": "tsx src/index.ts",
     "test": "vitest",
     "lint": "tsc --noEmit",
@@ -30,7 +38,8 @@
     "analyze:full": "tsx examples/complete-analysis.ts full",
     "analyze:save": "tsx examples/complete-analysis.ts save",
     "clean-json": "tsx scripts/clean-analysis.ts",
-    "clean-json:stats": "tsx scripts/clean-analysis.ts stats"
+    "clean-json:stats": "tsx scripts/clean-analysis.ts stats",
+    "test:text-analysis": "tsx test-analyze-to-text.ts"
   },
   "keywords": [
     "code-analysis",
@@ -58,6 +67,8 @@
     "@babel/traverse": "^7.27.4",
     "@babel/types": "^7.27.6",
     "p-limit": "^5.0.0",
+    "tree-sitter-python": "^0.23.6",
+    "tree-sitter-typescript": "^0.23.2",
     "web-tree-sitter": "^0.20.8"
   }
 }

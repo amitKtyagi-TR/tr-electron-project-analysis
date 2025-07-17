@@ -38,6 +38,27 @@ export class GitProcessor {
     this.gitDir = join(this.repoPath, '.git');
   }
 
+  private async findGitExecutable(): Promise<string> {
+    const possiblePaths = [
+      'git', // Try PATH first
+      '/usr/bin/git',
+      '/usr/local/bin/git',
+      '/opt/homebrew/bin/git', // macOS with Homebrew
+      'C:\\Program Files\\Git\\bin\\git.exe', // Windows
+    ];
+
+    for (const gitPath of possiblePaths) {
+      try {
+        await execFileAsync(gitPath, ['--version'], { timeout: 5000 });
+        return gitPath;
+      } catch {
+        continue;
+      }
+    }
+
+    throw new Error('Git executable not found. Please ensure Git is installed.');
+  }
+
   /**
    * Check if the specified directory is a valid git repository
    *
@@ -99,7 +120,8 @@ export class GitProcessor {
    */
   private async runGitCommand(args: string[]): Promise<string> {
     try {
-      const { stdout, stderr } = await execFileAsync('git', args, {
+      const gitExecutable = await this.findGitExecutable();
+      const { stdout, stderr } = await execFileAsync(gitExecutable, args, {
         cwd: this.repoPath,
         timeout: 30000, // 30 second timeout
         maxBuffer: 10 * 1024 * 1024, // 10MB buffer for large repositories

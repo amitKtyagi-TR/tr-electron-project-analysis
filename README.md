@@ -19,7 +19,7 @@ npm run analyze:quick /path/to/your/repo 100
 npm run analyze:full /path/to/your/repo
 
 # Save analysis to specific file
-npm run analyze:save "/Users/amitk/Development/GitHub/SOLARIUM-BCKND" my_analysis.json
+npm run analyze:save "/Users/amitk/Development/GitHub/SOLARIUM-CPAPP" my_analysis.json
 
 # Analyze current directory
 npm run analyze
