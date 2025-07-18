@@ -1,0 +1,413 @@
+<file path="examples/aggregation-demo.ts"/>
+
+  imp:
+    ../src/index.js:[analyzeRepository]
+      ../src/core/results-aggregator.js:[ResultsAggregator]
+  fn:
+    async runAggregationDemo()
+  events:
+    [0] t:dom_event, event:callback, hdl:runAggregationDemo, framework:Custom
+        [1] t:dom_event, event:unknown, hdl:runAggregationDemo, framework:Generic
+
+<file path="examples/api-detection-demo.ts"/>
+
+  imp: {../src/index.js:[ApiDetector, AnalysisCoordinator, DetailedApiEndpoint, FileAnalysis]}
+  fn:
+    createSampleAnalyses()
+      doc: Sample file analyses representing different frameworks
+    async demonstrateApiDetection()
+      doc: Demonstrate API endpoint detection
+
+<file path="examples/babel-analyzer-demo.ts"/>
+
+  imp: {../src/index.js:[BabelAnalyzer]}
+  fn:
+    async demonstrateBabelAnalyzer()
+      doc: Analyzes code samples and displays results
+
+<file path="examples/complete-analysis.ts"/>
+
+  imp:
+    fs:[writeFileSync]
+      p:[resolve]
+      ../src/index.js:[analyzeRepository]
+      ../src/types/index.js:[AnalysisResult]
+      __exports__:[default]
+  fn:
+    formatAsText(results, repositoryPath)(results, repositoryPath)
+      doc: Format analysis results as human-readable text
+    async saveAnalysis(repositoryPath, outputFile, excludeTests)(repositoryPath, outputFile, excludeTests)
+      doc: Analyze and save results to file (excluding test files by default)
+    async main()
+
+<file path="examples/event-detection-demo.ts"/>
+
+  imp: {../src/index.js:[EventDetector, AnalysisCoordinator, DetailedEventHandler, FileAnalysis]}
+  fn:
+    createSampleEventAnalyses()
+      doc: Sample file analyses representing different event handler patterns
+    async demonstrateEventDetection()
+      doc: Demonstrate event handler detection
+
+<file path="examples/file-processing-demo.ts"/>
+
+  imp: {../src/index.js:[GitProcessor, FileProcessor]}
+  fn:
+    async analyzeFileContent(content, filePath)(content, filePath)
+      doc: Simple file analyzer that counts lines and characters
+    async demonstrateFileProcessing()
+      doc: Demo function that processes current repository
+
+<file path="examples/framework-detection-demo.ts"/>
+
+  imp:
+    ../src/patterns/framework-detector.js:[FrameworkDetector]
+      ../src/patterns/pattern-definitions.js:[getSupportedFrameworks]
+      ../src/types/index.js:[FileAnalysis]
+  fn:
+    createSampleProject()
+      doc: Create sample file analyses for different frameworks
+    async demonstrateFrameworkDetection()
+      doc: Demonstrate framework detection capabilities
+
+<file path="examples/full-analysis-demo.ts"/>
+
+  imp: {../src/index.js:[GitProcessor, FileProcessor, AnalysisCoordinator, CoordinatorAnalysisResult]}
+  fn:
+    async demonstrateFullAnalysis()
+      doc: Main demo function that orchestrates the complete analysis pipeline
+  cls:
+    AnalysisStats
+      doc: Statistics collector for analysis results
+      mth: addResult(filePath, result), getLanguageDistribution(), getParserUsage(), getPerformanceStats(), getFallbackStats(), getDetailedResults(), hasDocstrings(analysis)
+
+<file path="examples/language-detection-demo.ts"/>
+
+  imp: {../src/index.js:[LanguageDetector, GitProcessor]}
+  fn:
+    async demonstrateLanguageDetection()
+      doc: Demonstrates language detection capabilities
+
+<file path="examples/state-detection-demo.ts"/>
+
+  imp: {../src/index.js:[StateDetector, AnalysisCoordinator, DetailedStatePattern, FileAnalysis]}
+  fn:
+    createSampleStateAnalyses()
+      doc: Sample file analyses representing different state management patterns
+    async demonstrateStateDetection()
+      doc: Demonstrate state management pattern detection
+
+<file path="scripts/clean-analysis.ts"/>
+
+  imp:
+    fs:[readFileSync, writeFileSync]
+      p:[resolve]
+      __exports__:[default]
+  fn:
+    isEmpty(value)(value)
+      doc: Check if a value is empty
+    formatValue(value)(value)
+      doc: Format a value for output
+    getKey(key, config)(key, config)
+      doc: Get abbreviated key if available
+    shouldSkipKey(key, config)(key, config)
+      doc: Should skip this key based on configuration
+    formatArray(arr)(arr)
+      doc: Format array values compactly
+    formatObject(obj, inline)(obj, inline)
+      doc: Format object as compact text
+    extractFileInfo(data)(data)
+      doc: Extract file information from the folder structure
+    processFolder(folderData, parentPath)(folderData, parentPath)
+    formatFileContent(filePath, fileData, config)(filePath, fileData, config)
+      doc: Format file content as text
+    convertToFlatFormat(inputFile, outputFile, config)(inputFile, outputFile, config)
+      doc: Convert analysis JSON to flat file format
+    showConversionPreview(inputFile, config)(inputFile, config)
+      doc: Show conversion preview
+    main()
+      doc: Main CLI function
+  events:
+    [0] t:dom_event, event:callback, hdl:showConversionPreview, framework:Custom
+        [1] t:dom_event, event:unknown, hdl:showConversionPreview, framework:Generic
+
+<file path="scripts/download-parsers.js"/>
+
+  imp:
+    node:fs/promises:[mkdir, writeFile]
+      node:path:[join]
+      node:url:[fileURLToPath]
+  fn:
+    async downloadFile(url, filename)(url, filename)
+      doc: Download a file from URL
+    async downloadParsers()
+      doc: Main download function
+  events:
+    [0] t:dom_event, event:load, hdl:downloadFile, framework:DOM
+        [1] t:dom_event, event:load, hdl:downloadParsers, framework:DOM
+
+<file path="src/core/analysis-coordinator.ts"/>
+
+  imp:
+    ../parsers/tree-sitter-manager.js:[TreeSitterManager]
+      ../parsers/babel-analyzer.js:[BabelAnalyzer]
+      ../parsers/python-analyzer.js:[PythonAnalyzer]
+      ./language-detector.js:[LanguageDetector]
+      ../types/index.js:[FileAnalysis, SupportedLanguage, AnalysisOptions]
+      __exports__:[default]
+  cls:
+    AnalysisCoordinator
+      doc: "Analysis coordinator that manages multiple parsers\nThis class provides a unified interface for analyzing source code files\nregardless of their programming language. It automatically detects languages\nand routes files to the most appropriate parser."
+      mth: constructor(), initialize(), analyzeFile(filePath, content, options), analyzeFiles(files, options), shouldUseBabelParser(language), shouldUsePythonParser(language), shouldUseTreeSitter(language), analyzeWithBabel(content, language, filePath), analyzeWithPython(content, filePath), analyzeWithTreeSitter(content, language, filePath), analyzeWithTreeSitterFallback(content, language, filePath), analyzeWithFallback(content, language, filePath), analyzeBasic(content, filePath, language), getStatistics()
+
+<file path="src/core/file-processor.ts"/>
+
+  imp:
+    node:fs/promises:[readFile, stat]
+      node:path:[join]
+      p-limit:[pLimit]
+      ../types/index.js:[FileAnalysis]
+      __exports__:[default]
+  cls:
+    FileProcessor
+      doc: "File processor with concurrent reading capabilities\nThis class handles reading multiple files concurrently while respecting\nsystem limits and providing progress feedback to the user."
+      mth: constructor(repositoryPath), processFiles(filePaths, processor, options), readFile(filePath, options), updateProgress(onProgress, currentFile), checkCancellation(signal), getRepositoryPath()
+
+<file path="src/core/git-processor.ts"/>
+
+  imp:
+    node:child_process:[execFile]
+      node:util:[promisify]
+      node:fs/promises:[access, stat]
+      node:path:[join, resolve, isAbsolute]
+      __exports__:[default]
+  cls:
+    GitProcessor
+      doc: "Git repository processor for file discovery and validation\nThis class provides methods to interact with git repositories,\nincluding validating repository structure and discovering tracked files."
+      mth: constructor(repoPath), findGitExecutable(), isGitRepository(), getTrackedFiles(), runGitCommand(args), filterBinaryFiles(filePaths), getRepositoryPath()
+
+<file path="src/core/index.ts"/>
+
+  imp: {__exports__:[default]}
+
+<file path="src/core/language-detector.ts"/>
+
+  imp:
+    node:fs/promises:[readFile]
+      node:path:[extname, basename]
+      ../types/index.js:[SupportedLanguage]
+      __exports__:[default]
+  cls:
+    LanguageDetector
+      doc: "Language detection service\nThis class provides comprehensive language detection using multiple strategies:\nfile extensions, shebang lines, and content analysis."
+      mth: detectLanguage(filePath, content), detectByExtension(filePath), detectByShebang(content), detectByContent(content), isDefinitiveExtension(extension), getSupportedExtensions(), supportsDeepAnalysis(language)
+
+<file path="src/core/results-aggregator.ts"/>
+
+  imp:
+    p:[resolve, dirname, join, relative, sep]
+      ../types/index.js:[AnalysisResult, FileAnalysis, ProjectSummary, DependencyGraph, AnalysisMetadata, FrameworkDetection, ANALYSIS_ENGINE_VERSION]
+      ./analysis-coordinator.js:[AnalysisResult]
+      ../patterns/api-detector.js:[DetailedApiEndpoint]
+      ../patterns/state-detector.js:[DetailedStatePattern]
+      ../patterns/event-detector.js:[DetailedEventHandler]
+      __exports__:[default]
+  fn:
+    dfs(file, path)(file, path)
+  cls:
+    ResultsAggregator
+      doc: Results aggregator that combines individual file analyses into final output
+      mth: constructor(options), aggregateResults(fileAnalyses, frameworkDetections, apiEndpoints, statePatterns, eventHandlers, startTime), enrichFileAnalyses(fileAnalyses, apiEndpoints, statePatterns, eventHandlers), groupByFile(items), buildFolderStructure(analyses), calculateSummary(analyses, frameworkDetections), buildDependencyGraph(analyses), resolveRelativeImport(fromFile, importPath, context), detectCircularDependencies(dependencies), getAggregationStats(result)
+
+<file path="src/index.ts"/>
+
+  imp:
+    ./core/git-processor.js:[GitProcessor]
+      ./core/file-processor.js:[FileProcessor]
+      ./core/analysis-coordinator.js:[AnalysisCoordinator]
+      ./core/results-aggregator.js:[ResultsAggregator]
+      ./patterns/framework-detector.js:[FrameworkDetector]
+      ./patterns/api-detector.js:[ApiDetector]
+      ./patterns/state-detector.js:[StateDetector]
+      ./patterns/event-detector.js:[EventDetector]
+      ./types/index.js:[AnalysisResult, AnalysisOptions, ANALYSIS_ENGINE_VERSION]
+      ./utils/test-file-filter.js:[shouldExcludeFile, filterTestFiles, getFilterStats]
+      __exports__:[default]
+  fn:
+    async analyzeRepository(repositoryPath, options)(repositoryPath, options)
+      doc: "Analyze a git repository and return comprehensive analysis results\nThis is the main entry point for the analysis engine. It performs a complete\nanalysis of a git repository including:\n- Git-tracked file discovery\n- Multi-language parsing (JavaScript/TypeScript via Babel, others via Tree-sitter)\n- Framework detection (React, Django, NestJS, Flutter, Express)\n- API endpoint extraction\n- State management pattern detection\n- Event handler identification\n- Dependency graph construction\n- Results aggregation and formatting\n@param repositoryPath - Absolute or relative path to the git repository\n@param options - Configuration options for the analysis\n@returns Promise that resolves to comprehensive analysis results\n@example\n```typescript\nimport { analyzeRepository } from '@ai-assistant/code-analysis-engine';\nconst results = await analyzeRepository('./my-project', {\nextensions: ['.js', '.ts', '.py'],\nconcurrency: 5,\non_progress: (completed, total, current) => {\nconsole.log(`Progress: ${completed}/${total} - ${current}`);\n}\n});\nconsole.log(`Found ${results.summary.total_files} files`);\nconsole.log(`Detected frameworks:`, Object.keys(results.summary.frameworks || {}));\n```"
+    async quickAnalyze(repositoryPath, limit)(repositoryPath, limit)
+      doc: "Quick analysis function for testing and development\n@param repositoryPath - Path to repository\n@param limit - Maximum number of files to analyze\n@returns Analysis results with limited scope"
+    isEmpty(value)(value)
+      doc: Check if a value is empty
+    formatValue(value)(value)
+      doc: Format a value for output
+    getKey(key, config)(key, config)
+      doc: Get abbreviated key if available
+    shouldSkipKey(key, config)(key, config)
+      doc: Should skip this key based on configuration
+    formatArray(arr)(arr)
+      doc: Format array values compactly
+    formatObject(obj, inline)(obj, inline)
+      doc: Format object as compact text
+    extractFileInfo(data)(data)
+      doc: Extract file information from the analysis result
+    formatFileContent(filePath, fileData, config)(filePath, fileData, config)
+      doc: Format file content as text
+    convertAnalysisToFlatText(analysisResult, config)(analysisResult, config)
+      doc: Convert analysis result to flat text format
+    async analyzeRepositoryToText(repositoryPath, options)(repositoryPath, options)
+      doc: "Analyze a git repository and return the result as flat text format\nThis is a wrapper function that combines both analysis and flat text conversion.\nIt performs the equivalent of running these two commands in sequence:\n1. npm run analyze:save \"/path/to/repo\" temp.json\n2. npm run clean-json temp.json output.txt\n@param repositoryPath - Path to the git repository\n@param options - Analysis options (optional)\n@returns Promise that resolves to the flat text format\n@example\n```typescript\nimport { analyzeRepositoryToText } from '@ai-assistant/code-analysis-engine';\nconst flatText = await analyzeRepositoryToText('/path/to/repo', {\non_progress: (completed, total, current) => {\nconsole.log(`Progress: ${completed}/${total} - ${current}`);\n}\n});\nconsole.log(flatText);\n```"
+
+<file path="src/parsers/babel-analyzer.ts"/>
+
+  imp:
+    @babel/parser:[parse, ParserOptions]
+      @babel/types:[* as t]
+      ../types/index.js:[FileAnalysis, FunctionInfo, ClassInfo, Decorator, SupportedLanguage]
+      __exports__:[default]
+  cls:
+    BabelAnalyzer
+      doc: "Babel-based analyzer for JavaScript and TypeScript files\nThis class provides comprehensive AST analysis using Babel's robust parser,\nextracting detailed information about code structure, patterns, and metadata."
+      mth: parseJavaScript(content, language, filePath), extractJSDocComments(ast, content), processImportDeclaration(path, analysis), processFunctionDeclaration(path, analysis, jsdocComments), processVariableDeclarator(path, analysis, jsdocComments), getParamName(param), findNearestJSDoc(line, jsdocComments), processClassDeclaration(path, analysis, jsdocComments), processClassMethod(path, analysis, jsdocComments), processExportDeclaration(path, analysis)
+
+<file path="src/parsers/index.ts"/>
+
+  imp: {__exports__:[default]}
+
+<file path="src/parsers/python-analyzer.ts"/>
+
+  imp:
+    ../types/index.js:[FileAnalysis, FunctionInfo, ClassInfo, SupportedLanguage, ApiEndpoint, Decorator, HttpMethod]
+      __exports__:[default]
+  cls:
+    PythonAnalyzer
+      doc: "Python code analyzer using regex patterns\nThis class provides comprehensive analysis of Python code, with special\nsupport for Django patterns, REST API endpoints, and Python-specific constructs."
+      mth: analyzePython(content, filePath), extractImports(content, analysis), parseImportLine(importLine, analysis), getLineNumberAccurate(content, matchedString), extractFunctions(content, lines, analysis), extractClasses(content, lines, analysis), parseParameters(paramString), parseBaseClasses(inheritanceString), findDecoratorsBeforeFunction(lines, functionLineNumber), findDecoratorsBeforeClass(lines, classLineNumber), findFunctionDocstring(lines, functionLineNumber), findClassDocstring(lines, classLineNumber), extractDocstring(lines, startLine), extractClassMethods(content, lines, className, classLineNumber), findClassEndLine(lines, classLineNumber), getLineNumber(lines, matchedString), isDjangoModel(baseClasses), isDjangoSerializer(baseClasses), isDjangoViewClass(baseClasses), isHTTPMethod(functionName), extractAPIEndpoints(decorators, functionName, lineNumber), getHttpMethodFromFunction(functionName)
+
+<file path="src/parsers/tree-sitter-manager.ts"/>
+
+  imp:
+    web-tree-sitter:[Parser]
+      node:fs/promises:[readFile]
+      node:path:[join]
+      node:url:[fileURLToPath]
+      ../types/index.js:[SupportedLanguage]
+      __exports__:[default]
+  cls:
+    TreeSitterManager
+      doc: "Tree-sitter WebAssembly manager\nThis class handles loading and managing Tree-sitter parsers for multiple languages.\nIt provides a unified interface for parsing code and executing queries."
+      mth: initialize(), parseFile(content, language), query(tree, queryString, language), hasParser(language), getSupportedLanguages(), loadParser(language)
+
+<file path="src/patterns/api-detector.ts"/>
+
+  imp:
+    ../types/index.js:[FileAnalysis, HttpMethod, ApiEndpoint, SupportedLanguage]
+      __exports__:[default]
+  cls:
+    ApiDetector
+      doc: "API endpoint detection engine\nThis class analyzes file analysis results to detect REST API endpoints\nacross multiple frameworks with detailed metadata extraction."
+      mth: constructor(debugMode), detectEndpoints(fileAnalyses), analyzeFileForEndpoints(filePath, analysis), detectExpressEndpoints(filePath, analysis), hasExpressImport(analysis), parseExpressEndpoint(apiEndpoint, filePath, handlerFunction, lineNumber), isExpressEndpoint(apiEndpoint), extractHttpMethod(apiEndpoint), extractRoute(apiEndpoint), extractRouteParameters(route), isValidHttpMethod(method), detectExpressRoutePatterns(filePath, analysis), findRouteHandlerPatterns(functionSignature, functionInfo), detectNestJSEndpoints(filePath, analysis), hasNestJSImport(analysis), extractControllerPrefix(analysis), parseNestJSDecorator(decorator, filePath, handlerFunction, lineNumber, controllerPrefix), parseNestJSEndpoint(apiEndpoint, filePath, handlerFunction, lineNumber, controllerPrefix), isNestJSEndpoint(apiEndpoint), extractNestJSMethod(decorator), extractNestJSRoute(decorator, controllerPrefix), detectDjangoEndpoints(filePath, analysis), hasDjangoImport(analysis), detectDjangoViews(filePath, analysis), isDjangoViewClass(classInfo), extractDjangoViewMethods(classInfo), detectDjangoUrlPatterns(filePath, analysis), detectDjangoRestFramework(filePath, analysis), isDRFViewClass(classInfo), extractDRFMethods(classInfo), parseDjangoDecorator(decorator, filePath, handlerFunction, lineNumber), extractMethodsFromApiViewDecorator(decorator), parseDjangoEndpoint(apiEndpoint, filePath, handlerFunction, lineNumber), isDjangoEndpoint(apiEndpoint), inferDjangoRoute(name), getDetectionStats(endpoints), getDetectionReport(fileAnalyses), getLanguageDistribution(fileAnalyses)
+
+<file path="src/patterns/event-detector.ts"/>
+
+  imp:
+    ../types/index.js:[FileAnalysis, EventHandler, EventHandlerType, SupportedLanguage]
+      __exports__:[default]
+  cls:
+    EventDetector
+      doc: "Event handler detection engine\nThis class analyzes file analysis results to detect event handlers\nacross multiple frameworks with detailed metadata extraction."
+      mth: constructor(debugMode), detectEventHandlers(fileAnalyses), analyzeFileForEventHandlers(filePath, analysis), detectDOMEventHandlers(filePath, analysis), detectReactEventHandlers(filePath, analysis), detectElectronIPCHandlers(filePath, analysis), detectCustomEventHandlers(filePath, analysis), detectDjangoEventHandlers(filePath, analysis), detectGenericEventHandlers(filePath, analysis), hasReactImport(analysis), hasElectronImport(analysis), hasDjangoImport(analysis), isDOMEventHandler(eventHandler), isReactEventHandler(eventHandler), isElectronIPCHandler(eventHandler), getDOMEventType(eventHandler), getReactEventType(eventHandler), getElectronIPCType(eventHandler), extractEventName(eventHandler), extractReactEventName(eventHandler), extractIPCChannel(eventHandler), detectDOMPatternsInFunction(filePath, functionName, functionInfo), detectReactEventsByNaming(filePath, functionName, functionInfo), isIPCSetupFunction(functionName, functionInfo), inferIPCChannel(functionName), isEventEmitterPattern(functionName, functionInfo, analysis), isCallbackPattern(functionName, functionInfo), extractCustomEventName(functionName), isDjangoSignalDecorator(decorator), extractSignalName(decorator), isDjangoFormHandler(functionName, functionInfo, analysis), hasEventHandlerNaming(functionName), inferEventTypeFromName(functionName), extractEventFromName(functionName), initializeEventPatterns(), getDetectionStats(handlers), getDetectionReport(fileAnalyses), getLanguageDistribution(fileAnalyses)
+
+<file path="src/patterns/framework-detector.ts"/>
+
+  imp:
+    ../types/index.js:[FileAnalysis, FrameworkDetection, SupportedLanguage]
+      ./pattern-definitions.js:[ALL_FRAMEWORK_SIGNATURES, FrameworkSignature, PatternDefinition]
+      __exports__:[default]
+  cls:
+    FrameworkDetector
+      doc: "Framework detection engine\nAnalyzes a collection of file analyses to detect which frameworks\nare being used in the codebase with confidence scoring."
+      mth: constructor(debugMode), detectFrameworks(fileAnalyses), analyzeFileForFrameworks(filePath, analysis, frameworkEvidence), matchesPattern(filePath, analysis, pattern), matchFileNamePattern(filePath, pattern), matchImportPattern(analysis, pattern), matchFunctionCallPattern(analysis, pattern), matchClassNamePattern(analysis, pattern), matchDecoratorPattern(analysis, pattern), matchContentPattern(analysis, pattern), calculateMaxPossibleScore(signature, fileAnalyses), getDetectionReport(fileAnalyses), getLanguageDistribution(fileAnalyses)
+
+<file path="src/patterns/index.ts"/>
+
+  imp: {__exports__:[default]}
+
+<file path="src/patterns/pattern-definitions.ts"/>
+
+  imp:
+    ../types/index.js:[SupportedLanguage, FileAnalysis]
+      __exports__:[default]
+  fn:
+    getFrameworkSignature(name)(name)
+      doc: Get framework signature by name
+    getSupportedFrameworks()
+      doc: Get all supported framework names
+
+<file path="src/patterns/state-detector.ts"/>
+
+  imp:
+    ../types/index.js:[FileAnalysis, StateChange, StatePatternType, MutationType, SupportedLanguage]
+      __exports__:[default]
+  cls:
+    StateDetector
+      doc: "State management pattern detection engine\nThis class analyzes file analysis results to detect state management patterns\nacross multiple frameworks with detailed metadata extraction."
+      mth: constructor(debugMode), detectStatePatterns(fileAnalyses), analyzeFileForStatePatterns(filePath, analysis), detectReactStatePatterns(filePath, analysis), hasReactImport(analysis), parseReactStateChange(stateChange, filePath, containerName, lineNumber, context), detectReactHooksInFunction(filePath, functionName, functionInfo, analysis), isReactComponentClass(classInfo), detectReactClassState(filePath, className, classInfo), extractVariableName(stateChange, pattern), inferStateVariableName(functionName, pattern), detectReduxPatterns(filePath, analysis), hasReduxImport(analysis), isReduxActionCreator(functionName, functionInfo), isReduxReducer(functionName, functionInfo), isStoreCreation(functionName, functionInfo, analysis), detectReduxToolkitPatterns(filePath, analysis), extractActionType(functionName), extractReducerStateType(functionName), extractDispatchAction(dispatchCall), detectMobXPatterns(filePath, analysis), detectDjangoStatePatterns(filePath, analysis), detectGenericStatePatterns(filePath, analysis), hasMobXImport(analysis), hasDjangoImport(analysis), hasMobXDecorators(classInfo), isMobXObservableCreation(functionName, functionInfo), extractObservableName(functionName), parseDjangoStateChange(stateChange, filePath, containerName, lineNumber), isDjangoViewFunction(functionName, functionInfo, analysis), isDjangoModelClass(classInfo), isDjangoModelMethod(methodName), getDjangoMethodMutationType(methodName), extractDjangoModelName(stateChange), extractModelNameFromView(functionName), isFrameworkSpecificPattern(stateChange), parseGenericStatePattern(stateChange, filePath, containerName, lineNumber, language), detectStateVariablePatterns(filePath, analysis), extractGenericVariableName(stateChange), initializeStatePatterns(), getDetectionStats(patterns), getDetectionReport(fileAnalyses), getLanguageDistribution(fileAnalyses)
+
+<file path="src/types/babel-traverse.d.ts"/>
+
+  imp: {__exports__:[default]}
+
+<file path="src/types/index.ts"/>
+
+  imp: {__exports__:[default]}
+
+
+<dependencies>
+
+  examples/complete-analysis.ts: __exports__, fs, path
+
+  scripts/clean-analysis.ts: __exports__, fs, path
+
+  scripts/download-parsers.js: node:fs/promises, node:path, node:url
+
+  src/core/analysis-coordinator.ts: __exports__
+
+  src/core/file-processor.ts: __exports__, node:fs/promises, node:path, p-limit
+
+  src/core/git-processor.ts: __exports__, node:child_process, node:fs/promises, node:path, node:util
+
+  src/core/index.ts: __exports__
+
+  src/core/language-detector.ts: __exports__, node:fs/promises, node:path
+
+  src/core/results-aggregator.ts: __exports__, path
+
+  src/index.ts: __exports__
+
+  src/parsers/babel-analyzer.ts: @babel/parser, @babel/types, __exports__
+
+  src/parsers/python-analyzer.ts: __exports__
+
+  src/parsers/index.ts: __exports__
+
+  src/parsers/tree-sitter-manager.ts: __exports__, node:fs/promises, node:path, node:url, web-tree-sitter
+
+  src/patterns/api-detector.ts: __exports__
+
+  src/patterns/event-detector.ts: __exports__
+
+  src/patterns/framework-detector.ts: __exports__
+
+  src/patterns/index.ts: __exports__
+
+  src/patterns/pattern-definitions.ts: __exports__
+
+  src/patterns/state-detector.ts: __exports__
+
+  src/types/babel-traverse.d.ts: __exports__
+
+  src/types/index.ts: __exports__
+
+</dependencies>

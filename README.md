@@ -34,3 +34,6 @@ tsx examples/complete-analysis.ts save /path/to/repo output.json
 
 ## Clean File
 npm run clean-json  project_analysis.txt my_analysis.json
+
+npx tsx electron-test-runner.ts  "/Users/amitk/Development/GitHub/SOLARIUM-CPAPP"
+

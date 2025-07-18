@@ -6,11 +6,11 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "exports": {
-  ".": {
-    "import": "./dist/index.js",
-    "types": "./dist/index.d.ts"
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
     }
-    },
+  },
   "engines": {
     "node": ">=20.0.0"
   },
@@ -39,7 +39,7 @@
     "analyze:save": "tsx examples/complete-analysis.ts save",
     "clean-json": "tsx scripts/clean-analysis.ts",
     "clean-json:stats": "tsx scripts/clean-analysis.ts stats",
-    "test:text-analysis": "tsx test-analyze-to-text.ts"
+    "test:text-analysis": "tsx examples/test-analyze-to-text.ts"
   },
   "keywords": [
     "code-analysis",

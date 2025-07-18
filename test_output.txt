@@ -1,0 +1,3313 @@
+<file path="App.tsx"/>
+
+  imp:
+    react:[React, useEffect]
+      react-redux:[Provider]
+      react-native-toast-message:[Toast]
+      ./src/navigation/NavigationProvider:[NavigationProvider]
+      ./src/theme/ThemeProvider:[ThemeProvider]
+      ./src/store/PersistGateProvider:[PersistGateProvider]
+      ./src/contexts/ConnectivityContext:[ConnectivityProvider]
+      ./src/components/common/ErrorBoundary:[ErrorBoundary]
+      ./src/store/store:[store]
+      ./src/database/DatabaseProvider:[DatabaseProvider]
+      ./src/components/common/AppInitializer:[AppInitializer]
+      ./src/sync/SyncScheduler:[startSyncScheduler, destroySyncScheduler]
+      ./src/utils/AppStateManager:[getAppStateManager, destroyAppStateManager]
+      __exports__:[default]
+  fn:
+    App()
+  states: [0] t:redux_reducer, var:app, mut:update
+
+<file path="__tests__/setup/accessibility.setup.js"/>
+
+  imp:
+    jest-axe:[configureAxe]
+      __exports__:[default]
+
+<file path="__tests__/setupAxe.js"/>
+
+  imp: {jest-axe:[configureAxe, toHaveNoViolations]}
+
+<file path="__tests__/testRunner.ts"/>
+
+  imp: {__exports__:[default]}
+
+<file path="__tests__/utils/accessibility.ts"/>
+
+  imp: {__exports__:[default]}
+  fn:
+    setupAccessibilityMocks()
+
+<file path="__tests__/utils/testHelpers.ts"/>
+
+  imp:
+    @reduxjs/toolkit:[configureStore, combineReducers]
+      @react-native-async-storage/async-storage:[AsyncStorage]
+      ../../src/store/slices/networkSlice:[networkSlice]
+      ../../src/store/slices/authSlice:[authSlice]
+      ../../src/store/api/dashboardApi:[dashboardApi]
+      __exports__:[default]
+  fn:
+    createTestStore()
+      doc: Create test store with all necessary slices
+    setupTestEnvironment()
+      doc: Setup complete test environment with mocks
+    waitForAsync(ms)(ms)
+      doc: Wait for async operations to complete
+    createMockDashboardData()
+      doc: Create mock dashboard data
+    createMockSyncResult(success, itemsProcessed)(success, itemsProcessed)
+      doc: Create mock sync result
+    simulateAppStateChange(newState)(newState)
+      doc: Simulate app state changes
+    async runPerformanceTest(testFn, maxDuration)(testFn, maxDuration)
+      doc: Create performance test scenario
+  cls:
+    MemoryTracker
+      doc: Memory usage tracker for tests
+      mth: takeSnapshot(), getGrowth(), hasMemoryLeak(threshold), clear()
+  states:
+    [0] t:redux_action, var:CREATE_TEST_STORE, mut:create
+        [1] t:redux_action, var:store, mut:create
+        [2] t:useState, var:createteststore, mut:update
+        [3] t:redux_action, var:SETUP_TEST_ENVIRONMENT, mut:create
+        [4] t:redux_action, var:store, mut:create
+        [5] t:redux_action, var:WAIT_FOR_ASYNC, mut:create
+        [6] t:redux_action, var:store, mut:create
+        [7] t:redux_action, var:CREATE_MOCK_DASHBOARD_DATA, mut:create
+        [8] t:redux_action, var:store, mut:create
+        [9] t:redux_action, var:CREATE_MOCK_SYNC_RESULT, mut:create
+        [10] t:redux_action, var:store, mut:create
+        [11] t:redux_action, var:SIMULATE_APP_STATE_CHANGE, mut:create
+        [12] t:redux_action, var:store, mut:create
+        [13] t:redux_action, var:RUN_PERFORMANCE_TEST, mut:create
+        [14] t:redux_action, var:store, mut:create
+  events:
+    [0] t:dom_event, event:change, hdl:simulateAppStateChange, framework:DOM
+        [1] t:onChange, event:change, hdl:simulateAppStateChange, framework:Generic
+
+<file path="android/app/build.gradle"/>
+
+  imp: {com.android.build.OutputFile:[com.android.build.OutputFile]}
+
+<file path="android/app/src/main/assets/index.android.bundle"/>
+
+  fn:
+    o()
+    i(r)(r)
+    l(r)(r)
+    a(r)(r)
+    d(e, t)(e, t)
+    p(r)(r)
+    _(t, n)(t, n)
+    n(n, e)(n, e)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    e(n)(n)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    t(n, t, a)(n, t, a)
+    r(n, e)(n, e)
+    o(n)(n)
+    i(n, e, t, r, o)(n, e, t, r, o)
+    l(n, e, r, o, i, l)(n, e, r, o, i, l)
+    u(n, e, t)(n, e, t)
+    a(n)(n)
+    f(n)(n)
+    c(n)(n)
+    s(n)(n)
+    p(n)(n)
+    g(n)(n)
+    y(n)(n)
+    d(n)(n)
+    v(n)(n)
+    h(n)(n)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    b(n, e)(n, e)
+    u(t)(t)
+    a(n, e)(n, e)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    c(n, e)(n, e)
+    g(n, e)(n, e)
+    s()
+    t(n, r)(n, r)
+    u(t, n)(t, n)
+    e(e, r)(e, r)
+    u(n)(n)
+    t(t, o)(t, o)
+    o(n, o)(n, o)
+    u(n, t, o)(n, t, o)
+    l(n, t)(n, t)
+    f(n, t)(n, t)
+    u()
+    c()
+    e(e)(e)
+    I(e, n)(e, n)
+    s(u)(u)
+    n(n)(n)
+    c(o)(o)
+    l(n)(n)
+    o(e, n, t, r, l, a, i, u, o)(e, n, t, r, l, a, i, u, o)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    h(e, n, t, r, l, a, i, u, d)(e, n, t, r, l, a, i, u, d)
+    g(e, n, t, r, l, a, i, u, o)(e, n, t, r, l, a, i, u, o)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    S(e, n, t)(e, n, t)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    k(e)(e)
+    x()
+    _()
+    E(e, n, t, r)(e, n, t, r)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    P(e, n, t, r)(e, n, t, r)
+    R(e)(e)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    T(e)(e)
+    n()
+    t()
+    C(e)(e)
+    z(e)(e)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    D(e)(e)
+    H(e)(e)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    A(e)(e)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    j(e)(e)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Q(e)(e)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    O(e, n)(e, n)
+    V(e, n)(e, n)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Y(e, n, t)(e, n, t)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    X(e, n)(e, n)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    J(e)(e)
+    K(e, n, t)(e, n, t)
+    Z(e, n)(e, n)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    ee(e, n, t)(e, n, t)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    ne(e)(e)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    te(e)(e)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    re(e)(e)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    ue()
+    oe(e, n)(e, n)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    fe(e, t, r, l)(e, t, r, l)
+    ge(e, n, t)(e, n, t)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    me(e, n, t)(e, n, t)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    ve(e, n, t, r)(e, n, t, r)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    be(e)(e)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    ye(e)(e)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    _e(e)(e)
+    je(e)(e)
+    Qe(e)(e)
+    Be(e)(e)
+    We(e)(e)
+    Oe(e)(e)
+    Ve(e)(e)
+    Ye(e)(e)
+    qe(e)(e)
+    $e(e, n)(e, n)
+    Ze(e, t)(e, t)
+    en(e, n, t)(e, n, t)
+    nn(e, t, r, l)(e, t, r, l)
+    tn(e, n, t)(e, n, t)
+    rn(e, n, t)(e, n, t)
+    ln(e, n, t, r)(e, n, t, r)
+    an(e, n)(e, n)
+    on(e, n)(e, n)
+    cn(e)(e)
+    pn(e)(e)
+    yn(e)(e)
+    Sn(e, n)(e, n)
+    kn(e, n)(e, n)
+    wn(e)(e)
+    xn()
+    _n(e)(e)
+    En(e, n, t)(e, n, t)
+    Pn(e, n)(e, n)
+    Rn(e, n)(e, n)
+    Nn(e)(e)
+    Cn()
+    e(e, n, t, r)(e, n, t, r)
+    Gn(e, n, t, r)(e, n, t, r)
+    Zn(e)(e)
+    et(e, n, t)(e, n, t)
+    nt(e, n)(e, n)
+    at(e)(e)
+    it(e)(e)
+    ut(e, n)(e, n)
+    ft(e, n)(e, n)
+    pt(e)(e)
+    ht()
+    gt(e, n, t)(e, n, t)
+    mt(e, n, t)(e, n, t)
+    vt(e)(e)
+    bt(e, n, t)(e, n, t)
+    xt()
+    Ct(e)(e)
+    Lt(e, n)(e, n)
+    Ut(e)(e)
+    Mt(e, n)(e, n)
+    jt()
+    Qt(e)(e)
+    Bt(e, n, t)(e, n, t)
+    Wt(e, n)(e, n)
+    Ot(e)(e)
+    Yt(e)(e)
+    qt(e, n, t, r)(e, n, t, r)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    $t(e, n)(e, n)
+    Gt(e)(e)
+    Jt(e, n)(e, n)
+    Kt(e, n)(e, n)
+    Zt(e, n, t)(e, n, t)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    er(e, n, t)(e, n, t)
+    nr(e, n)(e, n)
+    tr(e, n, t, r)(e, n, t, r)
+    rr(e, n, t)(e, n, t)
+    ar(e, n, t, r)(e, n, t, r)
+    ur(e, n, t, r, l, a, i)(e, n, t, r, l, a, i)
+    or(e, n, t)(e, n, t)
+    sr(e, n, t, r)(e, n, t, r)
+    cr(e, n, t, r)(e, n, t, r)
+    dr(e, n, t)(e, n, t)
+    fr(e, n)(e, n)
+    pr(e)(e)
+    hr(e)(e)
+    n(n, t)(n, t)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    t(t, r)(t, r)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    r(e, n)(e, n)
+    l(e, n)(e, n)
+    a(n, t, r)(n, t, r)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    i(n)(n)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    u(e, n, t, r)(e, n, t, r)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    o(e, n, t, r)(e, n, t, r)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    s(e, n, t, r)(e, n, t, r)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    c(e, n, t, r, a)(e, n, t, r, a)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    d(e, n, t)(e, n, t)
+    f(e, n, t, r)(e, n, t, r)
+    p(e, n, t, r, l)(e, n, t, r, l)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    h(l, i, u, o)(l, i, u, o)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    g(l, i, u, o)(l, i, u, o)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    kr(e)(e)
+    wr(e, n)(e, n)
+    xr()
+    _r(e)(e)
+    Er(e)(e)
+    Rr(e)(e)
+    Nr()
+    Ar()
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    jr(e, n)(e, n)
+    Qr(e, n, t, r, l, a)(e, n, t, r, l, a)
+    Br()
+    Wr()
+    Or(e, n)(e, n)
+    Vr(e)(e)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Yr(e)(e)
+    qr()
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    $r(e, n)(e, n)
+    Xr(e, n, t)(e, n, t)
+    Gr(e, n, t, r)(e, n, t, r)
+    Jr(e, n, t)(e, n, t)
+    Kr(e)(e)
+    Zr(e)(e)
+    el(e)(e)
+    nl(e, n, t, r)(e, n, t, r)
+    tl()
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    rl(e, n, t, r)(e, n, t, r)
+    ll(e, n, t, r)(e, n, t, r)
+    al(e, n)(e, n)
+    il(e, n)(e, n)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    ul(e, n)(e, n)
+    ol(e, n)(e, n)
+    sl(e, n)(e, n)
+    cl(e, n, t)(e, n, t)
+    dl()
+    fl(e, n)(e, n)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    pl(e, n)(e, n)
+    hl(e, n, t)(e, n, t)
+    gl(e, n)(e, n)
+    ml()
+    vl(e, n, t)(e, n, t)
+    bl(e, n, t)(e, n, t)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    yl(e)(e)
+    Sl(e, n)(e, n)
+    kl(e, n, t)(e, n, t)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Pl(e, n)(e, n)
+    Rl(e, n, t)(e, n, t)
+    Tl(e, t)(e, t)
+    Cl(e, n, t)(e, n, t)
+    zl(e, n, t)(e, n, t)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Il(e, n, t)(e, n, t)
+    Ml(e, n, t, r)(e, n, t, r)
+    Fl(e, n, t, r, l)(e, n, t, r, l)
+    Dl(e, n, t, r, l)(e, n, t, r, l)
+    Hl(e, n, t, r, l)(e, n, t, r, l)
+    Al(e, n, t)(e, n, t)
+    jl(e, n)(e, n)
+    Ql(e, n, t, r, l)(e, n, t, r, l)
+    Bl(e, n, t, r, l)(e, n, t, r, l)
+    Wl(e, n, t, r, l, a)(e, n, t, r, l, a)
+    Ol(e)(e)
+    Gl(e)(e)
+    Jl(e, n, t)(e, n, t)
+    Kl(e, n)(e, n)
+    Zl(e, n, t, r)(e, n, t, r)
+    ea(e, n, t, r, l, a, i)(e, n, t, r, l, a, i)
+    na(e, n, t)(e, n, t)
+    ta(e, n, t, r, l)(e, n, t, r, l)
+    ra(e, n, t)(e, n, t)
+    la(e, n)(e, n)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    aa(e, n, t)(e, n, t)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    ia(e, n, t)(e, n, t)
+    ua(e, n)(e, n)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    oa(e, n, t, r)(e, n, t, r)
+    sa(e, n)(e, n)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    ca(e)(e)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    da(e, t, r)(e, t, r)
+    fa(e, n)(e, n)
+    ga(e, n)(e, n)
+    ma(e, n, t)(e, n, t)
+    ba(e, n)(e, n)
+    ya(e, n, t)(e, n, t)
+    Sa(e, n)(e, n)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    ka(e)(e)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    wa(e, n, t)(e, n, t)
+    xa(e, n, t)(e, n, t)
+    _a(e)(e)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Ea(e, n)(e, n)
+    Pa(e, t)(e, t)
+    Ra(e)(e)
+    Ta(e)(e)
+    ii()
+    ui(e)(e)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    oi(e, t, r, l)(e, t, r, l)
+    si(e, t)(e, t)
+    ci(e, t)(e, t)
+    di(e, n)(e, n)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    fi(e)(e)
+    pi(e)(e)
+    hi(e, n)(e, n)
+    gi(e)(e)
+    mi()
+    vi(e, n)(e, n)
+    bi(e, n)(e, n)
+    yi()
+    Si()
+    ki(e, n)(e, n)
+    wi()
+    xi()
+    _i(e)(e)
+    Ei(e)(e)
+    Pi(e, n, t)(e, n, t)
+    Ri(e, t, r, l)(e, t, r, l)
+    Ti()
+    Ni(e, n, t)(e, n, t)
+    Ci(e, n, t)(e, n, t)
+    zi(e, t, r)(e, t, r)
+    Ii(e, n)(e, n)
+    Li(e)(e)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Ui(e, n)(e, n)
+    Mi(e, t)(e, t)
+    Fi(e, n, t, r)(e, n, t, r)
+    Di(e, n, t, r)(e, n, t, r)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Hi(e)(e)
+    Ai(e)(e)
+    ji(e, n)(e, n)
+    Qi(e, n, t, r, l, a)(e, n, t, r, l, a)
+    Bi(e, n, t, r)(e, n, t, r)
+    Wi(e, n, t, r)(e, n, t, r)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Oi(e, n, t)(e, n, t)
+    Vi(e, n, t)(e, n, t)
+    Yi(e, n, t, r, l)(e, n, t, r, l)
+    qi(e, n, t)(e, n, t)
+    $i(e)(e)
+    Xi(e, n, t, r)(e, n, t, r)
+    Gi(e)(e)
+    Ji(e)(e)
+    l()
+    y(n, e, t)(n, e, t)
+    k()
+    t(o)(o)
+    t(e, o)(e, o)
+    t(r)(r)
+    r()
+    t(t)(t)
+      doc: "@license React\nuse-sync-external-store-shim.native.production.js\nCopyright (c) Meta Platforms, Inc. and affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    o(l)(l)
+    f(l)(l)
+    p(l)(l)
+    h(l)(l)
+    s(s)(s)
+    l(l, o, t)(l, o, t)
+    u(n, i)(n, i)
+    f(n, i, u)(n, i, u)
+    c(t)(t)
+    _(t, o, i)(t, o, i)
+    s(n, t)(n, t)
+    l(n, i)(n, i)
+    h(n, u)(n, u)
+    y(n, t)(n, t)
+    a(n, t, o)(n, t, o)
+    v(n, i)(n, i)
+    u(i, c)(i, c)
+    s(t, n, o)(t, n, o)
+    p(t, n, o, i)(t, n, o, i)
+    y(t, n, o)(t, n, o)
+    E()
+    j()
+    P(t)(t)
+    T(t, n)(t, n)
+    o(c, u, h, f)(c, u, h, f)
+    F(t, n, o)(t, n, o)
+    S(t, o)(t, o)
+    I(t)(t)
+    R(t)(t)
+    A(t)(t)
+    Y(t)(t)
+    q()
+    c(i, c)(i, c)
+    h()
+    T(e, t)(e, t)
+    k(e, o, c)(e, o, c)
+    w()
+    p(e)(e)
+    N(e)(e)
+    q(t, n, i, l)(t, n, i, l)
+    M(t)(t)
+    h(e, t, s)(e, t, s)
+    e()
+    i(t)(t)
+    l(n, o)(n, o)
+    s(t)(t)
+    p(t, n)(t, n)
+    i(n, o)(n, o)
+    f(t, n)(t, n)
+    v(t)(t)
+    y(t, n)(t, n)
+    b(t, n)(t, n)
+    h(t, n)(t, n)
+    T(t)(t)
+    x(t)(t)
+    E(t, n)(t, n)
+    O(t)(t)
+    h(t)(t)
+    i(t, n, o)(t, n, o)
+    A(t, n, o)(t, n, o)
+    v()
+    p(t)(t)
+    y(t)(t)
+    l(t)(t)
+    b(t)(t)
+    w(t)(t)
+    E(t)(t)
+    g(t, o)(t, o)
+    B(t, e)(t, e)
+    P(o, n)(o, n)
+    b()
+    S()
+    N(o, u, c)(o, u, c)
+    s(e, l, c)(e, l, c)
+    A(n)(n)
+    f()
+    u(e, t)(e, t)
+    y(e)(e)
+    m(e, t, r)(e, t, r)
+      doc: "@license React\nreact.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    b(e, t, r)(e, t, r)
+      doc: "@license React\nreact.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    k(t, r, n)(t, r, n)
+      doc: "@license React\nreact.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    C(t, r)(t, r)
+      doc: "@license React\nreact.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    g(t)(t)
+      doc: "@license React\nreact.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    P(e, t)(e, t)
+      doc: "@license React\nreact.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    x(r, n, o, u, c)(r, n, o, u, c)
+      doc: "@license React\nreact.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    I(e, t, r)(e, t, r)
+      doc: "@license React\nreact.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    t(e, r)(e, r)
+    r(e)(e)
+    f(e, t)(e, t)
+    o(n, u)(n, u)
+    t(n, s)(n, s)
+    r(r, n, t)(r, n, t)
+    n(n, t, u)(n, t, u)
+    t(n, t, u)(n, t, u)
+    g()
+    b(r)(r)
+    f(r)(r)
+    y(r)(r)
+    w(r)(r)
+    t(t, u)(t, u)
+    l(l)(l)
+    o(t, f)(t, f)
+    s(t, n, f)(t, n, f)
+    n(s, l, c, o)(s, l, c, o)
+    n(t, n)(t, n)
+    a(e, t, a)(e, t, a)
+      doc: "@license React\nreact-jsx-runtime.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    o(e)(e)
+    i()
+    n(t)(t)
+    h(t, e, o)(t, e, o)
+    t(u)(u)
+    o(u)(u)
+    t(o, u)(o, u)
+    f(e, c)(e, c)
+    t(n)(n)
+    g(a)(a)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    k(n, a)(n, a)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    L()
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    M()
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    E(n)(n)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    N(n, e)(n, e)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    h(e, n, t, r, l, a, i, u, f)(e, n, t, r, l, a, i, u, f)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    w(e)(e)
+    T()
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    x(e, n, t, r)(e, n, t, r)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    P(e)(e)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    W(e, n)(e, n)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    K(e)(e)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    J(e, n, t)(e, n, t)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    de(e, t, r, l)(e, t, r, l)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Ee(e)(e)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Pe(e, n)(e, n)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Ce(e, n)(e, n)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Ne(e)(e)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Le(e, n, t)(e, n, t)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Xe(e)(e)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Ge(e)(e)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Ke(e)(e)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Je(e)(e)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Ze(e)(e)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    en(e)(e)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    nn(e)(e)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    tn(e)(e)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    on(e, t)(e, t)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    sn(e, n, t)(e, n, t)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    cn(e, t, r, l)(e, t, r, l)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    fn(e, n, t)(e, n, t)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    dn(e, n, t)(e, n, t)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    pn(e, n, t, r)(e, n, t, r)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    hn(e, n)(e, n)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    e(e, n)(e, n)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    bn(e)(e)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Tn(e)(e)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    xn(e, n)(e, n)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    En(e, n)(e, n)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Pn(e)(e)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Rn()
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Cn(e)(e)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    zn(e, n, t)(e, n, t)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Nn(e, n)(e, n)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    In(e, n)(e, n)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Un(e)(e)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Mn()
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Qn()
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    jn(e)(e)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Hn(e)(e)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Wn(e, n, t)(e, n, t)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Vn(e, n)(e, n)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Xn(e)(e)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Gn(e)(e)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Kn(e, n)(e, n)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    tt(e, n)(e, n)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    rt(e)(e)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    lt()
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    at(e, n, t)(e, n, t)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    it(e, n, t)(e, n, t)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    ut(e)(e)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    ot(e, n, t)(e, n, t)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    pt()
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    St(e)(e)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    _t(e, n)(e, n)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Tt(e)(e)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    xt(e)(e)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Et(e, n)(e, n)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Nt()
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    It(e)(e)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Lt(e, n, t)(e, n, t)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Ut(e, n)(e, n)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Mt(e)(e)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Dt(e)(e)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    At(e, n, t, r)(e, n, t, r)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Qt(e, n)(e, n)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Ht(e)(e)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Bt(e, n)(e, n)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Ot(e, n)(e, n)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Wt(e, n, t)(e, n, t)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Vt(e, n, t)(e, n, t)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Yt(e, n)(e, n)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    $t(e, n, t)(e, n, t)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Gt(e, n, t, r)(e, n, t, r)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Jt(e, n, t, r, l, a, i)(e, n, t, r, l, a, i)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    er(e, n, t, r)(e, n, t, r)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    nr(e, n, t, r)(e, n, t, r)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    tr(e, n, t)(e, n, t)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    rr(e, n)(e, n)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    lr(e)(e)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    ar(e)(e)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    f(e, n, t)(e, n, t)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    d(e, n, t, r)(e, n, t, r)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    dr(e)(e)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    pr(e, n)(e, n)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    hr()
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    gr(e)(e)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    mr(e)(e)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    br(e)(e)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Sr()
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    zr()
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Nr(e, n)(e, n)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Ir(e, n, t, r, l, a)(e, n, t, r, l, a)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Lr()
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Ur()
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Mr(e, n)(e, n)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Fr(e)(e)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Dr(e)(e)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Qr(e, n)(e, n)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    jr(e, n, t)(e, n, t)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Hr(e, n, t, r)(e, n, t, r)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Br(e, n, t)(e, n, t)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Or(e)(e)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Wr(e)(e)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Yr(e, n, t, r)(e, n, t, r)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    $r(e, n, t, r)(e, n, t, r)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Xr(e, n, t, r)(e, n, t, r)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Gr(e, n)(e, n)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Kr(e, n)(e, n)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Jr(e, n)(e, n)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Zr(e, n)(e, n)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    el(e, n)(e, n)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    nl(e, n, t)(e, n, t)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    rl(e, n)(e, n)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    ll(e, n)(e, n)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    al(e, n, t)(e, n, t)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    ul()
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    ol(e, n, t)(e, n, t)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    sl(e, n, t)(e, n, t)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    cl(e)(e)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    dl(e, n, t)(e, n, t)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    vl(e, n)(e, n)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    yl(e, t)(e, t)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    wl(e, n, t)(e, n, t)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    _l(e, n, t)(e, n, t)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    El(e, n, t, r)(e, n, t, r)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Pl(e, n, t, r, l)(e, n, t, r, l)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Rl(e, n, t, r, l)(e, n, t, r, l)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Cl(e, n, t, r, l)(e, n, t, r, l)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Nl(e, n)(e, n)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Il(e, n, t, r, l)(e, n, t, r, l)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Ll(e, n, t, r, l)(e, n, t, r, l)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Ul(e, n, t, r, l, a)(e, n, t, r, l, a)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Ml(e)(e)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Hl(e)(e)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Bl(e, n, t)(e, n, t)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Ol(e, n)(e, n)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Wl(e, n, t, r)(e, n, t, r)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Vl(e, n, t, r, l, a, i)(e, n, t, r, l, a, i)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Yl(e, n, t)(e, n, t)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    ql(e, n, t, r, l)(e, n, t, r, l)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    $l(e, n, t)(e, n, t)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Xl(e, n)(e, n)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Gl(e, n, t)(e, n, t)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Kl(e, n, t)(e, n, t)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Jl(e, n)(e, n)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Zl(e)(e)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    ea(e, t, r)(e, t, r)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    na(e, n)(e, n)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    oa(e, n, t)(e, n, t)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    fa(e)(e)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    da(e)(e)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    pa(e, t, r)(e, t, r)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    ha(e, t, r)(e, t, r)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    va(e, n, t)(e, n, t)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    ba(e, t, r)(e, t, r)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    ya(e)(e)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    wa(e, t)(e, t)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    ni()
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    ti(e)(e)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    ri(e, t, r, l)(e, t, r, l)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    li(e, t)(e, t)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    ai(e, t)(e, t)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    ii(e, n)(e, n)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    oi(e)(e)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    si(e, n)(e, n)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    ci(e)(e)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    fi()
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    pi(e, n)(e, n)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    hi()
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    gi()
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    mi(e, n)(e, n)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    vi()
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    bi()
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    yi(e)(e)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Si(e)(e)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    wi(e, n, t)(e, n, t)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    ki(e, t, r, l)(e, t, r, l)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    _i()
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Ti(e, n, t)(e, n, t)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    xi(e, n, t)(e, n, t)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Ei(e, t, r)(e, t, r)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Pi(e, n)(e, n)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Ri(e)(e)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Ci(e, n)(e, n)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    zi(e, t)(e, t)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Ni(e, n, t, r)(e, n, t, r)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Ii(e, n, t, r)(e, n, t, r)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Ui(e)(e)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Mi(e, n)(e, n)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Fi(e, n, t, r, l, a)(e, n, t, r, l, a)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Ai(e, n, t, r)(e, n, t, r)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Qi(e, n, t)(e, n, t)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    ji(e, n, t)(e, n, t)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Hi(e, n, t, r, l)(e, n, t, r, l)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Bi(e, n, t)(e, n, t)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Oi(e)(e)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Vi(e)(e)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    Yi(e)(e)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    qi(e)(e)
+      doc: "@license React\nscheduler.production.min.js\nCopyright (c) Facebook, Inc. and its affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    p()
+    y()
+    c(e, n)(e, n)
+    b(n)(n)
+    u(e)(e)
+    s(e)(e)
+    S(e)(e)
+    v(e)(e)
+    n(n, f, l, o, t, b)(n, f, l, o, t, b)
+    o(n, t, o, p, c, s)(n, t, o, p, c, s)
+    t(t, o, s, c, l)(t, o, s, c, l)
+    o(n, o, s, c)(n, o, s, c)
+    N(t, n)(t, n)
+    w(t, n, i)(t, n, i)
+    E(t, i)(t, i)
+    r(t, i, r)(t, i, r)
+    A(t, n)(t, n)
+    r(t, n, r)(t, n, r)
+    b(n, i)(n, i)
+    r(n, i, r)(n, i, r)
+    r(o)(o)
+    D(t, n)(t, n)
+    f(u)(u)
+    L(t)(t)
+    c(e)(e)
+    B(t)(t)
+    F(t)(t)
+    _(i)(i)
+    _(t, e, a, r)(t, e, a, r)
+    s(a)(a)
+    c(t, e, n, o)(t, e, n, o)
+    l(e, s)(e, s)
+    c(t, e, n, u)(t, e, n, u)
+    _(t)(t)
+    v(t, e, n, a, r, u, i, o)(t, e, n, a, r, u, i, o)
+    R(t, e)(t, e)
+    i(e, r)(e, r)
+    o(t, e, n, r)(t, e, n, r)
+    f(n, t, o)(n, t, o)
+    c(n, t, o)(n, t, o)
+    s(n, t, o)(n, t, o)
+    M(n)(n)
+    h(u)(u)
+    v(n, t)(n, t)
+    w(n, t, u)(n, t, u)
+    y(n, t, u)(n, t, u)
+    b(n, t, f, i, c)(n, t, f, i, c)
+    _(t, u, o, f)(t, u, o, f)
+    y(t, e)(t, e)
+    o(t)(t)
+    v(e, t, n, s)(e, t, n, s)
+    h(t, _)(t, _)
+    v(t, e, n, u)(t, e, n, u)
+    v(t, e, n, r)(t, e, n, r)
+    v(t, n, v, u)(t, n, v, u)
+    v(t, n)(t, n)
+    y(t, e, n, l)(t, e, n, l)
+    f(e, u)(e, u)
+    c(t, e, a, _)(t, e, a, _)
+    f(e, n)(e, n)
+    o(t, e, a, _)(t, e, a, _)
+    f(e, n, _)(e, n, _)
+    s(e, t, a, o)(e, t, a, o)
+    f(t, u)(t, u)
+    f(t, e, u, l)(t, e, u, l)
+    _(e, n)(e, n)
+    f(t, e, n, o)(t, e, n, o)
+    r(e, _, o, f, c)(e, _, o, f, c)
+    _(e)(e)
+    R()
+    E(e)(e)
+    F(e, t)(e, t)
+    O(e)(e)
+    I()
+    A(e, o)(e, o)
+    O()
+    W(e, o)(e, o)
+    o(n, o, l)(n, o, l)
+    l(n, t, u)(n, t, u)
+    f(e)(e)
+    o(t, n, s, o, h, c)(t, n, s, o, h, c)
+    l(t, n, s)(t, n, s)
+    u(t, n, s)(t, n, s)
+    n(t, n, f)(t, n, f)
+    u(n, u)(n, u)
+    p(e, t)(e, t)
+    n(n, t, e, o, r, u, i)(n, t, e, o, r, u, i)
+    f(t)(t)
+      doc: "@license React\nuse-sync-external-store-shim.native.production.js\nCopyright (c) Meta Platforms, Inc. and affiliates.\nThis source code is licensed under the MIT license found in the\nLICENSE file in the root directory of this source tree."
+    S(t)(t)
+    D(e, r)(e, r)
+    D()
+    k(t)(t)
+    e(t)(t)
+    u(l)(l)
+    c(e, t)(e, t)
+    W(e)(e)
+    A(r)(r)
+    ae()
+    re(e, n)(e, n)
+    oe()
+    se(e)(e)
+    ce(e)(e)
+    fe(e)(e)
+    pe(e)(e)
+    me(e)(e)
+    n(t, o)(t, o)
+    l(t, o)(t, o)
+    h(i)(i)
+    U()
+    o(n, o, t, u)(n, o, t, u)
+    n(o)(o)
+
+<file path="e2e/init.ts"/>
+
+  imp: {detox:[device, cleanup]}
+
+<file path="e2e/loginSuccess.e2e.ts"/>
+
+  imp: {detox:[device, element, by, expect, waitFor]}
+
+<file path="e2e/otpLockout.e2e.ts"/>
+
+  imp: {detox:[device, element, by, expect, waitFor]}
+  fn:
+    async navigateToOtpScreen(phoneNumber)(phoneNumber)
+      doc: Helper function to navigate to OTP screen
+    async enterOtpAndVerify(otp)(otp)
+      doc: Helper function to enter OTP and verify
+
+<file path="e2e/setup.ts"/>
+
+  imp: {detox:[device, cleanup]}
+
+<file path="e2e/viewLeadsFlow.e2e.ts"/>
+
+  imp: {detox:[device, expect, element, by]}
+
+<file path="index.js"/>
+
+  imp:
+    react-native:[AppRegistry]
+      ./App:[App]
+      ./app.json:[name]
+
+<file path="jest.setup.ts"/>
+
+  imp:
+    @react-native-async-storage/async-storage/jest/async-storage-mock:[mockAsyncStorage]
+      ./__tests__/mocks/fetchMock:[MockFetch]
+
+<file path="scripts/check-docs-quality.js"/>
+
+  fn:
+    checkDocsQuality()
+    getAllMarkdownFiles(dir)(dir)
+    traverse(currentDir)(currentDir)
+    generateQualityMetrics()
+
+<file path="scripts/coverage-report.js"/>
+
+  fn:
+    generateCoverageReport()
+    getModuleCoverage(coverageData, modulePath)(coverageData, modulePath)
+
+<file path="scripts/docs-metrics.js"/>
+
+  fn:
+    analyzeDocumentation()
+    checkFileExists(filePath)(filePath)
+    getWordCount(filePath)(filePath)
+    getChangelogEntries()
+    checkFeatureMatrix()
+    getLastUpdated()
+    displayMetrics(metrics)(metrics)
+    calculateScore(metrics)(metrics)
+  events:
+    [0] t:dom_event, event:change, hdl:getChangelogEntries, framework:DOM
+        [1] t:onChange, event:change, hdl:getChangelogEntries, framework:Generic
+
+<file path="scripts/generate-badges.js"/>
+
+  fn:
+    getBadgeColor(percentage)(percentage)
+
+<file path="scripts/generate-coverage-badge.js"/>
+
+  fn:
+    generateCoverageBadge()
+
+<file path="scripts/verifyIntegration.js"/>
+
+  fn:
+    generateFinalReport(results)(results)
+
+<file path="src/components/PlaceholderAuthStack.tsx"/>
+
+  imp:
+    react:[React]
+      react-native:[View, Text, StyleSheet, TouchableOpacity]
+      @hooks/reduxHooks:[useAppDispatch]
+      @store/slices/authSlice:[loginSuccess]
+      __exports__:[default]
+  fn:
+    PlaceholderAuthStack()
+      doc: "Temporary placeholder for AuthStack\nWill be replaced in ST-02.3"
+    handleLogin()
+  states:
+    [0] t:redux_action, var:PLACEHOLDER_AUTH_STACK, mut:create
+        [1] t:redux_action, var:HANDLE_LOGIN, mut:create
+        [2] t:useState, var:handlelogin, mut:update
+  events: [0] t:dom_event, event:unknown, hdl:handleLogin, framework:Generic
+
+<file path="src/components/PlaceholderMainTab.tsx"/>
+
+  imp:
+    react:[React]
+      react-native:[View, Text, StyleSheet, TouchableOpacity]
+      @hooks/reduxHooks:[useAppDispatch]
+      @store/slices/authSlice:[logout]
+      __exports__:[default]
+  fn:
+    PlaceholderMainTab()
+      doc: "Temporary placeholder for MainTabNavigator\nWill be replaced in ST-02.4"
+    handleLogout()
+  states:
+    [0] t:redux_action, var:PLACEHOLDER_MAIN_TAB, mut:create
+        [1] t:redux_action, var:HANDLE_LOGOUT, mut:create
+        [2] t:useState, var:handlelogout, mut:update
+  events: [0] t:dom_event, event:unknown, hdl:handleLogout, framework:Generic
+
+<file path="src/components/SimpleTestApp.tsx"/>
+
+  imp:
+    react:[React]
+      react-native:[View, Text, StyleSheet, TouchableOpacity]
+      @hooks/reduxHooks:[useAppSelector, useAppDispatch]
+      @store/slices/authSlice:[loginSuccess, logout]
+      __exports__:[default]
+  fn:
+    SimpleTestApp()
+    handleLogin()
+    handleLogout()
+  states:
+    [0] t:redux_action, var:SIMPLE_TEST_APP, mut:create
+        [1] t:redux_action, var:HANDLE_LOGIN, mut:create
+        [2] t:useState, var:handlelogin, mut:update
+        [3] t:redux_action, var:HANDLE_LOGOUT, mut:create
+        [4] t:useState, var:handlelogout, mut:update
+  events:
+    [0] t:dom_event, event:unknown, hdl:handleLogin, framework:Generic
+        [1] t:dom_event, event:unknown, hdl:handleLogout, framework:Generic
+
+<file path="src/components/auth/AuthGuard.tsx"/>
+
+  imp:
+    react:[React, useEffect]
+      @hooks/reduxHooks:[useAppSelector]
+      @react-navigation/native:[useNavigation, NavigationProp]
+      @navigation/types:[RootStackParamList]
+      __exports__:[default]
+  fn:
+    AuthGuard({ ... })({ ... })
+      doc: "AuthGuard Component\nProtects routes based on authentication state and handles automatic redirects"
+  states:
+    [0] t:redux_action, var:AUTH_GUARD, mut:create
+        [1] t:redux_reducer, var:authguard, mut:update
+
+<file path="src/components/auth/index.ts"/>
+
+  imp: {__exports__:[default]}
+
+<file path="src/components/common/AppButton.tsx"/>
+
+  imp:
+    react:[React]
+      react-native-paper:[Button, useTheme, ButtonProps]
+      react-native:[StyleSheet]
+      __exports__:[default]
+  fn:
+    AppButton({ ... })({ ... })
+      doc: "AppButton Component\nConsistent themed button with project styling"
+
+<file path="src/components/common/AppInitializer.tsx"/>
+
+  imp:
+    react:[React, useEffect, ReactNode]
+      @react-native-async-storage/async-storage:[AsyncStorage]
+      ../../hooks/reduxHooks:[useAppDispatch, useAppSelector]
+      ../../store/slices/networkSlice:[selectLastSyncTs, setLastSyncTimestamp]
+      ../../services/persistence:[initializePersistence]
+      ../../store/store:[store]
+      __exports__:[default]
+  fn:
+    AppInitializer({ ... })({ ... })
+    async initializeApp()
+  states:
+    [0] t:redux_action, var:APP_INITIALIZER, mut:create
+        [1] t:redux_reducer, var:appinitializer, mut:update
+        [2] t:redux_action, var:INITIALIZE_APP, mut:create
+
+<file path="src/components/common/AppTextInput.tsx"/>
+
+  imp:
+    react:[React]
+      react-native-paper:[TextInput, useTheme, TextInputProps]
+      react-native:[StyleSheet]
+      __exports__:[default]
+  fn:
+    AppTextInput({ ... })({ ... })
+      doc: "AppTextInput Component\nConsistent themed text input with project styling"
+
+<file path="src/components/common/AuthBootstrap.tsx"/>
+
+  imp:
+    react:[React]
+      react-native:[View, Text, ActivityIndicator, StyleSheet]
+      react-native-paper:[useTheme]
+      @hooks/reduxHooks:[useAppDispatch]
+      @store/thunks/authThunks:[bootstrapFromKeychain]
+      ../../database/DatabaseProvider:[useDatabase]
+      __exports__:[default]
+  fn:
+    AuthBootstrap({ ... })({ ... })
+      doc: "AuthBootstrap Component\nRuns authentication bootstrap when app starts\nMust be rendered inside Redux Provider and DatabaseProvider contexts"
+    async runAuthBootstrap()
+      doc: Run authentication bootstrap when database is ready
+  states:
+    [0] t:redux_action, var:AUTH_BOOTSTRAP, mut:create
+        [1] t:redux_reducer, var:authbootstrap, mut:update
+        [2] t:redux_action, var:RUN_AUTH_BOOTSTRAP, mut:create
+
+<file path="src/components/common/ErrorBoundary.tsx"/>
+
+  imp:
+    react:[React, Component, ReactNode]
+      react-native:[View, Text, StyleSheet, TouchableOpacity, SafeAreaView]
+      __exports__:[default]
+  cls:
+    ErrorBoundary(Component) [component]
+      mth: constructor(props), getDerivedStateFromError(error), componentDidCatch(error, errorInfo), render()
+  states: [0] t:setState, var:state, mut:create
+
+<file path="src/components/common/ErrorTestComponent.tsx"/>
+
+  imp:
+    react:[React, useState]
+      react-native:[View, Text, TouchableOpacity, StyleSheet]
+      __exports__:[default]
+  fn:
+    ErrorTestComponent({ ... })({ ... })
+      doc: "Component that can throw errors for testing ErrorBoundary\nWARNING: Only use this for testing purposes"
+  states: [0] t:useState, var:errortest, mut:update
+
+<file path="src/components/common/FloatingActionButton.tsx"/>
+
+  imp:
+    react:[React]
+      react-native:[TouchableOpacity, Text, View, StyleSheet, GestureResponderEvent, Alert]
+      react-native-paper:[useTheme, MD3Theme]
+      __exports__:[default]
+  fn:
+    FloatingActionButton({ ... })({ ... })
+    handlePress(event)(event)
+    handleLongPress()
+    getAccessibilityLabel()
+    createStyles(theme)(theme)
+  states:
+    [0] t:useState, var:handlepress, mut:update
+        [1] t:useState, var:handlelongpress, mut:update
+  events:
+    [0] t:dom_event, event:callback, hdl:FloatingActionButton, framework:Custom
+        [1] t:dom_event, event:unknown, hdl:FloatingActionButton, framework:Generic
+        [2] t:dom_event, event:unknown, hdl:handlePress, framework:Generic
+        [3] t:dom_event, event:unknown, hdl:handleLongPress, framework:Generic
+
+<file path="src/components/common/LastSyncIndicator.tsx"/>
+
+  imp:
+    react:[React, useState, useEffect]
+      react-native:[View, StyleSheet]
+      react-native-paper:[Text, useTheme, Icon]
+      ../../hooks/reduxHooks:[useAppSelector]
+      ../../contexts/ConnectivityContext:[useConnectivity]
+      ../../store/slices/networkSlice:[selectLastSyncTs, selectSyncInProgress]
+      ../../utils/date:[formatRelativeTime]
+      __exports__:[default]
+  fn:
+    LastSyncIndicator({ ... })({ ... })
+    getStatusColor()
+    getStatusIcon()
+    getStatusText()
+  states:
+    [0] t:useState, var:lastsyncindicator, mut:update
+        [1] t:redux_action, var:LAST_SYNC_INDICATOR, mut:create
+        [2] t:useState, var:getstatuscolor, mut:update
+        [3] t:redux_action, var:GET_STATUS_COLOR, mut:create
+        [4] t:useState, var:getstatusicon, mut:update
+        [5] t:redux_action, var:GET_STATUS_ICON, mut:create
+        [6] t:useState, var:getstatustext, mut:update
+        [7] t:redux_action, var:GET_STATUS_TEXT, mut:create
+
+<file path="src/components/common/OfflineBanner.tsx"/>
+
+  imp:
+    react:[useEffect, useRef, useState]
+      react-native:[Text, StyleSheet, Animated, AccessibilityInfo]
+      @contexts/ConnectivityContext:[useConnectivity]
+      @constants/strings:[OFFLINE_MESSAGE]
+      __exports__:[default]
+  fn:
+    OfflineBanner()
+      doc: "Offline Banner Component\nShows/hides based on connectivity status with smooth animation\nFeatures debounced state changes to prevent flicker"
+  states: [0] t:useState, var:offlinebanner, mut:update
+
+<file path="src/components/common/PullToRefreshControl.tsx"/>
+
+  imp:
+    react:[React]
+      react-native:[RefreshControl, RefreshControlProps]
+      react-native-paper:[useTheme]
+      ../../hooks/usePullToRefresh:[usePullToRefresh]
+      __exports__:[default]
+
+<file path="src/components/common/ScreenContainer.tsx"/>
+
+  imp:
+    react:[React]
+      react-native:[View, ScrollView, StyleSheet, ViewStyle, StatusBar]
+      react-native-paper:[useTheme]
+      __exports__:[default]
+  fn:
+    ScreenContainer({ ... })({ ... })
+      doc: "ScreenContainer Component\nProvides consistent theming and layout for all screens"
+
+<file path="src/components/common/TopBar.tsx"/>
+
+  imp:
+    react:[React, useCallback]
+      react-native:[View, StyleSheet, Platform, TouchableOpacity, Text]
+      react-native-paper:[Appbar, Badge, Icon, IconButton, useTheme]
+      react-native-safe-area-context:[useSafeAreaInsets]
+      ../../hooks/reduxHooks:[useAppSelector]
+      ../../contexts/ConnectivityContext:[useConnectivity]
+      ../../store/slices/networkSlice:[selectUnreadCount, selectSyncInProgress, selectLastSyncTs]
+      ../../services/SyncManager:[getSyncManager]
+      ../../navigation/navigationRef:[navigateToNotifications]
+      ../../store/index:[store]
+      __exports__:[default]
+  fn:
+    TopBar({ ... })({ ... })
+    getSyncAccessibilityLabel()
+      doc: Get sync button accessibility label
+    getSyncAccessibilityHint()
+      doc: Get sync button accessibility hint
+    getNotificationsAccessibilityLabel()
+      doc: Get notifications accessibility label
+  states:
+    [0] t:redux_action, var:TOP_BAR, mut:create
+        [1] t:redux_action, var:GET_SYNC_ACCESSIBILITY_LABEL, mut:create
+        [2] t:redux_action, var:GET_SYNC_ACCESSIBILITY_HINT, mut:create
+        [3] t:redux_action, var:GET_NOTIFICATIONS_ACCESSIBILITY_LABEL, mut:create
+
+<file path="src/components/common/index.ts"/>
+
+  imp: {__exports__:[default]}
+
+<file path="src/components/dashboard/DashboardStatCard.tsx"/>
+
+  imp:
+    react:[React]
+      react-native:[View, Text, StyleSheet, Platform]
+      react-native-paper:[useTheme, MD3Theme]
+      __exports__:[default]
+  fn:
+    getDisplayValue()
+    getSubtitle()
+    getAccessibilityLabel()
+    createStyles(theme)(theme)
+      doc: Create theme-aware styles
+
+<file path="src/components/dashboard/index.ts"/>
+
+  imp: {__exports__:[default]}
+
+<file path="src/components/debug/StateDebugger.tsx"/>
+
+  imp:
+    react:[React]
+      react-native:[View, Text, ScrollView, StyleSheet]
+      react-redux:[useSelector]
+      ../../store:[RootState]
+      __exports__:[default]
+  fn:
+    StateDebugger()
+  states:
+    [0] t:redux_action, var:STATE_DEBUGGER, mut:create
+        [1] t:redux_reducer, var:statedebugger, mut:update
+
+<file path="src/components/leads/EmptyLeadsState.tsx"/>
+
+  imp:
+    react:[React]
+      react-native:[View, Text, StyleSheet]
+      react-native-paper:[useTheme, Button, MD3Theme]
+      __exports__:[default]
+  fn:
+    EmptyLeadsState({ ... })({ ... })
+    createStyles(theme)(theme)
+      doc: Create theme-aware styles
+  states: [0] t:useState, var:emptyleadsstate, mut:update
+
+<file path="src/components/leads/LeadsApiTest.tsx"/>
+
+  imp:
+    react:[React]
+      react-native:[View, Text, ActivityIndicator, FlatList, StyleSheet]
+      ../../store/api/leadApi:[useGetLeadsQuery]
+      react-redux:[useSelector]
+      ../../store/slices/leadSlice:[selectLeads, selectLeadsTotalCount]
+      ../../store:[RootState]
+      __exports__:[default]
+  fn:
+    LeadsApiTest()
+  states: [0] t:redux_action, var:LEADS_API_TEST, mut:create
+
+<file path="src/components/leads/LeadsApiTestComplete.tsx"/>
+
+  imp:
+    react:[React]
+      react-native:[View, Text, ActivityIndicator, FlatList, StyleSheet, RefreshControl, TouchableOpacity, ScrollView]
+      ../../store/api/leadApi:[useGetLeadsQuery]
+      react-redux:[useSelector]
+      ../../store/slices/leadSlice:[selectLeads, selectLeadsTotalCount, selectLeadsLoading, selectLeadsError, selectLeadsLastSync, selectLeadState]
+      ../../store:[RootState]
+      ../../database/models/Lead:[Lead]
+      __exports__:[default]
+  fn:
+    LeadsApiTestComplete()
+    handleRefresh()
+    getStatusStyle(status)(status)
+  states:
+    [0] t:redux_action, var:LEADS_API_TEST_COMPLETE, mut:create
+        [1] t:redux_action, var:HANDLE_REFRESH, mut:create
+        [2] t:useState, var:handlerefresh, mut:update
+        [3] t:redux_action, var:GET_STATUS_STYLE, mut:create
+  events:
+    [0] t:dom_event, event:callback, hdl:LeadsApiTestComplete, framework:Custom
+        [1] t:dom_event, event:unknown, hdl:handleRefresh, framework:Generic
+
+<file path="src/components/leads/LeadsApiTestPagination.tsx"/>
+
+  imp:
+    react:[React]
+      react-native:[View, Text, ActivityIndicator, FlatList, StyleSheet, TouchableOpacity]
+      react-redux:[useSelector]
+      ../../store/api/leadApi:[useGetLeadsQuery]
+      ../../store/selectors/leadSelectors:[selectAllLeadsSorted, selectPaginationMeta, selectLeadStatistics, selectLeadsNeedingFollowUp]
+      ../../store:[RootState]
+      __exports__:[default]
+  fn:
+    LeadsApiTestPagination()
+    loadPage(page)(page)
+    getPriorityStyle(priority)(priority)
+  states:
+    [0] t:redux_action, var:LEADS_API_TEST_PAGINATION, mut:create
+        [1] t:redux_action, var:LOAD_PAGE, mut:create
+        [2] t:redux_action, var:GET_PRIORITY_STYLE, mut:create
+  events: [0] t:dom_event, event:load, hdl:loadPage, framework:DOM
+
+<file path="src/components/leads/index.ts"/>
+
+  imp: {__exports__:[default]}
+
+<file path="src/components/notifications/NotificationsList.tsx"/>
+
+  imp:
+    react:[React]
+      react-native:[View, Text, FlatList, StyleSheet, TouchableOpacity]
+      ../../store/api/notificationsApi:[useGetUnreadNotificationsQuery, useMarkNotificationAsReadMutation]
+      __exports__:[default]
+  fn:
+    NotificationsList()
+    async handleMarkAsRead(notificationId)(notificationId)
+    renderNotification({ ... })({ ... })
+  states: [0] t:useState, var:handlemarkasread, mut:update
+  events: [0] t:dom_event, event:unknown, hdl:handleMarkAsRead, framework:Generic
+
+<file path="src/config/Config.ts"/>
+
+  imp:
+    react-native-config:[Config]
+      __exports__:[default]
+  fn:
+    getConfigValue(key, fallback)(key, fallback)
+      doc: "Get configuration value with fallback\n@param key - Configuration key\n@param fallback - Fallback value if key is undefined\n@returns Configuration value or fallback"
+    isDevelopment()
+      doc: "Development configuration check\n@returns true if running in development mode"
+    isProduction()
+      doc: "Production configuration check\n@returns true if running in production mode"
+    isStaging()
+      doc: "Staging configuration check\n@returns true if running in staging mode"
+
+<file path="src/config/Network.ts"/>
+
+  imp:
+    ./Config:[getConfigValue]
+      __exports__:[default]
+
+<file path="src/config/api.ts"/>
+
+  imp: {__exports__:[default]}
+
+<file path="src/constants/auth.ts"/>
+
+  imp: {__exports__:[default]}
+
+<file path="src/constants/strings.ts"/>
+
+  imp: {__exports__:[default]}
+
+<file path="src/constants/sync.ts"/>
+
+  imp: {__exports__:[default]}
+
+<file path="src/contexts/ConnectivityContext.tsx"/>
+
+  imp:
+    react:[React, createContext, useContext, useEffect, useState]
+      @react-native-community/netinfo:[NetInfo]
+      __exports__:[default]
+  fn:
+    ConnectivityProvider({ ... })({ ... })
+      doc: "Connectivity Provider Component\nManages network connectivity state and provides it to the app"
+    useConnectivity()
+      doc: "Hook to access connectivity context\n@returns Connectivity context value\n@throws Error if used outside ConnectivityProvider"
+  states:
+    [0] t:useState, var:connectivityprovider, mut:update
+        [1] t:useState, var:context, mut:read
+        [2] t:useState, var:connectivity, mut:update
+        [3] t:useState, var:context, mut:read
+
+<file path="src/database/DatabaseProvider.tsx"/>
+
+  imp:
+    react:[React, createContext, useContext, useEffect, useState]
+      react-native-sqlite-storage:[openDatabase, SQLiteDatabase]
+      __exports__:[default]
+  fn:
+    useDatabase()
+    DatabaseProvider({ ... })({ ... })
+    async initializeDatabase()
+    async createAllTables(database)(database)
+    async createIndexes(database)(database)
+  states:
+    [0] t:useState, var:database, mut:update
+        [1] t:useState, var:context, mut:read
+        [2] t:useState, var:databaseprovider, mut:update
+        [3] t:useState, var:context, mut:read
+        [4] t:useState, var:initializedatabase, mut:update
+        [5] t:useState, var:context, mut:read
+        [6] t:useState, var:createalltables, mut:update
+        [7] t:useState, var:context, mut:read
+        [8] t:useState, var:createindexes, mut:update
+        [9] t:useState, var:context, mut:read
+
+<file path="src/database/dao/BaseDao.ts"/>
+
+  imp:
+    ../database:[SQLiteDatabase, SQLiteTransaction]
+      __exports__:[default]
+  cls:
+    BaseDao
+      doc: "Base DAO class with common CRUD operations\nAll entity DAOs should extend this class"
+      mth: constructor(db), getTableName(), findAll(whereClause, params), findById(id), upsertAll(records), deleteAll(whereClause, params), count(whereClause, params), addTimestamps(record, isUpdate), generateId()
+
+<file path="src/database/dao/CustomerDao.ts"/>
+
+  imp:
+    ./BaseDao:[BaseDao]
+      ../models/Customer:[Customer, CreateCustomerRequest, UpdateCustomerRequest]
+      ../database:[SQLiteDatabase]
+      __exports__:[default]
+  fn:
+    getInstance(db)(db)
+      doc: "Get singleton instance of CustomerDao\n@param db - Database instance\n@returns CustomerDao instance"
+    resetInstance()
+      doc: Reset singleton instance (for testing)
+  cls:
+    CustomerDao(BaseDao)
+      doc: Customer DAO implementation
+      mth: constructor(db), buildUpsertQuery(record), findByPhone(phone), findByEmail(email), findByKycStatus(kycStatus), findByCity(city), findByState(state), findPendingSync(), search(searchTerm), advancedSearch(criteria), create(customerRequest), update(updateRequest), updateKycStatus(customerId, kycStatus), getKycStatistics(), findByLocation(city, state), getUniqueCities(), getUniqueStates(), bulkUpdateKycStatus(customerIds, kycStatus), isPhoneRegistered(phone, excludeId), isEmailRegistered(email, excludeId), getRecentCustomers(days)
+
+<file path="src/database/dao/LeadDao.ts"/>
+
+  imp:
+    react-native-sqlite-storage:[SQLiteDatabase]
+      ../models/Lead:[Lead]
+      __exports__:[default]
+  cls:
+    LeadDao
+      mth: constructor(param), executeSql(query, params), upsertMany(leads, page), getPage(page, limit), getAllIds(), getPageWithMeta(page, limit), getLeadsCountByPage(), clearPage(page), mapRowToEntity(row), performanceTest(count)
+
+<file path="src/database/dao/QuotationDao.ts"/>
+
+  imp:
+    ./BaseDao:[BaseDao]
+      ../models/Quotation:[Quotation, CreateQuotationRequest]
+      ../database:[SQLiteDatabase]
+      __exports__:[default]
+  fn:
+    getInstance(db)(db)
+      doc: "Get singleton instance of QuotationDao\n@param db - Database instance\n@returns QuotationDao instance"
+    resetInstance()
+      doc: Reset singleton instance (for testing)
+  cls:
+    QuotationDao(BaseDao)
+      doc: Quotation DAO implementation
+      mth: constructor(db), buildUpsertQuery(record), findByLeadId(leadId), findByCustomerId(customerId), findByStatus(status), findByQuotationNumber(quotationNumber), findExpired(currentDate), findPendingSync(), findByAmountRange(minAmount, maxAmount), create(quotationRequest), updateStatus(quotationId, status), markExpired(quotationId), getTotalValueByCustomer(customerId), getStatistics()
+
+<file path="src/database/dao/SyncDao.ts"/>
+
+  imp:
+    ./BaseDao:[BaseDao]
+      ../models/SyncMetadata:[SyncMetadata, UpdateSyncMetadataRequest]
+      ../database:[SQLiteDatabase]
+      __exports__:[default]
+  fn:
+    getInstance(db)(db)
+      doc: "Get singleton instance of SyncDao\n@param db - Database instance\n@returns SyncDao instance"
+    resetInstance()
+      doc: Reset singleton instance (for testing)
+  cls:
+    SyncDao(BaseDao)
+      doc: Sync Metadata DAO implementation
+      mth: constructor(db), buildUpsertQuery(record), getByTableName(tableName), getAllSyncMetadata(), getPendingSync(), getFailedSync(), getLastSyncTimestamp(tableName), updateSyncMetadata(updateRequest), markSyncStarted(tableName), markSyncCompleted(tableName, recordCount, version), markSyncFailed(tableName, errorMessage), resetSyncStatus(tableName), getSyncStatistics(), isSyncNeeded(tableName, maxAgeMinutes), getTablesNeedingSync(maxAgeMinutes)
+
+<file path="src/database/dao/index.ts"/>
+
+  imp: {__exports__:[default]}
+
+<file path="src/database/database.ts"/>
+
+  imp:
+    ./migrations:[runMigrations, needsMigrations]
+      __exports__:[default]
+  fn:
+    async initializeDatabase()
+
+<file path="src/database/improvedMigrations.ts"/>
+
+  imp:
+    ./database:[SQLiteDatabase]
+      __exports__:[default]
+  fn:
+    async getCurrentVersionSafe(db)(db)
+      doc: Get current database version with fallback mechanisms
+    async runMigrationsSafe(db, targetVersion)(db, targetVersion)
+      doc: Run migrations with improved error handling
+  events:
+    [0] t:dom_event, event:callback, hdl:getCurrentVersionSafe, framework:Custom
+        [1] t:dom_event, event:unknown, hdl:getCurrentVersionSafe, framework:Generic
+
+<file path="src/database/migrations.ts"/>
+
+  imp:
+    react-native-sqlite-storage:[SQLiteDatabase]
+      ./schema:[CURRENT_SCHEMA_VERSION]
+      ./migrations/steps/v2_add_page_to_leads:[migrateTo2_addPageNumber, validateV2Migration]
+      __exports__:[default]
+  fn:
+    async getCurrentSchemaVersion(db)(db)
+      doc: "Get current schema version from database\n@param db - SQLite database instance\n@returns Promise<number> - Current schema version"
+    async setSchemaVersion(db, version)(db, version)
+      doc: "Set schema version in database\n@param db - SQLite database instance\n@param version - Version number to set"
+    async runMigrations(db)(db)
+      doc: "Run all pending migrations\n@param db - SQLite database instance\n@returns Promise<void>"
+    async needsMigrations(db)(db)
+      doc: "Check if migrations are needed\n@param db - SQLite database instance\n@returns Promise<boolean>"
+    async getPendingMigrations(db)(db)
+      doc: "Get pending migrations info\n@param db - SQLite database instance\n@returns Promise<MigrationStep[]>"
+    async runLegacyMigrations(db)(db)
+      doc: "Legacy migration support - for backwards compatibility\nThis can be removed in future versions"
+
+<file path="src/database/migrations/steps/v2_add_page_to_leads.ts"/>
+
+  imp:
+    react-native-sqlite-storage:[SQLiteDatabase]
+      __exports__:[default]
+  fn:
+    async migrateTo2_addPageNumber(db)(db)
+      doc: "Migration to add page_number column to leads table\n@param db - SQLite database instance\n@returns Promise<void>"
+    async validateV2Migration(db)(db)
+      doc: "Validation function to check if migration was successful\n@param db - SQLite database instance\n@returns Promise<boolean>"
+
+<file path="src/database/models/Customer.ts"/>
+
+  imp: {__exports__:[default]}
+
+<file path="src/database/models/Lead.ts"/>
+
+  imp: {__exports__:[default]}
+
+<file path="src/database/models/Quotation.ts"/>
+
+  imp: {__exports__:[default]}
+
+<file path="src/database/models/SyncMetadata.ts"/>
+
+  imp: {__exports__:[default]}
+
+<file path="src/database/schema.ts"/>
+
+  imp: {__exports__:[default]}
+
+<file path="src/database/sqlcipherImport.ts"/>
+
+  imp:
+    react-native-sqlite-storage:[SQLiteStorage]
+      __exports__:[default]
+
+<file path="src/database/testDatabase.ts"/>
+
+  imp:
+    ../utils/secureStorage/SQLiteKeyHelper:[getDbKey]
+      react-native-sqlcipher-storage:[SQLiteStorage]
+      __exports__:[default]
+  fn:
+    async testDatabaseSteps()
+
+<file path="src/database/testSQLCipher.ts"/>
+
+  imp: {__exports__:[default]}
+  fn:
+    async testSQLCipherLibrary()
+      doc: Test SQLCipher Library Integration
+
+<file path="src/debug/checkApiImports.ts"/>
+
+  imp: {__exports__:[default]}
+  fn:
+    checkApiImports()
+
+<file path="src/debug/checkStore.ts"/>
+
+  imp:
+    ../store/store:[store]
+      ../store/api/simpleNotificationsApi:[simpleNotificationsApi]
+      __exports__:[default]
+  fn:
+    debugStoreConfiguration()
+
+<file path="src/debug/testDashboardHydration.ts"/>
+
+  imp:
+    ../sync/SyncManager:[getSyncManager]
+      ../store:[store]
+      ../store/slices/networkSlice:[selectDashboardSummary]
+      __exports__:[default]
+  fn:
+    async testDashboardHydration()
+
+<file path="src/debug/testKeyGeneration.ts"/>
+
+  imp:
+    ../utils/secureStorage/SQLiteKeyHelper:[getDbKey]
+      __exports__:[default]
+  fn:
+    async testKeyGeneration()
+      doc: Debug script to test key generation
+
+<file path="src/debug/testNetworkSlice.ts"/>
+
+  imp:
+    ../store/store:[store]
+      ../store/slices/networkSlice:[setUnreadNotificationCount, setLastSyncTimestamp, selectUnreadCount, selectLastSyncTs]
+      __exports__:[default]
+  fn:
+    testNetworkSliceEnhancements()
+
+<file path="src/debug/testStore.ts"/>
+
+  imp:
+    ../store/store:[store]
+      ../store/api/notificationsApi:[notificationsApi]
+      __exports__:[default]
+  fn:
+    debugStore()
+  states: [0] t:useState, var:debugstore, mut:update
+
+<file path="src/hooks/index.ts"/>
+
+  imp: {__exports__:[default]}
+
+<file path="src/hooks/reduxHooks.ts"/>
+
+  imp:
+    react-redux:[TypedUseSelectorHook, useDispatch, useSelector]
+      ../store/index:[RootState, AppDispatch]
+      __exports__:[default]
+  fn:
+    useAppDispatch()
+      doc: Typed version of useDispatch hook
+  states: [0] t:redux_action, var:USE_APP_DISPATCH, mut:create
+
+<file path="src/hooks/useDashboardRefresh.ts"/>
+
+  imp:
+    react:[useCallback]
+      react-native:[AccessibilityInfo]
+      react-native-toast-message:[Toast]
+      ./reduxHooks:[useAppSelector, useAppDispatch]
+      ../sync/SyncManager:[SyncManager]
+      ../store/slices/networkSlice:[selectSyncInProgress, selectNextAllowedSyncAt, selectLastSyncAt, setSyncStarted, setSyncFinished, setSyncFailed, setNextAllowedSyncAt]
+      ../store/api/dashboardApi:[dashboardApi]
+      ../constants/sync:[isSyncAllowed, getNextAllowedSyncAt]
+      __exports__:[default]
+  fn:
+    useDashboardRefresh()
+      doc: "Dashboard refresh hook with sync guard and dashboard API integration\nThis hook provides pull-to-refresh functionality specifically optimized for\nthe dashboard screen. It integrates with both the general sync system and\nthe dashboard API to ensure fresh data is loaded.\nFeatures:\n- Respects sync guard interval to prevent excessive API calls\n- Manages sync state in Redux for UI consistency\n- Invalidates dashboard cache to force fresh data fetch\n- Provides user feedback via toast messages\n- Announces refresh actions for accessibility\n- Handles all error scenarios gracefully\n@returns Object with refreshing state, onRefresh function, and sync timestamps\n@example\n```typescript\nconst { refreshing, onRefresh, lastSyncAt } = useDashboardRefresh();\nreturn (\n<ScrollView refreshControl={\n<RefreshControl refreshing={refreshing} onRefresh={onRefresh} />\n}>\n<DashboardContent />\n</ScrollView>\n);\n```"
+  states:
+    [0] t:useState, var:dashboardrefresh, mut:update
+        [1] t:redux_action, var:USE_DASHBOARD_REFRESH, mut:create
+        [2] t:redux_reducer, var:usedashboardrefresh, mut:update
+
+<file path="src/hooks/useDatabase.ts"/>
+
+  imp:
+    ../database/DatabaseProvider:[useDatabase, useDatabaseInstance, useDatabaseEffect]
+      ../database/dao:[getLeadDao, getCustomerDao, getQuotationDao, getSyncDao]
+      ../database/database:[SQLiteDatabase]
+      __exports__:[default]
+  fn:
+    useDatabaseServices()
+      doc: "Hook to get database services (DAOs)\n@returns Database and DAO instances\n@throws Error if database is not ready"
+    useDatabaseStatus()
+      doc: Hook for database status and control
+
+<file path="src/hooks/usePullToRefresh.ts"/>
+
+  imp:
+    react:[useCallback]
+      react-native:[AccessibilityInfo]
+      react-native-toast-message:[Toast]
+      ./reduxHooks:[useAppSelector, useAppDispatch]
+      ../sync/SyncManager:[SyncManager]
+      ../store/slices/networkSlice:[selectSyncInProgress, selectNextAllowedSyncAt, setSyncStarted, setSyncFinished, setSyncFailed, setNextAllowedSyncAt]
+      ../constants/sync:[isSyncAllowed, getNextAllowedSyncAt, SYNC_GUARD_MS]
+      __exports__:[default]
+  fn:
+    usePullToRefresh()
+      doc: "Pull-to-refresh hook with sync guard and state management\nFeatures:\n- Respects sync guard interval (SYNC_GUARD_MS)\n- Manages sync state in Redux\n- Shows toast messages for user feedback\n- Announces refresh for accessibility\n- Prevents duplicate sync operations\n@returns Object with refreshing state and onRefresh function"
+  states:
+    [0] t:useState, var:pulltorefresh, mut:update
+        [1] t:redux_action, var:USE_PULL_TO_REFRESH, mut:create
+
+<file path="src/hooks/useThemeToggle.ts"/>
+
+  imp:
+    react-native:[useColorScheme]
+      ./reduxHooks:[useAppSelector, useAppDispatch]
+      @store/slices/preferencesSlice:[setColorScheme, ColorScheme]
+      @theme/index:[getTheme]
+      __exports__:[default]
+  fn:
+    useThemeToggle()
+      doc: Custom hook for theme management
+    toggleColorScheme(scheme)(scheme)
+      doc: Toggle color scheme preference
+    getThemeName()
+      doc: Get readable theme name
+  states:
+    [0] t:redux_action, var:USE_THEME_TOGGLE, mut:create
+        [1] t:redux_action, var:TOGGLE_COLOR_SCHEME, mut:create
+        [2] t:redux_action, var:GET_THEME_NAME, mut:create
+
+<file path="src/models/LeadModel.ts"/>
+
+  imp: {__exports__:[default]}
+  fn:
+    isApiLead(obj)(obj)
+      doc: Runtime type guard to check if an object is a valid ApiLead
+    isLeadsApiResponse(obj)(obj)
+      doc: Runtime type guard for API response envelope
+    transformApiLeadToLead(apiLead)(apiLead)
+      doc: Transform API lead to internal lead model
+    isTerminalStatus(status)(status)
+      doc: Helper function to check if a status is terminal
+    getValidNextStatuses(currentStatus)(currentStatus)
+      doc: Helper function to get valid next statuses
+
+<file path="src/navigation/AppNavigator.tsx"/>
+
+  imp:
+    react:[React]
+      @react-navigation/native-stack:[createNativeStackNavigator]
+      ./MainTabNavigator:[MainTabNavigator]
+      ./NotificationsStack:[NotificationsStack]
+      ./types:[RootStackParamList]
+      __exports__:[default]
+  fn:
+    AppNavigator()
+
+<file path="src/navigation/AuthStack.tsx"/>
+
+  imp:
+    react:[React]
+      @react-navigation/native-stack:[createNativeStackNavigator]
+      @screens/auth/SplashScreen:[SplashScreen]
+      @screens/auth/LoginScreen:[LoginScreen]
+      ./types:[AuthStackParamList]
+      @screens/auth/OtpScreen:[OtpScreen]
+      __exports__:[default]
+  fn:
+    AuthStack()
+      doc: "AuthStack Component\nNavigation stack for authentication screens"
+
+<file path="src/navigation/HomeStack.tsx"/>
+
+  imp:
+    react:[React]
+      @react-navigation/native-stack:[createNativeStackNavigator]
+      ../screens/home/HomeScreen:[HomeScreen]
+      ../screens/leads/MyLeadsScreen:[MyLeadsScreen]
+      __exports__:[default]
+  fn:
+    HomeStack()
+
+<file path="src/navigation/MainTabNavigator.tsx"/>
+
+  imp:
+    react:[React, useEffect]
+      react-native:[Platform, BackHandler, Alert, Text]
+      @react-navigation/bottom-tabs:[createBottomTabNavigator]
+      @react-navigation/native:[useNavigation, useIsFocused]
+      ./HomeStack:[HomeStack]
+      @screens/settings/SettingsScreen:[SettingsScreen]
+      ./types:[MainTabParamList]
+      __exports__:[default]
+  fn:
+    MainTabNavigator()
+      doc: "MainTabNavigator Component\nBottom tab navigation with Home and Settings"
+    handleBackPress()
+    TabIcon({ ... })({ ... })
+  states: [0] t:useState, var:handlebackpress, mut:update
+  events: [0] t:dom_event, event:unknown, hdl:handleBackPress, framework:Generic
+
+<file path="src/navigation/NavigationProvider.tsx"/>
+
+  imp:
+    react:[React]
+      react-native:[View, StyleSheet]
+      @react-navigation/native:[NavigationContainer]
+      @react-navigation/native-stack:[createNativeStackNavigator]
+      @hooks/reduxHooks:[useAppSelector]
+      ./AuthStack:[AuthStack]
+      ./MainTabNavigator:[MainTabNavigator]
+      @components/common/OfflineBanner:[OfflineBanner]
+      @components/common/AuthBootstrap:[AuthBootstrap]
+      @components/auth/AuthGuard:[AuthGuard]
+      ./types:[RootStackParamList]
+      ./navigationRef:[navigationRef]
+      __exports__:[default]
+  fn:
+    NavigationProvider()
+      doc: "Navigation Provider Component\nManages root-level navigation and authentication flow with AuthGuard protection"
+  states: [0] t:redux_action, var:NAVIGATION_PROVIDER, mut:create
+  events:
+    [0] t:dom_event, event:callback, hdl:NavigationProvider, framework:Custom
+        [1] t:dom_event, event:unknown, hdl:NavigationProvider, framework:Generic
+
+<file path="src/navigation/NotificationsStack.tsx"/>
+
+  imp:
+    react:[React]
+      @react-navigation/native-stack:[createNativeStackNavigator]
+      ../screens/notifications/NotificationsScreen:[NotificationsScreen]
+      __exports__:[default]
+  fn:
+    NotificationsStack()
+
+<file path="src/navigation/index.ts"/>
+
+  imp: {__exports__:[default]}
+
+<file path="src/navigation/navigationRef.ts"/>
+
+  imp:
+    react:[React]
+      @react-navigation/native:[NavigationContainerRef, CommonActions]
+      ./types:[RootStackParamList]
+      __exports__:[default]
+  fn:
+    navigate(name, params)(name, params)
+      doc: Navigate to any screen
+    goBack()
+      doc: Go back to previous screen
+    reset(routeName)(routeName)
+      doc: Reset navigation stack
+    navigateToNotifications()
+      doc: Navigate to notifications screen
+    isNavigationReady()
+      doc: Check if navigator is ready
+    getCurrentRouteName()
+      doc: Get current route name
+  events:
+    [0] t:dom_event, event:callback, hdl:isNavigationReady, framework:Custom
+        [1] t:dom_event, event:unknown, hdl:isNavigationReady, framework:Generic
+
+<file path="src/navigation/types.ts"/>
+
+  imp:
+    @react-navigation/native:[NavigatorScreenParams]
+      @react-navigation/native-stack:[NativeStackScreenProps]
+      ./NotificationsStack:[NotificationsStackParamList]
+      __exports__:[default]
+
+<file path="src/screens/RootScreen_old.tsx"/>
+
+  imp:
+    react:[React]
+      react-native:[SafeAreaView, ScrollView, StatusBar, StyleSheet, Text, useColorScheme, View]
+      @config/Config:[appConfig, isDevelopment, isProduction, isStaging]
+      react-native/Libraries/NewAppScreen:[Colors, DebugInstructions, Header, LearnMoreLinks, ReloadInstructions]
+      __exports__:[default]
+  fn:
+    RootScreen()
+      doc: "Root Screen - Temporary welcome screen for development\nWill be replaced with authentication flow in later tasks"
+
+<file path="src/screens/auth/LoginScreen.tsx"/>
+
+  imp:
+    react:[React]
+      react-native:[View, Text, StyleSheet, Alert]
+      @react-navigation/native:[useNavigation, NavigationProp]
+      @store/api/authApi:[useRequestOtpMutation]
+      @components/common:[AppButton, AppTextInput, ScreenContainer]
+      react-native-paper:[useTheme]
+      @contexts/ConnectivityContext:[useConnectivity]
+      @navigation/types:[AuthStackParamList]
+      @utils/errorMessage:[validateBackendError]
+      __exports__:[default]
+  fn:
+    LoginScreen()
+      doc: "Login Screen Component\nHandles phone number input and OTP request"
+    validatePhone(phoneNumber)(phoneNumber)
+      doc: Validate phone number format
+    async handleGetOtp()
+      doc: Handle OTP request
+    handlePhoneChange(text)(text)
+      doc: Format phone number input
+  states:
+    [0] t:useState, var:handlegetotp, mut:update
+        [1] t:useState, var:handlephonechange, mut:update
+  events:
+    [0] t:dom_event, event:unknown, hdl:handleGetOtp, framework:Generic
+        [1] t:dom_event, event:change, hdl:handlePhoneChange, framework:DOM
+        [2] t:onChange, event:change, hdl:handlePhoneChange, framework:Generic
+
+<file path="src/screens/auth/OtpScreen.tsx"/>
+
+  imp:
+    react:[React]
+      react-native:[View, Text, StyleSheet, Alert, BackHandler]
+      @react-navigation/native:[useNavigation, useRoute, useFocusEffect, NavigationProp, RouteProp]
+      react-native-otp-textinput:[OTPTextInput]
+      @store/api/authApi:[useVerifyOtpMutation, useRequestOtpMutation]
+      @hooks/reduxHooks:[useAppDispatch]
+      @store/slices/authSlice:[loginSuccess]
+      @components/common:[AppButton, ScreenContainer]
+      react-native-paper:[useTheme]
+      @contexts/ConnectivityContext:[useConnectivity]
+      @constants/auth:[OTP_EXPIRY_SEC, OTP_RESEND_INTERVAL]
+      @navigation/types:[AuthStackParamList]
+      @utils/secureStorage/KeychainHelper:[saveToken]
+      @utils/errorMessage:[validateBackendError]
+      @store/thunks/authThunks:[initializeSyncAfterLogin]
+      __exports__:[default]
+  fn:
+    OtpScreen()
+      doc: "OTP Screen Component\nHandles OTP verification with timer and resend functionality"
+    onBackPress()
+      doc: Handle hardware back button
+    async handleVerifyOtp()
+      doc: Handle OTP verification
+    async handleResendOtp()
+      doc: Handle resend OTP
+    formatTime(seconds)(seconds)
+      doc: Format timer display
+    formatLockTime(seconds)(seconds)
+      doc: Format lock timer display
+  states:
+    [0] t:redux_action, var:OTP_SCREEN, mut:create
+        [1] t:redux_action, var:ON_BACK_PRESS, mut:create
+        [2] t:redux_action, var:HANDLE_VERIFY_OTP, mut:create
+        [3] t:useState, var:handleverifyotp, mut:update
+        [4] t:redux_action, var:HANDLE_RESEND_OTP, mut:create
+        [5] t:useState, var:handleresendotp, mut:update
+        [6] t:redux_action, var:FORMAT_TIME, mut:create
+        [7] t:redux_action, var:FORMAT_LOCK_TIME, mut:create
+  events:
+    [0] t:dom_event, event:callback, hdl:onBackPress, framework:Custom
+        [1] t:dom_event, event:unknown, hdl:onBackPress, framework:Generic
+        [2] t:dom_event, event:unknown, hdl:handleVerifyOtp, framework:Generic
+        [3] t:dom_event, event:unknown, hdl:handleResendOtp, framework:Generic
+
+<file path="src/screens/auth/SplashScreen.tsx"/>
+
+  imp:
+    react:[React, useEffect]
+      react-native:[View, Text, StyleSheet, ActivityIndicator]
+      @react-navigation/native:[useNavigation, NavigationProp]
+      @navigation/types:[AuthStackParamList]
+      __exports__:[default]
+  fn:
+    SplashScreen()
+      doc: "Splash Screen Component\nDisplays loading state and auto-navigates to Login"
+
+<file path="src/screens/home/HomeScreen.tsx"/>
+
+  imp:
+    react:[React, useEffect, useState, useCallback]
+      react-native:[View, Text, StyleSheet, ScrollView, RefreshControl, TouchableOpacity, Alert, Platform]
+      react-native-paper:[useTheme, Button, Card, Title, Paragraph, Chip, ActivityIndicator, MD3Theme]
+      @react-native-community/netinfo:[NetInfo]
+      @react-navigation/native:[useFocusEffect]
+      ../../hooks/reduxHooks:[useAppSelector]
+      ../../store/slices/networkSlice:[selectLastSyncTs, selectDashboardSummary, selectSyncInProgress, selectLastSyncAt, selectNetworkError, setDashboardSummary]
+      ../../contexts/ConnectivityContext:[useConnectivity]
+      ../../utils/date:[formatRelativeTime]
+      ../../components/common/OfflineBanner:[OfflineBanner]
+      ../../store/hooks:[useAppSelectorShallow]
+      ../../store/slices/leadSlice:[selectLeads]
+      ../../components/dashboard:[DashboardStatCard]
+      ../../sync/SyncManager:[getSyncManager]
+      ../../navigation/types:[HomeScreenProps]
+      ../../navigation/navigationRef:[navigate]
+      ../../store/api/dashboardApi:[useGetDashboardSummaryQuery]
+      react-redux:[useDispatch]
+      ../../components/common/TopBar:[TopBar]
+      __exports__:[default]
+  fn:
+    HomeScreen({ ... })({ ... })
+    updateDisplay()
+    getStatusColor(status, theme)(status, theme)
+      doc: Get status color based on lead status
+    createStyles(theme)(theme)
+      doc: Create theme-aware styles
+  states:
+    [0] t:useState, var:homescreen, mut:update
+        [1] t:redux_action, var:HOME_SCREEN, mut:create
+        [2] t:useState, var:updatedisplay, mut:update
+        [3] t:redux_action, var:UPDATE_DISPLAY, mut:create
+        [4] t:useState, var:getstatuscolor, mut:update
+        [5] t:redux_action, var:GET_STATUS_COLOR, mut:create
+        [6] t:useState, var:createstyles, mut:update
+        [7] t:redux_action, var:CREATE_STYLES, mut:create
+
+<file path="src/screens/leads/LeadListItem.tsx"/>
+
+  imp:
+    react:[React]
+      react-native:[View, Text, TouchableOpacity, StyleSheet]
+      ../../database/models/Lead:[Lead]
+      __exports__:[default]
+  fn:
+    LeadListItem({ ... })({ ... })
+    handlePress()
+    getStatusColor(status)(status)
+    getPriorityColor(priority)(priority)
+  states: [0] t:useState, var:handlepress, mut:update
+  events: [0] t:dom_event, event:unknown, hdl:handlePress, framework:Generic
+
+<file path="src/screens/leads/MyLeadsScreen.tsx"/>
+
+  imp:
+    react:[React, useState]
+      react-native:[View, Text, FlatList, StyleSheet, RefreshControl, ActivityIndicator]
+      react-redux:[useSelector]
+      ../../store/api/leadApi:[useGetLeadsQuery]
+      ../../store/slices/leadSlice:[selectLeads, selectLeadsLoading, selectLeadsError, selectLeadsTotalCount]
+      ../../store/selectors/leadSelectors:[selectPaginationMeta]
+      ./LeadListItem:[LeadListItem]
+      ../../components/leads/EmptyLeadsState:[EmptyLeadsState]
+      ../../database/models/Lead:[Lead]
+      ../../store:[RootState]
+      __exports__:[default]
+  fn:
+    MyLeadsScreen()
+    async handleRefresh()
+  states:
+    [0] t:useState, var:myleadsscreen, mut:update
+        [1] t:redux_action, var:MY_LEADS_SCREEN, mut:create
+        [2] t:useState, var:handlerefresh, mut:update
+        [3] t:redux_action, var:HANDLE_REFRESH, mut:create
+        [4] t:useState, var:handlerefresh, mut:update
+  events: [0] t:dom_event, event:unknown, hdl:handleRefresh, framework:Generic
+
+<file path="src/screens/notifications/NotificationsScreen.tsx"/>
+
+  imp:
+    react:[React]
+      react-native:[View, StyleSheet, ScrollView]
+      react-native-paper:[Text, List, Divider, useTheme]
+      react-native-safe-area-context:[useSafeAreaInsets]
+      ../../components/common/TopBar:[TopBar]
+      ../../hooks/reduxHooks:[useAppSelector]
+      ../../store/slices/networkSlice:[selectUnreadCount]
+      __exports__:[default]
+  fn:
+    NotificationsScreen()
+    handleBackPress()
+  states:
+    [0] t:redux_action, var:NOTIFICATIONS_SCREEN, mut:create
+        [1] t:redux_action, var:HANDLE_BACK_PRESS, mut:create
+        [2] t:useState, var:handlebackpress, mut:update
+  events: [0] t:dom_event, event:unknown, hdl:handleBackPress, framework:Generic
+
+<file path="src/screens/settings/SettingsScreen.tsx"/>
+
+  imp:
+    react:[React]
+      react-native:[View, Text, StyleSheet, TouchableOpacity, Alert]
+      @hooks/reduxHooks:[useAppSelector, useAppDispatch]
+      @store/thunks/authThunks:[cleanupSyncOnLogout, performLogout]
+      @config/Config:[appConfig]
+      react-native-paper:[RadioButton, useTheme]
+      @hooks/useThemeToggle:[useThemeToggle]
+      @components/common:[ScreenContainer, AppButton]
+      __exports__:[default]
+  fn:
+    SettingsScreen()
+      doc: "Settings Screen Component\nDisplays user info and app settings"
+    handleLogout()
+    handleSettingPress(setting)(setting)
+  states:
+    [0] t:redux_action, var:SETTINGS_SCREEN, mut:create
+        [1] t:redux_action, var:HANDLE_LOGOUT, mut:create
+        [2] t:useState, var:handlelogout, mut:update
+        [3] t:redux_action, var:HANDLE_SETTING_PRESS, mut:create
+        [4] t:useState, var:handlesettingpress, mut:update
+  events:
+    [0] t:dom_event, event:unknown, hdl:handleLogout, framework:Generic
+        [1] t:dom_event, event:unknown, hdl:handleSettingPress, framework:Generic
+
+<file path="src/services/SyncManager.ts"/>
+
+  imp:
+    @reduxjs/toolkit:[Store]
+      @react-native-async-storage/async-storage:[AsyncStorage]
+      @react-native-community/netinfo:[NetInfo]
+      react-native-toast-message:[Toast]
+      ../store/slices/networkSlice:[setSyncStarted, setSyncFinished, setSyncFailed, setNextAllowedSyncAt, setUnreadNotificationCount, setLastSyncTimestamp, selectSyncInProgress, selectNextAllowedSyncAt]
+      ../store/store:[RootState]
+      ../constants/sync:[AUTO_SYNC_INTERVAL_MS, MIN_SYNC_GAP_MS, SYNC_TIMEOUT_MS, SYNC_THROTTLE_MESSAGE, SYNC_CONCURRENT_MESSAGE, SyncSource]
+      __exports__:[default]
+  fn:
+    getSyncManager(store)(store)
+  cls:
+    SyncMutex
+      mth: acquire(), release(), isLocked(), cancelAll()
+    SyncManager
+      mth: constructor(store, config), initializeLastSyncTime(), canTriggerSync(source), checkNetworkConnection(), setSyncStatus(inProgress, error), updateLastSyncTime(), syncEntity(entity), syncAllEntities(), fetchUnreadCount(), fetchWithRetry(endpoint, entityName), manualSync(source), fullSync(source), autoSync(), getSyncStatus(), forceSync(), cancelAllSyncs(), getLastSyncTime()
+  states:
+    [0] t:redux_action, var:GET_SYNC_MANAGER, mut:create
+        [1] t:useState, var:getsyncmanager, mut:update
+
+<file path="src/services/SyncService.ts"/>
+
+  imp:
+    ../store:[store]
+      ../sync/SyncManager:[createSyncManager, SyncManager, SyncEvents]
+      ../database/database:[getSqliteDatabase]
+      __exports__:[default]
+  cls:
+    SyncService
+      mth: initializeSync(), cleanup(), manualSync(), forceSync(), getSyncStatus(), setupSyncEventListeners(), startAutoSync()
+
+<file path="src/services/persistence.ts"/>
+
+  imp:
+    @react-native-async-storage/async-storage:[AsyncStorage]
+      @reduxjs/toolkit:[Store]
+      ../store/slices/networkSlice:[setUnreadNotificationCount, setLastSyncTimestamp, setDashboardSummary, DashboardSummary]
+      __exports__:[default]
+  fn:
+    async saveToStorage(key, data)(key, data)
+      doc: Save data to AsyncStorage with error handling
+    async loadFromStorage(key, defaultValue)(key, defaultValue)
+      doc: Load data from AsyncStorage with error handling
+    async hydrateReduxSlices(store, additionalData)(store, additionalData)
+      doc: Hydrate Redux slices with persisted data
+    async initializePersistence(store)(store)
+      doc: Initialize persistence system
+  states:
+    [0] t:redux_action, var:SAVE_TO_STORAGE, mut:create
+        [1] t:redux_action, var:LOAD_FROM_STORAGE, mut:create
+        [2] t:redux_action, var:HYDRATE_REDUX_SLICES, mut:create
+        [3] t:redux_reducer, var:hydratereduxslices, mut:create
+        [4] t:redux_action, var:INITIALIZE_PERSISTENCE, mut:create
+  events: [0] t:dom_event, event:load, hdl:loadFromStorage, framework:DOM
+
+<file path="src/store/PersistGateProvider.tsx"/>
+
+  imp:
+    react:[React]
+      react-native:[View, ActivityIndicator, StyleSheet]
+      redux-persist/integration/react:[PersistGate]
+      ./index:[persistor]
+      __exports__:[default]
+  fn:
+    Loading()
+      doc: Loading component shown during rehydration
+    PersistGateProvider({ ... })({ ... })
+      doc: "PersistGate Provider Component\nWraps children with PersistGate for Redux persistence"
+  states:
+    [0] t:redux_action, var:LOADING, mut:create
+        [1] t:redux_action, var:PERSIST_GATE_PROVIDER, mut:create
+  events: [0] t:dom_event, event:load, hdl:Loading, framework:DOM
+
+<file path="src/store/api/authApi.ts"/>
+
+  imp:
+    @reduxjs/toolkit/query/react:[createApi]
+      ./baseQuery:[customBaseQuery]
+      ../../utils/secureStorage/KeychainHelper:[saveToken]
+      ../slices/authSlice:[loginSuccess]
+      __exports__:[default]
+
+<file path="src/store/api/baseApi.ts"/>
+
+  imp:
+    @reduxjs/toolkit/query/react:[createApi]
+      ./baseQuery:[customBaseQuery]
+      @reduxjs/toolkit:[createListenerMiddleware]
+      ../slices/authSlice:[logout]
+      __exports__:[default]
+
+<file path="src/store/api/baseQuery.ts"/>
+
+  imp:
+    @reduxjs/toolkit/query/react:[fetchBaseQuery, retry, BaseQueryFn, FetchArgs, FetchBaseQueryError]
+      @config/Config:[appConfig]
+      @config/Network:[API_TIMEOUT_MS, API_RETRY_COUNT]
+      ../index:[RootState]
+      ../../utils/secureStorage/KeychainHelper:[getToken]
+      ../thunks/authThunks:[performLogout]
+      __exports__:[default]
+
+<file path="src/store/api/dashboardApi.ts"/>
+
+  imp:
+    @reduxjs/toolkit/query/react:[createApi]
+      ./baseQuery:[customBaseQuery]
+      ../../types/api:[DashboardSummary, DashboardSummaryResponse]
+      ../slices/networkSlice:[setDashboardSummary]
+      __exports__:[default]
+
+<file path="src/store/api/index.ts"/>
+
+  imp: {__exports__:[default]}
+
+<file path="src/store/api/leadApi.ts"/>
+
+  imp:
+    @reduxjs/toolkit/query/react:[createApi]
+      ./baseQuery:[customBaseQuery]
+      ../../types/api:[LeadsApiResponse, LeadsData, GetLeadsParams, ApiLead]
+      ../slices/leadSlice:[setLeads]
+      __exports__:[default]
+  fn:
+    isValidApiLead(obj)(obj)
+      doc: Runtime validation for API Lead
+  states: [0] t:redux_action, var:IS_VALID_API_LEAD, mut:create
+
+<file path="src/store/api/notificationsApi.ts"/>
+
+  imp:
+    @reduxjs/toolkit/query/react:[createApi, fetchBaseQuery]
+      __exports__:[default]
+
+<file path="src/store/api/simpleNotificationsApi.ts"/>
+
+  imp:
+    @reduxjs/toolkit/query/react:[createApi, fetchBaseQuery]
+      __exports__:[default]
+
+<file path="src/store/hooks.ts"/>
+
+  imp:
+    react-redux:[useSelector, useDispatch, shallowEqual, TypedUseSelectorHook]
+      ./store:[RootState, AppDispatch]
+      __exports__:[default]
+  fn:
+    useAppDispatch()
+    useAppSelectorShallow(selector)(selector)
+      doc: "Performance-optimized selector hook using shallow equality\nUse this for selecting objects to avoid unnecessary re-renders"
+  states:
+    [0] t:redux_action, var:USE_APP_DISPATCH, mut:create
+        [1] t:redux_action, var:USE_APP_SELECTOR_SHALLOW, mut:create
+
+<file path="src/store/index.ts"/>
+
+  imp:
+    @reduxjs/toolkit:[configureStore, combineReducers]
+      redux-persist:[persistStore, persistReducer]
+      @reduxjs/toolkit/query:[setupListeners]
+      @react-native-async-storage/async-storage:[AsyncStorage]
+      ./slices/authSlice:[authSlice]
+      ./slices/preferencesSlice:[preferencesSlice]
+      ./slices/leadSlice:[leadSlice]
+      ./slices/customerSlice:[customerSlice]
+      ./api/baseApi:[baseApi]
+      ./api/authApi:[authApi]
+      ./middleware/errorMiddleware:[errorMiddleware]
+      ./transforms/sqliteTransform:[createSQLiteTransform]
+      ./slices/networkSlice:[networkSlice]
+      ./api/dashboardApi:[dashboardApi]
+      __exports__:[default]
+
+<file path="src/store/middleware/errorMiddleware.ts"/>
+
+  imp:
+    @reduxjs/toolkit:[isRejectedWithValue, Middleware]
+      react-native-toast-message:[Toast]
+      ../slices/authSlice:[logout]
+      ../../navigation/navigationRef:[resetToRoute]
+      ../../utils/errorMessage:[getFriendlyMessage, shouldAutoLogout, shouldShowToast]
+      ../index:[RootState]
+      __exports__:[default]
+  fn:
+    errorMiddleware(storeAPI)(storeAPI)
+      doc: "Error middleware to handle RTK Query errors globally\nProvides auto-logout and user-friendly error messages"
+  states: [0] t:redux_action, var:ERROR_MIDDLEWARE, mut:create
+
+<file path="src/store/selectors/leadSelectors.ts"/>
+
+  imp:
+    @reduxjs/toolkit:[createSelector]
+      ../index:[RootState]
+      ../../database/models/Lead:[Lead]
+      ../slices/leadSlice:[selectLeadState]
+      __exports__:[default]
+  fn:
+    selectLeadsByPage(page)(page)
+      doc: Select leads by specific page number
+    selectLeadsBySearchText(searchText)(searchText)
+      doc: Search leads by text (name, phone, address)
+    selectLeadById(leadId)(leadId)
+      doc: Select a specific lead by ID
+  states:
+    [0] t:redux_action, var:SELECT_LEADS_BY_PAGE, mut:create
+        [1] t:redux_action, var:SELECT_LEADS_BY_SEARCH_TEXT, mut:create
+        [2] t:redux_action, var:SELECT_LEAD_BY_ID, mut:create
+
+<file path="src/store/slices/authSlice.ts"/>
+
+  imp:
+    @reduxjs/toolkit:[createSlice, PayloadAction]
+      __exports__:[default]
+
+<file path="src/store/slices/customerSlice.ts"/>
+
+  imp:
+    @reduxjs/toolkit:[createSlice, PayloadAction]
+      ../../database/models/Customer:[Customer]
+      __exports__:[default]
+  fn:
+    selectCustomers(state)(state)
+    selectCustomersLoading(state)(state)
+    selectCustomersError(state)(state)
+    selectCustomersLastSync(state)(state)
+    selectCustomersTotalCount(state)(state)
+    selectCustomersSearchTerm(state)(state)
+    selectCustomersFilters(state)(state)
+    selectCustomersByKycStatus(status)(status)
+    selectCustomersByLocation(city, state)(city, state)
+    selectPendingCustomers(state)(state)
+    selectFilteredCustomers(state)(state)
+  states:
+    [0] t:redux_action, var:SELECT_CUSTOMERS, mut:create
+        [1] t:redux_action, var:SELECT_CUSTOMERS_LOADING, mut:create
+        [2] t:redux_action, var:SELECT_CUSTOMERS_ERROR, mut:create
+        [3] t:redux_action, var:SELECT_CUSTOMERS_LAST_SYNC, mut:create
+        [4] t:redux_action, var:SELECT_CUSTOMERS_TOTAL_COUNT, mut:create
+        [5] t:redux_action, var:SELECT_CUSTOMERS_SEARCH_TERM, mut:create
+        [6] t:redux_action, var:SELECT_CUSTOMERS_FILTERS, mut:create
+        [7] t:redux_action, var:SELECT_CUSTOMERS_BY_KYC_STATUS, mut:create
+        [8] t:redux_action, var:SELECT_CUSTOMERS_BY_LOCATION, mut:create
+        [9] t:redux_reducer, var:selectcustomersbylocation, mut:update
+        [10] t:redux_action, var:SELECT_PENDING_CUSTOMERS, mut:create
+        [11] t:redux_action, var:SELECT_FILTERED_CUSTOMERS, mut:create
+  events: [0] t:dom_event, event:load, hdl:selectCustomersLoading, framework:DOM
+
+<file path="src/store/slices/leadSlice.ts"/>
+
+  imp:
+    @reduxjs/toolkit:[createSlice, PayloadAction, createSelector]
+      ../../database/models/Lead:[Lead]
+      ../../types/api:[LeadsData]
+      ../api/leadApi:[leadApi]
+      __exports__:[default]
+  fn:
+    selectLeadState(state)(state)
+    selectLeadsByStatus(status)(status)
+    selectLeadsByCustomer(customerId)(customerId)
+  states:
+    [0] t:redux_action, var:SELECT_LEAD_STATE, mut:create
+        [1] t:useState, var:selectleadstate, mut:update
+        [2] t:redux_action, var:SELECT_LEADS_BY_STATUS, mut:create
+        [3] t:redux_action, var:SELECT_LEADS_BY_CUSTOMER, mut:create
+
+<file path="src/store/slices/networkSlice.ts"/>
+
+  imp:
+    @reduxjs/toolkit:[createSlice, PayloadAction]
+      ../store:[RootState]
+      __exports__:[default]
+  fn:
+    selectSyncInProgress(state)(state)
+    selectLastSyncAt(state)(state)
+    selectNextAllowedSyncAt(state)(state)
+    selectDashboardSummary(state)(state)
+    selectNetworkError(state)(state)
+    selectUnreadCount(state)(state)
+    selectLastSyncTs(state)(state)
+  states:
+    [0] t:redux_action, var:SELECT_SYNC_IN_PROGRESS, mut:create
+        [1] t:redux_action, var:SELECT_LAST_SYNC_AT, mut:create
+        [2] t:redux_action, var:SELECT_NEXT_ALLOWED_SYNC_AT, mut:create
+        [3] t:redux_action, var:SELECT_DASHBOARD_SUMMARY, mut:create
+        [4] t:redux_action, var:SELECT_NETWORK_ERROR, mut:create
+        [5] t:redux_action, var:SELECT_UNREAD_COUNT, mut:create
+        [6] t:redux_action, var:SELECT_LAST_SYNC_TS, mut:create
+
+<file path="src/store/slices/preferencesSlice.ts"/>
+
+  imp:
+    @reduxjs/toolkit:[createSlice, PayloadAction]
+      __exports__:[default]
+
+<file path="src/store/store.ts"/>
+
+  imp:
+    @reduxjs/toolkit:[configureStore, combineReducers, createListenerMiddleware]
+      redux-persist:[persistStore, persistReducer, FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER]
+      @react-native-async-storage/async-storage:[AsyncStorage]
+      ./slices/networkSlice:[networkSlice]
+      ./slices/authSlice:[authSlice]
+      ./slices/customerSlice:[customerSlice]
+      ./slices/leadSlice:[leadSlice]
+      ./slices/preferencesSlice:[preferencesSlice]
+      ./api/baseApi:[baseApi]
+      ./api/authApi:[authApi]
+      ./api/dashboardApi:[dashboardApi]
+      ./api/leadApi:[leadApi]
+      ./api/simpleNotificationsApi:[simpleNotificationsApi]
+      ./middleware/errorMiddleware:[errorMiddleware]
+      ../debug/checkApiImports:[checkApiImports]
+      __exports__:[default]
+  fn:
+    createMiddleware(getDefaultMiddleware)(getDefaultMiddleware)
+  states:
+    [0] t:redux_action, var:CREATE_MIDDLEWARE, mut:create
+        [1] t:redux_action, var:store, mut:create
+
+<file path="src/store/testStore.ts"/>
+
+  imp:
+    @reduxjs/toolkit:[configureStore]
+      ./api/simpleNotificationsApi:[simpleNotificationsApi]
+      __exports__:[default]
+
+<file path="src/store/thunks/authThunks.ts"/>
+
+  imp:
+    @reduxjs/toolkit:[createAsyncThunk]
+      ../../utils/secureStorage/KeychainHelper:[getToken, deleteToken]
+      ../../utils/secureStorage/SQLiteKeyHelper:[resetDbKey]
+      ../slices/authSlice:[bootstrapSuccess, tokenExpired, logout]
+      @navigation/navigationRef:[navigationRef]
+      ../index:[RootState]
+      ../../services/SyncService:[syncService]
+      __exports__:[default]
+
+<file path="src/store/transforms/sqliteTransform.ts"/>
+
+  imp:
+    redux-persist:[Transform]
+      ../../database/database:[openEncryptedDb]
+      ../../database/dao:[getLeadDao, getCustomerDao, getSyncDao]
+      ../../database/models/Lead:[Lead]
+      ../../database/models/Customer:[Customer]
+      __exports__:[default]
+  fn:
+    logRehydrationMetrics(tableName, metrics)(tableName, metrics)
+      doc: Log rehydration performance
+    async loadLeadsFromCache()
+      doc: Load leads from SQLite cache
+    async loadCustomersFromCache()
+      doc: Load customers from SQLite cache
+    createSQLiteTransform()
+      doc: "Create SQLite transform for Redux Persist\nHandles rehydration from encrypted SQLite cache"
+    async preloadCacheData()
+      doc: "Preload cache data for immediate availability\nCan be called during app startup for better UX"
+    clearCacheTransform()
+      doc: "Clear cache transform state\nUsed during logout to ensure clean state"
+  states:
+    [0] t:redux_action, var:LOG_REHYDRATION_METRICS, mut:create
+        [1] t:redux_action, var:LOAD_LEADS_FROM_CACHE, mut:create
+        [2] t:redux_action, var:LOAD_CUSTOMERS_FROM_CACHE, mut:create
+        [3] t:redux_action, var:CREATE_S_Q_LITE_TRANSFORM, mut:create
+        [4] t:redux_action, var:PRELOAD_CACHE_DATA, mut:create
+        [5] t:redux_action, var:CLEAR_CACHE_TRANSFORM, mut:create
+  events:
+    [0] t:dom_event, event:callback, hdl:logRehydrationMetrics, framework:Custom
+        [1] t:dom_event, event:unknown, hdl:logRehydrationMetrics, framework:Generic
+        [2] t:dom_event, event:load, hdl:loadLeadsFromCache, framework:DOM
+        [3] t:dom_event, event:load, hdl:loadCustomersFromCache, framework:DOM
+        [4] t:dom_event, event:load, hdl:preloadCacheData, framework:DOM
+
+<file path="src/store/types.ts"/>
+
+  imp: {__exports__:[default]}
+
+<file path="src/sync/DashboardSync.ts"/>
+
+  imp:
+    @reduxjs/toolkit:[Store]
+      ../store/api/dashboardApi:[dashboardApi]
+      ../store/slices/networkSlice:[setDashboardSummary]
+      ../store/types:[DashboardSummaryRequest]
+      ../store:[RootState]
+      __exports__:[default]
+  cls:
+    DashboardSync
+      doc: "Dashboard sync utilities\nProvides methods for manual dashboard data refreshing"
+      mth: refreshSummary(store, params), isDashboardStale(lastUpdatedAt, maxAgeMs)
+
+<file path="src/sync/SyncManager.ts"/>
+
+  imp:
+    events:[EventEmitter]
+      ../database/dao/LeadDao:[LeadDao]
+      ../database/models/Lead:[Lead]
+      ../models/LeadModel:[isApiLead, assertLead, transformApiLeadToLead]
+      react-native-sqlite-storage:[SQLiteDatabase]
+      ../types/api:[ApiLead, LeadsApiResponse]
+      __exports__:[default]
+  fn:
+    createSyncManager(db, authToken)(db, authToken)
+      doc: Singleton instance
+    getSyncManager()
+  cls:
+    SyncManager(EventEmitter)
+      doc: Enhanced SyncManager with atomic page-aware synchronization
+      mth: constructor(param, param), performSync(), syncLeadsPageAware(), fetchLeadsPage(page, limit), validateAndTransformPage(apiLeads, pageNumber), atomicPersistAllPages(leadDao, allValidatedLeads), fetchWithRetry(url, options, maxRetries), updateSyncMetadata(entityType, timestamp), transformApiLeadToLead(apiLead), shouldThrottleSync(), categorizeError(error), getSyncStatus(), forceSync()
+  states:
+    [0] t:useState, var:createsyncmanager, mut:update
+        [1] t:useState, var:getsyncmanager, mut:update
+  events:
+    [0] t:addEventListener, event:create-sync-manager, hdl:createSyncManager, framework:Custom
+        [1] t:addEventListener, event:get-sync-manager, hdl:getSyncManager, framework:Custom
+
+<file path="src/sync/SyncScheduler.ts"/>
+
+  imp:
+    react-native:[AppState, AppStateStatus]
+      @react-native-community/netinfo:[NetInfo]
+      ../services/SyncManager:[getSyncManager]
+      ../store/store:[store]
+      ../constants/sync:[AUTO_SYNC_INTERVAL_MS, AUTO_SYNC_JITTER_MS]
+      __exports__:[default]
+  fn:
+    getSyncScheduler()
+    startSyncScheduler()
+    stopSyncScheduler()
+    destroySyncScheduler()
+  cls:
+    SyncScheduler
+      mth: constructor(), setupAppStateListener(), setupNetworkListener(), handleAppStateChange(nextAppState), handleNetworkStateChange(state), start(), stop(), scheduleAutoSync(), stopAutoSync(), executeAutoSync(), triggerManualSync(), triggerFullSync(), getStatus(), destroy()
+
+<file path="src/sync/index.ts"/>
+
+  imp: {__exports__:[default]}
+
+<file path="src/sync/types.ts"/>
+
+  imp:
+    ../database/models/Lead:[Lead]
+      ../database/models/Customer:[Customer]
+      ../database/models/Quotation:[Quotation]
+      __exports__:[default]
+
+<file path="src/theme/ThemeProvider.tsx"/>
+
+  imp:
+    react:[React]
+      react-native:[StatusBar]
+      react-native-paper:[PaperProvider]
+      @hooks/useThemeToggle:[useThemeToggle]
+      __exports__:[default]
+  fn:
+    ThemeProvider({ ... })({ ... })
+      doc: "ThemeProvider Component\nProvides theme context to the entire app"
+
+<file path="src/theme/index.ts"/>
+
+  imp:
+    react-native-paper:[MD3LightTheme, MD3DarkTheme, MD3Theme]
+      __exports__:[default]
+  fn:
+    getTheme(scheme, systemScheme)(scheme, systemScheme)
+      doc: Get theme based on scheme preference
+    createThemedStyles(styleCreator)(styleCreator)
+      doc: Styled component helper for consistent theming
+
+<file path="src/types/api.ts"/>
+
+  imp: {__exports__:[default]}
+
+<file path="src/types/netinfo.d.ts"/>
+
+  imp: {__exports__:[default]}
+
+<file path="src/types/react-native-sqlcipher-storage.d.ts"/>
+
+  imp: {__exports__:[default]}
+
+<file path="src/types/react-native-sqlcipher-storage2.d.ts"/>
+
+  imp: {__exports__:[default]}
+
+<file path="src/types/react-native-vector-icons.d.ts"/>
+
+  imp:
+    react:[Component, Component]
+      react-native:[TextProps, TextProps]
+      __exports__:[default]
+  cls:
+    Icon(Component) [component]
+  states: [0] t:setState, var:state, mut:create
+
+<file path="src/utils/AppStateManager.ts"/>
+
+  imp:
+    react-native:[AppState, AppStateStatus]
+      ../sync/SyncScheduler:[getSyncScheduler]
+      __exports__:[default]
+  fn:
+    getAppStateManager()
+    destroyAppStateManager()
+  cls:
+    AppStateManager
+      mth: constructor(), setupListener(), handleAppStateChange(nextAppState), getCurrentState(), isActive(), destroy()
+  states:
+    [0] t:useState, var:getappstatemanager, mut:update
+        [1] t:useState, var:destroyappstatemanager, mut:update
+
+<file path="src/utils/Logger.ts"/>
+
+  imp:
+    react-native:[Platform]
+      __exports__:[default]
+  fn:
+    debug(category, message, data)(category, message, data)
+    info(category, message, data)(category, message, data)
+    warn(category, message, data)(category, message, data)
+    error(category, message, errorObj, data)(category, message, errorObj, data)
+  cls:
+    Logger
+      mth: constructor(), getInstance(), setLogLevel(level), debug(category, message, data), info(category, message, data), warn(category, message, data), error(category, message, error, data), log(level, category, message, data, error), shouldLog(level), outputToConsole(entry), getConsoleMethod(level), getRecentLogs(count), getLogsByLevel(level), getLogsByCategory(category), exportLogs(), clearLogs(), cleanup(), trimLogHistory()
+
+<file path="src/utils/PerformanceMonitor.ts"/>
+
+  imp:
+    react-native:[Platform]
+      __exports__:[default]
+  cls:
+    PerformanceMonitor
+      mth: constructor(), getInstance(), startTiming(name, metadata), endTiming(metricId, error), startSyncTracking(source, metadata), endSyncTracking(syncId, success, error, additionalData), takeMemorySnapshot(), getCurrentMemorySnapshot(), getPerformanceSummary(), checkForMemoryLeaks(), getDiagnosticReport(), clearData(), cleanup(), startMemoryMonitoring(), stopMemoryMonitoring(), addToHistory(metric), trimSyncHistory(), trimMemorySnapshots(), calculateMemoryDelta(before, after)
+
+<file path="src/utils/SystemCleanup.ts"/>
+
+  imp:
+    ../sync/SyncScheduler:[SyncScheduler]
+      ./AppStateManager:[AppStateManager]
+      ./PerformanceMonitor:[PerformanceMonitor]
+      ./Logger:[Logger]
+      @react-native-async-storage/async-storage:[AsyncStorage]
+      __exports__:[default]
+  cls:
+    SystemCleanup
+      mth: performFullCleanup(), performSyncCleanup(), checkSystemHealth(), generateDiagnosticReport(), cleanupComponent(componentName, cleanupFn, report), clearSyncRelatedStorage(), forceGarbageCollection()
+
+<file path="src/utils/database/SQLCipherTest.ts"/>
+
+  imp:
+    react-native-sqlcipher-storage:[SQLiteStorage]
+      __exports__:[default]
+  fn:
+    async testSQLCipherIntegration()
+      doc: "Test basic SQLCipher functionality\nOpens an encrypted database to verify the library works correctly"
+
+<file path="src/utils/date.ts"/>
+
+  imp: {__exports__:[default]}
+  fn:
+    formatRelativeTime(iso)(iso)
+      doc: "Format a timestamp to relative time string\n@param iso - ISO string timestamp\n@returns Formatted relative time string"
+    formatDateTime(iso)(iso)
+      doc: "Format timestamp to readable date string\n@param iso - ISO string timestamp\n@returns Formatted date string"
+    isToday(iso)(iso)
+      doc: "Check if a timestamp is from today\n@param iso - ISO string timestamp\n@returns True if timestamp is from today"
+    getTimeUntilNextSync(lastSyncTs, minGapMs)(lastSyncTs, minGapMs)
+      doc: "Get time until next sync is allowed (for countdown display)\n@param lastSyncTs - Last sync timestamp\n@param minGapMs - Minimum gap between syncs in milliseconds\n@returns Seconds until next sync is allowed, or 0 if allowed now"
+
+<file path="src/utils/errorMessage.ts"/>
+
+  imp:
+    @reduxjs/toolkit/query/react:[FetchBaseQueryError]
+      __exports__:[default]
+  fn:
+    getFriendlyMessage(status)(status)
+      doc: "Get user-friendly error message for HTTP status code\n@param status - HTTP status code or error type\n@returns User-friendly error message"
+    validateBackendError(error)(error)
+      doc: "Validate and extract friendly error message from RTK Query error\n@param error - RTK Query FetchBaseQueryError\n@returns User-friendly error message string"
+    shouldAutoLogout(status)(status)
+      doc: "Determine if error should trigger auto-logout\n@param status - HTTP status code\n@returns true if should logout, false otherwise"
+    shouldShowToast(status)(status)
+      doc: "Determine if error should show toast notification\n@param status - HTTP status code\n@returns true if should show toast, false otherwise"
+  states:
+    [0] t:redux_action, var:GET_FRIENDLY_MESSAGE, mut:create
+        [1] t:redux_action, var:VALIDATE_BACKEND_ERROR, mut:create
+        [2] t:redux_action, var:SHOULD_AUTO_LOGOUT, mut:create
+        [3] t:redux_action, var:SHOULD_SHOW_TOAST, mut:create
+
+<file path="src/utils/index.ts"/>
+
+  imp: {__exports__:[default]}
+
+<file path="src/utils/secureStorage/KeychainHelper.ts"/>
+
+  imp:
+    react-native-keychain:[* as Keychain]
+      __exports__:[default]
+  fn:
+    async saveToken(token, expiresAt)(token, expiresAt)
+      doc: "Save JWT token with expiration time to keychain\n@param token - JWT token string\n@param expiresAt - Unix timestamp when token expires"
+    async getToken()
+      doc: "Retrieve JWT token from keychain\nReturns undefined if token doesn't exist or is expired\n@returns Token data or undefined"
+    async deleteToken()
+      doc: "Delete JWT token from keychain\nAlways resolves successfully, even if token doesn't exist"
+    async hasValidToken()
+      doc: "Check if a valid (non-expired) token exists\n@returns true if valid token exists"
+
+<file path="src/utils/secureStorage/SQLiteKeyHelper.ts"/>
+
+  imp:
+    react-native-keychain:[* as Keychain]
+      __exports__:[default]
+  fn:
+    generateSecureKey()
+      doc: "Generate a cryptographically secure 64-byte key (128 hex characters)\nUses React Native's built-in crypto.getRandomValues for secure random generation\n@returns 128-character hex string (64 bytes)"
+    async getDbKey()
+      doc: "Get database encryption key from keychain\nGenerates and stores a new key on first call\n@returns Promise<string> - 128-character hex key for SQLCipher"
+    async resetDbKey()
+      doc: "Reset (delete) the database encryption key from keychain\nThis will force generation of a new key on next access\nUsed during logout to clear all cached data"
+    async hasDbKey()
+      doc: "Check if a database encryption key exists in keychain\n@returns Promise<boolean> - true if key exists and is valid"
+
+<file path="src/utils/secureStorage/cryptoPolyfill.ts"/>
+
+  imp: {__exports__:[default]}
+
+<file path="src/utils/validators/apiEnvelope.ts"/>
+
+  imp: {__exports__:[default]}
+  fn:
+    isApiEnvelope(obj)(obj)
+      doc: "Runtime type guard for API envelope\n@param obj - Object to validate\n@returns true if object matches ApiEnvelope structure"
+    assertApiEnvelope(obj)(obj)
+      doc: "Runtime assertion for API envelope\n@param obj - Object to validate\n@throws Error if object is not a valid ApiEnvelope"
+    transformApiEnvelope(envelope, validateItem, entityName)(envelope, validateItem, entityName)
+      doc: "Transform API envelope to paginated response\n@param envelope - API envelope to transform\n@param validateItem - Function to validate each item\n@returns Paginated response with validated items"
+
+
+<dependencies>
+
+  App.tsx: __exports__, react, react-native-toast-message, react-redux, src/components/common/AppInitializer.tsx, src/components/common/ErrorBoundary.tsx, src/contexts/ConnectivityContext.tsx, src/database/DatabaseProvider.tsx, src/navigation/NavigationProvider.tsx, src/store/PersistGateProvider.tsx, src/store/store.ts, src/sync/SyncScheduler.ts, src/theme/ThemeProvider.tsx, src/utils/AppStateManager.ts
+
+  __tests__/setup/accessibility.setup.js: __exports__, jest-axe
+
+  __tests__/setupAxe.js: jest-axe
+
+  __tests__/utils/accessibility.ts: __exports__
+
+  __tests__/testRunner.ts: __exports__
+
+  android/app/build.gradle: com.android.build.OutputFile
+
+  __tests__/utils/testHelpers.ts: @react-native-async-storage/async-storage, @reduxjs/toolkit, __exports__, src/store/api/dashboardApi.ts, src/store/slices/authSlice.ts, src/store/slices/networkSlice.ts
+
+  e2e/init.ts: detox
+
+  e2e/setup.ts: detox
+
+  e2e/loginSuccess.e2e.ts: detox
+
+  e2e/otpLockout.e2e.ts: detox
+
+  e2e/viewLeadsFlow.e2e.ts: detox
+
+  index.js: App.tsx, app.json, react-native
+
+  jest.setup.ts: @react-native-async-storage/async-storage/jest/async-storage-mock
+
+  src/components/PlaceholderAuthStack.tsx: @hooks/reduxHooks, @store/slices/authSlice, __exports__, react, react-native
+
+  src/components/PlaceholderMainTab.tsx: @hooks/reduxHooks, @store/slices/authSlice, __exports__, react, react-native
+
+  src/components/SimpleTestApp.tsx: @hooks/reduxHooks, @store/slices/authSlice, __exports__, react, react-native
+
+  src/components/common/AppButton.tsx: __exports__, react, react-native, react-native-paper
+
+  src/components/auth/index.ts: __exports__
+
+  src/components/auth/AuthGuard.tsx: @hooks/reduxHooks, @navigation/types, @react-navigation/native, __exports__, react
+
+  src/components/common/AppInitializer.tsx: @react-native-async-storage/async-storage, __exports__, react, src/hooks/reduxHooks.ts, src/services/persistence.ts, src/store/slices/networkSlice.ts, src/store/store.ts
+
+  src/components/common/AuthBootstrap.tsx: @hooks/reduxHooks, @store/thunks/authThunks, __exports__, react, react-native, react-native-paper, src/database/DatabaseProvider.tsx
+
+  src/components/common/FloatingActionButton.tsx: __exports__, react, react-native, react-native-paper
+
+  src/components/common/AppTextInput.tsx: __exports__, react, react-native, react-native-paper
+
+  src/components/common/ErrorTestComponent.tsx: __exports__, react, react-native
+
+  src/components/common/ErrorBoundary.tsx: __exports__, react, react-native
+
+  src/components/common/LastSyncIndicator.tsx: __exports__, react, react-native, react-native-paper, src/contexts/ConnectivityContext.tsx, src/hooks/reduxHooks.ts, src/store/slices/networkSlice.ts, src/utils/date.ts
+
+  src/components/common/ScreenContainer.tsx: __exports__, react, react-native, react-native-paper
+
+  src/components/common/TopBar.tsx: __exports__, react, react-native, react-native-paper, react-native-safe-area-context, src/contexts/ConnectivityContext.tsx, src/hooks/reduxHooks.ts, src/navigation/navigationRef.ts, src/services/SyncManager.ts, src/store/index.ts, src/store/slices/networkSlice.ts
+
+  src/components/common/index.ts: __exports__
+
+  src/components/dashboard/DashboardStatCard.tsx: __exports__, react, react-native, react-native-paper
+
+  src/components/common/OfflineBanner.tsx: @constants/strings, @contexts/ConnectivityContext, __exports__, react, react-native
+
+  src/components/common/PullToRefreshControl.tsx: __exports__, react, react-native, react-native-paper, src/hooks/usePullToRefresh.ts
+
+  src/components/dashboard/index.ts: __exports__
+
+  src/components/debug/StateDebugger.tsx: __exports__, react, react-native, react-redux, src/store/index.ts
+
+  src/components/leads/LeadsApiTestComplete.tsx: __exports__, react, react-native, react-redux, src/database/models/Lead.ts, src/store/api/leadApi.ts, src/store/index.ts, src/store/slices/leadSlice.ts
+
+  src/components/leads/EmptyLeadsState.tsx: __exports__, react, react-native, react-native-paper
+
+  src/components/leads/LeadsApiTest.tsx: __exports__, react, react-native, react-redux, src/store/api/leadApi.ts, src/store/index.ts, src/store/slices/leadSlice.ts
+
+  src/components/leads/LeadsApiTestPagination.tsx: __exports__, react, react-native, react-redux, src/store/api/leadApi.ts, src/store/index.ts, src/store/selectors/leadSelectors.ts
+
+  src/config/Network.ts: __exports__, src/config/Config.ts
+
+  src/components/leads/index.ts: __exports__
+
+  src/config/api.ts: __exports__
+
+  src/config/Config.ts: __exports__, react-native-config
+
+  src/constants/auth.ts: __exports__
+
+  src/components/notifications/NotificationsList.tsx: __exports__, react, react-native, src/store/api/notificationsApi.ts
+
+  src/constants/strings.ts: __exports__
+
+  src/constants/sync.ts: __exports__
+
+  src/contexts/ConnectivityContext.tsx: @react-native-community/netinfo, __exports__, react
+
+  src/database/dao/BaseDao.ts: __exports__, src/database/database.ts
+
+  src/database/DatabaseProvider.tsx: __exports__, react, react-native-sqlite-storage
+
+  src/database/dao/LeadDao.ts: __exports__, react-native-sqlite-storage, src/database/models/Lead.ts
+
+  src/database/dao/SyncDao.ts: __exports__, src/database/dao/BaseDao.ts, src/database/database.ts, src/database/models/SyncMetadata.ts
+
+  src/database/database.ts: __exports__, src/database/migrations.ts
+
+  src/database/dao/QuotationDao.ts: __exports__, src/database/dao/BaseDao.ts, src/database/database.ts, src/database/models/Quotation.ts
+
+  src/database/dao/CustomerDao.ts: __exports__, src/database/dao/BaseDao.ts, src/database/database.ts, src/database/models/Customer.ts
+
+  src/database/dao/index.ts: __exports__
+
+  src/database/improvedMigrations.ts: __exports__, src/database/database.ts
+
+  src/database/models/Lead.ts: __exports__
+
+  src/database/migrations.ts: __exports__, react-native-sqlite-storage, src/database/migrations/steps/v2_add_page_to_leads.ts, src/database/schema.ts
+
+  src/database/migrations/steps/v2_add_page_to_leads.ts: __exports__, react-native-sqlite-storage
+
+  src/database/models/Customer.ts: __exports__
+
+  src/database/models/SyncMetadata.ts: __exports__
+
+  src/database/sqlcipherImport.ts: __exports__, react-native-sqlite-storage
+
+  src/database/models/Quotation.ts: __exports__
+
+  src/database/schema.ts: __exports__
+
+  src/database/testDatabase.ts: __exports__, react-native-sqlcipher-storage, src/utils/secureStorage/SQLiteKeyHelper.ts
+
+  src/database/testSQLCipher.ts: __exports__
+
+  src/debug/checkApiImports.ts: __exports__
+
+  src/debug/testDashboardHydration.ts: __exports__, src/store/index.ts, src/store/slices/networkSlice.ts, src/sync/SyncManager.ts
+
+  src/debug/testKeyGeneration.ts: __exports__, src/utils/secureStorage/SQLiteKeyHelper.ts
+
+  src/debug/checkStore.ts: __exports__, src/store/api/simpleNotificationsApi.ts, src/store/store.ts
+
+  src/debug/testNetworkSlice.ts: __exports__, src/store/slices/networkSlice.ts, src/store/store.ts
+
+  src/debug/testStore.ts: __exports__, src/store/api/notificationsApi.ts, src/store/store.ts
+
+  src/hooks/useDashboardRefresh.ts: __exports__, react, react-native, react-native-toast-message, src/constants/sync.ts, src/hooks/reduxHooks.ts, src/store/api/dashboardApi.ts, src/store/slices/networkSlice.ts, src/sync/SyncManager.ts
+
+  src/hooks/index.ts: __exports__
+
+  src/hooks/reduxHooks.ts: __exports__, react-redux, src/store/index.ts
+
+  src/hooks/usePullToRefresh.ts: __exports__, react, react-native, react-native-toast-message, src/constants/sync.ts, src/hooks/reduxHooks.ts, src/store/slices/networkSlice.ts, src/sync/SyncManager.ts
+
+  src/hooks/useDatabase.ts: __exports__, src/database/DatabaseProvider.tsx, src/database/dao/index.ts, src/database/database.ts
+
+  src/models/LeadModel.ts: __exports__
+
+  src/hooks/useThemeToggle.ts: @store/slices/preferencesSlice, @theme/index, __exports__, react-native, src/hooks/reduxHooks.ts
+
+  src/navigation/AppNavigator.tsx: @react-navigation/native-stack, __exports__, react, src/navigation/MainTabNavigator.tsx, src/navigation/NotificationsStack.tsx, src/navigation/types.ts
+
+  src/navigation/HomeStack.tsx: @react-navigation/native-stack, __exports__, react, src/screens/home/HomeScreen.tsx, src/screens/leads/MyLeadsScreen.tsx
+
+  src/navigation/MainTabNavigator.tsx: @react-navigation/bottom-tabs, @react-navigation/native, @screens/settings/SettingsScreen, __exports__, react, react-native, src/navigation/HomeStack.tsx, src/navigation/types.ts
+
+  src/navigation/NotificationsStack.tsx: @react-navigation/native-stack, __exports__, react, src/screens/notifications/NotificationsScreen.tsx
+
+  src/navigation/index.ts: __exports__
+
+  src/navigation/AuthStack.tsx: @react-navigation/native-stack, @screens/auth/LoginScreen, @screens/auth/OtpScreen, @screens/auth/SplashScreen, __exports__, react, src/navigation/types.ts
+
+  src/navigation/NavigationProvider.tsx: @components/auth/AuthGuard, @components/common/AuthBootstrap, @components/common/OfflineBanner, @hooks/reduxHooks, @react-navigation/native, @react-navigation/native-stack, __exports__, react, react-native, src/navigation/AuthStack.tsx, src/navigation/MainTabNavigator.tsx, src/navigation/navigationRef.ts, src/navigation/types.ts
+
+  src/screens/RootScreen_old.tsx: @config/Config, __exports__, react, react-native, react-native/Libraries/NewAppScreen
+
+  src/screens/auth/LoginScreen.tsx: @components/common, @contexts/ConnectivityContext, @navigation/types, @react-navigation/native, @store/api/authApi, @utils/errorMessage, __exports__, react, react-native, react-native-paper
+
+  src/navigation/types.ts: @react-navigation/native, @react-navigation/native-stack, __exports__, src/navigation/NotificationsStack.tsx
+
+  src/navigation/navigationRef.ts: @react-navigation/native, __exports__, react, src/navigation/types.ts
+
+  src/screens/auth/SplashScreen.tsx: @navigation/types, @react-navigation/native, __exports__, react, react-native
+
+  src/screens/leads/LeadListItem.tsx: __exports__, react, react-native, src/database/models/Lead.ts
+
+  src/screens/auth/OtpScreen.tsx: @components/common, @constants/auth, @contexts/ConnectivityContext, @hooks/reduxHooks, @navigation/types, @react-navigation/native, @store/api/authApi, @store/slices/authSlice, @store/thunks/authThunks, @utils/errorMessage, @utils/secureStorage/KeychainHelper, __exports__, react, react-native, react-native-otp-textinput, react-native-paper
+
+  src/screens/home/HomeScreen.tsx: @react-native-community/netinfo, @react-navigation/native, __exports__, react, react-native, react-native-paper, react-redux, src/components/common/OfflineBanner.tsx, src/components/common/TopBar.tsx, src/components/dashboard/index.ts, src/contexts/ConnectivityContext.tsx, src/hooks/reduxHooks.ts, src/navigation/navigationRef.ts, src/navigation/types.ts, src/store/api/dashboardApi.ts, src/store/hooks.ts, src/store/slices/leadSlice.ts, src/store/slices/networkSlice.ts, src/sync/SyncManager.ts, src/utils/date.ts
+
+  src/screens/leads/MyLeadsScreen.tsx: __exports__, react, react-native, react-redux, src/components/leads/EmptyLeadsState.tsx, src/database/models/Lead.ts, src/screens/leads/LeadListItem.tsx, src/store/api/leadApi.ts, src/store/index.ts, src/store/selectors/leadSelectors.ts, src/store/slices/leadSlice.ts
+
+  src/screens/settings/SettingsScreen.tsx: @components/common, @config/Config, @hooks/reduxHooks, @hooks/useThemeToggle, @store/thunks/authThunks, __exports__, react, react-native, react-native-paper
+
+  src/screens/notifications/NotificationsScreen.tsx: __exports__, react, react-native, react-native-paper, react-native-safe-area-context, src/components/common/TopBar.tsx, src/hooks/reduxHooks.ts, src/store/slices/networkSlice.ts
+
+  src/services/persistence.ts: @react-native-async-storage/async-storage, @reduxjs/toolkit, __exports__, src/store/slices/networkSlice.ts
+
+  src/services/SyncService.ts: __exports__, src/database/database.ts, src/store/index.ts, src/sync/SyncManager.ts
+
+  src/store/PersistGateProvider.tsx: __exports__, react, react-native, redux-persist/integration/react, src/store/index.ts
+
+  src/store/api/authApi.ts: @reduxjs/toolkit/query/react, __exports__, src/store/api/baseQuery.ts, src/store/slices/authSlice.ts, src/utils/secureStorage/KeychainHelper.ts
+
+  src/store/api/baseApi.ts: @reduxjs/toolkit, @reduxjs/toolkit/query/react, __exports__, src/store/api/baseQuery.ts, src/store/slices/authSlice.ts
+
+  src/services/SyncManager.ts: @react-native-async-storage/async-storage, @react-native-community/netinfo, @reduxjs/toolkit, __exports__, react-native-toast-message, src/constants/sync.ts, src/store/slices/networkSlice.ts, src/store/store.ts
+
+  src/store/api/baseQuery.ts: @config/Config, @config/Network, @reduxjs/toolkit/query/react, __exports__, src/store/index.ts, src/store/thunks/authThunks.ts, src/utils/secureStorage/KeychainHelper.ts
+
+  src/store/api/dashboardApi.ts: @reduxjs/toolkit/query/react, __exports__, src/store/api/baseQuery.ts, src/store/slices/networkSlice.ts, src/types/api.ts
+
+  src/store/api/index.ts: __exports__
+
+  src/store/api/leadApi.ts: @reduxjs/toolkit/query/react, __exports__, src/store/api/baseQuery.ts, src/store/slices/leadSlice.ts, src/types/api.ts
+
+  src/store/api/notificationsApi.ts: @reduxjs/toolkit/query/react, __exports__
+
+  src/store/api/simpleNotificationsApi.ts: @reduxjs/toolkit/query/react, __exports__
+
+  src/store/hooks.ts: __exports__, react-redux, src/store/store.ts
+
+  src/store/middleware/errorMiddleware.ts: @reduxjs/toolkit, __exports__, react-native-toast-message, src/navigation/navigationRef.ts, src/store/index.ts, src/store/slices/authSlice.ts, src/utils/errorMessage.ts
+
+  src/store/slices/authSlice.ts: @reduxjs/toolkit, __exports__
+
+  src/store/selectors/leadSelectors.ts: @reduxjs/toolkit, __exports__, src/database/models/Lead.ts, src/store/index.ts, src/store/slices/leadSlice.ts
+
+  src/store/index.ts: @react-native-async-storage/async-storage, @reduxjs/toolkit, @reduxjs/toolkit/query, __exports__, redux-persist, src/store/api/authApi.ts, src/store/api/baseApi.ts, src/store/api/dashboardApi.ts, src/store/middleware/errorMiddleware.ts, src/store/slices/authSlice.ts, src/store/slices/customerSlice.ts, src/store/slices/leadSlice.ts, src/store/slices/networkSlice.ts, src/store/slices/preferencesSlice.ts, src/store/transforms/sqliteTransform.ts
+
+  src/store/slices/networkSlice.ts: @reduxjs/toolkit, __exports__, src/store/store.ts
+
+  src/store/slices/preferencesSlice.ts: @reduxjs/toolkit, __exports__
+
+  src/store/testStore.ts: @reduxjs/toolkit, __exports__, src/store/api/simpleNotificationsApi.ts
+
+  src/store/slices/customerSlice.ts: @reduxjs/toolkit, __exports__, src/database/models/Customer.ts
+
+  src/store/thunks/authThunks.ts: @navigation/navigationRef, @reduxjs/toolkit, __exports__, src/services/SyncService.ts, src/store/index.ts, src/store/slices/authSlice.ts, src/utils/secureStorage/KeychainHelper.ts, src/utils/secureStorage/SQLiteKeyHelper.ts
+
+  src/store/slices/leadSlice.ts: @reduxjs/toolkit, __exports__, src/database/models/Lead.ts, src/store/api/leadApi.ts, src/types/api.ts
+
+  src/store/types.ts: __exports__
+
+  src/sync/DashboardSync.ts: @reduxjs/toolkit, __exports__, src/store/api/dashboardApi.ts, src/store/index.ts, src/store/slices/networkSlice.ts, src/store/types.ts
+
+  src/store/transforms/sqliteTransform.ts: __exports__, redux-persist, src/database/dao/index.ts, src/database/database.ts, src/database/models/Customer.ts, src/database/models/Lead.ts
+
+  src/store/store.ts: @react-native-async-storage/async-storage, @reduxjs/toolkit, __exports__, redux-persist, src/debug/checkApiImports.ts, src/store/api/authApi.ts, src/store/api/baseApi.ts, src/store/api/dashboardApi.ts, src/store/api/leadApi.ts, src/store/api/simpleNotificationsApi.ts, src/store/middleware/errorMiddleware.ts, src/store/slices/authSlice.ts, src/store/slices/customerSlice.ts, src/store/slices/leadSlice.ts, src/store/slices/networkSlice.ts, src/store/slices/preferencesSlice.ts
+
+  src/sync/SyncManager.ts: __exports__, events, react-native-sqlite-storage, src/database/dao/LeadDao.ts, src/database/models/Lead.ts, src/models/LeadModel.ts, src/types/api.ts
+
+  src/sync/SyncScheduler.ts: @react-native-community/netinfo, __exports__, react-native, src/constants/sync.ts, src/services/SyncManager.ts, src/store/store.ts
+
+  src/sync/types.ts: __exports__, src/database/models/Customer.ts, src/database/models/Lead.ts, src/database/models/Quotation.ts
+
+  src/sync/index.ts: __exports__
+
+  src/theme/ThemeProvider.tsx: @hooks/useThemeToggle, __exports__, react, react-native, react-native-paper
+
+  src/theme/index.ts: __exports__, react-native-paper
+
+  src/types/netinfo.d.ts: __exports__
+
+  src/types/api.ts: __exports__
+
+  src/types/react-native-sqlcipher-storage.d.ts: __exports__
+
+  src/types/react-native-vector-icons.d.ts: __exports__, react, react-native
+
+  src/utils/AppStateManager.ts: __exports__, react-native, src/sync/SyncScheduler.ts
+
+  src/types/react-native-sqlcipher-storage2.d.ts: __exports__
+
+  src/utils/PerformanceMonitor.ts: __exports__, react-native
+
+  src/utils/SystemCleanup.ts: @react-native-async-storage/async-storage, __exports__, src/sync/SyncScheduler.ts, src/utils/AppStateManager.ts, src/utils/Logger.ts, src/utils/PerformanceMonitor.ts
+
+  src/utils/errorMessage.ts: @reduxjs/toolkit/query/react, __exports__
+
+  src/utils/date.ts: __exports__
+
+  src/utils/database/SQLCipherTest.ts: __exports__, react-native-sqlcipher-storage
+
+  src/utils/Logger.ts: __exports__, react-native
+
+  src/utils/index.ts: __exports__
+
+  src/utils/secureStorage/cryptoPolyfill.ts: __exports__
+
+  src/utils/secureStorage/KeychainHelper.ts: __exports__, react-native-keychain
+
+  src/utils/secureStorage/SQLiteKeyHelper.ts: __exports__, react-native-keychain
+
+  src/utils/validators/apiEnvelope.ts: __exports__
+
+</dependencies>
